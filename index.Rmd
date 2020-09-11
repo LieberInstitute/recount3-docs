@@ -1,0 +1,78 @@
+---
+title: "recount3: human and mouse public RNA-seq data"
+author: ""
+site: bookdown::bookdown_site
+documentclass: book
+output:
+  bookdown::gitbook: default
+---
+
+# Overview
+
+Welcome to the home of the `recount3` project! This website is the home to the most updated version of all the documentation related to the `recount3` project.
+
+**recount3** is an online resource consisting of RNA-seq gene, exon, and exon-exon junction counts as well as coverage bigWig files for *XX* and *YY* different studies for human and mouse respectively. It is the third generation of the [ReCount project](http://bowtie-bio.sourceforge.net/recount/).
+
+The raw sequencing data were processed with [`recount-pump`](https://github.com/langmead-lab/recount-pump/) as described in the [recount3 paper](https://biorxiv.org) which created the coverage bigWig files and the recount-unified text files. While these raw output files are available through [SciServer](), for ease of statistical analysis, we provide through the [`recount3`](https://bioconductor.org/packages/recount3) R/Bioconductor package an interface that builds [RangedSummarizedExperiment](https://bioconductor.org/packages/SummarizedExperiment) R objects for gene, exon, and exon-exon junction counts. The coverage bigWig files can be used for annotation-agnostic expression analyses using for example [`derfinder`](https://bioconductor.org/packages/derfinder), [`megadepth`]() and other tools. 
+
+By taking care of several preprocessing steps and combining many datasets into one easily-accessible website, we make finding and analyzing RNA-seq data considerably more straightforward.
+
+
+## How to cite `recount3`
+
+Thank you for your continued support of the `ReCount` family of projects! We greatly appreciate you citing our work.
+
+```{r}
+print(citation("recount3")[2], bibtex = TRUE)
+```
+
+### Related projects
+
+The `ReCount` project has three main publications over the years with implementation details that have been improved each time. Each phase of the project has had several companion publications that expanded the main resource in different directions. Please cite the appropriate expansions and results as you see relevant for your work.
+
+### Previous `ReCount` projects
+
+* [`recount2`](https://jhubiostatistics.shinyapps.io/recount/)
+* [`ReCount`](http://bowtie-bio.sourceforge.net/recount/)
+
+### Related publications
+
+#### `recount3`
+
+#### `recount2`
+
+#### `ReCount`
+
+## Related `recount3` websites
+
+`recount3` is composed of several related software tools and websites. Here is the full list, with all of them referring to this website for their unified documentation.
+
+* [`recount-pump`](https://github.com/langmead-lab/recount-pump/): TODO 
+* `recount-unifier`: TODO
+* `monorail`: TODO
+* `megadepth`: TODO
+* `recount3`: R package [source](https://github.com/LieberInstitute/recount3), Bioconductor [landing page](https://bioconductor.org/packages/recount3), `pkdown` documentation [website](https://LieberInstitute.github.io/recount3)
+* [`recount3-docs`]((https://github.com/LieberInstitute/recount3-docs): the source code for this documentation website.
+
+
+## Team members
+
+* [Christopher Wilks](https://github.com/) (the star behind `recount3`!)
+* [Leonardo Collado Torres](https://github.com/lcolladotor) 
+* [Shijie Charles Zheng](https://github.com/)
+
+
+## Teams involved
+
+* [Ben Langmead's lab at JHU Computer Science](http://www.langmead-lab.org/)
+* [Kasper Daniel Hansen's lab at JHBSPH Biostatistics Department](https://www.hansenlab.org/)
+* [Leonardo Collado-Torres](http://lcolladotor.github.io/) and [Andrew E. Jaffe](http://aejaffe.com/) from [LIBD](https://www.libd.org/)
+* [Abhinav Nellore's lab at OHSU](http://nellore.bio/)
+* Data hosted by [SciServer at JHU](https://www.sciserver.org/)
+
+|                                                                                                                                                                               |                                                                                                      |                                                                                                                                                                         |                                                                                                                                                   |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| <a href="http://www.langmead-lab.org/"><img src="http://www.langmead-lab.org/wp-content/uploads/2014/01/Screen-Shot-2014-02-02-at-5.20.13-PM-1024x199.png" width="250px"></a> | <a href="https://www.libd.org/"><img src="http://aejaffe.com/media/LIBD_logo.jpg" width="250px"></a> | <a href="http://nellore.bio/"><img src="https://seekvectorlogo.net/wp-content/uploads/2018/08/oregon-health-science-university-ohsu-vector-logo.png" width="250px"></a> | <a href="https://www.sciserver.org/"><img src="https://skyserver.sdss.org/dr14/en/images/sciserver_logo_inverted_vertical.png" width="250px"></a> |
+
+
+This book was last updated on `r Sys.time()`.
