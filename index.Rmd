@@ -7,7 +7,7 @@ output:
   bookdown::gitbook: default
 ---
 
-# Overview
+# Overview {-}
 
 Welcome to the home of the `recount3` project! This website is the home to the most updated version of all the documentation related to the `recount3` project.
 
@@ -17,33 +17,7 @@ The raw sequencing data were processed with [`recount-pump`](https://github.com/
 
 By taking care of several preprocessing steps and combining many datasets into one easily-accessible website, we make finding and analyzing RNA-seq data considerably more straightforward.
 
-
-## How to cite `recount3`
-
-Thank you for your continued support of the `ReCount` family of projects! We greatly appreciate you citing our work.
-
-```{r}
-print(citation("recount3")[2], bibtex = TRUE)
-```
-
-### Related projects
-
-The `ReCount` project has three main publications over the years with implementation details that have been improved each time. Each phase of the project has had several companion publications that expanded the main resource in different directions. Please cite the appropriate expansions and results as you see relevant for your work.
-
-### Previous `ReCount` projects
-
-* [`recount2`](https://jhubiostatistics.shinyapps.io/recount/)
-* [`ReCount`](http://bowtie-bio.sourceforge.net/recount/)
-
-### Related publications
-
-#### `recount3`
-
-#### `recount2`
-
-#### `ReCount`
-
-## Related `recount3` websites
+## Related `recount3` websites {-}
 
 `recount3` is composed of several related software tools and websites. Here is the full list, with all of them referring to this website for their unified documentation.
 
@@ -52,17 +26,43 @@ The `ReCount` project has three main publications over the years with implementa
 * `monorail`: TODO
 * `megadepth`: TODO
 * `recount3`: R package [source](https://github.com/LieberInstitute/recount3), Bioconductor [landing page](https://bioconductor.org/packages/recount3), `pkgdown` documentation [website](https://LieberInstitute.github.io/recount3)
-* [`recount3-docs`]((https://github.com/LieberInstitute/recount3-docs): the source code for this documentation [website](https://LieberInstitute.github.io/recount3-docs).
+* [`recount3-docs`](https://github.com/LieberInstitute/recount3-docs): the source code for this documentation [website](https://LieberInstitute.github.io/recount3-docs).
 
 
-## Team members
+
+## How to cite `recount3` {-}
+
+Thank you for your continued support of the `ReCount` family of projects! We greatly appreciate you citing our work.
+
+```{r "citation"}
+print(citation("recount3")[2], bibtex = TRUE)
+```
+
+### Related projects {-}
+
+The `ReCount` project has three main publications over the years with implementation details that have been improved each time. Each phase of the project has had several companion publications that expanded the main resource in different directions. Please cite the appropriate expansions and results as you see relevant for your work.
+
+### Previous `ReCount` projects {-}
+
+* [`recount2`](https://jhubiostatistics.shinyapps.io/recount/)
+* [`ReCount`](http://bowtie-bio.sourceforge.net/recount/)
+
+### Related publications {-}
+
+#### `recount3` {-}
+
+#### `recount2` {-}
+
+#### `ReCount` {-}
+
+## Team members {-}
 
 * [Christopher Wilks](https://github.com/) (the star behind `recount3`!)
 * [Leonardo Collado Torres](https://github.com/lcolladotor) 
 * [Shijie Charles Zheng](https://github.com/)
 
 
-## Teams involved
+## Teams involved {-}
 
 * [Ben Langmead's lab at JHU Computer Science](http://www.langmead-lab.org/)
 * [Kasper Daniel Hansen's lab at JHBSPH Biostatistics Department](https://www.hansenlab.org/)
@@ -76,3 +76,23 @@ The `ReCount` project has three main publications over the years with implementa
 
 
 This book was last updated on `r Sys.time()`.
+
+## R session information {-}
+
+Details on the R version used for making this book. The source code is available at [`lcolladotor/bioc_team_ds`](https://github.com/lcolladotor/bioc_team_ds).
+
+```{r session_info_chunk, eval = FALSE}
+## Load the package at the top of your script
+library("sessioninfo")
+
+## Reproducibility information
+print('Reproducibility information:')
+Sys.time()
+proc.time()
+options(width = 120)
+session_info()
+```
+
+```{r session_info, echo = FALSE}
+<<session_info_chunk>>
+```
