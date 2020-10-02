@@ -2,3 +2,105 @@
 
 # Quality check fields
 
+We used a number of tools to collect potentially useful quality-control (QC) measures.  Specifically, we used `seqtk` [@seqtk], the `idxstats` subcommand of `samtools`, the output of `STAR`, our own `megadepth` tool, and `featureCounts`.  We examine each in turn, listing the specific QC measures calculated be each.
+
+Monorail runs the `seqtk fqchk` command on input FASTQ files to collect base-quality and base-composition summaries for all sequencing cycles.  We distill these into a few QC measures included with every summarized run in `recount3`. 
+
+1. **`min_len`**: minimum read length
+1. **`max_len`**: maximum read length
+1. **`avg_len`**: average read length
+1. **`#distinct_quality_values`**: number of different quality scores present in the sequence run's base qualities
+1. **`#bases`**: total number of bases across spots (not including both read mates if paired)
+1. **`%A`**: percent of bases that are A
+1. **`%C`**: percent of bases that are C
+1. **`%G`**: percent of bases that are G
+1. **`%T`**: percent of bases that are T
+1. **`%N`**: percent of bases that are N
+1. **`avgQ`**: weighted average over Phred quality scores present in the sequence run, where weights are the Phred quality values themselves
+1. **`errQ`**: negatively scaled log of the weighted average Phred quality scores present in the sequence run, where weights are the error probabilities associated with the Phred quality scores
+
+
+Monorail uses `STAR` to align RNA-seq reads in a spliced fashion to a reference genome, without using any annotation.  Files output by `STAR`, particularly the `Log.out` and `Log.final.out`, report a number of measures that can be used for QC.  We compile these into a number of QC measures included with every summarized run in recount3.  Note that some of these measures are reported separately for the two ends of a paired-end read.  We omit the second-end versions of these QC measures here for space reasons.
+
+From the `STAR` manual (version 2.7.2b):
+
+>> Log.final.out: summary mapping statistics after mapping job is complete, very useful for quality control. The statistics are calculated for each read (single- or paired-end) and then summed or averaged over all reads. Note that STAR counts a paired-end read as one read, (unlike the samtools flagstat/idxstats, which count each mate separately). Most of the information is collected about the UNIQUE mappers (unlike samtools flagstat/idxstats which does not separate unique or multi-mappers). Each splicing is counted in the numbers of splices, which would correspond to summing the counts in SJ.out.tab. The mismatch/indel error rates are calculated on a per base basis, i.e. as total number of mismatches/indels in all unique mappers divided by the total number of mapped bases.
+
+Some of the following definitions include text from the `STAR` manual/source code, reprinted here for convenience.  Please see the [`STAR` manual](https://github.com/alexdobin/STAR/tree/master/doc) for more in depth information.
+
+1. **`%_of_chimeric_reads`**: Number of chimeric reads divided by number of input reads
+1. **`%_of_reads_mapped_to_multiple_loci`**: Number of reads mapped to multiple loci divided by number of input reads
+1. **`%_of_reads_mapped_to_too_many_loci`**: Number of reads mapped to (> 10) loci divided by number of input reads
+1. **`%_of_reads_unmapped:_other`**: Reads are unmapped due to no acceptable seed/windows divided by number of input reads
+1. **`%_of_reads_unmapped:_too_many_mismatches`**: Number of reads where best alignment has more mismatches than max allowed number of mismatches divided by number of input reads
+1. **`%_of_reads_unmapped:_too_short`**: Number of reads where best alignment was shorter than min allowed mapped length divided by number of input reads
+1. **`all_mapped_reads`**: Total number of reads aligned
+1. **`average_input_read_length`**:  Average length of a read
+1. **`average_mapped_length`**: Average length of an alignment
+1. **`deletion_average_length`**: Average length of a genomic deletion, i.e. genomic gaps
+1. **`deletion_rate_per_base`**: Genomic deletions per mapped base
+1. **`insertion_average_length`**: Average length of a genomic insertion, i.e. read gaps
+1. **`insertion_rate_per_base`**: Genomics insertions per mapped base
+1. **`mapping_speed_million_of_reads_per_hour`**: How fast it was to align this sample
+1. **`mismatch_rate_per_base_%`**: Mismatches per mapped base
+1. **`number_of_chimeric_reads`**: Total number of reads which were fragmented on aligning, e.g. fusion potential reads
+1. **`number_of_input_reads`**: Total number of reads input to `STAR`
+1. **`number_of_reads_mapped_to_multiple_loci`**: Number of reads mapped to multiple loci
+1. **`number_of_reads_mapped_to_too_many_loci`**: Number of reads mapped to (> 10) loci
+1. **`number_of_reads_unmapped:_other`**: Number of reads left unmapped due to no acceptable seed/windows
+1. **`number_of_reads_unmapped:_too_many_mismatches`**: Number of reads where best alignment has more mismatches than max allowed number of mismatches
+1. **`number_of_reads_unmapped:_too_short`**: Number of reads where best alignment was shorter than min allowed mapped length
+1. **`number_of_splices:_at/ac`**: Number of canonical splices of AT-AC (and reverse)
+1. **`number_of_splices:_annotated_(sjdb)`**: Number of splices found that were also in the annotation database
+1. **`number_of_splices:_gc/ag`**: Number of canonical splices of GC-AG (and reverse)
+1. **`number_of_splices:_gt/ag`**: Number of canonical splices of GT-AG (and reverse)
+1. **`number_of_splices:_non-canonical`**: Number of non-canonical splices, anything not GT-AG, AT-AC, GC-AG, or their reverse complement
+1. **`number_of_splices:_total`**: Total number of splices
+1. **`uniquely_mapped_reads_%`**: Number of reads which mapped to a single locus divided by number of input reads
+1. **`uniquely_mapped_reads_number`**: Number of reads which mapped to a single locus
+
+
+Monorail runs the `samtools idxstats` on the BAM file output by `STAR` to collect statistics about how many reads aligned to each chromosome in the genome assembly.  This can be helpful in, for instance, confirming the sex of the individual sequenced based on alignments to sex chromosomes, or measuring effectiveness of ribosomal RNA depletion by considering the fraction of reads aligned to the mitochondrial genome.  We compile these into a number of QC measures included with every summarized run in recount3:
+
+
+1. **`aligned_reads%.chrm`**: Percent of reads aligning to the mitochondrial genome.
+1. **`aligned_reads%.chrx`**: Percent of reads aligning to chromosome X.
+1. **`aligned_reads%.chry`**: Precent of reads aligning to chromosome Y.
+
+
+Monorail runs our `megadepth` tool on the BAM files output by `STAR`.  The chief function is to convert BAM files to bigWig files that are then added to the recount3 archive.  As `megadepth` performs this conversion, it also summarizes the amount of sequencing coverage within the intervals of a provided BED file representing a gene annotation.  These quantifications can be useful for quality control, tell us, for example, what fraction of the coverage is within annotated genes. 
+
+Fragment length distribution is based on a special read filter only applied for this purpose to be compatible with CSAW's fragment counting approach [@csaw], paired reads in a passing fragment must not be secondary, supplementary, have conflicting read order, be unmapped or be mapped on more than one chromosome.  The `bc_` prefix here refers to the previous name of the Megadepth tool ^[Megadepth used to be called BamCount.].
+
+
+1. **`bc_auc.all_reads_all_bases`**: Area under coverage (total depth of coverage evaluated at all bases) for all alignments
+1. **`bc_auc.all_reads_annotated_bases`**: Area under coverage for all alignments, but only for bases in annotated exons
+1. **`bc_auc.unique_reads_all_bases`**: Area under coverage for uniquely aligned reads
+1. **`bc_auc.unique_reads_annotated_bases`**: Area under coverage for uniquely aligned reads, but only for bases in annotated exons
+1. **`bc_auc.all_%`**: `bc_auc.all_reads_annotated_bases` divided by `bc_auc.all_reads_all_bases`
+1. **`bc_auc.unique_%`**: `bc_auc.unique_reads_annotated_bases` divided by `bc_auc.unique_reads_all_bases`
+1. **`bc_frag.count`**: Total number of read fragments in BAM after filtering
+1. **`bc_frag.kallisto_count`**: Number of read fragments (< 1000) bp in length in BAM after filtering
+1. **`bc_frag.kallisto_mean_length`**: Mean length of read fragments (< 1000) bp in length in BAM after filtering
+1. **`bc_frag.mean_length`**: Mean length of all read fragments in BAM after filtering
+1. **`bc_frag.mode_length`**: Mode of the read fragment length of all fragments in BAM after filtering
+1. **`bc_frag.mode_length_count`**: Number of read fraqments with the `bc_frag.mode_length` in BAM after filtering
+
+
+
+Finally, Monorail runs `featureCounts` on the BAM files output by `STAR`.  This provides a `second opinion` on the quantifications produced by `megadepth`.  While we have not yet found compelling examples where the `megadepth` and `featureCounts` outputs disagree, we keep summaries of the `featureCounts` quantifications as potential QC measures.
+
+
+1. **`exon_fc.all_%`**: `exon_fc_count_all.assigned` divided by `all_mapped_reads` (from `STAR`)
+1. **`exon_fc.unique_%`**: `exon_fc_count_unique.assigned` divided by `uniquely_mapped_reads_number` (from `STAR`)
+1. **`exon_fc_count_all.total`**: Total number of fragments, including multi-mappers, input to `featureCounts`
+1. **`exon_fc_count_all.assigned`**: Number of fragments, including multi-mappers, assigned by `featureCounts` to an exon
+1. **`exon_fc_count_unique.total`**: Total number of uniquely mapping fragments input to `featureCounts`
+1. **`exon_fc_count_unique.assigned`**: Number of uniquely mapping fragments assigned by `featureCounts` to an exon
+1. **`gene_fc.all_%`**: `gene_fc_count_all.assigned` divided by `all_mapped_read`s (from `STAR`)
+1. **`gene_fc.unique_%`**: `gene_fc_count_unique.assigned` divided by `uniquely_mapped_reads_number` (from `STAR`)
+1. **`gene_fc_count_all.total`**: Total number of fragments, including multi-mappers, input to `featureCounts`
+1. **`gene_fc_count_all.assigned`**: Number of fragments, including multi-mappers, assigned by `featureCounts` to a gene
+1. **`gene_fc_count_unique.total`**: Total number of uniquely mapping fragments input to `featureCounts`
+1. **`gene_fc_count_unique.assigned`**: Number of uniquely mapping fragments assigned by `featureCounts` to a gene
+
