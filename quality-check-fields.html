@@ -192,7 +192,115 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="quality-check-fields" class="section level1">
 <h1><span class="header-section-number">5</span> Quality check fields</h1>
+<p>We used a number of tools to collect potentially useful quality-control (QC) measures. Specifically, we used <code>seqtk</code> <span class="citation">(Li, <a href="#ref-seqtk" role="doc-biblioref">n.d.</a>)</span>, the <code>idxstats</code> subcommand of <code>samtools</code>, the output of <code>STAR</code>, our own <code>megadepth</code> tool, and <code>featureCounts</code>. We examine each in turn, listing the specific QC measures calculated be each.</p>
+<p>Monorail runs the <code>seqtk fqchk</code> command on input FASTQ files to collect base-quality and base-composition summaries for all sequencing cycles. We distill these into a few QC measures included with every summarized run in <code>recount3</code>.</p>
+<ol style="list-style-type: decimal">
+<li><strong><code>min_len</code></strong>: minimum read length</li>
+<li><strong><code>max_len</code></strong>: maximum read length</li>
+<li><strong><code>avg_len</code></strong>: average read length</li>
+<li><strong><code>#distinct_quality_values</code></strong>: number of different quality scores present in the sequence run’s base qualities</li>
+<li><strong><code>#bases</code></strong>: total number of bases across spots (not including both read mates if paired)</li>
+<li><strong><code>%A</code></strong>: percent of bases that are A</li>
+<li><strong><code>%C</code></strong>: percent of bases that are C</li>
+<li><strong><code>%G</code></strong>: percent of bases that are G</li>
+<li><strong><code>%T</code></strong>: percent of bases that are T</li>
+<li><strong><code>%N</code></strong>: percent of bases that are N</li>
+<li><strong><code>avgQ</code></strong>: weighted average over Phred quality scores present in the sequence run, where weights are the Phred quality values themselves</li>
+<li><strong><code>errQ</code></strong>: negatively scaled log of the weighted average Phred quality scores present in the sequence run, where weights are the error probabilities associated with the Phred quality scores</li>
+</ol>
+<p>Monorail uses <code>STAR</code> to align RNA-seq reads in a spliced fashion to a reference genome, without using any annotation. Files output by <code>STAR</code>, particularly the <code>Log.out</code> and <code>Log.final.out</code>, report a number of measures that can be used for QC. We compile these into a number of QC measures included with every summarized run in recount3. Note that some of these measures are reported separately for the two ends of a paired-end read. We omit the second-end versions of these QC measures here for space reasons.</p>
+<p>From the <code>STAR</code> manual (version 2.7.2b):</p>
+<blockquote>
+<blockquote>
+<p>Log.final.out: summary mapping statistics after mapping job is complete, very useful for quality control. The statistics are calculated for each read (single- or paired-end) and then summed or averaged over all reads. Note that STAR counts a paired-end read as one read, (unlike the samtools flagstat/idxstats, which count each mate separately). Most of the information is collected about the UNIQUE mappers (unlike samtools flagstat/idxstats which does not separate unique or multi-mappers). Each splicing is counted in the numbers of splices, which would correspond to summing the counts in SJ.out.tab. The mismatch/indel error rates are calculated on a per base basis, i.e. as total number of mismatches/indels in all unique mappers divided by the total number of mapped bases.</p>
+</blockquote>
+</blockquote>
+<p>Some of the following definitions include text from the <code>STAR</code> manual/source code, reprinted here for convenience. Please see the <a href="https://github.com/alexdobin/STAR/tree/master/doc"><code>STAR</code> manual</a> for more in depth information.</p>
+<ol style="list-style-type: decimal">
+<li><strong><code>%_of_chimeric_reads</code></strong>: Number of chimeric reads divided by number of input reads</li>
+<li><strong><code>%_of_reads_mapped_to_multiple_loci</code></strong>: Number of reads mapped to multiple loci divided by number of input reads</li>
+<li><strong><code>%_of_reads_mapped_to_too_many_loci</code></strong>: Number of reads mapped to (&gt; 10) loci divided by number of input reads</li>
+<li><strong><code>%_of_reads_unmapped:_other</code></strong>: Reads are unmapped due to no acceptable seed/windows divided by number of input reads</li>
+<li><strong><code>%_of_reads_unmapped:_too_many_mismatches</code></strong>: Number of reads where best alignment has more mismatches than max allowed number of mismatches divided by number of input reads</li>
+<li><strong><code>%_of_reads_unmapped:_too_short</code></strong>: Number of reads where best alignment was shorter than min allowed mapped length divided by number of input reads</li>
+<li><strong><code>all_mapped_reads</code></strong>: Total number of reads aligned</li>
+<li><strong><code>average_input_read_length</code></strong>: Average length of a read</li>
+<li><strong><code>average_mapped_length</code></strong>: Average length of an alignment</li>
+<li><strong><code>deletion_average_length</code></strong>: Average length of a genomic deletion, i.e. genomic gaps</li>
+<li><strong><code>deletion_rate_per_base</code></strong>: Genomic deletions per mapped base</li>
+<li><strong><code>insertion_average_length</code></strong>: Average length of a genomic insertion, i.e. read gaps</li>
+<li><strong><code>insertion_rate_per_base</code></strong>: Genomics insertions per mapped base</li>
+<li><strong><code>mapping_speed_million_of_reads_per_hour</code></strong>: How fast it was to align this sample</li>
+<li><strong><code>mismatch_rate_per_base_%</code></strong>: Mismatches per mapped base</li>
+<li><strong><code>number_of_chimeric_reads</code></strong>: Total number of reads which were fragmented on aligning, e.g. fusion potential reads</li>
+<li><strong><code>number_of_input_reads</code></strong>: Total number of reads input to <code>STAR</code></li>
+<li><strong><code>number_of_reads_mapped_to_multiple_loci</code></strong>: Number of reads mapped to multiple loci</li>
+<li><strong><code>number_of_reads_mapped_to_too_many_loci</code></strong>: Number of reads mapped to (&gt; 10) loci</li>
+<li><strong><code>number_of_reads_unmapped:_other</code></strong>: Number of reads left unmapped due to no acceptable seed/windows</li>
+<li><strong><code>number_of_reads_unmapped:_too_many_mismatches</code></strong>: Number of reads where best alignment has more mismatches than max allowed number of mismatches</li>
+<li><strong><code>number_of_reads_unmapped:_too_short</code></strong>: Number of reads where best alignment was shorter than min allowed mapped length</li>
+<li><strong><code>number_of_splices:_at/ac</code></strong>: Number of canonical splices of AT-AC (and reverse)</li>
+<li><strong><code>number_of_splices:_annotated_(sjdb)</code></strong>: Number of splices found that were also in the annotation database</li>
+<li><strong><code>number_of_splices:_gc/ag</code></strong>: Number of canonical splices of GC-AG (and reverse)</li>
+<li><strong><code>number_of_splices:_gt/ag</code></strong>: Number of canonical splices of GT-AG (and reverse)</li>
+<li><strong><code>number_of_splices:_non-canonical</code></strong>: Number of non-canonical splices, anything not GT-AG, AT-AC, GC-AG, or their reverse complement</li>
+<li><strong><code>number_of_splices:_total</code></strong>: Total number of splices</li>
+<li><strong><code>uniquely_mapped_reads_%</code></strong>: Number of reads which mapped to a single locus divided by number of input reads</li>
+<li><strong><code>uniquely_mapped_reads_number</code></strong>: Number of reads which mapped to a single locus</li>
+</ol>
+<p>Monorail runs the <code>samtools idxstats</code> on the BAM file output by <code>STAR</code> to collect statistics about how many reads aligned to each chromosome in the genome assembly. This can be helpful in, for instance, confirming the sex of the individual sequenced based on alignments to sex chromosomes, or measuring effectiveness of ribosomal RNA depletion by considering the fraction of reads aligned to the mitochondrial genome. We compile these into a number of QC measures included with every summarized run in recount3:</p>
+<ol style="list-style-type: decimal">
+<li><strong><code>aligned_reads%.chrm</code></strong>: Percent of reads aligning to the mitochondrial genome.</li>
+<li><strong><code>aligned_reads%.chrx</code></strong>: Percent of reads aligning to chromosome X.</li>
+<li><strong><code>aligned_reads%.chry</code></strong>: Precent of reads aligning to chromosome Y.</li>
+</ol>
+<p>Monorail runs our <code>megadepth</code> tool on the BAM files output by <code>STAR</code>. The chief function is to convert BAM files to bigWig files that are then added to the recount3 archive. As <code>megadepth</code> performs this conversion, it also summarizes the amount of sequencing coverage within the intervals of a provided BED file representing a gene annotation. These quantifications can be useful for quality control, tell us, for example, what fraction of the coverage is within annotated genes.</p>
+<p>Fragment length distribution is based on a special read filter only applied for this purpose to be compatible with CSAW’s fragment counting approach <span class="citation">(Lun and Smyth <a href="#ref-csaw" role="doc-biblioref">2016</a>)</span>, paired reads in a passing fragment must not be secondary, supplementary, have conflicting read order, be unmapped or be mapped on more than one chromosome. The <code>bc_</code> prefix here refers to the previous name of the Megadepth tool.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<ol style="list-style-type: decimal">
+<li><strong><code>bc_auc.all_reads_all_bases</code></strong>: Area under coverage (total depth of coverage evaluated at all bases) for all alignments</li>
+<li><strong><code>bc_auc.all_reads_annotated_bases</code></strong>: Area under coverage for all alignments, but only for bases in annotated exons</li>
+<li><strong><code>bc_auc.unique_reads_all_bases</code></strong>: Area under coverage for uniquely aligned reads</li>
+<li><strong><code>bc_auc.unique_reads_annotated_bases</code></strong>: Area under coverage for uniquely aligned reads, but only for bases in annotated exons</li>
+<li><strong><code>bc_auc.all_%</code></strong>: <code>bc_auc.all_reads_annotated_bases</code> divided by <code>bc_auc.all_reads_all_bases</code></li>
+<li><strong><code>bc_auc.unique_%</code></strong>: <code>bc_auc.unique_reads_annotated_bases</code> divided by <code>bc_auc.unique_reads_all_bases</code></li>
+<li><strong><code>bc_frag.count</code></strong>: Total number of read fragments in BAM after filtering</li>
+<li><strong><code>bc_frag.kallisto_count</code></strong>: Number of read fragments (&lt; 1000) bp in length in BAM after filtering</li>
+<li><strong><code>bc_frag.kallisto_mean_length</code></strong>: Mean length of read fragments (&lt; 1000) bp in length in BAM after filtering</li>
+<li><strong><code>bc_frag.mean_length</code></strong>: Mean length of all read fragments in BAM after filtering</li>
+<li><strong><code>bc_frag.mode_length</code></strong>: Mode of the read fragment length of all fragments in BAM after filtering</li>
+<li><strong><code>bc_frag.mode_length_count</code></strong>: Number of read fraqments with the <code>bc_frag.mode_length</code> in BAM after filtering</li>
+</ol>
+<p>Finally, Monorail runs <code>featureCounts</code> on the BAM files output by <code>STAR</code>. This provides a <code>second opinion</code> on the quantifications produced by <code>megadepth</code>. While we have not yet found compelling examples where the <code>megadepth</code> and <code>featureCounts</code> outputs disagree, we keep summaries of the <code>featureCounts</code> quantifications as potential QC measures.</p>
+<ol style="list-style-type: decimal">
+<li><strong><code>exon_fc.all_%</code></strong>: <code>exon_fc_count_all.assigned</code> divided by <code>all_mapped_reads</code> (from <code>STAR</code>)</li>
+<li><strong><code>exon_fc.unique_%</code></strong>: <code>exon_fc_count_unique.assigned</code> divided by <code>uniquely_mapped_reads_number</code> (from <code>STAR</code>)</li>
+<li><strong><code>exon_fc_count_all.total</code></strong>: Total number of fragments, including multi-mappers, input to <code>featureCounts</code></li>
+<li><strong><code>exon_fc_count_all.assigned</code></strong>: Number of fragments, including multi-mappers, assigned by <code>featureCounts</code> to an exon</li>
+<li><strong><code>exon_fc_count_unique.total</code></strong>: Total number of uniquely mapping fragments input to <code>featureCounts</code></li>
+<li><strong><code>exon_fc_count_unique.assigned</code></strong>: Number of uniquely mapping fragments assigned by <code>featureCounts</code> to an exon</li>
+<li><strong><code>gene_fc.all_%</code></strong>: <code>gene_fc_count_all.assigned</code> divided by <code>all_mapped_read</code>s (from <code>STAR</code>)</li>
+<li><strong><code>gene_fc.unique_%</code></strong>: <code>gene_fc_count_unique.assigned</code> divided by <code>uniquely_mapped_reads_number</code> (from <code>STAR</code>)</li>
+<li><strong><code>gene_fc_count_all.total</code></strong>: Total number of fragments, including multi-mappers, input to <code>featureCounts</code></li>
+<li><strong><code>gene_fc_count_all.assigned</code></strong>: Number of fragments, including multi-mappers, assigned by <code>featureCounts</code> to a gene</li>
+<li><strong><code>gene_fc_count_unique.total</code></strong>: Total number of uniquely mapping fragments input to <code>featureCounts</code></li>
+<li><strong><code>gene_fc_count_unique.assigned</code></strong>: Number of uniquely mapping fragments assigned by <code>featureCounts</code> to a gene</li>
+</ol>
 
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-seqtk">
+<p>Li, H. n.d. <em>Seqtk: Toolkit for Processing Sequences in Fasta/Q Formats</em>. <a href="https://github.com/lh3/seqtk">https://github.com/lh3/seqtk</a>.</p>
+</div>
+<div id="ref-csaw">
+<p>Lun, A. T., and G. K. Smyth. 2016. “csaw: a Bioconductor package for differential binding analysis of ChIP-seq data using sliding windows.” <em>Nucleic Acids Res.</em> 44 (5): e45.</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>Megadepth used to be called BamCount.<a href="quality-check-fields.html#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
