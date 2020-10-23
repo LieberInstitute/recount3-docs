@@ -2,4 +2,113 @@
 
 ## recount3
 
+_The following information is taken from the [`recount3`](https://bioconductor.org/packages/recount3) documentation._
+
+After installing `r Biocpkg('recount3')`, we need to load the package, which will automatically load the required dependencies.
+
+```{r 'start', message=FALSE}
+## Load recount3 R package
+library("recount3")
+```
+
+If you have identified a **study** of interest and want to access the gene level expression data, use `create_rse()` as shown below. `create_rse()` has arguments that will allow you to specify the  **annotation** of interest for the given organism, and whether you want to download **gene**, **exon** or **exon-exon junction** expression data. 
+
+
+```{r 'quick_example'}
+## Find all available human projects
+human_projects <- available_projects()
+
+## Find the project you are interested in,
+## here we use SRP009615 as an example
+proj_info <- subset(
+    human_projects,
+    project == "SRP009615" & project_type == "data_sources"
+)
+
+## Create a RangedSummarizedExperiment (RSE) object at the gene level
+rse_gene_SRP009615 <- create_rse(proj_info)
+
+## Explore that RSE object
+rse_gene_SRP009615
+```
+
+You can also interactively choose your study of interest
+
+```{r "interactive_display", eval = FALSE}
+## Note that you can interactively explore the available projects
+proj_info_interactive <- interactiveDisplayBase::display(human_projects)
+
+## Select a single row, then hit "send". The following code checks this.
+stopifnot(nrow(proj_info_interactive) == 1)
+
+## Then create the RSE object
+rse_gene_interactive <- create_rse(proj_info_interactive)
+```
+
+Once you have a RSE file, you can use `transform_counts()` to transform the raw coverage counts.
+
+
+```{r "tranform_counts"}
+## Once you have your RSE object, you can transform the raw coverage
+## base-pair coverage counts using transform_counts().
+## For RPKM, TPM or read outputs, check the details in transform_counts().
+assay(rse_gene_SRP009615, "counts") <- transform_counts(rse_gene_SRP009615)
+```
+
+Now you are ready to continue with downstream analysis software.
+
+
+`r Biocpkg('recount3')` also supports accessing the BigWig raw coverage files as well as specific study or collection sample **metadata**. Please continue to the [users guide](https://bioconductor.org/packages/recount3) for more detailed information.
+
 ## snapcount
+
+## megadepth
+
+_The following information is taken from the [`megadepth`](https://bioconductor.org/packages/megadepth) documentation._
+
+To get started, we need to load the `r Biocpkg("megadepth")` package into our R session. This will load all the required dependencies.
+
+```{r "start_megadepth", message=FALSE}
+library("megadepth")
+```
+
+Once we have the R package loaded, we need to install the [Megadepth](https://github.com/ChristopherWilks/megadepth) software. We can do so with `install_megadepth()`, which downloads a binary for your OS (Linux, Windows or macOS) ^[Please check [Megadepth](https://github.com/ChristopherWilks/megadepth) for instructions on how to compile the software from source if the binary version doesn't work for you.]. We can then use with an example BigWig file to compute the coverage at a set of regions.
+
+```{r "install_software"}
+## Install the latest version of Megadepth
+install_megadepth(force = TRUE)
+```
+
+Next, we might want to use `r Biocpkg("megadepth")` to quantify the coverage at a set of regions of the genome of interest to us. Here we will use two example files that are include in the package for illustration and testing purposes. One of them is a [bigWig file](https://genome.ucsc.edu/goldenPath/help/bigWig.html) that contains the base-pair coverage information for a sample of interest and the second one is [BED file](https://genome.ucsc.edu/FAQ/FAQformat.html#format1) which contains the genomic region coordinates of interest. So we first locate them.
+
+```{r "locate_example_bw"}
+## Next, we locate the example BigWig and annotation files
+example_bw <- system.file("tests", "test.bam.all.bw",
+    package = "megadepth", mustWork = TRUE
+)
+annotation_file <- system.file("tests", "testbw2.bed",
+    package = "megadepth", mustWork = TRUE
+)
+
+## Where are they?
+example_bw
+annotation_file
+```
+
+Once we have located the example files we can proceed to calculating the base-pair coverage for our genomic regions of interest. There are several ways to do this with `r Biocpkg("megadepth")`, but here we use the user-friendly function `get_coverage()`. This function will perform a given operation **op** on the bigWig file for a given set of regions of interest (_annotation_). One of those operations is to compute the mean base-pair coverage for each input region. This is what we'll do with our example bigWig file.
+
+```{r example}
+## We can then use megadepth to compute the coverage
+bw_cov <- get_coverage(
+    example_bw,
+    op = "mean",
+    annotation = annotation_file
+)
+bw_cov
+```
+
+`get_coverage()` returns an object that is familiar to `r Biocpkg("GenomicRanges")` users, that is, a `GRanges` object that can be used with other Bioconductor software packages.
+
+This example is just the tip of the iceberg, as [Megadepth](https://github.com/ChristopherWilks/megadepth) and thus `r Biocpkg("megadepth")` can do a lot of useful processing operations on BAM and bigWig files.
+
+Please continue to the [users guide](https://bioconductor.org/packages/megadepth) for more detailed information.
