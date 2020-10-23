@@ -202,43 +202,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb9-2"><a href="quick-access.html#cb9-2"></a><span class="kw">library</span>(<span class="st">&quot;recount3&quot;</span>)</span></code></pre></div>
 <p>If you have identified a <strong>study</strong> of interest and want to access the gene level expression data, use <code>create_rse()</code> as shown below. <code>create_rse()</code> has arguments that will allow you to specify the <strong>annotation</strong> of interest for the given organism, and whether you want to download <strong>gene</strong>, <strong>exon</strong> or <strong>exon-exon junction</strong> expression data.</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="quick-access.html#cb10-1"></a><span class="co">## Find all available human projects</span></span>
-<span id="cb10-2"><a href="quick-access.html#cb10-2"></a>human_projects &lt;-<span class="st"> </span><span class="kw">available_projects</span>()</span></code></pre></div>
-<pre><code>## using temporary cache /tmp/Rtmp0OaSnW/BiocFileCache</code></pre>
-<pre><code>## 2020-10-23 21:16:14 caching file sra.recount_project.MD.gz.</code></pre>
-<pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/sra.recount_project.MD.gz&#39;</code></pre>
-<pre><code>## 2020-10-23 21:16:14 caching file gtex.recount_project.MD.gz.</code></pre>
-<pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/gtex/metadata/gtex.recount_project.MD.gz&#39;</code></pre>
-<pre><code>## 2020-10-23 21:16:15 caching file tcga.recount_project.MD.gz.</code></pre>
-<pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/tcga/metadata/tcga.recount_project.MD.gz&#39;</code></pre>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="quick-access.html#cb18-1"></a><span class="co">## Find the project you are interested in,</span></span>
-<span id="cb18-2"><a href="quick-access.html#cb18-2"></a><span class="co">## here we use SRP009615 as an example</span></span>
-<span id="cb18-3"><a href="quick-access.html#cb18-3"></a>proj_info &lt;-<span class="st"> </span><span class="kw">subset</span>(</span>
-<span id="cb18-4"><a href="quick-access.html#cb18-4"></a>    human_projects,</span>
-<span id="cb18-5"><a href="quick-access.html#cb18-5"></a>    project <span class="op">==</span><span class="st"> &quot;SRP009615&quot;</span> <span class="op">&amp;</span><span class="st"> </span>project_type <span class="op">==</span><span class="st"> &quot;data_sources&quot;</span></span>
-<span id="cb18-6"><a href="quick-access.html#cb18-6"></a>)</span>
-<span id="cb18-7"><a href="quick-access.html#cb18-7"></a></span>
-<span id="cb18-8"><a href="quick-access.html#cb18-8"></a><span class="co">## Create a RangedSummarizedExperiment (RSE) object at the gene level</span></span>
-<span id="cb18-9"><a href="quick-access.html#cb18-9"></a>rse_gene_SRP009615 &lt;-<span class="st"> </span><span class="kw">create_rse</span>(proj_info)</span></code></pre></div>
-<pre><code>## 2020-10-23 21:16:20 downloading and reading the metadata.</code></pre>
-<pre><code>## 2020-10-23 21:16:20 caching file sra.sra.SRP009615.MD.gz.</code></pre>
-<pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/15/SRP009615/sra.sra.SRP009615.MD.gz&#39;</code></pre>
-<pre><code>## 2020-10-23 21:16:21 caching file sra.recount_project.SRP009615.MD.gz.</code></pre>
-<pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/15/SRP009615/sra.recount_project.SRP009615.MD.gz&#39;</code></pre>
-<pre><code>## 2020-10-23 21:16:21 caching file sra.recount_qc.SRP009615.MD.gz.</code></pre>
-<pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/15/SRP009615/sra.recount_qc.SRP009615.MD.gz&#39;</code></pre>
-<pre><code>## 2020-10-23 21:16:22 caching file sra.recount_seq_qc.SRP009615.MD.gz.</code></pre>
-<pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/15/SRP009615/sra.recount_seq_qc.SRP009615.MD.gz&#39;</code></pre>
-<pre><code>## 2020-10-23 21:16:22 caching file sra.recount_pred.SRP009615.MD.gz.</code></pre>
-<pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/15/SRP009615/sra.recount_pred.SRP009615.MD.gz&#39;</code></pre>
-<pre><code>## 2020-10-23 21:16:22 downloading and reading the feature information.</code></pre>
-<pre><code>## 2020-10-23 21:16:22 caching file human.gene_sums.G026.gtf.gz.</code></pre>
-<pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/annotations/gene_sums/human.gene_sums.G026.gtf.gz&#39;</code></pre>
-<pre><code>## 2020-10-23 21:16:23 downloading and reading the counts: 12 samples across 63856 features.</code></pre>
-<pre><code>## 2020-10-23 21:16:24 caching file sra.gene_sums.SRP009615.G026.gz.</code></pre>
-<pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/15/SRP009615/sra.gene_sums.SRP009615.G026.gz&#39;</code></pre>
-<pre><code>## 2020-10-23 21:16:24 construcing the RangedSummarizedExperiment (rse) object.</code></pre>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="quick-access.html#cb37-1"></a><span class="co">## Explore that RSE object</span></span>
-<span id="cb37-2"><a href="quick-access.html#cb37-2"></a>rse_gene_SRP009615</span></code></pre></div>
+<span id="cb10-2"><a href="quick-access.html#cb10-2"></a>human_projects &lt;-<span class="st"> </span><span class="kw">available_projects</span>()</span>
+<span id="cb10-3"><a href="quick-access.html#cb10-3"></a></span>
+<span id="cb10-4"><a href="quick-access.html#cb10-4"></a><span class="co">## Find the project you are interested in,</span></span>
+<span id="cb10-5"><a href="quick-access.html#cb10-5"></a><span class="co">## here we use SRP009615 as an example</span></span>
+<span id="cb10-6"><a href="quick-access.html#cb10-6"></a>proj_info &lt;-<span class="st"> </span><span class="kw">subset</span>(</span>
+<span id="cb10-7"><a href="quick-access.html#cb10-7"></a>    human_projects,</span>
+<span id="cb10-8"><a href="quick-access.html#cb10-8"></a>    project <span class="op">==</span><span class="st"> &quot;SRP009615&quot;</span> <span class="op">&amp;</span><span class="st"> </span>project_type <span class="op">==</span><span class="st"> &quot;data_sources&quot;</span></span>
+<span id="cb10-9"><a href="quick-access.html#cb10-9"></a>)</span>
+<span id="cb10-10"><a href="quick-access.html#cb10-10"></a></span>
+<span id="cb10-11"><a href="quick-access.html#cb10-11"></a><span class="co">## Create a RangedSummarizedExperiment (RSE) object at the gene level</span></span>
+<span id="cb10-12"><a href="quick-access.html#cb10-12"></a>rse_gene_SRP009615 &lt;-<span class="st"> </span><span class="kw">create_rse</span>(proj_info)</span>
+<span id="cb10-13"><a href="quick-access.html#cb10-13"></a></span>
+<span id="cb10-14"><a href="quick-access.html#cb10-14"></a><span class="co">## Explore that RSE object</span></span>
+<span id="cb10-15"><a href="quick-access.html#cb10-15"></a>rse_gene_SRP009615</span></code></pre></div>
 <pre><code>## class: RangedSummarizedExperiment 
 ## dim: 63856 12 
 ## metadata(8): time_created recount3_version ... annotation recount3_url
@@ -248,19 +225,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## colnames(12): SRR387777 SRR387778 ... SRR389077 SRR389078
 ## colData names(175): rail_id external_id ... recount_pred.curated.cell_line BigWigURL</code></pre>
 <p>You can also interactively choose your study of interest</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="quick-access.html#cb39-1"></a><span class="co">## Note that you can interactively explore the available projects</span></span>
-<span id="cb39-2"><a href="quick-access.html#cb39-2"></a>proj_info_interactive &lt;-<span class="st"> </span>interactiveDisplayBase<span class="op">::</span><span class="kw">display</span>(human_projects)</span>
-<span id="cb39-3"><a href="quick-access.html#cb39-3"></a></span>
-<span id="cb39-4"><a href="quick-access.html#cb39-4"></a><span class="co">## Select a single row, then hit &quot;send&quot;. The following code checks this.</span></span>
-<span id="cb39-5"><a href="quick-access.html#cb39-5"></a><span class="kw">stopifnot</span>(<span class="kw">nrow</span>(proj_info_interactive) <span class="op">==</span><span class="st"> </span><span class="dv">1</span>)</span>
-<span id="cb39-6"><a href="quick-access.html#cb39-6"></a></span>
-<span id="cb39-7"><a href="quick-access.html#cb39-7"></a><span class="co">## Then create the RSE object</span></span>
-<span id="cb39-8"><a href="quick-access.html#cb39-8"></a>rse_gene_interactive &lt;-<span class="st"> </span><span class="kw">create_rse</span>(proj_info_interactive)</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="quick-access.html#cb12-1"></a><span class="co">## Note that you can interactively explore the available projects</span></span>
+<span id="cb12-2"><a href="quick-access.html#cb12-2"></a>proj_info_interactive &lt;-<span class="st"> </span>interactiveDisplayBase<span class="op">::</span><span class="kw">display</span>(human_projects)</span>
+<span id="cb12-3"><a href="quick-access.html#cb12-3"></a></span>
+<span id="cb12-4"><a href="quick-access.html#cb12-4"></a><span class="co">## Select a single row, then hit &quot;send&quot;. The following code checks this.</span></span>
+<span id="cb12-5"><a href="quick-access.html#cb12-5"></a><span class="kw">stopifnot</span>(<span class="kw">nrow</span>(proj_info_interactive) <span class="op">==</span><span class="st"> </span><span class="dv">1</span>)</span>
+<span id="cb12-6"><a href="quick-access.html#cb12-6"></a></span>
+<span id="cb12-7"><a href="quick-access.html#cb12-7"></a><span class="co">## Then create the RSE object</span></span>
+<span id="cb12-8"><a href="quick-access.html#cb12-8"></a>rse_gene_interactive &lt;-<span class="st"> </span><span class="kw">create_rse</span>(proj_info_interactive)</span></code></pre></div>
 <p>Once you have a RSE file, you can use <code>transform_counts()</code> to transform the raw coverage counts.</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="quick-access.html#cb40-1"></a><span class="co">## Once you have your RSE object, you can transform the raw coverage</span></span>
-<span id="cb40-2"><a href="quick-access.html#cb40-2"></a><span class="co">## base-pair coverage counts using transform_counts().</span></span>
-<span id="cb40-3"><a href="quick-access.html#cb40-3"></a><span class="co">## For RPKM, TPM or read outputs, check the details in transform_counts().</span></span>
-<span id="cb40-4"><a href="quick-access.html#cb40-4"></a><span class="kw">assay</span>(rse_gene_SRP009615, <span class="st">&quot;counts&quot;</span>) &lt;-<span class="st"> </span><span class="kw">transform_counts</span>(rse_gene_SRP009615)</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="quick-access.html#cb13-1"></a><span class="co">## Once you have your RSE object, you can transform the raw coverage</span></span>
+<span id="cb13-2"><a href="quick-access.html#cb13-2"></a><span class="co">## base-pair coverage counts using transform_counts().</span></span>
+<span id="cb13-3"><a href="quick-access.html#cb13-3"></a><span class="co">## For RPKM, TPM or read outputs, check the details in transform_counts().</span></span>
+<span id="cb13-4"><a href="quick-access.html#cb13-4"></a><span class="kw">assay</span>(rse_gene_SRP009615, <span class="st">&quot;counts&quot;</span>) &lt;-<span class="st"> </span><span class="kw">transform_counts</span>(rse_gene_SRP009615)</span></code></pre></div>
 <p>Now you are ready to continue with downstream analysis software.</p>
 <p><em><a href="https://bioconductor.org/packages/3.12/recount3">recount3</a></em> also supports accessing the BigWig raw coverage files as well as specific study or collection sample <strong>metadata</strong>. Please continue to the <a href="https://bioconductor.org/packages/recount3">users guide</a> for more detailed information.</p>
 </div>
@@ -271,34 +248,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">2.3</span> megadepth</h2>
 <p><em>The following information is taken from the <a href="https://bioconductor.org/packages/megadepth"><code>megadepth</code></a> documentation.</em></p>
 <p>To get started, we need to load the <em><a href="https://bioconductor.org/packages/3.12/megadepth">megadepth</a></em> package into our R session. This will load all the required dependencies.</p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="quick-access.html#cb41-1"></a><span class="kw">library</span>(<span class="st">&quot;megadepth&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="quick-access.html#cb14-1"></a><span class="kw">library</span>(<span class="st">&quot;megadepth&quot;</span>)</span></code></pre></div>
 <p>Once we have the R package loaded, we need to install the <a href="https://github.com/ChristopherWilks/megadepth">Megadepth</a> software. We can do so with <code>install_megadepth()</code>, which downloads a binary for your OS (Linux, Windows or macOS).<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> We can then use with an example BigWig file to compute the coverage at a set of regions.</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="quick-access.html#cb42-1"></a><span class="co">## Install the latest version of Megadepth</span></span>
-<span id="cb42-2"><a href="quick-access.html#cb42-2"></a><span class="kw">install_megadepth</span>(<span class="dt">force =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="quick-access.html#cb15-1"></a><span class="co">## Install the latest version of Megadepth</span></span>
+<span id="cb15-2"><a href="quick-access.html#cb15-2"></a><span class="kw">install_megadepth</span>(<span class="dt">force =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
 <pre><code>## The latest megadepth version is 1.0.7</code></pre>
 <pre><code>## megadepth has been installed to /github/home/bin</code></pre>
 <p>Next, we might want to use <em><a href="https://bioconductor.org/packages/3.12/megadepth">megadepth</a></em> to quantify the coverage at a set of regions of the genome of interest to us. Here we will use two example files that are include in the package for illustration and testing purposes. One of them is a <a href="https://genome.ucsc.edu/goldenPath/help/bigWig.html">bigWig file</a> that contains the base-pair coverage information for a sample of interest and the second one is <a href="https://genome.ucsc.edu/FAQ/FAQformat.html#format1">BED file</a> which contains the genomic region coordinates of interest. So we first locate them.</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="quick-access.html#cb45-1"></a><span class="co">## Next, we locate the example BigWig and annotation files</span></span>
-<span id="cb45-2"><a href="quick-access.html#cb45-2"></a>example_bw &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;tests&quot;</span>, <span class="st">&quot;test.bam.all.bw&quot;</span>,</span>
-<span id="cb45-3"><a href="quick-access.html#cb45-3"></a>    <span class="dt">package =</span> <span class="st">&quot;megadepth&quot;</span>, <span class="dt">mustWork =</span> <span class="ot">TRUE</span></span>
-<span id="cb45-4"><a href="quick-access.html#cb45-4"></a>)</span>
-<span id="cb45-5"><a href="quick-access.html#cb45-5"></a>annotation_file &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;tests&quot;</span>, <span class="st">&quot;testbw2.bed&quot;</span>,</span>
-<span id="cb45-6"><a href="quick-access.html#cb45-6"></a>    <span class="dt">package =</span> <span class="st">&quot;megadepth&quot;</span>, <span class="dt">mustWork =</span> <span class="ot">TRUE</span></span>
-<span id="cb45-7"><a href="quick-access.html#cb45-7"></a>)</span>
-<span id="cb45-8"><a href="quick-access.html#cb45-8"></a></span>
-<span id="cb45-9"><a href="quick-access.html#cb45-9"></a><span class="co">## Where are they?</span></span>
-<span id="cb45-10"><a href="quick-access.html#cb45-10"></a>example_bw</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="quick-access.html#cb18-1"></a><span class="co">## Next, we locate the example BigWig and annotation files</span></span>
+<span id="cb18-2"><a href="quick-access.html#cb18-2"></a>example_bw &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;tests&quot;</span>, <span class="st">&quot;test.bam.all.bw&quot;</span>,</span>
+<span id="cb18-3"><a href="quick-access.html#cb18-3"></a>    <span class="dt">package =</span> <span class="st">&quot;megadepth&quot;</span>, <span class="dt">mustWork =</span> <span class="ot">TRUE</span></span>
+<span id="cb18-4"><a href="quick-access.html#cb18-4"></a>)</span>
+<span id="cb18-5"><a href="quick-access.html#cb18-5"></a>annotation_file &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;tests&quot;</span>, <span class="st">&quot;testbw2.bed&quot;</span>,</span>
+<span id="cb18-6"><a href="quick-access.html#cb18-6"></a>    <span class="dt">package =</span> <span class="st">&quot;megadepth&quot;</span>, <span class="dt">mustWork =</span> <span class="ot">TRUE</span></span>
+<span id="cb18-7"><a href="quick-access.html#cb18-7"></a>)</span>
+<span id="cb18-8"><a href="quick-access.html#cb18-8"></a></span>
+<span id="cb18-9"><a href="quick-access.html#cb18-9"></a><span class="co">## Where are they?</span></span>
+<span id="cb18-10"><a href="quick-access.html#cb18-10"></a>example_bw</span></code></pre></div>
 <pre><code>## [1] &quot;/usr/local/lib/R/host-site-library/megadepth/tests/test.bam.all.bw&quot;</code></pre>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="quick-access.html#cb47-1"></a>annotation_file</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="quick-access.html#cb20-1"></a>annotation_file</span></code></pre></div>
 <pre><code>## [1] &quot;/usr/local/lib/R/host-site-library/megadepth/tests/testbw2.bed&quot;</code></pre>
 <p>Once we have located the example files we can proceed to calculating the base-pair coverage for our genomic regions of interest. There are several ways to do this with <em><a href="https://bioconductor.org/packages/3.12/megadepth">megadepth</a></em>, but here we use the user-friendly function <code>get_coverage()</code>. This function will perform a given operation <strong>op</strong> on the bigWig file for a given set of regions of interest (<em>annotation</em>). One of those operations is to compute the mean base-pair coverage for each input region. This is what we’ll do with our example bigWig file.</p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="quick-access.html#cb49-1"></a><span class="co">## We can then use megadepth to compute the coverage</span></span>
-<span id="cb49-2"><a href="quick-access.html#cb49-2"></a>bw_cov &lt;-<span class="st"> </span><span class="kw">get_coverage</span>(</span>
-<span id="cb49-3"><a href="quick-access.html#cb49-3"></a>    example_bw,</span>
-<span id="cb49-4"><a href="quick-access.html#cb49-4"></a>    <span class="dt">op =</span> <span class="st">&quot;mean&quot;</span>,</span>
-<span id="cb49-5"><a href="quick-access.html#cb49-5"></a>    <span class="dt">annotation =</span> annotation_file</span>
-<span id="cb49-6"><a href="quick-access.html#cb49-6"></a>)</span>
-<span id="cb49-7"><a href="quick-access.html#cb49-7"></a>bw_cov</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="quick-access.html#cb22-1"></a><span class="co">## We can then use megadepth to compute the coverage</span></span>
+<span id="cb22-2"><a href="quick-access.html#cb22-2"></a>bw_cov &lt;-<span class="st"> </span><span class="kw">get_coverage</span>(</span>
+<span id="cb22-3"><a href="quick-access.html#cb22-3"></a>    example_bw,</span>
+<span id="cb22-4"><a href="quick-access.html#cb22-4"></a>    <span class="dt">op =</span> <span class="st">&quot;mean&quot;</span>,</span>
+<span id="cb22-5"><a href="quick-access.html#cb22-5"></a>    <span class="dt">annotation =</span> annotation_file</span>
+<span id="cb22-6"><a href="quick-access.html#cb22-6"></a>)</span>
+<span id="cb22-7"><a href="quick-access.html#cb22-7"></a>bw_cov</span></code></pre></div>
 <pre><code>## GRanges object with 4 ranges and 1 metadata column:
 ##         seqnames          ranges strand |     score
 ##            &lt;Rle&gt;       &lt;IRanges&gt;  &lt;Rle&gt; | &lt;numeric&gt;
