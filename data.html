@@ -148,6 +148,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2" data-path="quick-access.html"><a href="quick-access.html"><i class="fa fa-check"></i><b>2</b> Quick Access</a><ul>
 <li class="chapter" data-level="2.1" data-path="index.html"><a href="index.html#recount3"><i class="fa fa-check"></i><b>2.1</b> recount3</a></li>
 <li class="chapter" data-level="2.2" data-path="quick-access.html"><a href="quick-access.html#snapcount"><i class="fa fa-check"></i><b>2.2</b> snapcount</a></li>
+<li class="chapter" data-level="2.3" data-path="quick-access.html"><a href="quick-access.html#megadepth"><i class="fa fa-check"></i><b>2.3</b> megadepth</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="study-explorer.html"><a href="study-explorer.html"><i class="fa fa-check"></i><b>3</b> Study explorer</a></li>
 <li class="chapter" data-level="4" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html"><i class="fa fa-check"></i><b>4</b> How to ask for help</a><ul>
@@ -160,6 +161,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6" data-path="bioconductor.html"><a href="bioconductor.html"><i class="fa fa-check"></i><b>6</b> Bioconductor</a><ul>
 <li class="chapter" data-level="6.1" data-path="index.html"><a href="index.html#recount3"><i class="fa fa-check"></i><b>6.1</b> recount3</a></li>
 <li class="chapter" data-level="6.2" data-path="quick-access.html"><a href="quick-access.html#snapcount"><i class="fa fa-check"></i><b>6.2</b> snapcount</a></li>
+<li class="chapter" data-level="6.3" data-path="quick-access.html"><a href="quick-access.html#megadepth"><i class="fa fa-check"></i><b>6.3</b> megadepth</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="raw-files.html"><a href="raw-files.html"><i class="fa fa-check"></i><b>7</b> Raw files</a><ul>
 <li class="chapter" data-level="7.1" data-path="raw-files.html"><a href="raw-files.html#data-source-vs-collection"><i class="fa fa-check"></i><b>7.1</b> Data source vs collection</a></li>
@@ -192,7 +194,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="data" class="section level1">
 <h1><span class="header-section-number">1</span> Data</h1>
-<p><code>recount3</code> provides processed RNA-seq data for human and mouse in file formats similar to <code>recount2</code> (Figure <a href="data.html#fig:recountWorkflowFig1">1.1</a>), which at its core is based on coverage bigWig files and exon-exon junction counts (see <a href="raw-files.html#raw-files">Raw file</a> for more details). These two raw files power the whole <code>recount3</code> ecosystem. In <code>recount3</code>, we have provided coverage count files for several human and mouse annotations with samples grouped by study. Some large studies, like <a href="TODO">GTEx</a> and <a href="TODO">TCGA</a> have been fragmented at the tissue level to make the data more accessible.</p>
+<p><code>recount3</code> provides processed RNA-seq data for human and mouse in file formats similar to <code>recount2</code> (Figure <a href="data.html#fig:recountWorkflowFig1">1.1</a>), which at its core is based on coverage bigWig files and exon-exon junction counts (see <a href="raw-files.html#raw-files">Raw file</a> for more details). These two raw files power the whole <code>recount3</code> ecosystem. In <code>recount3</code>, we have provided coverage count files for several human and mouse annotations with samples grouped by study. Some large studies, like <a href="https://gtexportal.org/">GTEx</a> and <a href="https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga">TCGA</a> have been fragmented at the tissue level to make the data more accessible.</p>
 <div class="figure" style="text-align: center"><span id="fig:recountWorkflowFig1"></span>
 <img src="images/recountWorkflow_Figure1.png" alt="Overview of the data available in recount2 and recount3. Reads (pink boxes) aligned to the reference genome can be used to compute a base-pair coverage curve and identify exon-exon junctions (split reads). Gene and exon count matrices are generated using annotation information providing the gene (green boxes) and exon (blue boxes) coordinates together with the base-level coverage curve. The reads spanning exon-exon junctions (jx) are used to compute a third count matrix that might include unannotated junctions (jx 3 and 4). Without using annotation information, expressed regions (orange box) can be determined from the base-level coverage curve to then construct data-driven count matrices." width="100%" />
 <p class="caption">

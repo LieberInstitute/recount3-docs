@@ -148,6 +148,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2" data-path="quick-access.html"><a href="quick-access.html"><i class="fa fa-check"></i><b>2</b> Quick Access</a><ul>
 <li class="chapter" data-level="2.1" data-path="index.html"><a href="index.html#recount3"><i class="fa fa-check"></i><b>2.1</b> recount3</a></li>
 <li class="chapter" data-level="2.2" data-path="quick-access.html"><a href="quick-access.html#snapcount"><i class="fa fa-check"></i><b>2.2</b> snapcount</a></li>
+<li class="chapter" data-level="2.3" data-path="quick-access.html"><a href="quick-access.html#megadepth"><i class="fa fa-check"></i><b>2.3</b> megadepth</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="study-explorer.html"><a href="study-explorer.html"><i class="fa fa-check"></i><b>3</b> Study explorer</a></li>
 <li class="chapter" data-level="4" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html"><i class="fa fa-check"></i><b>4</b> How to ask for help</a><ul>
@@ -160,6 +161,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6" data-path="bioconductor.html"><a href="bioconductor.html"><i class="fa fa-check"></i><b>6</b> Bioconductor</a><ul>
 <li class="chapter" data-level="6.1" data-path="index.html"><a href="index.html#recount3"><i class="fa fa-check"></i><b>6.1</b> recount3</a></li>
 <li class="chapter" data-level="6.2" data-path="quick-access.html"><a href="quick-access.html#snapcount"><i class="fa fa-check"></i><b>6.2</b> snapcount</a></li>
+<li class="chapter" data-level="6.3" data-path="quick-access.html"><a href="quick-access.html#megadepth"><i class="fa fa-check"></i><b>6.3</b> megadepth</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="raw-files.html"><a href="raw-files.html"><i class="fa fa-check"></i><b>7</b> Raw files</a><ul>
 <li class="chapter" data-level="7.1" data-path="raw-files.html"><a href="raw-files.html#data-source-vs-collection"><i class="fa fa-check"></i><b>7.1</b> Data source vs collection</a></li>
@@ -255,7 +257,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><strong><code>aligned_reads%.chry</code></strong>: Precent of reads aligning to chromosome Y.</li>
 </ol>
 <p>Monorail runs our <code>megadepth</code> tool on the BAM files output by <code>STAR</code>. The chief function is to convert BAM files to bigWig files that are then added to the recount3 archive. As <code>megadepth</code> performs this conversion, it also summarizes the amount of sequencing coverage within the intervals of a provided BED file representing a gene annotation. These quantifications can be useful for quality control, tell us, for example, what fraction of the coverage is within annotated genes.</p>
-<p>Fragment length distribution is based on a special read filter only applied for this purpose to be compatible with CSAW’s fragment counting approach <span class="citation">(Lun and Smyth <a href="#ref-csaw" role="doc-biblioref">2016</a>)</span>, paired reads in a passing fragment must not be secondary, supplementary, have conflicting read order, be unmapped or be mapped on more than one chromosome. The <code>bc_</code> prefix here refers to the previous name of the Megadepth tool.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p>Fragment length distribution is based on a special read filter only applied for this purpose to be compatible with CSAW’s fragment counting approach <span class="citation">(Lun and Smyth <a href="#ref-csaw" role="doc-biblioref">2016</a>)</span>, paired reads in a passing fragment must not be secondary, supplementary, have conflicting read order, be unmapped or be mapped on more than one chromosome. The <code>bc_</code> prefix here refers to the previous name of the Megadepth tool.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
 <ol style="list-style-type: decimal">
 <li><strong><code>bc_auc.all_reads_all_bases</code></strong>: Area under coverage (total depth of coverage evaluated at all bases) for all alignments</li>
 <li><strong><code>bc_auc.all_reads_annotated_bases</code></strong>: Area under coverage for all alignments, but only for bases in annotated exons</li>
@@ -298,8 +300,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div class="footnotes">
 <hr />
-<ol start="1">
-<li id="fn1"><p>Megadepth used to be called BamCount.<a href="quality-check-fields.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<ol start="2">
+<li id="fn2"><p>Megadepth used to be called BamCount.<a href="quality-check-fields.html#fnref2" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
