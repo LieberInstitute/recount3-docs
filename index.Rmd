@@ -14,11 +14,11 @@ link-citations: true
 
 Welcome to the home of the `recount3` project! This website is the home to the most updated version of all the documentation related to the `recount3` project.
 
-**recount3** is an online resource consisting of RNA-seq gene, exon, and exon-exon junction counts as well as coverage bigWig files for *XX* and *YY* different studies for human and mouse respectively. It is the third generation of the [ReCount project](http://bowtie-bio.sourceforge.net/recount/).
+**recount3** is an online resource consisting of RNA-seq gene, exon, and exon-exon junction counts as well as coverage bigWig files for 8,679 and 10,088 different studies for human and mouse respectively. It is the third generation of the [ReCount project](http://bowtie-bio.sourceforge.net/recount/).
 
-The raw sequencing data were processed with [`recount-pump`](https://github.com/langmead-lab/recount-pump/) as described in the [recount3 paper](https://biorxiv.org) which created the coverage bigWig files and the recount-unified text files. While these raw output files are available through [SciServer](), for ease of statistical analysis, we provide through the [`recount3`](https://bioconductor.org/packages/recount3) R/Bioconductor package an interface that builds [RangedSummarizedExperiment](https://bioconductor.org/packages/SummarizedExperiment) R objects for gene, exon, and exon-exon junction counts. The coverage bigWig files can be used for annotation-agnostic expression analyses using for example [`derfinder`](https://bioconductor.org/packages/derfinder), [`megadepth`]() and other tools. 
+The raw sequencing data were processed with [`recount-pump`](https://github.com/langmead-lab/recount-pump/) as described in the [recount3 paper](https://biorxiv.org) which created the coverage bigWig files and the recount-unified text files. While these raw output files are available through [SciServer](), for ease of statistical analysis, we provide through the [`recount3`](https://bioconductor.org/packages/recount3) R/Bioconductor package an interface that builds [RangedSummarizedExperiment](https://bioconductor.org/packages/SummarizedExperiment) R objects for gene, exon, and exon-exon junction counts. The coverage bigWig files can be used for annotation-agnostic expression analyses using for example [`megadepth`](https://bioconductor.org/packages/megadepth), [`derfinder`](https://bioconductor.org/packages/derfinder) and other tools. 
 
-By taking care of several preprocessing steps and combining many datasets into one easily-accessible website, we make finding and analyzing RNA-seq data considerably more straightforward.
+By taking care of several pre-processing steps and combining many datasets into one easily-accessible website, we make finding and analyzing RNA-seq data considerably more straightforward.
 
 ## Related `recount3` websites {-}
 
@@ -27,8 +27,8 @@ By taking care of several preprocessing steps and combining many datasets into o
 * [`recount-pump`](https://github.com/langmead-lab/recount-pump/): TODO 
 * `recount-unifier`: TODO
 * `monorail`: TODO
-* `megadepth`: TODO
-* `recount3`: R package [source](https://github.com/LieberInstitute/recount3), Bioconductor [landing page](https://bioconductor.org/packages/recount3), `pkgdown` documentation [website](https://LieberInstitute.github.io/recount3)
+* `megadepth`: software [source](https://github.com/ChristopherWilks/megadepth), R package [source](https://github.com/LieberInstitute/megadepth), Bioconductor [landing page](https://bioconductor.org/packages/megadepth), `pkgdown` documentation [website](https://LieberInstitute.github.io/megadepth)
+* `recount3`: R package [source](https://github.com/LieberInstitute/recount3), Bioconductor [landing page](https://bioconductor.org/packages/recount3), `pkgdown` documentation [website](https://LieberInstitute.github.io/recount3).
 * [`recount3-docs`](https://github.com/LieberInstitute/recount3-docs): the source code for this documentation [website](https://LieberInstitute.github.io/recount3-docs).
 
 
@@ -96,6 +96,16 @@ proc.time()
 options(width = 120)
 session_info()
 ```
+
+```{r "BiocPkgs", message = FALSE}
+## For links
+library("BiocStyle")
+
+## Packages illustrated in the documentation
+library("recount3")
+library("megadepth")
+```
+
 
 ```{r session_info, echo = FALSE}
 <<session_info_chunk>>
