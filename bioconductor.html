@@ -130,7 +130,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <ul class="summary">
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a><ul>
-<li><a href="index.html#related-recount3-websites">Related <code>recount3</code> websites</a></li>
 <li><a href="index.html#how-to-cite-recount3">How to cite <code>recount3</code></a><ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#related-projects"><i class="fa fa-check"></i>Related projects</a></li>
 <li><a href="index.html#previous-recount-projects">Previous <code>ReCount</code> projects</a></li>
@@ -146,9 +145,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.2" data-path="data.html"><a href="data.html#mouse"><i class="fa fa-check"></i><b>1.2</b> Mouse</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="quick-access.html"><a href="quick-access.html"><i class="fa fa-check"></i><b>2</b> Quick Access</a><ul>
-<li class="chapter" data-level="2.1" data-path="index.html"><a href="index.html#recount3"><i class="fa fa-check"></i><b>2.1</b> recount3</a></li>
-<li class="chapter" data-level="2.2" data-path="quick-access.html"><a href="quick-access.html#snapcount"><i class="fa fa-check"></i><b>2.2</b> snapcount</a></li>
-<li class="chapter" data-level="2.3" data-path="quick-access.html"><a href="quick-access.html#megadepth"><i class="fa fa-check"></i><b>2.3</b> megadepth</a></li>
+<li class="chapter" data-level="2.1" data-path="quick-access.html"><a href="quick-access.html#quick-recount3"><i class="fa fa-check"></i><b>2.1</b> Quick recount3</a></li>
+<li class="chapter" data-level="2.2" data-path="quick-access.html"><a href="quick-access.html#quick-snapcount"><i class="fa fa-check"></i><b>2.2</b> Quick snapcount</a></li>
+<li class="chapter" data-level="2.3" data-path="quick-access.html"><a href="quick-access.html#quick-raw-files"><i class="fa fa-check"></i><b>2.3</b> Quick raw files</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="study-explorer.html"><a href="study-explorer.html"><i class="fa fa-check"></i><b>3</b> Study explorer</a></li>
 <li class="chapter" data-level="4" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html"><i class="fa fa-check"></i><b>4</b> How to ask for help</a><ul>
@@ -160,10 +159,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="quality-check-fields.html"><a href="quality-check-fields.html"><i class="fa fa-check"></i><b>5</b> Quality check fields</a></li>
 <li class="chapter" data-level="6" data-path="bioconductor.html"><a href="bioconductor.html"><i class="fa fa-check"></i><b>6</b> Bioconductor</a><ul>
 <li class="chapter" data-level="6.1" data-path="index.html"><a href="index.html#recount3"><i class="fa fa-check"></i><b>6.1</b> recount3</a></li>
-<li class="chapter" data-level="6.2" data-path="quick-access.html"><a href="quick-access.html#snapcount"><i class="fa fa-check"></i><b>6.2</b> snapcount</a></li>
-<li class="chapter" data-level="6.3" data-path="quick-access.html"><a href="quick-access.html#megadepth"><i class="fa fa-check"></i><b>6.3</b> megadepth</a></li>
+<li class="chapter" data-level="6.2" data-path="bioconductor.html"><a href="bioconductor.html#snapcount"><i class="fa fa-check"></i><b>6.2</b> snapcount</a></li>
+<li class="chapter" data-level="6.3" data-path="bioconductor.html"><a href="bioconductor.html#megadepth"><i class="fa fa-check"></i><b>6.3</b> megadepth</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="raw-files.html"><a href="raw-files.html"><i class="fa fa-check"></i><b>7</b> Raw files</a><ul>
+<li class="chapter" data-level="7" data-path="raw-files.html"><a href="raw-files.html"><i class="fa fa-check"></i><b>7</b> Raw Files</a><ul>
 <li class="chapter" data-level="7.1" data-path="raw-files.html"><a href="raw-files.html#data-source-vs-collection"><i class="fa fa-check"></i><b>7.1</b> Data source vs collection</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="bigwig-tools.html"><a href="bigwig-tools.html"><i class="fa fa-check"></i><b>8</b> bigWig tools</a></li>
@@ -194,16 +193,140 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="bioconductor" class="section level1">
 <h1><span class="header-section-number">6</span> Bioconductor</h1>
+<p>R is an open source software programming language that has been widely used for studying gene expression data thanks in part to the <a href="http://bioconductor.org/">Bioconductor project</a>. You can install R for free from <a href="https://cran.r-project.org/">CRAN</a> on macOS, Windows, and Linux operating systems.</p>
+<p>The Bioconductor community has defined common structures that enable users to store their data in common formats and analyzed through many different solutions (DOI: <a href="https://doi.org/10.1038/nmeth.3252">10.1038/nmeth.3252</a>). One such common format is the <code>RangedSummarizedExperiment</code> object from the <em><a href="https://bioconductor.org/packages/3.12/SummarizedExperiment">SummarizedExperiment</a></em> package that can then be used in downstream analayses of differential expression using packages such as <em><a href="https://bioconductor.org/packages/3.12/DESeq2">DESeq2</a></em>, <em><a href="https://bioconductor.org/packages/3.12/edgeR">edgeR</a></em>, and <em><a href="https://bioconductor.org/packages/3.12/limma">limma</a></em>.</p>
+<p>To facilitate the re-analysis of public expression data, we have provided several R/Bioconductor packages that interface with the <code>recount3</code> data. These are:</p>
+<ul>
+<li><em><a href="https://bioconductor.org/packages/3.12/recount3">recount3</a></em></li>
+<li><em><a href="https://bioconductor.org/packages/3.12/snapcount">snapcount</a></em></li>
+<li><em><a href="https://bioconductor.org/packages/3.12/megadepth">megadepth</a></em></li>
+</ul>
+<p>These packages can also benefit from using <em><a href="https://bioconductor.org/packages/3.12/recount">recount</a></em> and <em><a href="https://bioconductor.org/packages/3.12/derfinder">derfinder</a></em>, which we made in earlier phases of the <code>ReCount</code> project.</p>
 <div id="recount3" class="section level2">
 <h2><span class="header-section-number">6.1</span> recount3</h2>
+<p><em>The following information is taken from the <a href="https://bioconductor.org/packages/recount3"><code>recount3</code></a> documentation.</em></p>
+<p>After installing <em><a href="https://bioconductor.org/packages/3.12/recount3">recount3</a></em>, we need to load the package, which will automatically load the required dependencies.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="bioconductor.html#cb10-1"></a><span class="co">## Load recount3 R package</span></span>
+<span id="cb10-2"><a href="bioconductor.html#cb10-2"></a><span class="kw">library</span>(<span class="st">&quot;recount3&quot;</span>)</span></code></pre></div>
+<p>If you have identified a <strong>study</strong> of interest and want to access the gene level expression data, use <code>create_rse()</code> as shown below. <code>create_rse()</code> has arguments that will allow you to specify the <strong>annotation</strong> of interest for the given organism, and whether you want to download <strong>gene</strong>, <strong>exon</strong> or <strong>exon-exon junction</strong> expression data.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="bioconductor.html#cb11-1"></a><span class="co">## Find all available human projects</span></span>
+<span id="cb11-2"><a href="bioconductor.html#cb11-2"></a>human_projects &lt;-<span class="st"> </span><span class="kw">available_projects</span>()</span></code></pre></div>
+<pre><code>## using temporary cache /tmp/Rtmps85Cpt/BiocFileCache</code></pre>
+<pre><code>## 2020-10-30 21:09:16 caching file sra.recount_project.MD.gz.</code></pre>
+<pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/sra.recount_project.MD.gz&#39;</code></pre>
+<pre><code>## 2020-10-30 21:09:17 caching file gtex.recount_project.MD.gz.</code></pre>
+<pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/gtex/metadata/gtex.recount_project.MD.gz&#39;</code></pre>
+<pre><code>## 2020-10-30 21:09:18 caching file tcga.recount_project.MD.gz.</code></pre>
+<pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/tcga/metadata/tcga.recount_project.MD.gz&#39;</code></pre>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="bioconductor.html#cb19-1"></a><span class="co">## Find the project you are interested in,</span></span>
+<span id="cb19-2"><a href="bioconductor.html#cb19-2"></a><span class="co">## here we use SRP009615 as an example</span></span>
+<span id="cb19-3"><a href="bioconductor.html#cb19-3"></a>proj_info &lt;-<span class="st"> </span><span class="kw">subset</span>(</span>
+<span id="cb19-4"><a href="bioconductor.html#cb19-4"></a>    human_projects,</span>
+<span id="cb19-5"><a href="bioconductor.html#cb19-5"></a>    project <span class="op">==</span><span class="st"> &quot;SRP009615&quot;</span> <span class="op">&amp;</span><span class="st"> </span>project_type <span class="op">==</span><span class="st"> &quot;data_sources&quot;</span></span>
+<span id="cb19-6"><a href="bioconductor.html#cb19-6"></a>)</span>
+<span id="cb19-7"><a href="bioconductor.html#cb19-7"></a></span>
+<span id="cb19-8"><a href="bioconductor.html#cb19-8"></a><span class="co">## Create a RangedSummarizedExperiment (RSE) object at the gene level</span></span>
+<span id="cb19-9"><a href="bioconductor.html#cb19-9"></a>rse_gene_SRP009615 &lt;-<span class="st"> </span><span class="kw">create_rse</span>(proj_info)</span></code></pre></div>
+<pre><code>## 2020-10-30 21:09:23 downloading and reading the metadata.</code></pre>
+<pre><code>## 2020-10-30 21:09:23 caching file sra.sra.SRP009615.MD.gz.</code></pre>
+<pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/15/SRP009615/sra.sra.SRP009615.MD.gz&#39;</code></pre>
+<pre><code>## 2020-10-30 21:09:23 caching file sra.recount_project.SRP009615.MD.gz.</code></pre>
+<pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/15/SRP009615/sra.recount_project.SRP009615.MD.gz&#39;</code></pre>
+<pre><code>## 2020-10-30 21:09:24 caching file sra.recount_qc.SRP009615.MD.gz.</code></pre>
+<pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/15/SRP009615/sra.recount_qc.SRP009615.MD.gz&#39;</code></pre>
+<pre><code>## 2020-10-30 21:09:24 caching file sra.recount_seq_qc.SRP009615.MD.gz.</code></pre>
+<pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/15/SRP009615/sra.recount_seq_qc.SRP009615.MD.gz&#39;</code></pre>
+<pre><code>## 2020-10-30 21:09:24 caching file sra.recount_pred.SRP009615.MD.gz.</code></pre>
+<pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/15/SRP009615/sra.recount_pred.SRP009615.MD.gz&#39;</code></pre>
+<pre><code>## 2020-10-30 21:09:25 downloading and reading the feature information.</code></pre>
+<pre><code>## 2020-10-30 21:09:25 caching file human.gene_sums.G026.gtf.gz.</code></pre>
+<pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/annotations/gene_sums/human.gene_sums.G026.gtf.gz&#39;</code></pre>
+<pre><code>## 2020-10-30 21:09:26 downloading and reading the counts: 12 samples across 63856 features.</code></pre>
+<pre><code>## 2020-10-30 21:09:26 caching file sra.gene_sums.SRP009615.G026.gz.</code></pre>
+<pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/15/SRP009615/sra.gene_sums.SRP009615.G026.gz&#39;</code></pre>
+<pre><code>## 2020-10-30 21:09:27 construcing the RangedSummarizedExperiment (rse) object.</code></pre>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="bioconductor.html#cb38-1"></a><span class="co">## Explore that RSE object</span></span>
+<span id="cb38-2"><a href="bioconductor.html#cb38-2"></a>rse_gene_SRP009615</span></code></pre></div>
+<pre><code>## class: RangedSummarizedExperiment 
+## dim: 63856 12 
+## metadata(8): time_created recount3_version ... annotation recount3_url
+## assays(1): raw_counts
+## rownames(63856): ENSG00000278704.1 ENSG00000277400.1 ... ENSG00000182484.15_PAR_Y ENSG00000227159.8_PAR_Y
+## rowData names(10): source type ... havana_gene tag
+## colnames(12): SRR387777 SRR387778 ... SRR389077 SRR389078
+## colData names(175): rail_id external_id ... recount_pred.curated.cell_line BigWigURL</code></pre>
+<p>You can also interactively choose your study of interest</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="bioconductor.html#cb40-1"></a><span class="co">## Note that you can interactively explore the available projects</span></span>
+<span id="cb40-2"><a href="bioconductor.html#cb40-2"></a>proj_info_interactive &lt;-<span class="st"> </span>interactiveDisplayBase<span class="op">::</span><span class="kw">display</span>(human_projects)</span>
+<span id="cb40-3"><a href="bioconductor.html#cb40-3"></a></span>
+<span id="cb40-4"><a href="bioconductor.html#cb40-4"></a><span class="co">## Select a single row, then hit &quot;send&quot;. The following code checks this.</span></span>
+<span id="cb40-5"><a href="bioconductor.html#cb40-5"></a><span class="kw">stopifnot</span>(<span class="kw">nrow</span>(proj_info_interactive) <span class="op">==</span><span class="st"> </span><span class="dv">1</span>)</span>
+<span id="cb40-6"><a href="bioconductor.html#cb40-6"></a></span>
+<span id="cb40-7"><a href="bioconductor.html#cb40-7"></a><span class="co">## Then create the RSE object</span></span>
+<span id="cb40-8"><a href="bioconductor.html#cb40-8"></a>rse_gene_interactive &lt;-<span class="st"> </span><span class="kw">create_rse</span>(proj_info_interactive)</span></code></pre></div>
+<p>Once you have a RSE file, you can use <code>transform_counts()</code> to transform the raw coverage counts.</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="bioconductor.html#cb41-1"></a><span class="co">## Once you have your RSE object, you can transform the raw coverage</span></span>
+<span id="cb41-2"><a href="bioconductor.html#cb41-2"></a><span class="co">## base-pair coverage counts using transform_counts().</span></span>
+<span id="cb41-3"><a href="bioconductor.html#cb41-3"></a><span class="co">## For RPKM, TPM or read outputs, check the details in transform_counts().</span></span>
+<span id="cb41-4"><a href="bioconductor.html#cb41-4"></a><span class="kw">assay</span>(rse_gene_SRP009615, <span class="st">&quot;counts&quot;</span>) &lt;-<span class="st"> </span><span class="kw">transform_counts</span>(rse_gene_SRP009615)</span></code></pre></div>
+<p>Now you are ready to continue with downstream analysis software.</p>
+<p><em><a href="https://bioconductor.org/packages/3.12/recount3">recount3</a></em> also supports accessing the BigWig raw coverage files as well as specific study or collection sample <strong>metadata</strong>. Please continue to the <a href="https://bioconductor.org/packages/recount3">users guide</a> for more detailed information.</p>
 </div>
 <div id="snapcount" class="section level2">
 <h2><span class="header-section-number">6.2</span> snapcount</h2>
 </div>
 <div id="megadepth" class="section level2">
 <h2><span class="header-section-number">6.3</span> megadepth</h2>
+<p><em>The following information is taken from the <a href="https://bioconductor.org/packages/megadepth"><code>megadepth</code></a> documentation.</em></p>
+<p>To get started, we need to load the <em><a href="https://bioconductor.org/packages/3.12/megadepth">megadepth</a></em> package into our R session. This will load all the required dependencies.</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="bioconductor.html#cb42-1"></a><span class="kw">library</span>(<span class="st">&quot;megadepth&quot;</span>)</span></code></pre></div>
+<p>Once we have the R package loaded, we need to install the <a href="https://github.com/ChristopherWilks/megadepth">Megadepth</a> software. We can do so with <code>install_megadepth()</code>, which downloads a binary for your OS (Linux, Windows or macOS).<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> We can then use with an example BigWig file to compute the coverage at a set of regions.</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="bioconductor.html#cb43-1"></a><span class="co">## Install the latest version of Megadepth</span></span>
+<span id="cb43-2"><a href="bioconductor.html#cb43-2"></a><span class="kw">install_megadepth</span>(<span class="dt">force =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<pre><code>## The latest megadepth version is 1.0.8</code></pre>
+<pre><code>## megadepth has been installed to /github/home/bin</code></pre>
+<p>Next, we might want to use <em><a href="https://bioconductor.org/packages/3.12/megadepth">megadepth</a></em> to quantify the coverage at a set of regions of the genome of interest to us. Here we will use two example files that are include in the package for illustration and testing purposes. One of them is a <a href="https://genome.ucsc.edu/goldenPath/help/bigWig.html">bigWig file</a> that contains the base-pair coverage information for a sample of interest and the second one is <a href="https://genome.ucsc.edu/FAQ/FAQformat.html#format1">BED file</a> which contains the genomic region coordinates of interest. So we first locate them.</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="bioconductor.html#cb46-1"></a><span class="co">## Next, we locate the example BigWig and annotation files</span></span>
+<span id="cb46-2"><a href="bioconductor.html#cb46-2"></a>example_bw &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;tests&quot;</span>, <span class="st">&quot;test.bam.all.bw&quot;</span>,</span>
+<span id="cb46-3"><a href="bioconductor.html#cb46-3"></a>    <span class="dt">package =</span> <span class="st">&quot;megadepth&quot;</span>, <span class="dt">mustWork =</span> <span class="ot">TRUE</span></span>
+<span id="cb46-4"><a href="bioconductor.html#cb46-4"></a>)</span>
+<span id="cb46-5"><a href="bioconductor.html#cb46-5"></a>annotation_file &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;tests&quot;</span>, <span class="st">&quot;testbw2.bed&quot;</span>,</span>
+<span id="cb46-6"><a href="bioconductor.html#cb46-6"></a>    <span class="dt">package =</span> <span class="st">&quot;megadepth&quot;</span>, <span class="dt">mustWork =</span> <span class="ot">TRUE</span></span>
+<span id="cb46-7"><a href="bioconductor.html#cb46-7"></a>)</span>
+<span id="cb46-8"><a href="bioconductor.html#cb46-8"></a></span>
+<span id="cb46-9"><a href="bioconductor.html#cb46-9"></a><span class="co">## Where are they?</span></span>
+<span id="cb46-10"><a href="bioconductor.html#cb46-10"></a>example_bw</span></code></pre></div>
+<pre><code>## [1] &quot;/usr/local/lib/R/host-site-library/megadepth/tests/test.bam.all.bw&quot;</code></pre>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="bioconductor.html#cb48-1"></a>annotation_file</span></code></pre></div>
+<pre><code>## [1] &quot;/usr/local/lib/R/host-site-library/megadepth/tests/testbw2.bed&quot;</code></pre>
+<p>Once we have located the example files we can proceed to calculating the base-pair coverage for our genomic regions of interest. There are several ways to do this with <em><a href="https://bioconductor.org/packages/3.12/megadepth">megadepth</a></em>, but here we use the user-friendly function <code>get_coverage()</code>. This function will perform a given operation <strong>op</strong> on the bigWig file for a given set of regions of interest (<em>annotation</em>). One of those operations is to compute the mean base-pair coverage for each input region. This is what we’ll do with our example bigWig file.</p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="bioconductor.html#cb50-1"></a><span class="co">## We can then use megadepth to compute the coverage</span></span>
+<span id="cb50-2"><a href="bioconductor.html#cb50-2"></a>bw_cov &lt;-<span class="st"> </span><span class="kw">get_coverage</span>(</span>
+<span id="cb50-3"><a href="bioconductor.html#cb50-3"></a>    example_bw,</span>
+<span id="cb50-4"><a href="bioconductor.html#cb50-4"></a>    <span class="dt">op =</span> <span class="st">&quot;mean&quot;</span>,</span>
+<span id="cb50-5"><a href="bioconductor.html#cb50-5"></a>    <span class="dt">annotation =</span> annotation_file</span>
+<span id="cb50-6"><a href="bioconductor.html#cb50-6"></a>)</span>
+<span id="cb50-7"><a href="bioconductor.html#cb50-7"></a>bw_cov</span></code></pre></div>
+<pre><code>## GRanges object with 4 ranges and 1 metadata column:
+##         seqnames          ranges strand |     score
+##            &lt;Rle&gt;       &lt;IRanges&gt;  &lt;Rle&gt; | &lt;numeric&gt;
+##   [1]      chr10            0-10      * |      0.00
+##   [2]      chr10 8756697-8756762      * |     15.85
+##   [3]      chr10 4359156-4359188      * |      3.00
+##   [4] GL000219.1   168500-168620      * |      1.26
+##   -------
+##   seqinfo: 2 sequences from an unspecified genome; no seqlengths</code></pre>
+<p><code>get_coverage()</code> returns an object that is familiar to <em><a href="https://bioconductor.org/packages/3.12/GenomicRanges">GenomicRanges</a></em> users, that is, a <code>GRanges</code> object that can be used with other Bioconductor software packages.</p>
+<p>This example is just the tip of the iceberg, as <a href="https://github.com/ChristopherWilks/megadepth">Megadepth</a> and thus <em><a href="https://bioconductor.org/packages/3.12/megadepth">megadepth</a></em> can do a lot of useful processing operations on BAM and bigWig files.</p>
+<p>Please continue to the <a href="https://bioconductor.org/packages/megadepth">users guide</a> for more detailed information.</p>
 
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="2">
+<li id="fn2"><p>Please check <a href="https://github.com/ChristopherWilks/megadepth">Megadepth</a> for instructions on how to compile the software from source if the binary version doesn’t work for you.<a href="bioconductor.html#fnref2" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
