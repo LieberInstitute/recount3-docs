@@ -9,7 +9,7 @@ A `data source` specifies where the data is hosted at, most commonly from the [S
 * `data_source`: samples from the original data origin
 * `collection`: manually selected samples with curated collection-specific sample metadata
 
-## Annotation
+## Annotation files
 
 Here are the direct links in case you are interested in downloading the annotation files directly.
 
@@ -43,7 +43,24 @@ knitr::kable(ann_files, row.names = FALSE, caption = "Annotation files")
 
 On the R package, you can use `recount3::locate_url_ann()` to obtain these URLs.
 
-## Project-level files
+The URL structure is:
+
+`<recount3_url>`/data/`<organism>`/annotations/`<gene|exon>`_sums/`<organism>`.`<gene|exon>`_sums.`<annotation file extension>`.gtf.gz
+
+These are the annotation file extensions; human:
+
+* Gencode v26: `G026`
+* Gencode v29: `G029`
+* RefSeq: `ERCC`
+* FANTOM6_cat: `F006`
+* ERCC: `R109`
+* SIRV: `SIRV`
+
+Mouse:
+
+* Gencode v23: `M023`
+
+## Project-level count files
 
 For every project, we have files at the gene, exon, and exon-exon junction expression levels. For genes and exons, we provide a file for each of the annotations. That is, for every project we provide:
 
@@ -106,11 +123,81 @@ dim(projects)
 write.csv(projects, file = "recount3_raw_project_files_with_default_annotation.csv", row.names = FALSE)
 ```
 
-As a teaser, here you can see the first 20 rows of this long table. Or download the CSV file to your computer from [GitHub](https://github.com/LieberInstitute/recount3-docs/blob/master/recount3_raw_project_files_with_default_annotation.csv).
+As a teaser, here you can see the first 20 rows of this long table. Or you can download the CSV file to your computer from [GitHub](https://github.com/LieberInstitute/recount3-docs/blob/master/recount3_raw_project_files_with_default_annotation.csv).
 
 ```{r "project_raw_files_table", echo = FALSE, results = "asis"}
-projects2 <- read.csv("recount3_raw_project_files_with_default_annotation.csv", row.names = NULL)
-knitr::kable(head(projects2, 20), row.names = FALSE, caption = "First 20 raw project files")
+projects <- read.csv("recount3_raw_project_files_with_default_annotation.csv", row.names = NULL)
+knitr::kable(head(projects, 20), row.names = FALSE, caption = "First 20 raw project files")
 ```
 
+The URL structure is:
+
+* gene: `<recount3_url>`/data/`<organism>`/data_sources/`<data_source>`/gene_sums/`<last 2 project letters or digits>`/`<project>`/`<data_source>`.gene_sums.`<project>`.`<annotation file extension>`.gz
+* exon: `<recount3_url>`/data/`<organism>`/data_sources/`<data_source>`/exon_sums/`<last 2 project letters or digits>`/`<project>`/`<data_source>`.exon_sums.`<project>`.`<annotation file extension>`.gz
+* junctions: `<recount3_url>`/data/`<organism>`/data_sources/`<data_source>`/junctions/`<last 2 project letters or digits>`/`<project>`/`<data_source>`.junctions.`<project>`.`<junction type: typically ALL>`.`<junction file extension: RR, MM or ID>`.gz ^[Only GTEx and TCGA have junction type `UNIQUE` available in addition to `ALL`.]
+
+## Project-level metadata files
+
+Every project from an original data source has 5 different sample metadata tables. These are:
+
+* `project_meta` (`sra`, `gtex`, `tcga`): information mostly used by the R interface for locating files
+* `recount_project`: information downloaded from the original data source, such as the SRA Run Table selector
+* `recount_qc`: [quality check fields](#quality-check-fields) using the QC annotation
+* `recount_seq_qc`: sequence quantily check fields
+* `recount_pred`: curated and predicted sample information described in the recount3 manuscript
+
+You can use the following R code to obtain the links to all these raw metadata files or use `recount3::locate_url()`.
+
+```{r "metadata_files", eval = FALSE}
+## Obtain all the metadata files
+metadata_files <- do.call(rbind, apply(projects, 1, function(x) {
+    x <-
+        locate_url(
+            project = x[["project"]],
+            project_home = x[["project_home"]],
+            type = "metadata",
+            organism = x[["organism"]]
+        )
+    res <- data.frame(t(x))
+    colnames(res) <-
+        gsub("\\..*", "", gsub("^[a-z]+\\.", "", colnames(res)))
+    
+    colnames(res)[colnames(res) %in% unique(projects$file_source)] <-
+        "project_meta"
+    return(res)
+}))
+dim(metadata_files)
+# [1] 18830     5
+
+## Export
+write.csv(metadata_files, file = "recount3_metadata_files.csv", row.names = FALSE)
+```
+
+As a teaser, here you can see the first 6 rows of this long table. Or you can download the CSV file to your computer from [GitHub](https://github.com/LieberInstitute/recount3-docs/blob/master/recount3_metadata_files.csv). If you want to, you can combine it with the project raw files table from the previous section.
+
+```{r "metadata_files_table", echo = FALSE}
+metadata_files <- read.csv("recount3_metadata_files.csv", row.names = NULL)
+head(metadata_files)
+```
+
+The URL structure is:
+
+`<recount3_url>`/data/`<organism>`/data_sources/`<data_source>`/metadata/`<last 2 project letters or digits>`/`<project>`/`<data_source>`.`<table name>`.`<project>`.MD.gz
+
+## Sample-level BigWig files
+
+Each sample in recount3 has bigWig file publicly available and whose URL can be obtained using `recount3::locate_url()`. Below we show the URL for one such sample. 
+
+```{r "example_bigWig_URL"}
+locate_url(
+    "SRP009615",
+    "data_sources/sra",
+    type = "bw",
+    sample = "SRR387777"
+)
+```
+
+The URL structure is:
+
+`<recount3_url>`/data/`<organism>`/data_sources/`<data_source>`/base_sums/`<last 2 project letters or digits>`/`<project>`/`<last 2 sample letters or digits>`/`<data_source>`.base_sums.`<project>`_`<sample>`.ALL.bw
 
