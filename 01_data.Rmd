@@ -8,6 +8,8 @@
 knitr::include_graphics("images/recountWorkflow_Figure1.png")
 ```
 
+The following annotations are supported in `recount3`. See [Annotation](#annotation) for direct links to the annotation files.
+
 ## Human
 
 Annotations:
@@ -20,3 +22,7 @@ Annotations:
 * SIRV
 
 ## Mouse
+
+Annotations:
+
+* Gencode v23

@@ -3,3 +3,114 @@
 Explain the raw file formats we have and how they are organized
 
 ## Data source vs collection
+
+A `data source` specifies where the data is hosted at, most commonly from the [Sequence Read Archive (SRA)](https://www.ncbi.nlm.nih.gov/sra). A `collection` is a manually curated set of samples from one or more studies. A collection has a custom metadata file where the curator(s) can specify metadata variables for the collection. In other words:
+
+* `data_source`: samples from the original data origin
+* `collection`: manually selected samples with curated collection-specific sample metadata
+
+## Annotation
+
+Here are the direct links in case you are interested in downloading the annotation files directly.
+
+```{r "ann_files", results='asis', echo = FALSE}
+library("recount3")
+library("purrr")
+
+ann_files <- map_dfr(c("human", "mouse"), function(x) {
+    map_dfr(c("gene", "exon"), function(y) {
+        map_dfr(annotation_options(x), ~ 
+                data.frame(
+                    organism = x,
+                    type = y,
+                    annotation = .x,
+                    file_extension = annotation_ext(
+                        organism = x,
+                        annotation = .x
+                    ),
+                    URL = locate_url_ann(
+                        type = y,
+                        organism = x,
+                        annotation = .x
+                    )
+                )
+        )
+        
+    })
+})
+knitr::kable(ann_files, row.names = FALSE, caption = "Annotation files")
+```
+
+On the R package, you can use `recount3::locate_url_ann()` to obtain these URLs.
+
+## Project-level files
+
+For every project, we have files at the gene, exon, and exon-exon junction expression levels. For genes and exons, we provide a file for each of the annotations. That is, for every project we provide:
+
+* gene files: one count matrix per annotation
+* exon files: one count matrix per annotation
+* 3 exon-exon junction files: the sparse count matrix data in Matrix Market (MM) format, the small list of sample identifiers (IDs), and the exon-exon junctions coordinate information (RR file)
+
+All these files can be located with `recount3::locate_url()`. The following R code creates a table with links to the files for the default annotation for each organism. Note that you can replace the annotation file extension (like `G026`) for the corresponding one for annotation annotation shown in the previous section (or use `recount3::annotation_ext()` to see available options).
+
+
+```{r "project_raw_files", eval = FALSE}
+## Obtain all available projects
+projects <- rbind(
+    recount3::available_projects("human"),
+    recount3::available_projects("mouse")
+)
+
+## Locate the project raw files at the gene level using the default annotation
+projects$gene <- apply(projects, 1, function(x)
+    locate_url(
+        project = x["project"],
+        project_home = x["project_home"],
+        type = "gene",
+        organism = x["organism"],
+        annotation = annotation_options(x["organism"])[1] # Use default annotation
+    ))
+
+## Locate the project raw files at the exon level using the default annotation
+projects$exon <- apply(projects, 1, function(x)
+    locate_url(
+        project = x["project"],
+        project_home = x["project_home"],
+        type = "exon",
+        organism = x["organism"],
+        annotation = annotation_options(x["organism"])[1] # Use default annotation
+    ))
+
+## Locate the project raw exon-exon junction files
+projects <-
+    cbind(projects, do.call(rbind, apply(projects, 1, function(x) {
+        x <-
+            locate_url(
+                project = x["project"],
+                project_home = x["project_home"],
+                type = "jxn",
+                organism = x["organism"]
+            )
+        res <- data.frame(t(x))
+        colnames(res) <-
+            paste0("jxn_", gsub("^.*\\.", "", gsub("\\.gz", "", colnames(res))))
+        return(res)
+    })))
+rownames(projects) <- NULL
+
+## Dimensions of the table
+dim(projects)
+# [1] 18830    10
+
+## Export
+write.csv(projects, file = "recount3_raw_project_files_with_default_annotation.csv", row.names = FALSE)
+```
+
+As a teaser, here you can see the first 20 rows of this long table. Or download the CSV file to your computer from [GitHub](https://github.com/LieberInstitute/recount3-docs/blob/master/recount3_raw_project_files_with_default_annotation.csv).
+
+```{r "project_raw_files_table", echo = FALSE, results = "asis"}
+projects2 <- read.csv("recount3_raw_project_files_with_default_annotation.csv", row.names = NULL)
+knitr::kable(head(projects2, 20), row.names = FALSE, caption = "First 20 raw project files")
+```
+
+

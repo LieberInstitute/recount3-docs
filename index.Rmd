@@ -91,6 +91,9 @@ library("BiocStyle")
 ## Packages illustrated in the documentation
 library("recount3")
 library("megadepth")
+
+## For looping
+library("purrr")
 ```
 
 
