@@ -117,7 +117,7 @@ rownames(projects) <- NULL
 
 ## Dimensions of the table
 dim(projects)
-# [1] 18830    10
+# [1] 18830    11
 
 ## Export
 write.csv(projects, file = "recount3_raw_project_files_with_default_annotation.csv", row.names = FALSE)
