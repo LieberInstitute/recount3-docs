@@ -1,1 +1,19 @@
 # Related analyses
+
+The code for the analyses shown in the recount3 paper is available through the following GitHub repositories.
+
+TODO
+
+## Beyond recount3
+
+Some analyses beyond recount3 are available through the following locations:
+
+* `runs`: https://github.com/nellore/runs for processing the data behind Intropolis and recount2 with Rail-RNA
+* `fcr2`: https://github.com/eddieimada/fcr2, with https://github.com/LieberInstitute/marchionni_projects as a companion repository
+* `recount-analyses`: https://github.com/leekgroup/recount-analyses for recount2
+* `intropolis`: https://github.com/nellore/intropolis
+* `phenopredict`: https://github.com/leekgroup/phenopredict, https://github.com/ShanEllis/phenopredict_phenotypes and https://github.com/ShanEllis/phenopredict_usecase
+* `recount-brain`: https://github.com/LieberInstitute/recount-brain which is an example `collection`
+* `insp`: https://github.com/LieberInstitute/insp which is an example use case of `recount.bwtool`
+* `recountNNLS`: https://github.com/JMF47/recountNNLS
+* `recount_pandey`: https://github.com/LieberInstitute/recount_pandey which involve modified code from `recount-website/recount-prep`

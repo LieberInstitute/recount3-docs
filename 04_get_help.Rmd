@@ -1,10 +1,45 @@
 # How to ask for help
 
-something about avoiding emails
-sharing your questions enables us to help more people like you
+In general we prefer that you contact us through a public forum such that others can benefit from your answers, so please avoid emails as much as possible. Leonardo has written a more extensive page on [how to ask for help](https://lcolladotor.github.io/bioc_team_ds/how-to-ask-for-help.html) in general beyond this project which might be useful for you. While we have multiple options for you to contact us, please avoid posting your question in all the forums.
 
 ## Gitter
 
+We have several Gitter chats setup in relation to our software. Here's some of them:
+
+* `Megadepth`: https://gitter.im/megadepth/community
+* `Snaptron`: https://gitter.im/snaptron/Lobby
+
 ## Bioconductor Support website
 
+For our R/Bioconductor packages, you can ask for help through the Bioconductor support website using the appropriate tags:
+
+* `recount3`: https://support.bioconductor.org/?tag=recount3
+* `snapcount`: https://support.bioconductor.org/?tag=snapcount
+* `megadepth`: https://support.bioconductor.org/?tag=megadepth
+
 ## GitHub Issues
+
+You can also report bugs through GitHub issues. Ideally, use the repository that contains the code that has produced the bug. For example, for the `recount3` R/Bioconductor package use https://github.com/LieberInstitute/recount3/issues.
+
+Here's a list of possible locations:
+
+R/Bioconductor related:
+
+* `recount3`: https://github.com/LieberInstitute/recount3/issues
+* `megadepth`: https://github.com/LieberInstitute/megadepth/issues
+* `snapcount`: https://github.com/langmead-lab/snapcount/issues
+
+Tools:
+
+* `Megadepth`: https://github.com/ChristopherWilks/megadepth/issues
+* `Snaptron`: https://github.com/ChristopherWilks/snaptron/issues
+
+Monorail system related:
+
+* `monorail-external`: https://github.com/langmead-lab/monorail-external/issues
+* `recount-pump`: https://github.com/langmead-lab/recount-pump/issues
+* `recount-unify`: https://github.com/langmead-lab/recount-unify/issues
+
+Documentation related:
+
+* `recount3-docs`: https://github.com/LieberInstitute/recount3-docs/issues (where this website is created)

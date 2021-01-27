@@ -1,1 +1,54 @@
 # Related software
+
+As part of recount3 we provide bigWig files for each sample. These files can be used to re-quantify the expression levels with new annotations using the same reference genomes. They can also be used to explore un-annotated regions of the genome. For `recount3` we suggest using the `megadepth` R/Bioconductor package (or the command-line version) available from https://bioconductor.org/packages/megadepth. 
+
+Additionally, we have written quite a bit of code for `recount3` that is is available through different GitHub repositories. You can find our main products at [**recount.bio**](https://recount.bio) ^[Test version is available at http://nellore.bio/recount-landing/.]. Some of our software related to recount3 are highlighted below.
+
+R/Bioconductor related:
+
+* `recount3`: https://github.com/LieberInstitute/recount3 or https://bioconductor.org/packages/recount3
+* `megadepth`: https://github.com/LieberInstitute/megadepth or https://bioconductor.org/packages/megadepth
+* `snapcount`: https://github.com/langmead-lab/snapcount or https://bioconductor.org/packages/snapcount
+
+Tools:
+
+* `Megadepth`: https://github.com/ChristopherWilks/megadepth also available from anaconda at https://anaconda.org/bioconda/megadepth
+* `Snaptron`: https://github.com/ChristopherWilks/snaptron
+
+Monorail system related:
+
+* `monorail-external`: https://github.com/langmead-lab/monorail-external
+* `recount-pump`: https://github.com/langmead-lab/recount-pump
+* `recount-unify`: https://github.com/langmead-lab/recount-unify
+
+Documentation related:
+
+* `recount3-docs`: https://github.com/LieberInstitute/recount3-docs (where this website is created)
+
+## Beyond recount3
+
+We have more software beyond recount3 including:
+
+* `recount`: https://bioconductor.org/packages/recount (for accessing the recount2 data)
+* `ASCOT`: http://ascot.cs.jhu.edu/
+* `recountmethylation`: https://bioconductor.org/packages/recountmethylation
+* `Rail-RNA` and `Rail-dbGaP`: http://rail.bio/
+* `derfinder`: https://bioconductor.org/packages/derfinder
+* `recount.bwtool`: https://github.com/LieberInstitute/recount.bwtool (now defunct given `megadepth` which is much faster and available through Bioconductor)
+
+Documentation related:
+
+* `recount-website`: https://github.com/leekgroup/recount-website for recount2
+* `recountWorkflow`: https://bioconductor.org/packages/recountWorkflow and several workshops such as https://github.com/LieberInstitute/recountWorkshop2020
+* `recount-contributions`: https://github.com/leekgroup/recount-contributions (now defunct given how you can use the Monorail system to process [your data](#your-data) and share it with us)
+
+
+Some other software we have written can be found at:
+
+* https://github.com/ChristopherWilks?tab=repositories
+* https://github.com/langmead-lab?tab=repositories
+* https://github.com/LieberInstitute?tab=repositories
+* https://github.com/kasperdanielhansen?tab=repositories
+* https://github.com/nellore?tab=repositories
+* https://github.com/leekgroup?tab=repositories
+* https://github.com/lcolladotor?tab=repositories

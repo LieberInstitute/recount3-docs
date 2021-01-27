@@ -2,15 +2,72 @@
 
 # Your data
 
+_Note that this section will need to be refined once we have gone through this process. Currently we are focused on releasing the initial version of recount3._
+
 ## Process your data
 
-Info on how to use `recount-pump` for your own private data
+While [`recount_pump`](https://github.com/langmead-lab/recount-pump) contains code for generating recount3, if you want to use the Monorail RNA-seq processing pipeline (alignment/quantification) for your own data, we highly recommend that you start by looking at the [**`monorail-external`**](https://github.com/langmead-lab/monorail-external/) GitHub repository. It contains a very detailed README with instructions on how to install the software, download the annotation files, and process raw RNA-seq data (with some example files used for illustration purposes).
 
-this is **experimental**
+In order to add your data to recount3, we will need all the [raw files](#raw-files) for your study. That is:
 
+* the gene count text files for each annotation we support (organism-dependent)
+* similarly, the exon count text files for each annotation
+* the exon-exon junction files ^[Hm... I think this will be tricky if new exon-exon junctions are found in someone's data which are absent in recount3. This is VERY likely to happen!]
+* the five metadata files
+* the bigWig files for each sample
 
+We will then need to organize your data into the directory structure expected by `recount3`.
 
 ## Contribute your collections
 
-How to build a collection and send that information to us
+As described in the [raw files](#raw-files) section, collections involve creating a metadata file for a custom set of samples across one or more studies (typically more than one study). You can find some example collections at http://snaptron.cs.jhu.edu/data/temp/recount3/human/collections/. For example, http://snaptron.cs.jhu.edu/data/temp/recount3/human/collections/gtex_geuvadis/metadata/ contains two files:
 
+* `<collection_name>`.custom.gz: gtex_geuvadis.custom.gz
+* `<collection_name>`.recount_project.gz: gtex_geuvadis.recount_project.gz (optional!)
+
+These files include the 3 columns we use internally for identifying all samples: 
+
+* `rail_id`: used by Snaptron
+* `study`: the project name. See `recount3::available_projects()` for supported options (or use your own custom `recount3_url`).
+* `external_id`: typically the SRA run ID but each data source has different unique IDs, like TCGA which uses much longer sample IDs.
+
+
+### Collection metadata
+
+The `<collection_name>`.custom.gz can then contain any additional columns of interest. For example, in the [`recount-brain` project](https://github.com/LieberInstitute/recount-brain) we manually curated samples from 62 studies and standardized variables across the 62 studies.
+
+Here's how the example collection metadata file looks like:
+
+```{r "example_custom_metadata_file"}
+read.delim(
+    recount3::file_retrieve(
+        "http://snaptron.cs.jhu.edu/data/temp/recount3/human/collections/gtex_geuvadis/metadata/gtex_geuvadis.custom.gz"
+    )
+)
+```
+
+This file has to be readble with R using the following code:
+
+```{r read_custom, eval = FALSE}
+utils::read.delim(
+    file_path,
+    sep = "\t",
+    check.names = FALSE,
+    quote = "",
+    comment.char = ""
+)
+```
+
+Since this is the main file that needs to be produced for adding a collection to `recount3`, if your collection involves data that is already present in `recount3`, it will be very easy for us to add it to our resource. Otherwise we will need the [raw files](#raw-files) for the corresponding new data.
+
+### Collection project location
+
+The second text file specifies the required information for locating the samples. While we had considered using this type of file, we don't require it anymore. For historical purposes, this is how that file looked: ^[Once we have more collections I can verify this!]
+
+```{r "example_recount_project_file"}
+read.delim(
+    recount3::file_retrieve(
+        "http://snaptron.cs.jhu.edu/data/temp/recount3/human/collections/gtex_geuvadis/metadata/gtex_geuvadis.recount_project.gz"
+    )
+)
+```
