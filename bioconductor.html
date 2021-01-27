@@ -230,12 +230,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>If you have identified a <strong>study</strong> of interest and want to access the gene level expression data, use <code>create_rse()</code> as shown below. <code>create_rse()</code> has arguments that will allow you to specify the <strong>annotation</strong> of interest for the given organism, and whether you want to download <strong>gene</strong>, <strong>exon</strong> or <strong>exon-exon junction</strong> expression data.</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="bioconductor.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Find all available human projects</span></span>
 <span id="cb11-2"><a href="bioconductor.html#cb11-2" aria-hidden="true" tabindex="-1"></a>human_projects <span class="ot">&lt;-</span> <span class="fu">available_projects</span>()</span></code></pre></div>
-<pre><code>## using temporary cache /tmp/RtmpJPscFb/BiocFileCache</code></pre>
-<pre><code>## 2021-01-27 04:12:56 caching file sra.recount_project.MD.gz.</code></pre>
+<pre><code>## using temporary cache /tmp/Rtmp63szOc/BiocFileCache</code></pre>
+<pre><code>## 2021-01-27 05:04:45 caching file sra.recount_project.MD.gz.</code></pre>
 <pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/sra.recount_project.MD.gz&#39;</code></pre>
-<pre><code>## 2021-01-27 04:12:57 caching file gtex.recount_project.MD.gz.</code></pre>
+<pre><code>## 2021-01-27 05:04:46 caching file gtex.recount_project.MD.gz.</code></pre>
 <pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/gtex/metadata/gtex.recount_project.MD.gz&#39;</code></pre>
-<pre><code>## 2021-01-27 04:12:58 caching file tcga.recount_project.MD.gz.</code></pre>
+<pre><code>## 2021-01-27 05:04:47 caching file tcga.recount_project.MD.gz.</code></pre>
 <pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/tcga/metadata/tcga.recount_project.MD.gz&#39;</code></pre>
 <div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="bioconductor.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Find the project you are interested in,</span></span>
 <span id="cb19-2"><a href="bioconductor.html#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="do">## here we use SRP009615 as an example</span></span>
@@ -246,24 +246,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb19-7"><a href="bioconductor.html#cb19-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-8"><a href="bioconductor.html#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="do">## Create a RangedSummarizedExperiment (RSE) object at the gene level</span></span>
 <span id="cb19-9"><a href="bioconductor.html#cb19-9" aria-hidden="true" tabindex="-1"></a>rse_gene_SRP009615 <span class="ot">&lt;-</span> <span class="fu">create_rse</span>(proj_info)</span></code></pre></div>
-<pre><code>## 2021-01-27 04:13:03 downloading and reading the metadata.</code></pre>
-<pre><code>## 2021-01-27 04:13:03 caching file sra.sra.SRP009615.MD.gz.</code></pre>
+<pre><code>## 2021-01-27 05:04:53 downloading and reading the metadata.</code></pre>
+<pre><code>## 2021-01-27 05:04:53 caching file sra.sra.SRP009615.MD.gz.</code></pre>
 <pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/15/SRP009615/sra.sra.SRP009615.MD.gz&#39;</code></pre>
-<pre><code>## 2021-01-27 04:13:03 caching file sra.recount_project.SRP009615.MD.gz.</code></pre>
+<pre><code>## 2021-01-27 05:04:53 caching file sra.recount_project.SRP009615.MD.gz.</code></pre>
 <pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/15/SRP009615/sra.recount_project.SRP009615.MD.gz&#39;</code></pre>
-<pre><code>## 2021-01-27 04:13:04 caching file sra.recount_qc.SRP009615.MD.gz.</code></pre>
+<pre><code>## 2021-01-27 05:04:54 caching file sra.recount_qc.SRP009615.MD.gz.</code></pre>
 <pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/15/SRP009615/sra.recount_qc.SRP009615.MD.gz&#39;</code></pre>
-<pre><code>## 2021-01-27 04:13:05 caching file sra.recount_seq_qc.SRP009615.MD.gz.</code></pre>
+<pre><code>## 2021-01-27 05:04:56 caching file sra.recount_seq_qc.SRP009615.MD.gz.</code></pre>
 <pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/15/SRP009615/sra.recount_seq_qc.SRP009615.MD.gz&#39;</code></pre>
-<pre><code>## 2021-01-27 04:13:05 caching file sra.recount_pred.SRP009615.MD.gz.</code></pre>
+<pre><code>## 2021-01-27 05:04:56 caching file sra.recount_pred.SRP009615.MD.gz.</code></pre>
 <pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/15/SRP009615/sra.recount_pred.SRP009615.MD.gz&#39;</code></pre>
-<pre><code>## 2021-01-27 04:13:05 downloading and reading the feature information.</code></pre>
-<pre><code>## 2021-01-27 04:13:06 caching file human.gene_sums.G026.gtf.gz.</code></pre>
+<pre><code>## 2021-01-27 05:04:57 downloading and reading the feature information.</code></pre>
+<pre><code>## 2021-01-27 05:04:57 caching file human.gene_sums.G026.gtf.gz.</code></pre>
 <pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/annotations/gene_sums/human.gene_sums.G026.gtf.gz&#39;</code></pre>
-<pre><code>## 2021-01-27 04:13:07 downloading and reading the counts: 12 samples across 63856 features.</code></pre>
-<pre><code>## 2021-01-27 04:13:07 caching file sra.gene_sums.SRP009615.G026.gz.</code></pre>
+<pre><code>## 2021-01-27 05:04:58 downloading and reading the counts: 12 samples across 63856 features.</code></pre>
+<pre><code>## 2021-01-27 05:04:58 caching file sra.gene_sums.SRP009615.G026.gz.</code></pre>
 <pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/15/SRP009615/sra.gene_sums.SRP009615.G026.gz&#39;</code></pre>
-<pre><code>## 2021-01-27 04:13:08 construcing the RangedSummarizedExperiment (rse) object.</code></pre>
+<pre><code>## 2021-01-27 05:04:59 construcing the RangedSummarizedExperiment (rse) object.</code></pre>
 <div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="bioconductor.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Explore that RSE object</span></span>
 <span id="cb38-2"><a href="bioconductor.html#cb38-2" aria-hidden="true" tabindex="-1"></a>rse_gene_SRP009615</span></code></pre></div>
 <pre><code>## class: RangedSummarizedExperiment 
