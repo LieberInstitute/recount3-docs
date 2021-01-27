@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>5 Quality check fields | recount3: human and mouse public RNA-seq data</title>
-  <meta name="description" content="5 Quality check fields | recount3: human and mouse public RNA-seq data" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <title>4 Quality check fields | recount3: human and mouse public RNA-seq data</title>
+  <meta name="description" content="4 Quality check fields | recount3: human and mouse public RNA-seq data" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="5 Quality check fields | recount3: human and mouse public RNA-seq data" />
+  <meta property="og:title" content="4 Quality check fields | recount3: human and mouse public RNA-seq data" />
   <meta property="og:type" content="book" />
   
   
@@ -16,12 +16,11 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="5 Quality check fields | recount3: human and mouse public RNA-seq data" />
+  <meta name="twitter:title" content="4 Quality check fields | recount3: human and mouse public RNA-seq data" />
   
   
   
 
-<meta name="author" content="" />
 
 
 
@@ -32,6 +31,7 @@
   
 <link rel="prev" href="how-to-ask-for-help.html"/>
 <link rel="next" href="bioconductor.html"/>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -49,22 +49,20 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -84,7 +82,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -117,6 +115,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<link rel="stylesheet" href="css/styles.css" type="text/css" />
 </head>
 
 <body>
@@ -129,51 +128,71 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a><ul>
-<li><a href="index.html#how-to-cite-recount3">How to cite <code>recount3</code></a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#study-explorer"><i class="fa fa-check"></i>Study explorer</a></li>
+<li><a href="index.html#how-to-cite-recount3">How to cite <code>recount3</code></a>
+<ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#related-projects"><i class="fa fa-check"></i>Related projects</a></li>
-<li><a href="index.html#previous-recount-projects">Previous <code>ReCount</code> projects</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#related-publications"><i class="fa fa-check"></i>Related publications</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#team-members"><i class="fa fa-check"></i>Team members</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#teams-involved"><i class="fa fa-check"></i>Teams involved</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#r-session-information"><i class="fa fa-check"></i>R session information</a></li>
 </ul></li>
 <li class="part"><span><b>I Get RNA-seq data!</b></span></li>
-<li class="chapter" data-level="1" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>1</b> Data</a><ul>
+<li class="chapter" data-level="1" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>1</b> Data</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="data.html"><a href="data.html#human"><i class="fa fa-check"></i><b>1.1</b> Human</a></li>
 <li class="chapter" data-level="1.2" data-path="data.html"><a href="data.html#mouse"><i class="fa fa-check"></i><b>1.2</b> Mouse</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="quick-access.html"><a href="quick-access.html"><i class="fa fa-check"></i><b>2</b> Quick Access</a><ul>
+<li class="chapter" data-level="2" data-path="quick-access.html"><a href="quick-access.html"><i class="fa fa-check"></i><b>2</b> Quick Access</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="quick-access.html"><a href="quick-access.html#quick-recount3"><i class="fa fa-check"></i><b>2.1</b> Quick recount3</a></li>
 <li class="chapter" data-level="2.2" data-path="quick-access.html"><a href="quick-access.html#quick-snapcount"><i class="fa fa-check"></i><b>2.2</b> Quick snapcount</a></li>
 <li class="chapter" data-level="2.3" data-path="quick-access.html"><a href="quick-access.html#quick-raw-files"><i class="fa fa-check"></i><b>2.3</b> Quick raw files</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="study-explorer.html"><a href="study-explorer.html"><i class="fa fa-check"></i><b>3</b> Study explorer</a></li>
-<li class="chapter" data-level="4" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html"><i class="fa fa-check"></i><b>4</b> How to ask for help</a><ul>
-<li class="chapter" data-level="4.1" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#gitter"><i class="fa fa-check"></i><b>4.1</b> Gitter</a></li>
-<li class="chapter" data-level="4.2" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#bioconductor-support-website"><i class="fa fa-check"></i><b>4.2</b> Bioconductor Support website</a></li>
-<li class="chapter" data-level="4.3" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#github-issues"><i class="fa fa-check"></i><b>4.3</b> GitHub Issues</a></li>
+<li class="chapter" data-level="3" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html"><i class="fa fa-check"></i><b>3</b> How to ask for help</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#gitter"><i class="fa fa-check"></i><b>3.1</b> Gitter</a></li>
+<li class="chapter" data-level="3.2" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#bioconductor-support-website"><i class="fa fa-check"></i><b>3.2</b> Bioconductor Support website</a></li>
+<li class="chapter" data-level="3.3" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#github-issues"><i class="fa fa-check"></i><b>3.3</b> GitHub Issues</a></li>
 </ul></li>
 <li class="part"><span><b>II Details</b></span></li>
-<li class="chapter" data-level="5" data-path="quality-check-fields.html"><a href="quality-check-fields.html"><i class="fa fa-check"></i><b>5</b> Quality check fields</a></li>
-<li class="chapter" data-level="6" data-path="bioconductor.html"><a href="bioconductor.html"><i class="fa fa-check"></i><b>6</b> Bioconductor</a><ul>
-<li class="chapter" data-level="6.1" data-path="index.html"><a href="index.html#recount3"><i class="fa fa-check"></i><b>6.1</b> recount3</a></li>
-<li class="chapter" data-level="6.2" data-path="bioconductor.html"><a href="bioconductor.html#snapcount"><i class="fa fa-check"></i><b>6.2</b> snapcount</a></li>
-<li class="chapter" data-level="6.3" data-path="bioconductor.html"><a href="bioconductor.html#megadepth"><i class="fa fa-check"></i><b>6.3</b> megadepth</a></li>
+<li class="chapter" data-level="4" data-path="quality-check-fields.html"><a href="quality-check-fields.html"><i class="fa fa-check"></i><b>4</b> Quality check fields</a></li>
+<li class="chapter" data-level="5" data-path="bioconductor.html"><a href="bioconductor.html"><i class="fa fa-check"></i><b>5</b> Bioconductor</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="bioconductor.html"><a href="bioconductor.html#recount3"><i class="fa fa-check"></i><b>5.1</b> recount3</a></li>
+<li class="chapter" data-level="5.2" data-path="bioconductor.html"><a href="bioconductor.html#snapcount"><i class="fa fa-check"></i><b>5.2</b> snapcount</a></li>
+<li class="chapter" data-level="5.3" data-path="bioconductor.html"><a href="bioconductor.html#megadepth"><i class="fa fa-check"></i><b>5.3</b> megadepth</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="raw-files.html"><a href="raw-files.html"><i class="fa fa-check"></i><b>7</b> Raw Files</a><ul>
-<li class="chapter" data-level="7.1" data-path="raw-files.html"><a href="raw-files.html#data-source-vs-collection"><i class="fa fa-check"></i><b>7.1</b> Data source vs collection</a></li>
+<li class="chapter" data-level="6" data-path="raw-files.html"><a href="raw-files.html"><i class="fa fa-check"></i><b>6</b> Raw Files</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="raw-files.html"><a href="raw-files.html#data-source-vs-collection"><i class="fa fa-check"></i><b>6.1</b> Data source vs collection</a></li>
+<li class="chapter" data-level="6.2" data-path="raw-files.html"><a href="raw-files.html#annotation-files"><i class="fa fa-check"></i><b>6.2</b> Annotation files</a></li>
+<li class="chapter" data-level="6.3" data-path="raw-files.html"><a href="raw-files.html#project-level-count-files"><i class="fa fa-check"></i><b>6.3</b> Project-level count files</a></li>
+<li class="chapter" data-level="6.4" data-path="raw-files.html"><a href="raw-files.html#project-level-metadata-files"><i class="fa fa-check"></i><b>6.4</b> Project-level metadata files</a></li>
+<li class="chapter" data-level="6.5" data-path="raw-files.html"><a href="raw-files.html#sample-level-bigwig-files"><i class="fa fa-check"></i><b>6.5</b> Sample-level BigWig files</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="bigwig-tools.html"><a href="bigwig-tools.html"><i class="fa fa-check"></i><b>8</b> bigWig tools</a></li>
-<li class="chapter" data-level="9" data-path="related-software.html"><a href="related-software.html"><i class="fa fa-check"></i><b>9</b> Related software</a></li>
-<li class="chapter" data-level="10" data-path="related-analyses.html"><a href="related-analyses.html"><i class="fa fa-check"></i><b>10</b> Related analyses</a></li>
+<li class="chapter" data-level="7" data-path="related-software.html"><a href="related-software.html"><i class="fa fa-check"></i><b>7</b> Related software</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="related-software.html"><a href="related-software.html#beyond-recount3"><i class="fa fa-check"></i><b>7.1</b> Beyond recount3</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="related-analyses.html"><a href="related-analyses.html"><i class="fa fa-check"></i><b>8</b> Related analyses</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="related-analyses.html"><a href="related-analyses.html#beyond-recount3-1"><i class="fa fa-check"></i><b>8.1</b> Beyond recount3</a></li>
+</ul></li>
 <li class="part"><span><b>III Expand <code>ReCount</code></b></span></li>
-<li class="chapter" data-level="11" data-path="your-data.html"><a href="your-data.html"><i class="fa fa-check"></i><b>11</b> Your data</a><ul>
-<li class="chapter" data-level="11.1" data-path="your-data.html"><a href="your-data.html#process-your-data"><i class="fa fa-check"></i><b>11.1</b> Process your data</a></li>
-<li class="chapter" data-level="11.2" data-path="your-data.html"><a href="your-data.html#contribute-your-collections"><i class="fa fa-check"></i><b>11.2</b> Contribute your collections</a></li>
+<li class="chapter" data-level="9" data-path="your-data.html"><a href="your-data.html"><i class="fa fa-check"></i><b>9</b> Your data</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="your-data.html"><a href="your-data.html#process-your-data"><i class="fa fa-check"></i><b>9.1</b> Process your data</a></li>
+<li class="chapter" data-level="9.2" data-path="your-data.html"><a href="your-data.html#contribute-your-collections"><i class="fa fa-check"></i><b>9.2</b> Contribute your collections</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="your-data.html"><a href="your-data.html#collection-metadata"><i class="fa fa-check"></i><b>9.2.1</b> Collection metadata</a></li>
+<li class="chapter" data-level="9.2.2" data-path="your-data.html"><a href="your-data.html#collection-project-location"><i class="fa fa-check"></i><b>9.2.2</b> Collection project location</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="join-the-recount-team.html"><a href="join-the-recount-team.html"><i class="fa fa-check"></i><b>12</b> Join the <code>ReCount</code> team!</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="join-the-recount-team.html"><a href="join-the-recount-team.html"><i class="fa fa-check"></i><b>10</b> Join the <code>ReCount</code> team!</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 </ul>
 
       </nav>
@@ -191,9 +210,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="quality-check-fields" class="section level1">
-<h1><span class="header-section-number">5</span> Quality check fields</h1>
-<p>We used a number of tools to collect potentially useful quality-control (QC) measures. Specifically, we used <code>seqtk</code> <span class="citation">(Li, <a href="#ref-seqtk" role="doc-biblioref">n.d.</a>)</span>, the <code>idxstats</code> subcommand of <code>samtools</code>, the output of <code>STAR</code>, our own <code>megadepth</code> tool, and <code>featureCounts</code>. We examine each in turn, listing the specific QC measures calculated be each.</p>
+<div id="quality-check-fields" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Quality check fields</h1>
+<p>We used a number of tools to collect potentially useful quality-control (QC) measures. Specifically, we used <code>seqtk</code> <span class="citation">(<a href="references.html#ref-seqtk" role="doc-biblioref">Li 2020 (accessed August 18, 2020)</a>)</span>, the <code>idxstats</code> subcommand of <code>samtools</code>, the output of <code>STAR</code>, our own <code>megadepth</code> tool, and <code>featureCounts</code>. We examine each in turn, listing the specific QC measures calculated be each.</p>
 <p>Monorail runs the <code>seqtk fqchk</code> command on input FASTQ files to collect base-quality and base-composition summaries for all sequencing cycles. We distill these into a few QC measures included with every summarized run in <code>recount3</code>.</p>
 <ol style="list-style-type: decimal">
 <li><strong><code>min_len</code></strong>: minimum read length</li>
@@ -256,7 +275,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><strong><code>aligned_reads%.chry</code></strong>: Precent of reads aligning to chromosome Y.</li>
 </ol>
 <p>Monorail runs our <code>megadepth</code> tool on the BAM files output by <code>STAR</code>. The chief function is to convert BAM files to bigWig files that are then added to the recount3 archive. As <code>megadepth</code> performs this conversion, it also summarizes the amount of sequencing coverage within the intervals of a provided BED file representing a gene annotation. These quantifications can be useful for quality control, tell us, for example, what fraction of the coverage is within annotated genes.</p>
-<p>Fragment length distribution is based on a special read filter only applied for this purpose to be compatible with CSAW’s fragment counting approach <span class="citation">(Lun and Smyth <a href="#ref-csaw" role="doc-biblioref">2016</a>)</span>, paired reads in a passing fragment must not be secondary, supplementary, have conflicting read order, be unmapped or be mapped on more than one chromosome. The <code>bc_</code> prefix here refers to the previous name of the Megadepth tool.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p>Fragment length distribution is based on a special read filter only applied for this purpose to be compatible with CSAW’s fragment counting approach <span class="citation">(<a href="references.html#ref-csaw" role="doc-biblioref">Lun and Smyth 2016</a>)</span>, paired reads in a passing fragment must not be secondary, supplementary, have conflicting read order, be unmapped or be mapped on more than one chromosome. The <code>bc_</code> prefix here refers to the previous name of the Megadepth tool.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
 <ol style="list-style-type: decimal">
 <li><strong><code>bc_auc.all_reads_all_bases</code></strong>: Area under coverage (total depth of coverage evaluated at all bases) for all alignments</li>
 <li><strong><code>bc_auc.all_reads_annotated_bases</code></strong>: Area under coverage for all alignments, but only for bases in annotated exons</li>
@@ -287,15 +306,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><strong><code>gene_fc_count_unique.assigned</code></strong>: Number of uniquely mapping fragments assigned by <code>featureCounts</code> to a gene</li>
 </ol>
 
-</div>
-<h3>References</h3>
-<div id="refs" class="references">
-<div id="ref-seqtk">
-<p>Li, H. n.d. <em>Seqtk: Toolkit for Processing Sequences in Fasta/Q Formats</em>. <a href="https://github.com/lh3/seqtk">https://github.com/lh3/seqtk</a>.</p>
-</div>
-<div id="ref-csaw">
-<p>Lun, A. T., and G. K. Smyth. 2016. “csaw: a Bioconductor package for differential binding analysis of ChIP-seq data using sliding windows.” <em>Nucleic Acids Res.</em> 44 (5): e45.</p>
-</div>
 </div>
 <div class="footnotes">
 <hr />

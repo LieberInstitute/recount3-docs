@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>recount3: human and mouse public RNA-seq data</title>
   <meta name="description" content="recount3: human and mouse public RNA-seq data" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="recount3: human and mouse public RNA-seq data" />
   <meta property="og:type" content="book" />
@@ -21,7 +21,6 @@
   
   
 
-<meta name="author" content="" />
 
 
 
@@ -32,6 +31,7 @@
   
 
 <link rel="next" href="data.html"/>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -49,22 +49,20 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -84,7 +82,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -117,6 +115,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<link rel="stylesheet" href="css/styles.css" type="text/css" />
 </head>
 
 <body>
@@ -129,51 +128,71 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a><ul>
-<li><a href="index.html#how-to-cite-recount3">How to cite <code>recount3</code></a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#study-explorer"><i class="fa fa-check"></i>Study explorer</a></li>
+<li><a href="index.html#how-to-cite-recount3">How to cite <code>recount3</code></a>
+<ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#related-projects"><i class="fa fa-check"></i>Related projects</a></li>
-<li><a href="index.html#previous-recount-projects">Previous <code>ReCount</code> projects</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#related-publications"><i class="fa fa-check"></i>Related publications</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#team-members"><i class="fa fa-check"></i>Team members</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#teams-involved"><i class="fa fa-check"></i>Teams involved</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#r-session-information"><i class="fa fa-check"></i>R session information</a></li>
 </ul></li>
 <li class="part"><span><b>I Get RNA-seq data!</b></span></li>
-<li class="chapter" data-level="1" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>1</b> Data</a><ul>
+<li class="chapter" data-level="1" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>1</b> Data</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="data.html"><a href="data.html#human"><i class="fa fa-check"></i><b>1.1</b> Human</a></li>
 <li class="chapter" data-level="1.2" data-path="data.html"><a href="data.html#mouse"><i class="fa fa-check"></i><b>1.2</b> Mouse</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="quick-access.html"><a href="quick-access.html"><i class="fa fa-check"></i><b>2</b> Quick Access</a><ul>
+<li class="chapter" data-level="2" data-path="quick-access.html"><a href="quick-access.html"><i class="fa fa-check"></i><b>2</b> Quick Access</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="quick-access.html"><a href="quick-access.html#quick-recount3"><i class="fa fa-check"></i><b>2.1</b> Quick recount3</a></li>
 <li class="chapter" data-level="2.2" data-path="quick-access.html"><a href="quick-access.html#quick-snapcount"><i class="fa fa-check"></i><b>2.2</b> Quick snapcount</a></li>
 <li class="chapter" data-level="2.3" data-path="quick-access.html"><a href="quick-access.html#quick-raw-files"><i class="fa fa-check"></i><b>2.3</b> Quick raw files</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="study-explorer.html"><a href="study-explorer.html"><i class="fa fa-check"></i><b>3</b> Study explorer</a></li>
-<li class="chapter" data-level="4" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html"><i class="fa fa-check"></i><b>4</b> How to ask for help</a><ul>
-<li class="chapter" data-level="4.1" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#gitter"><i class="fa fa-check"></i><b>4.1</b> Gitter</a></li>
-<li class="chapter" data-level="4.2" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#bioconductor-support-website"><i class="fa fa-check"></i><b>4.2</b> Bioconductor Support website</a></li>
-<li class="chapter" data-level="4.3" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#github-issues"><i class="fa fa-check"></i><b>4.3</b> GitHub Issues</a></li>
+<li class="chapter" data-level="3" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html"><i class="fa fa-check"></i><b>3</b> How to ask for help</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#gitter"><i class="fa fa-check"></i><b>3.1</b> Gitter</a></li>
+<li class="chapter" data-level="3.2" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#bioconductor-support-website"><i class="fa fa-check"></i><b>3.2</b> Bioconductor Support website</a></li>
+<li class="chapter" data-level="3.3" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#github-issues"><i class="fa fa-check"></i><b>3.3</b> GitHub Issues</a></li>
 </ul></li>
 <li class="part"><span><b>II Details</b></span></li>
-<li class="chapter" data-level="5" data-path="quality-check-fields.html"><a href="quality-check-fields.html"><i class="fa fa-check"></i><b>5</b> Quality check fields</a></li>
-<li class="chapter" data-level="6" data-path="bioconductor.html"><a href="bioconductor.html"><i class="fa fa-check"></i><b>6</b> Bioconductor</a><ul>
-<li class="chapter" data-level="6.1" data-path="index.html"><a href="index.html#recount3"><i class="fa fa-check"></i><b>6.1</b> recount3</a></li>
-<li class="chapter" data-level="6.2" data-path="bioconductor.html"><a href="bioconductor.html#snapcount"><i class="fa fa-check"></i><b>6.2</b> snapcount</a></li>
-<li class="chapter" data-level="6.3" data-path="bioconductor.html"><a href="bioconductor.html#megadepth"><i class="fa fa-check"></i><b>6.3</b> megadepth</a></li>
+<li class="chapter" data-level="4" data-path="quality-check-fields.html"><a href="quality-check-fields.html"><i class="fa fa-check"></i><b>4</b> Quality check fields</a></li>
+<li class="chapter" data-level="5" data-path="bioconductor.html"><a href="bioconductor.html"><i class="fa fa-check"></i><b>5</b> Bioconductor</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="bioconductor.html"><a href="bioconductor.html#recount3"><i class="fa fa-check"></i><b>5.1</b> recount3</a></li>
+<li class="chapter" data-level="5.2" data-path="bioconductor.html"><a href="bioconductor.html#snapcount"><i class="fa fa-check"></i><b>5.2</b> snapcount</a></li>
+<li class="chapter" data-level="5.3" data-path="bioconductor.html"><a href="bioconductor.html#megadepth"><i class="fa fa-check"></i><b>5.3</b> megadepth</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="raw-files.html"><a href="raw-files.html"><i class="fa fa-check"></i><b>7</b> Raw Files</a><ul>
-<li class="chapter" data-level="7.1" data-path="raw-files.html"><a href="raw-files.html#data-source-vs-collection"><i class="fa fa-check"></i><b>7.1</b> Data source vs collection</a></li>
+<li class="chapter" data-level="6" data-path="raw-files.html"><a href="raw-files.html"><i class="fa fa-check"></i><b>6</b> Raw Files</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="raw-files.html"><a href="raw-files.html#data-source-vs-collection"><i class="fa fa-check"></i><b>6.1</b> Data source vs collection</a></li>
+<li class="chapter" data-level="6.2" data-path="raw-files.html"><a href="raw-files.html#annotation-files"><i class="fa fa-check"></i><b>6.2</b> Annotation files</a></li>
+<li class="chapter" data-level="6.3" data-path="raw-files.html"><a href="raw-files.html#project-level-count-files"><i class="fa fa-check"></i><b>6.3</b> Project-level count files</a></li>
+<li class="chapter" data-level="6.4" data-path="raw-files.html"><a href="raw-files.html#project-level-metadata-files"><i class="fa fa-check"></i><b>6.4</b> Project-level metadata files</a></li>
+<li class="chapter" data-level="6.5" data-path="raw-files.html"><a href="raw-files.html#sample-level-bigwig-files"><i class="fa fa-check"></i><b>6.5</b> Sample-level BigWig files</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="bigwig-tools.html"><a href="bigwig-tools.html"><i class="fa fa-check"></i><b>8</b> bigWig tools</a></li>
-<li class="chapter" data-level="9" data-path="related-software.html"><a href="related-software.html"><i class="fa fa-check"></i><b>9</b> Related software</a></li>
-<li class="chapter" data-level="10" data-path="related-analyses.html"><a href="related-analyses.html"><i class="fa fa-check"></i><b>10</b> Related analyses</a></li>
+<li class="chapter" data-level="7" data-path="related-software.html"><a href="related-software.html"><i class="fa fa-check"></i><b>7</b> Related software</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="related-software.html"><a href="related-software.html#beyond-recount3"><i class="fa fa-check"></i><b>7.1</b> Beyond recount3</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="related-analyses.html"><a href="related-analyses.html"><i class="fa fa-check"></i><b>8</b> Related analyses</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="related-analyses.html"><a href="related-analyses.html#beyond-recount3-1"><i class="fa fa-check"></i><b>8.1</b> Beyond recount3</a></li>
+</ul></li>
 <li class="part"><span><b>III Expand <code>ReCount</code></b></span></li>
-<li class="chapter" data-level="11" data-path="your-data.html"><a href="your-data.html"><i class="fa fa-check"></i><b>11</b> Your data</a><ul>
-<li class="chapter" data-level="11.1" data-path="your-data.html"><a href="your-data.html#process-your-data"><i class="fa fa-check"></i><b>11.1</b> Process your data</a></li>
-<li class="chapter" data-level="11.2" data-path="your-data.html"><a href="your-data.html#contribute-your-collections"><i class="fa fa-check"></i><b>11.2</b> Contribute your collections</a></li>
+<li class="chapter" data-level="9" data-path="your-data.html"><a href="your-data.html"><i class="fa fa-check"></i><b>9</b> Your data</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="your-data.html"><a href="your-data.html#process-your-data"><i class="fa fa-check"></i><b>9.1</b> Process your data</a></li>
+<li class="chapter" data-level="9.2" data-path="your-data.html"><a href="your-data.html#contribute-your-collections"><i class="fa fa-check"></i><b>9.2</b> Contribute your collections</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="your-data.html"><a href="your-data.html#collection-metadata"><i class="fa fa-check"></i><b>9.2.1</b> Collection metadata</a></li>
+<li class="chapter" data-level="9.2.2" data-path="your-data.html"><a href="your-data.html#collection-project-location"><i class="fa fa-check"></i><b>9.2.2</b> Collection project location</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="join-the-recount-team.html"><a href="join-the-recount-team.html"><i class="fa fa-check"></i><b>12</b> Join the <code>ReCount</code> team!</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="join-the-recount-team.html"><a href="join-the-recount-team.html"><i class="fa fa-check"></i><b>10</b> Join the <code>ReCount</code> team!</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 </ul>
 
       </nav>
@@ -193,16 +212,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="header">
 <h1 class="title">recount3: human and mouse public RNA-seq data</h1>
+<p class="author"><em></em></p>
 </div>
 <div id="overview" class="section level1 unnumbered">
 <h1>Overview</h1>
-<p><strong>recount3</strong> is an online resource consisting of RNA-seq gene, exon, and exon-exon junction counts as well as coverage bigWig files for 8,679 and 10,088 different studies for human and mouse respectively. It is the third generation of the <a href="http://bowtie-bio.sourceforge.net/recount/">ReCount project</a>.</p>
-<p>The raw sequencing data were processed with <a href="https://github.com/langmead-lab/recount-pump/"><code>recount-pump</code></a> as described in the <a href="TODO">recount3 paper</a> which created the coverage bigWig files and the recount-unified text files. While these raw output files are available through <a href="https://idies.jhu.edu/">IDIES SciServer</a>, for ease of statistical analysis, we provide through the <em><a href="https://bioconductor.org/packages/3.12/recount3">recount3</a></em> R/Bioconductor package an interface that builds <a href="https://doi.org/10.1038/nmeth.3252">RangedSummarizedExperiment</a> R objects for gene, exon, and exon-exon junction counts for each study. Furthermore, <em><a href="https://bioconductor.org/packages/3.12/snapcount">snapcount</a></em> enables query-based access of the <code>recount3</code> and <code>recount2</code> data. The coverage bigWig files can be used for annotation-agnostic expression analyses using for example <em><a href="https://bioconductor.org/packages/3.12/megadepth">megadepth</a></em>, <em><a href="https://bioconductor.org/packages/3.12/derfinder">derfinder</a></em> and other tools.</p>
+<p><strong>recount3</strong> is an online resource consisting of RNA-seq gene, exon, and exon-exon junction counts as well as coverage bigWig files for 8,679 and 10,088 different studies for human and mouse respectively. It is the third generation of the <a href="http://bowtie-bio.sourceforge.net/recount/">ReCount project</a> and part of <a href="https://recount.bio"><strong>recount.bio</strong></a>.</p>
+<p>The raw sequencing data were processed with the Monorail system as described in the <a href="TODO">recount3 paper</a> which created the coverage bigWig files and the recount-unified text files. While these raw output files are available through <a href="https://idies.jhu.edu/">IDIES SciServer</a>, for ease of statistical analysis, we provide through the <em><a href="https://bioconductor.org/packages/3.13/recount3">recount3</a></em> R/Bioconductor package an interface that builds <a href="https://doi.org/10.1038/nmeth.3252">RangedSummarizedExperiment</a> R objects for gene, exon, and exon-exon junction counts for each study. Furthermore, <em><a href="https://bioconductor.org/packages/3.13/snapcount">snapcount</a></em> enables query-based access of the <code>recount3</code> and <code>recount2</code> data. The coverage bigWig files can be used for annotation-agnostic expression analyses using for example <em><a href="https://bioconductor.org/packages/3.13/megadepth">megadepth</a></em>, <em><a href="https://bioconductor.org/packages/3.13/derfinder">derfinder</a></em> and other tools.</p>
 <p>By taking care of several pre-processing steps and combining many datasets into one easily-accessible website, we make finding and analyzing RNA-seq data considerably more straightforward.</p>
+<div id="study-explorer" class="section level2 unnumbered">
+<h2>Study explorer</h2>
+<iframe src="https://jhubiostatistics.shinyapps.io/recount3-study-explorer/?showcase=0" width="100%" height="2000px">
+</iframe>
+<p>You can also open the study explorer independently through <a href="https://jhubiostatistics.shinyapps.io/recount3-study-explorer/">shinyapps.io</a>.</p>
+</div>
 <div id="how-to-cite-recount3" class="section level2 unnumbered">
 <h2>How to cite <code>recount3</code></h2>
 <p>Thank you for your continued support of the <code>ReCount</code> family of projects! We greatly appreciate you citing our work.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1"></a><span class="kw">print</span>(<span class="kw">citation</span>(<span class="st">&quot;recount3&quot;</span>)[<span class="dv">2</span>], <span class="dt">bibtex =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">citation</span>(<span class="st">&quot;recount3&quot;</span>)[<span class="dv">2</span>], <span class="at">bibtex =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
 <pre><code>## 
 ## Wilks C, Collado-Torres L, Zheng SC, Jaffe AE, Nellore A, Hansen KD,
 ## Langmead B (2020). &quot;recount3 pre-print title TODO.&quot; _bioRxiv_. doi:
@@ -222,33 +248,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="related-projects" class="section level3 unnumbered">
 <h3>Related projects</h3>
 <p>The <code>ReCount</code> project has three main publications over the years with implementation details that have been improved each time. Each phase of the project has had several companion publications that expanded the main resource in different directions. Please cite the appropriate expansions and results as you see relevant for your work.</p>
-</div>
-<div id="previous-recount-projects" class="section level3 unnumbered">
-<h3>Previous <code>ReCount</code> projects</h3>
+<p>Previous <code>ReCount</code> projects:</p>
 <ul>
-<li><a href="https://jhubiostatistics.shinyapps.io/recount/"><code>recount2</code></a></li>
-<li><a href="http://bowtie-bio.sourceforge.net/recount/"><code>ReCount</code></a></li>
+<li><a href="https://jhubiostatistics.shinyapps.io/recount/"><code>recount2</code></a>, DOI: <a href="https://doi.org/10.1038/nbt.3838">10.1038/nbt.3838</a></li>
+<li><a href="http://bowtie-bio.sourceforge.net/recount/"><code>ReCount</code></a>, DOI: <a href="https://doi.org/10.1186/1471-2105-12-449">10.1186/1471-2105-12-449</a></li>
 </ul>
-</div>
-<div id="related-publications" class="section level3 unnumbered">
-<h3>Related publications</h3>
-<div id="recount3" class="section level4 unnumbered">
-<h4><code>recount3</code></h4>
-</div>
-<div id="recount2" class="section level4 unnumbered">
-<h4><code>recount2</code></h4>
-</div>
-<div id="recount" class="section level4 unnumbered">
-<h4><code>ReCount</code></h4>
-</div>
 </div>
 </div>
 <div id="team-members" class="section level2 unnumbered">
 <h2>Team members</h2>
 <ul>
-<li><a href="https://github.com/">Christopher Wilks</a> (the star behind <code>recount3</code>!)</li>
+<li><a href="https://github.com/ChristopherWilks">Christopher Wilks</a> (the star behind <code>recount3</code>!)</li>
 <li><a href="https://github.com/lcolladotor">Leonardo Collado Torres</a></li>
-<li><a href="https://github.com/">Shijie Charles Zheng</a></li>
+<li><a href="https://github.com/sjczheng">Shijie Charles Zheng</a></li>
+<li><a href="https://github.com/KevinFYChen">Kevin FY Chen</a></li>
+<li><a href="https://github.com/kasperdanielhansen">Kasper Daniel Hansen</a></li>
+<li><a href="https://github.com/BenLangmead">Ben Langmead</a></li>
 </ul>
 </div>
 <div id="teams-involved" class="section level2 unnumbered">
@@ -271,122 +286,132 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 </tbody>
 </table>
-<p>This book was last updated on 2020-10-30 21:09:08.</p>
+<p>This book was last updated on 2021-01-27 04:11:24.</p>
 </div>
 <div id="r-session-information" class="section level2 unnumbered">
 <h2>R session information</h2>
-<p>Details on the R version used for making this book. The source code is available at <a href="https://github.com/lcolladotor/bioc_team_ds"><code>lcolladotor/bioc_team_ds</code></a>.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="index.html#cb3-1"></a><span class="co">## Load the package at the top of your script</span></span>
-<span id="cb3-2"><a href="index.html#cb3-2"></a><span class="kw">library</span>(<span class="st">&quot;sessioninfo&quot;</span>)</span>
-<span id="cb3-3"><a href="index.html#cb3-3"></a></span>
-<span id="cb3-4"><a href="index.html#cb3-4"></a><span class="co">## Reproducibility information</span></span>
-<span id="cb3-5"><a href="index.html#cb3-5"></a><span class="kw">print</span>(<span class="st">&#39;Reproducibility information:&#39;</span>)</span>
-<span id="cb3-6"><a href="index.html#cb3-6"></a><span class="kw">Sys.time</span>()</span>
-<span id="cb3-7"><a href="index.html#cb3-7"></a><span class="kw">proc.time</span>()</span>
-<span id="cb3-8"><a href="index.html#cb3-8"></a><span class="kw">options</span>(<span class="dt">width =</span> <span class="dv">120</span>)</span>
-<span id="cb3-9"><a href="index.html#cb3-9"></a><span class="kw">session_info</span>()</span></code></pre></div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="index.html#cb4-1"></a><span class="co">## For links</span></span>
-<span id="cb4-2"><a href="index.html#cb4-2"></a><span class="kw">library</span>(<span class="st">&quot;BiocStyle&quot;</span>)</span>
-<span id="cb4-3"><a href="index.html#cb4-3"></a></span>
-<span id="cb4-4"><a href="index.html#cb4-4"></a><span class="co">## Packages illustrated in the documentation</span></span>
-<span id="cb4-5"><a href="index.html#cb4-5"></a><span class="kw">library</span>(<span class="st">&quot;recount3&quot;</span>)</span>
-<span id="cb4-6"><a href="index.html#cb4-6"></a><span class="kw">library</span>(<span class="st">&quot;megadepth&quot;</span>)</span></code></pre></div>
+<p>Details on the R version used for making this book. The source code is available at <a href="https://github.com/LieberInstitute/recount3-docs"><code>LieberInstitute/recount3-docs</code></a>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="index.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Load the package at the top of your script</span></span>
+<span id="cb3-2"><a href="index.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;sessioninfo&quot;</span>)</span>
+<span id="cb3-3"><a href="index.html#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="index.html#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Reproducibility information</span></span>
+<span id="cb3-5"><a href="index.html#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">&#39;Reproducibility information:&#39;</span>)</span>
+<span id="cb3-6"><a href="index.html#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.time</span>()</span>
+<span id="cb3-7"><a href="index.html#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">proc.time</span>()</span>
+<span id="cb3-8"><a href="index.html#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
+<span id="cb3-9"><a href="index.html#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu">session_info</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="index.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">## For links</span></span>
+<span id="cb4-2"><a href="index.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;BiocStyle&quot;</span>)</span>
+<span id="cb4-3"><a href="index.html#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="index.html#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Packages illustrated in the documentation</span></span>
+<span id="cb4-5"><a href="index.html#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;recount3&quot;</span>)</span>
+<span id="cb4-6"><a href="index.html#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;megadepth&quot;</span>)</span>
+<span id="cb4-7"><a href="index.html#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="index.html#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="do">## For looping</span></span>
+<span id="cb4-9"><a href="index.html#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;purrr&quot;</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;Reproducibility information:&quot;</code></pre>
-<pre><code>## [1] &quot;2020-10-30 21:09:16 UTC&quot;</code></pre>
+<pre><code>## [1] &quot;2021-01-27 04:11:35 UTC&quot;</code></pre>
 <pre><code>##    user  system elapsed 
-##   8.286   0.469   8.796</code></pre>
+##  10.738   0.502  11.267</code></pre>
 <pre><code>## ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
-##  setting  value                                      
-##  version  R version 4.0.3 Patched (2020-10-29 r79387)
-##  os       Ubuntu 20.04.1 LTS                         
-##  system   x86_64, linux-gnu                          
-##  ui       X11                                        
-##  language (EN)                                       
-##  collate  en_US.UTF-8                                
-##  ctype    en_US.UTF-8                                
-##  tz       Etc/UTC                                    
-##  date     2020-10-30                                 
+##  setting  value                                             
+##  version  R Under development (unstable) (2021-01-21 r79854)
+##  os       Ubuntu 20.04.1 LTS                                
+##  system   x86_64, linux-gnu                                 
+##  ui       X11                                               
+##  language (EN)                                              
+##  collate  en_US.UTF-8                                       
+##  ctype    en_US.UTF-8                                       
+##  tz       Etc/UTC                                           
+##  date     2021-01-27                                        
 ## 
 ## ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
 ##  package              * version  date       lib source                                    
-##  assertthat             0.2.1    2019-03-21 [2] RSPM (R 4.0.0)                            
-##  Biobase              * 2.50.0   2020-10-27 [1] Bioconductor                              
-##  BiocFileCache          1.14.0   2020-10-27 [1] Bioconductor                              
-##  BiocGenerics         * 0.36.0   2020-10-27 [1] Bioconductor                              
-##  BiocManager          * 1.30.10  2019-11-16 [2] CRAN (R 4.0.3)                            
-##  BiocParallel           1.24.0   2020-10-27 [1] Bioconductor                              
-##  BiocStyle            * 2.18.0   2020-10-27 [1] Bioconductor                              
-##  Biostrings             2.58.0   2020-10-27 [1] Bioconductor                              
-##  bit                    4.0.4    2020-08-04 [1] RSPM (R 4.0.2)                            
-##  bit64                  4.0.5    2020-08-30 [1] RSPM (R 4.0.2)                            
-##  bitops                 1.0-6    2013-08-17 [1] RSPM (R 4.0.0)                            
-##  blob                   1.2.1    2020-01-20 [1] RSPM (R 4.0.0)                            
-##  bookdown               0.20     2020-06-23 [1] RSPM (R 4.0.2)                            
-##  cli                    2.1.0    2020-10-12 [2] RSPM (R 4.0.2)                            
-##  cmdfun                 1.0.2    2020-10-10 [1] RSPM (R 4.0.2)                            
-##  crayon                 1.3.4    2017-09-16 [2] RSPM (R 4.0.0)                            
-##  curl                   4.3      2019-12-02 [2] RSPM (R 4.0.0)                            
-##  data.table             1.13.0   2020-07-24 [1] RSPM (R 4.0.2)                            
-##  DBI                    1.1.0    2019-12-15 [1] RSPM (R 4.0.0)                            
-##  dbplyr                 1.4.4    2020-05-27 [1] RSPM (R 4.0.0)                            
-##  DelayedArray           0.16.0   2020-10-27 [1] Bioconductor                              
-##  digest                 0.6.25   2020-02-23 [2] RSPM (R 4.0.0)                            
-##  dplyr                  1.0.2    2020-08-18 [1] RSPM (R 4.0.2)                            
-##  ellipsis               0.3.1    2020-05-15 [2] RSPM (R 4.0.0)                            
-##  evaluate               0.14     2019-05-28 [2] RSPM (R 4.0.0)                            
-##  fansi                  0.4.1    2020-01-08 [2] RSPM (R 4.0.0)                            
-##  fs                     1.5.0    2020-07-31 [2] RSPM (R 4.0.2)                            
-##  generics               0.0.2    2018-11-29 [1] RSPM (R 4.0.0)                            
-##  GenomeInfoDb         * 1.26.0   2020-10-27 [1] Bioconductor                              
-##  GenomeInfoDbData       1.2.4    2020-10-30 [1] Bioconductor                              
-##  GenomicAlignments      1.26.0   2020-10-27 [1] Bioconductor                              
-##  GenomicRanges        * 1.42.0   2020-10-27 [1] Bioconductor                              
-##  glue                   1.4.2    2020-08-27 [2] RSPM (R 4.0.2)                            
-##  hms                    0.5.3    2020-01-08 [1] RSPM (R 4.0.0)                            
-##  htmltools              0.5.0    2020-06-16 [2] RSPM (R 4.0.1)                            
-##  httr                   1.4.2    2020-07-20 [2] RSPM (R 4.0.2)                            
-##  IRanges              * 2.24.0   2020-10-27 [1] Bioconductor                              
-##  knitr                  1.30     2020-09-22 [2] RSPM (R 4.0.2)                            
-##  lattice                0.20-41  2020-04-02 [3] CRAN (R 4.0.3)                            
-##  lifecycle              0.2.0    2020-03-06 [2] RSPM (R 4.0.0)                            
-##  magrittr               1.5      2014-11-22 [2] RSPM (R 4.0.0)                            
-##  Matrix                 1.2-18   2019-11-27 [3] CRAN (R 4.0.3)                            
-##  MatrixGenerics       * 1.2.0    2020-10-27 [1] Bioconductor                              
-##  matrixStats          * 0.57.0   2020-09-25 [1] RSPM (R 4.0.2)                            
-##  megadepth            * 0.99.10  2020-10-30 [1] Github (LieberInstitute/megadepth@358abe9)
-##  memoise                1.1.0    2017-04-21 [2] RSPM (R 4.0.0)                            
-##  pillar                 1.4.6    2020-07-10 [2] RSPM (R 4.0.2)                            
-##  pkgconfig              2.0.3    2019-09-22 [2] RSPM (R 4.0.0)                            
-##  purrr                  0.3.4    2020-04-17 [2] RSPM (R 4.0.0)                            
-##  R.methodsS3            1.8.1    2020-08-26 [1] RSPM (R 4.0.2)                            
-##  R.oo                   1.24.0   2020-08-26 [1] RSPM (R 4.0.2)                            
-##  R.utils                2.10.1   2020-08-26 [1] RSPM (R 4.0.2)                            
-##  R6                     2.4.1    2019-11-12 [2] RSPM (R 4.0.0)                            
-##  rappdirs               0.3.1    2016-03-28 [1] RSPM (R 4.0.0)                            
-##  Rcpp                   1.0.5    2020-07-06 [2] RSPM (R 4.0.2)                            
-##  RCurl                  1.98-1.2 2020-04-18 [1] RSPM (R 4.0.0)                            
-##  readr                  1.4.0    2020-10-05 [1] RSPM (R 4.0.2)                            
-##  recount3             * 0.99.11  2020-10-30 [1] Github (LieberInstitute/recount3@ce25093) 
-##  rlang                  0.4.8    2020-10-08 [2] RSPM (R 4.0.2)                            
-##  rmarkdown              2.4      2020-09-30 [1] RSPM (R 4.0.2)                            
-##  Rsamtools              2.6.0    2020-10-27 [1] Bioconductor                              
-##  RSQLite                2.2.1    2020-09-30 [1] RSPM (R 4.0.2)                            
-##  rstudioapi             0.11     2020-02-07 [2] RSPM (R 4.0.0)                            
-##  rtracklayer            1.50.0   2020-10-27 [1] Bioconductor                              
-##  S4Vectors            * 0.28.0   2020-10-27 [1] Bioconductor                              
-##  sessioninfo          * 1.1.1    2018-11-05 [1] RSPM (R 4.0.0)                            
-##  stringi                1.5.3    2020-09-09 [2] RSPM (R 4.0.2)                            
-##  stringr                1.4.0    2019-02-10 [2] RSPM (R 4.0.0)                            
-##  SummarizedExperiment * 1.20.0   2020-10-27 [1] Bioconductor                              
-##  tibble                 3.0.4    2020-10-12 [2] RSPM (R 4.0.2)                            
-##  tidyselect             1.1.0    2020-05-11 [1] RSPM (R 4.0.0)                            
-##  vctrs                  0.3.4    2020-08-29 [2] RSPM (R 4.0.2)                            
-##  withr                  2.3.0    2020-09-22 [2] RSPM (R 4.0.2)                            
-##  xfun                   0.18     2020-09-29 [2] RSPM (R 4.0.2)                            
-##  XML                    3.99-0.5 2020-07-23 [1] RSPM (R 4.0.2)                            
-##  XVector                0.30.0   2020-10-27 [1] Bioconductor                              
-##  yaml                   2.2.1    2020-02-01 [2] RSPM (R 4.0.0)                            
-##  zlibbioc               1.36.0   2020-10-27 [1] Bioconductor                              
+##  assertthat             0.2.1    2019-03-21 [2] CRAN (R 4.1.0)                            
+##  Biobase              * 2.51.0   2020-10-27 [1] Bioconductor                              
+##  BiocFileCache          1.15.1   2020-11-09 [1] Bioconductor                              
+##  BiocGenerics         * 0.37.0   2020-10-27 [1] Bioconductor                              
+##  BiocIO                 1.1.2    2020-12-05 [1] Bioconductor                              
+##  BiocManager          * 1.30.10  2019-11-16 [2] CRAN (R 4.1.0)                            
+##  BiocParallel           1.25.3   2021-01-24 [1] Bioconductor                              
+##  BiocStyle            * 2.19.1   2020-11-24 [1] Bioconductor                              
+##  Biostrings             2.59.2   2020-12-18 [1] Bioconductor                              
+##  bit                    4.0.4    2020-08-04 [1] CRAN (R 4.1.0)                            
+##  bit64                  4.0.5    2020-08-30 [1] CRAN (R 4.1.0)                            
+##  bitops                 1.0-6    2013-08-17 [1] CRAN (R 4.1.0)                            
+##  blob                   1.2.1    2020-01-20 [1] CRAN (R 4.1.0)                            
+##  bookdown               0.21     2020-10-13 [1] CRAN (R 4.1.0)                            
+##  cachem                 1.0.1    2021-01-21 [1] CRAN (R 4.1.0)                            
+##  cli                    2.2.0    2020-11-20 [2] CRAN (R 4.1.0)                            
+##  cmdfun                 1.0.2    2020-10-10 [1] CRAN (R 4.1.0)                            
+##  crayon                 1.3.4    2017-09-16 [2] CRAN (R 4.1.0)                            
+##  curl                   4.3      2019-12-02 [2] CRAN (R 4.1.0)                            
+##  data.table             1.13.6   2020-12-30 [1] CRAN (R 4.1.0)                            
+##  DBI                    1.1.1    2021-01-15 [1] CRAN (R 4.1.0)                            
+##  dbplyr                 2.0.0    2020-11-03 [1] CRAN (R 4.1.0)                            
+##  DelayedArray           0.17.7   2020-12-26 [1] Bioconductor                              
+##  digest                 0.6.27   2020-10-24 [2] CRAN (R 4.1.0)                            
+##  dplyr                  1.0.3    2021-01-15 [1] CRAN (R 4.1.0)                            
+##  ellipsis               0.3.1    2020-05-15 [2] CRAN (R 4.1.0)                            
+##  evaluate               0.14     2019-05-28 [2] CRAN (R 4.1.0)                            
+##  fansi                  0.4.2    2021-01-15 [2] CRAN (R 4.1.0)                            
+##  fastmap                1.1.0    2021-01-25 [1] CRAN (R 4.1.0)                            
+##  filelock               1.0.2    2018-10-05 [1] CRAN (R 4.1.0)                            
+##  fs                     1.5.0    2020-07-31 [2] CRAN (R 4.1.0)                            
+##  generics               0.1.0    2020-10-31 [1] CRAN (R 4.1.0)                            
+##  GenomeInfoDb         * 1.27.5   2021-01-23 [1] Bioconductor                              
+##  GenomeInfoDbData       1.2.4    2021-01-27 [1] Bioconductor                              
+##  GenomicAlignments      1.27.2   2020-12-12 [1] Bioconductor                              
+##  GenomicRanges        * 1.43.3   2021-01-14 [1] Bioconductor                              
+##  glue                   1.4.2    2020-08-27 [2] CRAN (R 4.1.0)                            
+##  highr                  0.8      2019-03-20 [2] CRAN (R 4.1.0)                            
+##  hms                    1.0.0    2021-01-13 [1] CRAN (R 4.1.0)                            
+##  htmltools              0.5.1    2021-01-12 [2] CRAN (R 4.1.0)                            
+##  httr                   1.4.2    2020-07-20 [2] CRAN (R 4.1.0)                            
+##  IRanges              * 2.25.6   2020-12-18 [1] Bioconductor                              
+##  knitr                  1.30     2020-09-22 [2] CRAN (R 4.1.0)                            
+##  lattice                0.20-41  2020-04-02 [3] CRAN (R 4.1.0)                            
+##  lifecycle              0.2.0    2020-03-06 [2] CRAN (R 4.1.0)                            
+##  magrittr               2.0.1    2020-11-17 [2] CRAN (R 4.1.0)                            
+##  Matrix                 1.3-2    2021-01-06 [3] CRAN (R 4.1.0)                            
+##  MatrixGenerics       * 1.3.0    2020-10-27 [1] Bioconductor                              
+##  matrixStats          * 0.57.0   2020-09-25 [1] CRAN (R 4.1.0)                            
+##  megadepth            * 1.1.2    2021-01-27 [1] Github (LieberInstitute/megadepth@665f222)
+##  memoise                2.0.0    2021-01-26 [1] CRAN (R 4.1.0)                            
+##  pillar                 1.4.7    2020-11-20 [2] CRAN (R 4.1.0)                            
+##  pkgconfig              2.0.3    2019-09-22 [2] CRAN (R 4.1.0)                            
+##  purrr                * 0.3.4    2020-04-17 [1] CRAN (R 4.1.0)                            
+##  R.methodsS3            1.8.1    2020-08-26 [1] CRAN (R 4.1.0)                            
+##  R.oo                   1.24.0   2020-08-26 [1] CRAN (R 4.1.0)                            
+##  R.utils                2.10.1   2020-08-26 [1] CRAN (R 4.1.0)                            
+##  R6                     2.5.0    2020-10-28 [2] CRAN (R 4.1.0)                            
+##  rappdirs               0.3.1    2016-03-28 [2] CRAN (R 4.1.0)                            
+##  Rcpp                   1.0.6    2021-01-15 [2] CRAN (R 4.1.0)                            
+##  RCurl                  1.98-1.2 2020-04-18 [1] CRAN (R 4.1.0)                            
+##  readr                  1.4.0    2020-10-05 [1] CRAN (R 4.1.0)                            
+##  recount3             * 1.1.2    2021-01-27 [1] Github (LieberInstitute/recount3@bb682ed) 
+##  restfulr               0.0.13   2017-08-06 [1] CRAN (R 4.1.0)                            
+##  rjson                  0.2.20   2018-06-08 [1] CRAN (R 4.1.0)                            
+##  rlang                  0.4.10   2020-12-30 [2] CRAN (R 4.1.0)                            
+##  rmarkdown              2.6      2020-12-14 [1] CRAN (R 4.1.0)                            
+##  Rsamtools              2.7.1    2021-01-18 [1] Bioconductor                              
+##  RSQLite                2.2.3    2021-01-24 [1] CRAN (R 4.1.0)                            
+##  rstudioapi             0.13     2020-11-12 [2] CRAN (R 4.1.0)                            
+##  rtracklayer            1.51.4   2021-01-14 [1] Bioconductor                              
+##  S4Vectors            * 0.29.6   2020-12-09 [1] Bioconductor                              
+##  sessioninfo          * 1.1.1    2018-11-05 [1] CRAN (R 4.1.0)                            
+##  stringi                1.5.3    2020-09-09 [2] CRAN (R 4.1.0)                            
+##  stringr                1.4.0    2019-02-10 [2] CRAN (R 4.1.0)                            
+##  SummarizedExperiment * 1.21.1   2020-12-12 [1] Bioconductor                              
+##  tibble                 3.0.5    2021-01-15 [2] CRAN (R 4.1.0)                            
+##  tidyselect             1.1.0    2020-05-11 [1] CRAN (R 4.1.0)                            
+##  vctrs                  0.3.6    2020-12-17 [2] CRAN (R 4.1.0)                            
+##  withr                  2.4.1    2021-01-26 [1] CRAN (R 4.1.0)                            
+##  xfun                   0.20     2021-01-06 [2] CRAN (R 4.1.0)                            
+##  XML                    3.99-0.5 2020-07-23 [1] CRAN (R 4.1.0)                            
+##  XVector                0.31.1   2020-12-12 [1] Bioconductor                              
+##  yaml                   2.2.1    2020-02-01 [2] CRAN (R 4.1.0)                            
+##  zlibbioc               1.37.0   2020-10-27 [1] Bioconductor                              
 ## 
 ## [1] /usr/local/lib/R/host-site-library
 ## [2] /usr/local/lib/R/site-library

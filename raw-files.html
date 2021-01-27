@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>7 Raw Files | recount3: human and mouse public RNA-seq data</title>
-  <meta name="description" content="7 Raw Files | recount3: human and mouse public RNA-seq data" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <title>6 Raw Files | recount3: human and mouse public RNA-seq data</title>
+  <meta name="description" content="6 Raw Files | recount3: human and mouse public RNA-seq data" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="7 Raw Files | recount3: human and mouse public RNA-seq data" />
+  <meta property="og:title" content="6 Raw Files | recount3: human and mouse public RNA-seq data" />
   <meta property="og:type" content="book" />
   
   
@@ -16,12 +16,11 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="7 Raw Files | recount3: human and mouse public RNA-seq data" />
+  <meta name="twitter:title" content="6 Raw Files | recount3: human and mouse public RNA-seq data" />
   
   
   
 
-<meta name="author" content="" />
 
 
 
@@ -31,7 +30,8 @@
   
   
 <link rel="prev" href="bioconductor.html"/>
-<link rel="next" href="bigwig-tools.html"/>
+<link rel="next" href="related-software.html"/>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -49,22 +49,20 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -84,7 +82,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -117,6 +115,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<link rel="stylesheet" href="css/styles.css" type="text/css" />
 </head>
 
 <body>
@@ -129,51 +128,71 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a><ul>
-<li><a href="index.html#how-to-cite-recount3">How to cite <code>recount3</code></a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#study-explorer"><i class="fa fa-check"></i>Study explorer</a></li>
+<li><a href="index.html#how-to-cite-recount3">How to cite <code>recount3</code></a>
+<ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#related-projects"><i class="fa fa-check"></i>Related projects</a></li>
-<li><a href="index.html#previous-recount-projects">Previous <code>ReCount</code> projects</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#related-publications"><i class="fa fa-check"></i>Related publications</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#team-members"><i class="fa fa-check"></i>Team members</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#teams-involved"><i class="fa fa-check"></i>Teams involved</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#r-session-information"><i class="fa fa-check"></i>R session information</a></li>
 </ul></li>
 <li class="part"><span><b>I Get RNA-seq data!</b></span></li>
-<li class="chapter" data-level="1" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>1</b> Data</a><ul>
+<li class="chapter" data-level="1" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>1</b> Data</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="data.html"><a href="data.html#human"><i class="fa fa-check"></i><b>1.1</b> Human</a></li>
 <li class="chapter" data-level="1.2" data-path="data.html"><a href="data.html#mouse"><i class="fa fa-check"></i><b>1.2</b> Mouse</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="quick-access.html"><a href="quick-access.html"><i class="fa fa-check"></i><b>2</b> Quick Access</a><ul>
+<li class="chapter" data-level="2" data-path="quick-access.html"><a href="quick-access.html"><i class="fa fa-check"></i><b>2</b> Quick Access</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="quick-access.html"><a href="quick-access.html#quick-recount3"><i class="fa fa-check"></i><b>2.1</b> Quick recount3</a></li>
 <li class="chapter" data-level="2.2" data-path="quick-access.html"><a href="quick-access.html#quick-snapcount"><i class="fa fa-check"></i><b>2.2</b> Quick snapcount</a></li>
 <li class="chapter" data-level="2.3" data-path="quick-access.html"><a href="quick-access.html#quick-raw-files"><i class="fa fa-check"></i><b>2.3</b> Quick raw files</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="study-explorer.html"><a href="study-explorer.html"><i class="fa fa-check"></i><b>3</b> Study explorer</a></li>
-<li class="chapter" data-level="4" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html"><i class="fa fa-check"></i><b>4</b> How to ask for help</a><ul>
-<li class="chapter" data-level="4.1" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#gitter"><i class="fa fa-check"></i><b>4.1</b> Gitter</a></li>
-<li class="chapter" data-level="4.2" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#bioconductor-support-website"><i class="fa fa-check"></i><b>4.2</b> Bioconductor Support website</a></li>
-<li class="chapter" data-level="4.3" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#github-issues"><i class="fa fa-check"></i><b>4.3</b> GitHub Issues</a></li>
+<li class="chapter" data-level="3" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html"><i class="fa fa-check"></i><b>3</b> How to ask for help</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#gitter"><i class="fa fa-check"></i><b>3.1</b> Gitter</a></li>
+<li class="chapter" data-level="3.2" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#bioconductor-support-website"><i class="fa fa-check"></i><b>3.2</b> Bioconductor Support website</a></li>
+<li class="chapter" data-level="3.3" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#github-issues"><i class="fa fa-check"></i><b>3.3</b> GitHub Issues</a></li>
 </ul></li>
 <li class="part"><span><b>II Details</b></span></li>
-<li class="chapter" data-level="5" data-path="quality-check-fields.html"><a href="quality-check-fields.html"><i class="fa fa-check"></i><b>5</b> Quality check fields</a></li>
-<li class="chapter" data-level="6" data-path="bioconductor.html"><a href="bioconductor.html"><i class="fa fa-check"></i><b>6</b> Bioconductor</a><ul>
-<li class="chapter" data-level="6.1" data-path="index.html"><a href="index.html#recount3"><i class="fa fa-check"></i><b>6.1</b> recount3</a></li>
-<li class="chapter" data-level="6.2" data-path="bioconductor.html"><a href="bioconductor.html#snapcount"><i class="fa fa-check"></i><b>6.2</b> snapcount</a></li>
-<li class="chapter" data-level="6.3" data-path="bioconductor.html"><a href="bioconductor.html#megadepth"><i class="fa fa-check"></i><b>6.3</b> megadepth</a></li>
+<li class="chapter" data-level="4" data-path="quality-check-fields.html"><a href="quality-check-fields.html"><i class="fa fa-check"></i><b>4</b> Quality check fields</a></li>
+<li class="chapter" data-level="5" data-path="bioconductor.html"><a href="bioconductor.html"><i class="fa fa-check"></i><b>5</b> Bioconductor</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="bioconductor.html"><a href="bioconductor.html#recount3"><i class="fa fa-check"></i><b>5.1</b> recount3</a></li>
+<li class="chapter" data-level="5.2" data-path="bioconductor.html"><a href="bioconductor.html#snapcount"><i class="fa fa-check"></i><b>5.2</b> snapcount</a></li>
+<li class="chapter" data-level="5.3" data-path="bioconductor.html"><a href="bioconductor.html#megadepth"><i class="fa fa-check"></i><b>5.3</b> megadepth</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="raw-files.html"><a href="raw-files.html"><i class="fa fa-check"></i><b>7</b> Raw Files</a><ul>
-<li class="chapter" data-level="7.1" data-path="raw-files.html"><a href="raw-files.html#data-source-vs-collection"><i class="fa fa-check"></i><b>7.1</b> Data source vs collection</a></li>
+<li class="chapter" data-level="6" data-path="raw-files.html"><a href="raw-files.html"><i class="fa fa-check"></i><b>6</b> Raw Files</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="raw-files.html"><a href="raw-files.html#data-source-vs-collection"><i class="fa fa-check"></i><b>6.1</b> Data source vs collection</a></li>
+<li class="chapter" data-level="6.2" data-path="raw-files.html"><a href="raw-files.html#annotation-files"><i class="fa fa-check"></i><b>6.2</b> Annotation files</a></li>
+<li class="chapter" data-level="6.3" data-path="raw-files.html"><a href="raw-files.html#project-level-count-files"><i class="fa fa-check"></i><b>6.3</b> Project-level count files</a></li>
+<li class="chapter" data-level="6.4" data-path="raw-files.html"><a href="raw-files.html#project-level-metadata-files"><i class="fa fa-check"></i><b>6.4</b> Project-level metadata files</a></li>
+<li class="chapter" data-level="6.5" data-path="raw-files.html"><a href="raw-files.html#sample-level-bigwig-files"><i class="fa fa-check"></i><b>6.5</b> Sample-level BigWig files</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="bigwig-tools.html"><a href="bigwig-tools.html"><i class="fa fa-check"></i><b>8</b> bigWig tools</a></li>
-<li class="chapter" data-level="9" data-path="related-software.html"><a href="related-software.html"><i class="fa fa-check"></i><b>9</b> Related software</a></li>
-<li class="chapter" data-level="10" data-path="related-analyses.html"><a href="related-analyses.html"><i class="fa fa-check"></i><b>10</b> Related analyses</a></li>
+<li class="chapter" data-level="7" data-path="related-software.html"><a href="related-software.html"><i class="fa fa-check"></i><b>7</b> Related software</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="related-software.html"><a href="related-software.html#beyond-recount3"><i class="fa fa-check"></i><b>7.1</b> Beyond recount3</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="related-analyses.html"><a href="related-analyses.html"><i class="fa fa-check"></i><b>8</b> Related analyses</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="related-analyses.html"><a href="related-analyses.html#beyond-recount3-1"><i class="fa fa-check"></i><b>8.1</b> Beyond recount3</a></li>
+</ul></li>
 <li class="part"><span><b>III Expand <code>ReCount</code></b></span></li>
-<li class="chapter" data-level="11" data-path="your-data.html"><a href="your-data.html"><i class="fa fa-check"></i><b>11</b> Your data</a><ul>
-<li class="chapter" data-level="11.1" data-path="your-data.html"><a href="your-data.html#process-your-data"><i class="fa fa-check"></i><b>11.1</b> Process your data</a></li>
-<li class="chapter" data-level="11.2" data-path="your-data.html"><a href="your-data.html#contribute-your-collections"><i class="fa fa-check"></i><b>11.2</b> Contribute your collections</a></li>
+<li class="chapter" data-level="9" data-path="your-data.html"><a href="your-data.html"><i class="fa fa-check"></i><b>9</b> Your data</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="your-data.html"><a href="your-data.html#process-your-data"><i class="fa fa-check"></i><b>9.1</b> Process your data</a></li>
+<li class="chapter" data-level="9.2" data-path="your-data.html"><a href="your-data.html#contribute-your-collections"><i class="fa fa-check"></i><b>9.2</b> Contribute your collections</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="your-data.html"><a href="your-data.html#collection-metadata"><i class="fa fa-check"></i><b>9.2.1</b> Collection metadata</a></li>
+<li class="chapter" data-level="9.2.2" data-path="your-data.html"><a href="your-data.html#collection-project-location"><i class="fa fa-check"></i><b>9.2.2</b> Collection project location</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="join-the-recount-team.html"><a href="join-the-recount-team.html"><i class="fa fa-check"></i><b>12</b> Join the <code>ReCount</code> team!</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="join-the-recount-team.html"><a href="join-the-recount-team.html"><i class="fa fa-check"></i><b>10</b> Join the <code>ReCount</code> team!</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 </ul>
 
       </nav>
@@ -191,13 +210,586 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="raw-files" class="section level1">
-<h1><span class="header-section-number">7</span> Raw Files</h1>
+<div id="raw-files" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Raw Files</h1>
 <p>Explain the raw file formats we have and how they are organized</p>
-<div id="data-source-vs-collection" class="section level2">
-<h2><span class="header-section-number">7.1</span> Data source vs collection</h2>
+<div id="data-source-vs-collection" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Data source vs collection</h2>
+<p>A <code>data source</code> specifies where the data is hosted at, most commonly from the <a href="https://www.ncbi.nlm.nih.gov/sra">Sequence Read Archive (SRA)</a>. A <code>collection</code> is a manually curated set of samples from one or more studies. A collection has a custom metadata file where the curator(s) can specify metadata variables for the collection. In other words:</p>
+<ul>
+<li><code>data_source</code>: samples from the original data origin</li>
+<li><code>collection</code>: manually selected samples with curated collection-specific sample metadata</li>
+</ul>
+</div>
+<div id="annotation-files" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Annotation files</h2>
+<p>Here are the direct links in case you are interested in downloading the annotation files directly.</p>
+<table>
+<caption>(#tab:ann_files)Annotation files</caption>
+<colgroup>
+<col width="6%" />
+<col width="3%" />
+<col width="9%" />
+<col width="11%" />
+<col width="68%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">organism</th>
+<th align="left">type</th>
+<th align="left">annotation</th>
+<th align="left">file_extension</th>
+<th align="left">URL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">human</td>
+<td align="left">gene</td>
+<td align="left">gencode_v26</td>
+<td align="left">G026</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/annotations/gene_sums/human.gene_sums.G026.gtf.gz" class="uri">http://idies.jhu.edu/recount3/data/human/annotations/gene_sums/human.gene_sums.G026.gtf.gz</a></td>
+</tr>
+<tr class="even">
+<td align="left">human</td>
+<td align="left">gene</td>
+<td align="left">gencode_v29</td>
+<td align="left">G029</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/annotations/gene_sums/human.gene_sums.G029.gtf.gz" class="uri">http://idies.jhu.edu/recount3/data/human/annotations/gene_sums/human.gene_sums.G029.gtf.gz</a></td>
+</tr>
+<tr class="odd">
+<td align="left">human</td>
+<td align="left">gene</td>
+<td align="left">fantom6_cat</td>
+<td align="left">F006</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/annotations/gene_sums/human.gene_sums.F006.gtf.gz" class="uri">http://idies.jhu.edu/recount3/data/human/annotations/gene_sums/human.gene_sums.F006.gtf.gz</a></td>
+</tr>
+<tr class="even">
+<td align="left">human</td>
+<td align="left">gene</td>
+<td align="left">refseq</td>
+<td align="left">R109</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/annotations/gene_sums/human.gene_sums.R109.gtf.gz" class="uri">http://idies.jhu.edu/recount3/data/human/annotations/gene_sums/human.gene_sums.R109.gtf.gz</a></td>
+</tr>
+<tr class="odd">
+<td align="left">human</td>
+<td align="left">gene</td>
+<td align="left">ercc</td>
+<td align="left">ERCC</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/annotations/gene_sums/human.gene_sums.ERCC.gtf.gz" class="uri">http://idies.jhu.edu/recount3/data/human/annotations/gene_sums/human.gene_sums.ERCC.gtf.gz</a></td>
+</tr>
+<tr class="even">
+<td align="left">human</td>
+<td align="left">gene</td>
+<td align="left">sirv</td>
+<td align="left">SIRV</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/annotations/gene_sums/human.gene_sums.SIRV.gtf.gz" class="uri">http://idies.jhu.edu/recount3/data/human/annotations/gene_sums/human.gene_sums.SIRV.gtf.gz</a></td>
+</tr>
+<tr class="odd">
+<td align="left">human</td>
+<td align="left">exon</td>
+<td align="left">gencode_v26</td>
+<td align="left">G026</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/annotations/exon_sums/human.exon_sums.G026.gtf.gz" class="uri">http://idies.jhu.edu/recount3/data/human/annotations/exon_sums/human.exon_sums.G026.gtf.gz</a></td>
+</tr>
+<tr class="even">
+<td align="left">human</td>
+<td align="left">exon</td>
+<td align="left">gencode_v29</td>
+<td align="left">G029</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/annotations/exon_sums/human.exon_sums.G029.gtf.gz" class="uri">http://idies.jhu.edu/recount3/data/human/annotations/exon_sums/human.exon_sums.G029.gtf.gz</a></td>
+</tr>
+<tr class="odd">
+<td align="left">human</td>
+<td align="left">exon</td>
+<td align="left">fantom6_cat</td>
+<td align="left">F006</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/annotations/exon_sums/human.exon_sums.F006.gtf.gz" class="uri">http://idies.jhu.edu/recount3/data/human/annotations/exon_sums/human.exon_sums.F006.gtf.gz</a></td>
+</tr>
+<tr class="even">
+<td align="left">human</td>
+<td align="left">exon</td>
+<td align="left">refseq</td>
+<td align="left">R109</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/annotations/exon_sums/human.exon_sums.R109.gtf.gz" class="uri">http://idies.jhu.edu/recount3/data/human/annotations/exon_sums/human.exon_sums.R109.gtf.gz</a></td>
+</tr>
+<tr class="odd">
+<td align="left">human</td>
+<td align="left">exon</td>
+<td align="left">ercc</td>
+<td align="left">ERCC</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/annotations/exon_sums/human.exon_sums.ERCC.gtf.gz" class="uri">http://idies.jhu.edu/recount3/data/human/annotations/exon_sums/human.exon_sums.ERCC.gtf.gz</a></td>
+</tr>
+<tr class="even">
+<td align="left">human</td>
+<td align="left">exon</td>
+<td align="left">sirv</td>
+<td align="left">SIRV</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/annotations/exon_sums/human.exon_sums.SIRV.gtf.gz" class="uri">http://idies.jhu.edu/recount3/data/human/annotations/exon_sums/human.exon_sums.SIRV.gtf.gz</a></td>
+</tr>
+<tr class="odd">
+<td align="left">mouse</td>
+<td align="left">gene</td>
+<td align="left">gencode_v23</td>
+<td align="left">M023</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/mouse/annotations/gene_sums/mouse.gene_sums.M023.gtf.gz" class="uri">http://idies.jhu.edu/recount3/data/mouse/annotations/gene_sums/mouse.gene_sums.M023.gtf.gz</a></td>
+</tr>
+<tr class="even">
+<td align="left">mouse</td>
+<td align="left">exon</td>
+<td align="left">gencode_v23</td>
+<td align="left">M023</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/mouse/annotations/exon_sums/mouse.exon_sums.M023.gtf.gz" class="uri">http://idies.jhu.edu/recount3/data/mouse/annotations/exon_sums/mouse.exon_sums.M023.gtf.gz</a></td>
+</tr>
+</tbody>
+</table>
+<p>On the R package, you can use <code>recount3::locate_url_ann()</code> to obtain these URLs.</p>
+<p>The URL structure is:</p>
+<p><code>&lt;recount3_url&gt;</code>/data/<code>&lt;organism&gt;</code>/annotations/<code>&lt;gene|exon&gt;</code>_sums/<code>&lt;organism&gt;</code>.<code>&lt;gene|exon&gt;</code>_sums.<code>&lt;annotation file extension&gt;</code>.gtf.gz</p>
+<p>These are the annotation file extensions; human:</p>
+<ul>
+<li>Gencode v26: <code>G026</code></li>
+<li>Gencode v29: <code>G029</code></li>
+<li>RefSeq: <code>ERCC</code></li>
+<li>FANTOM6_cat: <code>F006</code></li>
+<li>ERCC: <code>R109</code></li>
+<li>SIRV: <code>SIRV</code></li>
+</ul>
+<p>Mouse:</p>
+<ul>
+<li>Gencode v23: <code>M023</code></li>
+</ul>
+</div>
+<div id="project-level-count-files" class="section level2" number="6.3">
+<h2><span class="header-section-number">6.3</span> Project-level count files</h2>
+<p>For every project, we have files at the gene, exon, and exon-exon junction expression levels. For genes and exons, we provide a file for each of the annotations. That is, for every project we provide:</p>
+<ul>
+<li>gene files: one count matrix per annotation</li>
+<li>exon files: one count matrix per annotation</li>
+<li>3 exon-exon junction files: the sparse count matrix data in Matrix Market (MM) format, the small list of sample identifiers (IDs), and the exon-exon junctions coordinate information (RR file)</li>
+</ul>
+<p>All these files can be located with <code>recount3::locate_url()</code>. The following R code creates a table with links to the files for the default annotation for each organism. Note that you can replace the annotation file extension (like <code>G026</code>) for the corresponding one for annotation annotation shown in the previous section (or use <code>recount3::annotation_ext()</code> to see available options).</p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="raw-files.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Obtain all available projects</span></span>
+<span id="cb52-2"><a href="raw-files.html#cb52-2" aria-hidden="true" tabindex="-1"></a>projects <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
+<span id="cb52-3"><a href="raw-files.html#cb52-3" aria-hidden="true" tabindex="-1"></a>    recount3<span class="sc">::</span><span class="fu">available_projects</span>(<span class="st">&quot;human&quot;</span>),</span>
+<span id="cb52-4"><a href="raw-files.html#cb52-4" aria-hidden="true" tabindex="-1"></a>    recount3<span class="sc">::</span><span class="fu">available_projects</span>(<span class="st">&quot;mouse&quot;</span>)</span>
+<span id="cb52-5"><a href="raw-files.html#cb52-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb52-6"><a href="raw-files.html#cb52-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-7"><a href="raw-files.html#cb52-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Locate the project raw files at the gene level using the default annotation</span></span>
+<span id="cb52-8"><a href="raw-files.html#cb52-8" aria-hidden="true" tabindex="-1"></a>projects<span class="sc">$</span>gene <span class="ot">&lt;-</span> <span class="fu">apply</span>(projects, <span class="dv">1</span>, <span class="cf">function</span>(x)</span>
+<span id="cb52-9"><a href="raw-files.html#cb52-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">locate_url</span>(</span>
+<span id="cb52-10"><a href="raw-files.html#cb52-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">project =</span> x[<span class="st">&quot;project&quot;</span>],</span>
+<span id="cb52-11"><a href="raw-files.html#cb52-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">project_home =</span> x[<span class="st">&quot;project_home&quot;</span>],</span>
+<span id="cb52-12"><a href="raw-files.html#cb52-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">type =</span> <span class="st">&quot;gene&quot;</span>,</span>
+<span id="cb52-13"><a href="raw-files.html#cb52-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">organism =</span> x[<span class="st">&quot;organism&quot;</span>],</span>
+<span id="cb52-14"><a href="raw-files.html#cb52-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">annotation =</span> <span class="fu">annotation_options</span>(x[<span class="st">&quot;organism&quot;</span>])[<span class="dv">1</span>] <span class="co"># Use default annotation</span></span>
+<span id="cb52-15"><a href="raw-files.html#cb52-15" aria-hidden="true" tabindex="-1"></a>    ))</span>
+<span id="cb52-16"><a href="raw-files.html#cb52-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-17"><a href="raw-files.html#cb52-17" aria-hidden="true" tabindex="-1"></a><span class="do">## Locate the project raw files at the exon level using the default annotation</span></span>
+<span id="cb52-18"><a href="raw-files.html#cb52-18" aria-hidden="true" tabindex="-1"></a>projects<span class="sc">$</span>exon <span class="ot">&lt;-</span> <span class="fu">apply</span>(projects, <span class="dv">1</span>, <span class="cf">function</span>(x)</span>
+<span id="cb52-19"><a href="raw-files.html#cb52-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">locate_url</span>(</span>
+<span id="cb52-20"><a href="raw-files.html#cb52-20" aria-hidden="true" tabindex="-1"></a>        <span class="at">project =</span> x[<span class="st">&quot;project&quot;</span>],</span>
+<span id="cb52-21"><a href="raw-files.html#cb52-21" aria-hidden="true" tabindex="-1"></a>        <span class="at">project_home =</span> x[<span class="st">&quot;project_home&quot;</span>],</span>
+<span id="cb52-22"><a href="raw-files.html#cb52-22" aria-hidden="true" tabindex="-1"></a>        <span class="at">type =</span> <span class="st">&quot;exon&quot;</span>,</span>
+<span id="cb52-23"><a href="raw-files.html#cb52-23" aria-hidden="true" tabindex="-1"></a>        <span class="at">organism =</span> x[<span class="st">&quot;organism&quot;</span>],</span>
+<span id="cb52-24"><a href="raw-files.html#cb52-24" aria-hidden="true" tabindex="-1"></a>        <span class="at">annotation =</span> <span class="fu">annotation_options</span>(x[<span class="st">&quot;organism&quot;</span>])[<span class="dv">1</span>] <span class="co"># Use default annotation</span></span>
+<span id="cb52-25"><a href="raw-files.html#cb52-25" aria-hidden="true" tabindex="-1"></a>    ))</span>
+<span id="cb52-26"><a href="raw-files.html#cb52-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-27"><a href="raw-files.html#cb52-27" aria-hidden="true" tabindex="-1"></a><span class="do">## Locate the project raw exon-exon junction files</span></span>
+<span id="cb52-28"><a href="raw-files.html#cb52-28" aria-hidden="true" tabindex="-1"></a>projects <span class="ot">&lt;-</span></span>
+<span id="cb52-29"><a href="raw-files.html#cb52-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cbind</span>(projects, <span class="fu">do.call</span>(rbind, <span class="fu">apply</span>(projects, <span class="dv">1</span>, <span class="cf">function</span>(x) {</span>
+<span id="cb52-30"><a href="raw-files.html#cb52-30" aria-hidden="true" tabindex="-1"></a>        x <span class="ot">&lt;-</span></span>
+<span id="cb52-31"><a href="raw-files.html#cb52-31" aria-hidden="true" tabindex="-1"></a>            <span class="fu">locate_url</span>(</span>
+<span id="cb52-32"><a href="raw-files.html#cb52-32" aria-hidden="true" tabindex="-1"></a>                <span class="at">project =</span> x[<span class="st">&quot;project&quot;</span>],</span>
+<span id="cb52-33"><a href="raw-files.html#cb52-33" aria-hidden="true" tabindex="-1"></a>                <span class="at">project_home =</span> x[<span class="st">&quot;project_home&quot;</span>],</span>
+<span id="cb52-34"><a href="raw-files.html#cb52-34" aria-hidden="true" tabindex="-1"></a>                <span class="at">type =</span> <span class="st">&quot;jxn&quot;</span>,</span>
+<span id="cb52-35"><a href="raw-files.html#cb52-35" aria-hidden="true" tabindex="-1"></a>                <span class="at">organism =</span> x[<span class="st">&quot;organism&quot;</span>]</span>
+<span id="cb52-36"><a href="raw-files.html#cb52-36" aria-hidden="true" tabindex="-1"></a>            )</span>
+<span id="cb52-37"><a href="raw-files.html#cb52-37" aria-hidden="true" tabindex="-1"></a>        res <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">t</span>(x))</span>
+<span id="cb52-38"><a href="raw-files.html#cb52-38" aria-hidden="true" tabindex="-1"></a>        <span class="fu">colnames</span>(res) <span class="ot">&lt;-</span></span>
+<span id="cb52-39"><a href="raw-files.html#cb52-39" aria-hidden="true" tabindex="-1"></a>            <span class="fu">paste0</span>(<span class="st">&quot;jxn_&quot;</span>, <span class="fu">gsub</span>(<span class="st">&quot;^.*</span><span class="sc">\\</span><span class="st">.&quot;</span>, <span class="st">&quot;&quot;</span>, <span class="fu">gsub</span>(<span class="st">&quot;</span><span class="sc">\\</span><span class="st">.gz&quot;</span>, <span class="st">&quot;&quot;</span>, <span class="fu">colnames</span>(res))))</span>
+<span id="cb52-40"><a href="raw-files.html#cb52-40" aria-hidden="true" tabindex="-1"></a>        <span class="fu">return</span>(res)</span>
+<span id="cb52-41"><a href="raw-files.html#cb52-41" aria-hidden="true" tabindex="-1"></a>    })))</span>
+<span id="cb52-42"><a href="raw-files.html#cb52-42" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(projects) <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb52-43"><a href="raw-files.html#cb52-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-44"><a href="raw-files.html#cb52-44" aria-hidden="true" tabindex="-1"></a><span class="do">## Dimensions of the table</span></span>
+<span id="cb52-45"><a href="raw-files.html#cb52-45" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(projects)</span>
+<span id="cb52-46"><a href="raw-files.html#cb52-46" aria-hidden="true" tabindex="-1"></a><span class="co"># [1] 18830    10</span></span>
+<span id="cb52-47"><a href="raw-files.html#cb52-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-48"><a href="raw-files.html#cb52-48" aria-hidden="true" tabindex="-1"></a><span class="do">## Export</span></span>
+<span id="cb52-49"><a href="raw-files.html#cb52-49" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(projects, <span class="at">file =</span> <span class="st">&quot;recount3_raw_project_files_with_default_annotation.csv&quot;</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<p>As a teaser, here you can see the first 20 rows of this long table. Or you can download the CSV file to your computer from <a href="https://github.com/LieberInstitute/recount3-docs/blob/master/recount3_raw_project_files_with_default_annotation.csv">GitHub</a>.</p>
+<table>
+<caption>(#tab:project_raw_files_table)First 20 raw project files</caption>
+<colgroup>
+<col width="1%" />
+<col width="1%" />
+<col width="1%" />
+<col width="2%" />
+<col width="2%" />
+<col width="17%" />
+<col width="17%" />
+<col width="18%" />
+<col width="18%" />
+<col width="18%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">project</th>
+<th align="left">organism</th>
+<th align="left">file_source</th>
+<th align="left">project_home</th>
+<th align="left">project_type</th>
+<th align="left">gene</th>
+<th align="left">exon</th>
+<th align="left">jxn_MM</th>
+<th align="left">jxn_RR</th>
+<th align="left">jxn_ID</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">SRP107565</td>
+<td align="left">human</td>
+<td align="left">sra</td>
+<td align="left">data_sources/sra</td>
+<td align="left">data_sources</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP107565/sra.gene_sums.SRP107565.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP107565/sra.gene_sums.SRP107565.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP107565/sra.exon_sums.SRP107565.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP107565/sra.exon_sums.SRP107565.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP107565/sra.junctions.SRP107565.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP107565/sra.junctions.SRP107565.ALL.MM.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP107565/sra.junctions.SRP107565.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP107565/sra.junctions.SRP107565.ALL.RR.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP107565/sra.junctions.SRP107565.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP107565/sra.junctions.SRP107565.ALL.ID.gz</a></td>
+</tr>
+<tr class="even">
+<td align="left">SRP149665</td>
+<td align="left">human</td>
+<td align="left">sra</td>
+<td align="left">data_sources/sra</td>
+<td align="left">data_sources</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP149665/sra.gene_sums.SRP149665.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP149665/sra.gene_sums.SRP149665.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP149665/sra.exon_sums.SRP149665.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP149665/sra.exon_sums.SRP149665.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP149665/sra.junctions.SRP149665.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP149665/sra.junctions.SRP149665.ALL.MM.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP149665/sra.junctions.SRP149665.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP149665/sra.junctions.SRP149665.ALL.RR.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP149665/sra.junctions.SRP149665.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP149665/sra.junctions.SRP149665.ALL.ID.gz</a></td>
+</tr>
+<tr class="odd">
+<td align="left">SRP017465</td>
+<td align="left">human</td>
+<td align="left">sra</td>
+<td align="left">data_sources/sra</td>
+<td align="left">data_sources</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP017465/sra.gene_sums.SRP017465.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP017465/sra.gene_sums.SRP017465.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP017465/sra.exon_sums.SRP017465.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP017465/sra.exon_sums.SRP017465.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP017465/sra.junctions.SRP017465.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP017465/sra.junctions.SRP017465.ALL.MM.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP017465/sra.junctions.SRP017465.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP017465/sra.junctions.SRP017465.ALL.RR.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP017465/sra.junctions.SRP017465.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP017465/sra.junctions.SRP017465.ALL.ID.gz</a></td>
+</tr>
+<tr class="even">
+<td align="left">SRP119165</td>
+<td align="left">human</td>
+<td align="left">sra</td>
+<td align="left">data_sources/sra</td>
+<td align="left">data_sources</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP119165/sra.gene_sums.SRP119165.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP119165/sra.gene_sums.SRP119165.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP119165/sra.exon_sums.SRP119165.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP119165/sra.exon_sums.SRP119165.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP119165/sra.junctions.SRP119165.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP119165/sra.junctions.SRP119165.ALL.MM.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP119165/sra.junctions.SRP119165.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP119165/sra.junctions.SRP119165.ALL.RR.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP119165/sra.junctions.SRP119165.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP119165/sra.junctions.SRP119165.ALL.ID.gz</a></td>
+</tr>
+<tr class="odd">
+<td align="left">SRP133965</td>
+<td align="left">human</td>
+<td align="left">sra</td>
+<td align="left">data_sources/sra</td>
+<td align="left">data_sources</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP133965/sra.gene_sums.SRP133965.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP133965/sra.gene_sums.SRP133965.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP133965/sra.exon_sums.SRP133965.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP133965/sra.exon_sums.SRP133965.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP133965/sra.junctions.SRP133965.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP133965/sra.junctions.SRP133965.ALL.MM.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP133965/sra.junctions.SRP133965.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP133965/sra.junctions.SRP133965.ALL.RR.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP133965/sra.junctions.SRP133965.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP133965/sra.junctions.SRP133965.ALL.ID.gz</a></td>
+</tr>
+<tr class="even">
+<td align="left">SRP096765</td>
+<td align="left">human</td>
+<td align="left">sra</td>
+<td align="left">data_sources/sra</td>
+<td align="left">data_sources</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP096765/sra.gene_sums.SRP096765.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP096765/sra.gene_sums.SRP096765.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP096765/sra.exon_sums.SRP096765.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP096765/sra.exon_sums.SRP096765.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP096765/sra.junctions.SRP096765.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP096765/sra.junctions.SRP096765.ALL.MM.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP096765/sra.junctions.SRP096765.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP096765/sra.junctions.SRP096765.ALL.RR.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP096765/sra.junctions.SRP096765.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP096765/sra.junctions.SRP096765.ALL.ID.gz</a></td>
+</tr>
+<tr class="odd">
+<td align="left">SRP124965</td>
+<td align="left">human</td>
+<td align="left">sra</td>
+<td align="left">data_sources/sra</td>
+<td align="left">data_sources</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP124965/sra.gene_sums.SRP124965.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP124965/sra.gene_sums.SRP124965.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP124965/sra.exon_sums.SRP124965.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP124965/sra.exon_sums.SRP124965.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP124965/sra.junctions.SRP124965.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP124965/sra.junctions.SRP124965.ALL.MM.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP124965/sra.junctions.SRP124965.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP124965/sra.junctions.SRP124965.ALL.RR.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP124965/sra.junctions.SRP124965.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP124965/sra.junctions.SRP124965.ALL.ID.gz</a></td>
+</tr>
+<tr class="even">
+<td align="left">SRP189165</td>
+<td align="left">human</td>
+<td align="left">sra</td>
+<td align="left">data_sources/sra</td>
+<td align="left">data_sources</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP189165/sra.gene_sums.SRP189165.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP189165/sra.gene_sums.SRP189165.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP189165/sra.exon_sums.SRP189165.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP189165/sra.exon_sums.SRP189165.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP189165/sra.junctions.SRP189165.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP189165/sra.junctions.SRP189165.ALL.MM.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP189165/sra.junctions.SRP189165.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP189165/sra.junctions.SRP189165.ALL.RR.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP189165/sra.junctions.SRP189165.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP189165/sra.junctions.SRP189165.ALL.ID.gz</a></td>
+</tr>
+<tr class="odd">
+<td align="left">SRP050365</td>
+<td align="left">human</td>
+<td align="left">sra</td>
+<td align="left">data_sources/sra</td>
+<td align="left">data_sources</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP050365/sra.gene_sums.SRP050365.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP050365/sra.gene_sums.SRP050365.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP050365/sra.exon_sums.SRP050365.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP050365/sra.exon_sums.SRP050365.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP050365/sra.junctions.SRP050365.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP050365/sra.junctions.SRP050365.ALL.MM.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP050365/sra.junctions.SRP050365.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP050365/sra.junctions.SRP050365.ALL.RR.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP050365/sra.junctions.SRP050365.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP050365/sra.junctions.SRP050365.ALL.ID.gz</a></td>
+</tr>
+<tr class="even">
+<td align="left">SRP123065</td>
+<td align="left">human</td>
+<td align="left">sra</td>
+<td align="left">data_sources/sra</td>
+<td align="left">data_sources</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP123065/sra.gene_sums.SRP123065.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP123065/sra.gene_sums.SRP123065.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP123065/sra.exon_sums.SRP123065.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP123065/sra.exon_sums.SRP123065.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP123065/sra.junctions.SRP123065.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP123065/sra.junctions.SRP123065.ALL.MM.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP123065/sra.junctions.SRP123065.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP123065/sra.junctions.SRP123065.ALL.RR.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP123065/sra.junctions.SRP123065.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP123065/sra.junctions.SRP123065.ALL.ID.gz</a></td>
+</tr>
+<tr class="odd">
+<td align="left">SRP162465</td>
+<td align="left">human</td>
+<td align="left">sra</td>
+<td align="left">data_sources/sra</td>
+<td align="left">data_sources</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP162465/sra.gene_sums.SRP162465.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP162465/sra.gene_sums.SRP162465.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP162465/sra.exon_sums.SRP162465.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP162465/sra.exon_sums.SRP162465.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP162465/sra.junctions.SRP162465.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP162465/sra.junctions.SRP162465.ALL.MM.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP162465/sra.junctions.SRP162465.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP162465/sra.junctions.SRP162465.ALL.RR.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP162465/sra.junctions.SRP162465.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP162465/sra.junctions.SRP162465.ALL.ID.gz</a></td>
+</tr>
+<tr class="even">
+<td align="left">SRP178865</td>
+<td align="left">human</td>
+<td align="left">sra</td>
+<td align="left">data_sources/sra</td>
+<td align="left">data_sources</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP178865/sra.gene_sums.SRP178865.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP178865/sra.gene_sums.SRP178865.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP178865/sra.exon_sums.SRP178865.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP178865/sra.exon_sums.SRP178865.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP178865/sra.junctions.SRP178865.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP178865/sra.junctions.SRP178865.ALL.MM.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP178865/sra.junctions.SRP178865.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP178865/sra.junctions.SRP178865.ALL.RR.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP178865/sra.junctions.SRP178865.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP178865/sra.junctions.SRP178865.ALL.ID.gz</a></td>
+</tr>
+<tr class="odd">
+<td align="left">SRP032165</td>
+<td align="left">human</td>
+<td align="left">sra</td>
+<td align="left">data_sources/sra</td>
+<td align="left">data_sources</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP032165/sra.gene_sums.SRP032165.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP032165/sra.gene_sums.SRP032165.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP032165/sra.exon_sums.SRP032165.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP032165/sra.exon_sums.SRP032165.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP032165/sra.junctions.SRP032165.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP032165/sra.junctions.SRP032165.ALL.MM.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP032165/sra.junctions.SRP032165.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP032165/sra.junctions.SRP032165.ALL.RR.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP032165/sra.junctions.SRP032165.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP032165/sra.junctions.SRP032165.ALL.ID.gz</a></td>
+</tr>
+<tr class="even">
+<td align="left">SRP125965</td>
+<td align="left">human</td>
+<td align="left">sra</td>
+<td align="left">data_sources/sra</td>
+<td align="left">data_sources</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP125965/sra.gene_sums.SRP125965.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP125965/sra.gene_sums.SRP125965.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP125965/sra.exon_sums.SRP125965.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP125965/sra.exon_sums.SRP125965.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP125965/sra.junctions.SRP125965.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP125965/sra.junctions.SRP125965.ALL.MM.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP125965/sra.junctions.SRP125965.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP125965/sra.junctions.SRP125965.ALL.RR.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP125965/sra.junctions.SRP125965.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP125965/sra.junctions.SRP125965.ALL.ID.gz</a></td>
+</tr>
+<tr class="odd">
+<td align="left">SRP120165</td>
+<td align="left">human</td>
+<td align="left">sra</td>
+<td align="left">data_sources/sra</td>
+<td align="left">data_sources</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP120165/sra.gene_sums.SRP120165.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP120165/sra.gene_sums.SRP120165.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP120165/sra.exon_sums.SRP120165.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP120165/sra.exon_sums.SRP120165.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP120165/sra.junctions.SRP120165.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP120165/sra.junctions.SRP120165.ALL.MM.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP120165/sra.junctions.SRP120165.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP120165/sra.junctions.SRP120165.ALL.RR.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP120165/sra.junctions.SRP120165.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP120165/sra.junctions.SRP120165.ALL.ID.gz</a></td>
+</tr>
+<tr class="even">
+<td align="left">SRP044265</td>
+<td align="left">human</td>
+<td align="left">sra</td>
+<td align="left">data_sources/sra</td>
+<td align="left">data_sources</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP044265/sra.gene_sums.SRP044265.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP044265/sra.gene_sums.SRP044265.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP044265/sra.exon_sums.SRP044265.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP044265/sra.exon_sums.SRP044265.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP044265/sra.junctions.SRP044265.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP044265/sra.junctions.SRP044265.ALL.MM.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP044265/sra.junctions.SRP044265.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP044265/sra.junctions.SRP044265.ALL.RR.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP044265/sra.junctions.SRP044265.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP044265/sra.junctions.SRP044265.ALL.ID.gz</a></td>
+</tr>
+<tr class="odd">
+<td align="left">SRP014565</td>
+<td align="left">human</td>
+<td align="left">sra</td>
+<td align="left">data_sources/sra</td>
+<td align="left">data_sources</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP014565/sra.gene_sums.SRP014565.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP014565/sra.gene_sums.SRP014565.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP014565/sra.exon_sums.SRP014565.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP014565/sra.exon_sums.SRP014565.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP014565/sra.junctions.SRP014565.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP014565/sra.junctions.SRP014565.ALL.MM.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP014565/sra.junctions.SRP014565.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP014565/sra.junctions.SRP014565.ALL.RR.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP014565/sra.junctions.SRP014565.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP014565/sra.junctions.SRP014565.ALL.ID.gz</a></td>
+</tr>
+<tr class="even">
+<td align="left">SRP057065</td>
+<td align="left">human</td>
+<td align="left">sra</td>
+<td align="left">data_sources/sra</td>
+<td align="left">data_sources</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP057065/sra.gene_sums.SRP057065.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP057065/sra.gene_sums.SRP057065.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP057065/sra.exon_sums.SRP057065.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP057065/sra.exon_sums.SRP057065.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP057065/sra.junctions.SRP057065.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP057065/sra.junctions.SRP057065.ALL.MM.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP057065/sra.junctions.SRP057065.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP057065/sra.junctions.SRP057065.ALL.RR.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP057065/sra.junctions.SRP057065.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP057065/sra.junctions.SRP057065.ALL.ID.gz</a></td>
+</tr>
+<tr class="odd">
+<td align="left">SRP117665</td>
+<td align="left">human</td>
+<td align="left">sra</td>
+<td align="left">data_sources/sra</td>
+<td align="left">data_sources</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP117665/sra.gene_sums.SRP117665.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP117665/sra.gene_sums.SRP117665.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP117665/sra.exon_sums.SRP117665.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP117665/sra.exon_sums.SRP117665.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP117665/sra.junctions.SRP117665.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP117665/sra.junctions.SRP117665.ALL.MM.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP117665/sra.junctions.SRP117665.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP117665/sra.junctions.SRP117665.ALL.RR.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP117665/sra.junctions.SRP117665.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP117665/sra.junctions.SRP117665.ALL.ID.gz</a></td>
+</tr>
+<tr class="even">
+<td align="left">SRP049465</td>
+<td align="left">human</td>
+<td align="left">sra</td>
+<td align="left">data_sources/sra</td>
+<td align="left">data_sources</td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP049465/sra.gene_sums.SRP049465.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP049465/sra.gene_sums.SRP049465.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP049465/sra.exon_sums.SRP049465.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP049465/sra.exon_sums.SRP049465.G026.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP049465/sra.junctions.SRP049465.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP049465/sra.junctions.SRP049465.ALL.MM.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP049465/sra.junctions.SRP049465.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP049465/sra.junctions.SRP049465.ALL.RR.gz</a></td>
+<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP049465/sra.junctions.SRP049465.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP049465/sra.junctions.SRP049465.ALL.ID.gz</a></td>
+</tr>
+</tbody>
+</table>
+<p>The URL structure is:</p>
+<ul>
+<li>gene: <code>&lt;recount3_url&gt;</code>/data/<code>&lt;organism&gt;</code>/data_sources/<code>&lt;data_source&gt;</code>/gene_sums/<code>&lt;last 2 project letters or digits&gt;</code>/<code>&lt;project&gt;</code>/<code>&lt;data_source&gt;</code>.gene_sums.<code>&lt;project&gt;</code>.<code>&lt;annotation file extension&gt;</code>.gz</li>
+<li>exon: <code>&lt;recount3_url&gt;</code>/data/<code>&lt;organism&gt;</code>/data_sources/<code>&lt;data_source&gt;</code>/exon_sums/<code>&lt;last 2 project letters or digits&gt;</code>/<code>&lt;project&gt;</code>/<code>&lt;data_source&gt;</code>.exon_sums.<code>&lt;project&gt;</code>.<code>&lt;annotation file extension&gt;</code>.gz</li>
+<li>junctions: <code>&lt;recount3_url&gt;</code>/data/<code>&lt;organism&gt;</code>/data_sources/<code>&lt;data_source&gt;</code>/junctions/<code>&lt;last 2 project letters or digits&gt;</code>/<code>&lt;project&gt;</code>/<code>&lt;data_source&gt;</code>.junctions.<code>&lt;project&gt;</code>.<code>&lt;junction type: typically ALL&gt;</code>.<code>&lt;junction file extension: RR, MM or ID&gt;</code>.gz<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></li>
+</ul>
+</div>
+<div id="project-level-metadata-files" class="section level2" number="6.4">
+<h2><span class="header-section-number">6.4</span> Project-level metadata files</h2>
+<p>Every project from an original data source has 5 different sample metadata tables. These are:</p>
+<ul>
+<li><code>project_meta</code> (<code>sra</code>, <code>gtex</code>, <code>tcga</code>): information mostly used by the R interface for locating files</li>
+<li><code>recount_project</code>: information downloaded from the original data source, such as the SRA Run Table selector</li>
+<li><code>recount_qc</code>: <a href="quality-check-fields.html#quality-check-fields">quality check fields</a> using the QC annotation</li>
+<li><code>recount_seq_qc</code>: sequence quantily check fields</li>
+<li><code>recount_pred</code>: curated and predicted sample information described in the recount3 manuscript</li>
+</ul>
+<p>You can use the following R code to obtain the links to all these raw metadata files or use <code>recount3::locate_url()</code>.</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="raw-files.html#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Obtain all the metadata files</span></span>
+<span id="cb53-2"><a href="raw-files.html#cb53-2" aria-hidden="true" tabindex="-1"></a>metadata_files <span class="ot">&lt;-</span> <span class="fu">do.call</span>(rbind, <span class="fu">apply</span>(projects, <span class="dv">1</span>, <span class="cf">function</span>(x) {</span>
+<span id="cb53-3"><a href="raw-files.html#cb53-3" aria-hidden="true" tabindex="-1"></a>    x <span class="ot">&lt;-</span></span>
+<span id="cb53-4"><a href="raw-files.html#cb53-4" aria-hidden="true" tabindex="-1"></a>        <span class="fu">locate_url</span>(</span>
+<span id="cb53-5"><a href="raw-files.html#cb53-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">project =</span> x[[<span class="st">&quot;project&quot;</span>]],</span>
+<span id="cb53-6"><a href="raw-files.html#cb53-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">project_home =</span> x[[<span class="st">&quot;project_home&quot;</span>]],</span>
+<span id="cb53-7"><a href="raw-files.html#cb53-7" aria-hidden="true" tabindex="-1"></a>            <span class="at">type =</span> <span class="st">&quot;metadata&quot;</span>,</span>
+<span id="cb53-8"><a href="raw-files.html#cb53-8" aria-hidden="true" tabindex="-1"></a>            <span class="at">organism =</span> x[[<span class="st">&quot;organism&quot;</span>]]</span>
+<span id="cb53-9"><a href="raw-files.html#cb53-9" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb53-10"><a href="raw-files.html#cb53-10" aria-hidden="true" tabindex="-1"></a>    res <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">t</span>(x))</span>
+<span id="cb53-11"><a href="raw-files.html#cb53-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">colnames</span>(res) <span class="ot">&lt;-</span></span>
+<span id="cb53-12"><a href="raw-files.html#cb53-12" aria-hidden="true" tabindex="-1"></a>        <span class="fu">gsub</span>(<span class="st">&quot;</span><span class="sc">\\</span><span class="st">..*&quot;</span>, <span class="st">&quot;&quot;</span>, <span class="fu">gsub</span>(<span class="st">&quot;^[a-z]+</span><span class="sc">\\</span><span class="st">.&quot;</span>, <span class="st">&quot;&quot;</span>, <span class="fu">colnames</span>(res)))</span>
+<span id="cb53-13"><a href="raw-files.html#cb53-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb53-14"><a href="raw-files.html#cb53-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">colnames</span>(res)[<span class="fu">colnames</span>(res) <span class="sc">%in%</span> <span class="fu">unique</span>(projects<span class="sc">$</span>file_source)] <span class="ot">&lt;-</span></span>
+<span id="cb53-15"><a href="raw-files.html#cb53-15" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;project_meta&quot;</span></span>
+<span id="cb53-16"><a href="raw-files.html#cb53-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(res)</span>
+<span id="cb53-17"><a href="raw-files.html#cb53-17" aria-hidden="true" tabindex="-1"></a>}))</span>
+<span id="cb53-18"><a href="raw-files.html#cb53-18" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(metadata_files)</span>
+<span id="cb53-19"><a href="raw-files.html#cb53-19" aria-hidden="true" tabindex="-1"></a><span class="co"># [1] 18830     5</span></span>
+<span id="cb53-20"><a href="raw-files.html#cb53-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-21"><a href="raw-files.html#cb53-21" aria-hidden="true" tabindex="-1"></a><span class="do">## Export</span></span>
+<span id="cb53-22"><a href="raw-files.html#cb53-22" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(metadata_files, <span class="at">file =</span> <span class="st">&quot;recount3_metadata_files.csv&quot;</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<p>As a teaser, here you can see the first 6 rows of this long table. Or you can download the CSV file to your computer from <a href="https://github.com/LieberInstitute/recount3-docs/blob/master/recount3_metadata_files.csv">GitHub</a>. If you want to, you can combine it with the project raw files table from the previous section.</p>
+<pre><code>##                                                                                              project_meta
+## 1 http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/65/SRP107565/sra.sra.SRP107565.MD.gz
+## 2 http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/65/SRP149665/sra.sra.SRP149665.MD.gz
+## 3 http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/65/SRP017465/sra.sra.SRP017465.MD.gz
+## 4 http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/65/SRP119165/sra.sra.SRP119165.MD.gz
+## 5 http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/65/SRP133965/sra.sra.SRP133965.MD.gz
+## 6 http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/65/SRP096765/sra.sra.SRP096765.MD.gz
+##                                                                                                       recount_project
+## 1 http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/65/SRP107565/sra.recount_project.SRP107565.MD.gz
+## 2 http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/65/SRP149665/sra.recount_project.SRP149665.MD.gz
+## 3 http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/65/SRP017465/sra.recount_project.SRP017465.MD.gz
+## 4 http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/65/SRP119165/sra.recount_project.SRP119165.MD.gz
+## 5 http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/65/SRP133965/sra.recount_project.SRP133965.MD.gz
+## 6 http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/65/SRP096765/sra.recount_project.SRP096765.MD.gz
+##                                                                                                       recount_qc
+## 1 http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/65/SRP107565/sra.recount_qc.SRP107565.MD.gz
+## 2 http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/65/SRP149665/sra.recount_qc.SRP149665.MD.gz
+## 3 http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/65/SRP017465/sra.recount_qc.SRP017465.MD.gz
+## 4 http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/65/SRP119165/sra.recount_qc.SRP119165.MD.gz
+## 5 http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/65/SRP133965/sra.recount_qc.SRP133965.MD.gz
+## 6 http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/65/SRP096765/sra.recount_qc.SRP096765.MD.gz
+##                                                                                                       recount_seq_qc
+## 1 http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/65/SRP107565/sra.recount_seq_qc.SRP107565.MD.gz
+## 2 http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/65/SRP149665/sra.recount_seq_qc.SRP149665.MD.gz
+## 3 http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/65/SRP017465/sra.recount_seq_qc.SRP017465.MD.gz
+## 4 http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/65/SRP119165/sra.recount_seq_qc.SRP119165.MD.gz
+## 5 http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/65/SRP133965/sra.recount_seq_qc.SRP133965.MD.gz
+## 6 http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/65/SRP096765/sra.recount_seq_qc.SRP096765.MD.gz
+##                                                                                                       recount_pred
+## 1 http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/65/SRP107565/sra.recount_pred.SRP107565.MD.gz
+## 2 http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/65/SRP149665/sra.recount_pred.SRP149665.MD.gz
+## 3 http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/65/SRP017465/sra.recount_pred.SRP017465.MD.gz
+## 4 http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/65/SRP119165/sra.recount_pred.SRP119165.MD.gz
+## 5 http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/65/SRP133965/sra.recount_pred.SRP133965.MD.gz
+## 6 http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/65/SRP096765/sra.recount_pred.SRP096765.MD.gz</code></pre>
+<p>The URL structure is:</p>
+<p><code>&lt;recount3_url&gt;</code>/data/<code>&lt;organism&gt;</code>/data_sources/<code>&lt;data_source&gt;</code>/metadata/<code>&lt;last 2 project letters or digits&gt;</code>/<code>&lt;project&gt;</code>/<code>&lt;data_source&gt;</code>.<code>&lt;table name&gt;</code>.<code>&lt;project&gt;</code>.MD.gz</p>
+</div>
+<div id="sample-level-bigwig-files" class="section level2" number="6.5">
+<h2><span class="header-section-number">6.5</span> Sample-level BigWig files</h2>
+<p>Each sample in recount3 has bigWig file publicly available and whose URL can be obtained using <code>recount3::locate_url()</code>. Below we show the URL for one such sample.</p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="raw-files.html#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">locate_url</span>(</span>
+<span id="cb55-2"><a href="raw-files.html#cb55-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;SRP009615&quot;</span>,</span>
+<span id="cb55-3"><a href="raw-files.html#cb55-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;data_sources/sra&quot;</span>,</span>
+<span id="cb55-4"><a href="raw-files.html#cb55-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">type =</span> <span class="st">&quot;bw&quot;</span>,</span>
+<span id="cb55-5"><a href="raw-files.html#cb55-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">sample =</span> <span class="st">&quot;SRR387777&quot;</span></span>
+<span id="cb55-6"><a href="raw-files.html#cb55-6" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>##                                                                                       sra.base_sums.SRP009615_SRR387777.ALL.bw 
+## &quot;http://idies.jhu.edu/recount3/data/human/data_sources/sra/base_sums/15/SRP009615/77/sra.base_sums.SRP009615_SRR387777.ALL.bw&quot;</code></pre>
+<p>The URL structure is:</p>
+<p><code>&lt;recount3_url&gt;</code>/data/<code>&lt;organism&gt;</code>/data_sources/<code>&lt;data_source&gt;</code>/base_sums/<code>&lt;last 2 project letters or digits&gt;</code>/<code>&lt;project&gt;</code>/<code>&lt;last 2 sample letters or digits&gt;</code>/<code>&lt;data_source&gt;</code>.base_sums.<code>&lt;project&gt;</code>_<code>&lt;sample&gt;</code>.ALL.bw</p>
 
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="3">
+<li id="fn3"><p>Only GTEx and TCGA have junction type <code>UNIQUE</code> available in addition to <code>ALL</code>.<a href="raw-files.html#fnref3" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
@@ -205,7 +797,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 <a href="bioconductor.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="bigwig-tools.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="related-software.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

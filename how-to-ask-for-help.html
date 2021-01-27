@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 How to ask for help | recount3: human and mouse public RNA-seq data</title>
-  <meta name="description" content="4 How to ask for help | recount3: human and mouse public RNA-seq data" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <title>3 How to ask for help | recount3: human and mouse public RNA-seq data</title>
+  <meta name="description" content="3 How to ask for help | recount3: human and mouse public RNA-seq data" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 How to ask for help | recount3: human and mouse public RNA-seq data" />
+  <meta property="og:title" content="3 How to ask for help | recount3: human and mouse public RNA-seq data" />
   <meta property="og:type" content="book" />
   
   
@@ -16,12 +16,11 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 How to ask for help | recount3: human and mouse public RNA-seq data" />
+  <meta name="twitter:title" content="3 How to ask for help | recount3: human and mouse public RNA-seq data" />
   
   
   
 
-<meta name="author" content="" />
 
 
 
@@ -30,8 +29,9 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="study-explorer.html"/>
+<link rel="prev" href="quick-access.html"/>
 <link rel="next" href="quality-check-fields.html"/>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -49,22 +49,20 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -84,7 +82,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -117,6 +115,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<link rel="stylesheet" href="css/styles.css" type="text/css" />
 </head>
 
 <body>
@@ -129,51 +128,71 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a><ul>
-<li><a href="index.html#how-to-cite-recount3">How to cite <code>recount3</code></a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#study-explorer"><i class="fa fa-check"></i>Study explorer</a></li>
+<li><a href="index.html#how-to-cite-recount3">How to cite <code>recount3</code></a>
+<ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#related-projects"><i class="fa fa-check"></i>Related projects</a></li>
-<li><a href="index.html#previous-recount-projects">Previous <code>ReCount</code> projects</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#related-publications"><i class="fa fa-check"></i>Related publications</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#team-members"><i class="fa fa-check"></i>Team members</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#teams-involved"><i class="fa fa-check"></i>Teams involved</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#r-session-information"><i class="fa fa-check"></i>R session information</a></li>
 </ul></li>
 <li class="part"><span><b>I Get RNA-seq data!</b></span></li>
-<li class="chapter" data-level="1" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>1</b> Data</a><ul>
+<li class="chapter" data-level="1" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>1</b> Data</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="data.html"><a href="data.html#human"><i class="fa fa-check"></i><b>1.1</b> Human</a></li>
 <li class="chapter" data-level="1.2" data-path="data.html"><a href="data.html#mouse"><i class="fa fa-check"></i><b>1.2</b> Mouse</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="quick-access.html"><a href="quick-access.html"><i class="fa fa-check"></i><b>2</b> Quick Access</a><ul>
+<li class="chapter" data-level="2" data-path="quick-access.html"><a href="quick-access.html"><i class="fa fa-check"></i><b>2</b> Quick Access</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="quick-access.html"><a href="quick-access.html#quick-recount3"><i class="fa fa-check"></i><b>2.1</b> Quick recount3</a></li>
 <li class="chapter" data-level="2.2" data-path="quick-access.html"><a href="quick-access.html#quick-snapcount"><i class="fa fa-check"></i><b>2.2</b> Quick snapcount</a></li>
 <li class="chapter" data-level="2.3" data-path="quick-access.html"><a href="quick-access.html#quick-raw-files"><i class="fa fa-check"></i><b>2.3</b> Quick raw files</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="study-explorer.html"><a href="study-explorer.html"><i class="fa fa-check"></i><b>3</b> Study explorer</a></li>
-<li class="chapter" data-level="4" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html"><i class="fa fa-check"></i><b>4</b> How to ask for help</a><ul>
-<li class="chapter" data-level="4.1" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#gitter"><i class="fa fa-check"></i><b>4.1</b> Gitter</a></li>
-<li class="chapter" data-level="4.2" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#bioconductor-support-website"><i class="fa fa-check"></i><b>4.2</b> Bioconductor Support website</a></li>
-<li class="chapter" data-level="4.3" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#github-issues"><i class="fa fa-check"></i><b>4.3</b> GitHub Issues</a></li>
+<li class="chapter" data-level="3" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html"><i class="fa fa-check"></i><b>3</b> How to ask for help</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#gitter"><i class="fa fa-check"></i><b>3.1</b> Gitter</a></li>
+<li class="chapter" data-level="3.2" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#bioconductor-support-website"><i class="fa fa-check"></i><b>3.2</b> Bioconductor Support website</a></li>
+<li class="chapter" data-level="3.3" data-path="how-to-ask-for-help.html"><a href="how-to-ask-for-help.html#github-issues"><i class="fa fa-check"></i><b>3.3</b> GitHub Issues</a></li>
 </ul></li>
 <li class="part"><span><b>II Details</b></span></li>
-<li class="chapter" data-level="5" data-path="quality-check-fields.html"><a href="quality-check-fields.html"><i class="fa fa-check"></i><b>5</b> Quality check fields</a></li>
-<li class="chapter" data-level="6" data-path="bioconductor.html"><a href="bioconductor.html"><i class="fa fa-check"></i><b>6</b> Bioconductor</a><ul>
-<li class="chapter" data-level="6.1" data-path="index.html"><a href="index.html#recount3"><i class="fa fa-check"></i><b>6.1</b> recount3</a></li>
-<li class="chapter" data-level="6.2" data-path="bioconductor.html"><a href="bioconductor.html#snapcount"><i class="fa fa-check"></i><b>6.2</b> snapcount</a></li>
-<li class="chapter" data-level="6.3" data-path="bioconductor.html"><a href="bioconductor.html#megadepth"><i class="fa fa-check"></i><b>6.3</b> megadepth</a></li>
+<li class="chapter" data-level="4" data-path="quality-check-fields.html"><a href="quality-check-fields.html"><i class="fa fa-check"></i><b>4</b> Quality check fields</a></li>
+<li class="chapter" data-level="5" data-path="bioconductor.html"><a href="bioconductor.html"><i class="fa fa-check"></i><b>5</b> Bioconductor</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="bioconductor.html"><a href="bioconductor.html#recount3"><i class="fa fa-check"></i><b>5.1</b> recount3</a></li>
+<li class="chapter" data-level="5.2" data-path="bioconductor.html"><a href="bioconductor.html#snapcount"><i class="fa fa-check"></i><b>5.2</b> snapcount</a></li>
+<li class="chapter" data-level="5.3" data-path="bioconductor.html"><a href="bioconductor.html#megadepth"><i class="fa fa-check"></i><b>5.3</b> megadepth</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="raw-files.html"><a href="raw-files.html"><i class="fa fa-check"></i><b>7</b> Raw Files</a><ul>
-<li class="chapter" data-level="7.1" data-path="raw-files.html"><a href="raw-files.html#data-source-vs-collection"><i class="fa fa-check"></i><b>7.1</b> Data source vs collection</a></li>
+<li class="chapter" data-level="6" data-path="raw-files.html"><a href="raw-files.html"><i class="fa fa-check"></i><b>6</b> Raw Files</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="raw-files.html"><a href="raw-files.html#data-source-vs-collection"><i class="fa fa-check"></i><b>6.1</b> Data source vs collection</a></li>
+<li class="chapter" data-level="6.2" data-path="raw-files.html"><a href="raw-files.html#annotation-files"><i class="fa fa-check"></i><b>6.2</b> Annotation files</a></li>
+<li class="chapter" data-level="6.3" data-path="raw-files.html"><a href="raw-files.html#project-level-count-files"><i class="fa fa-check"></i><b>6.3</b> Project-level count files</a></li>
+<li class="chapter" data-level="6.4" data-path="raw-files.html"><a href="raw-files.html#project-level-metadata-files"><i class="fa fa-check"></i><b>6.4</b> Project-level metadata files</a></li>
+<li class="chapter" data-level="6.5" data-path="raw-files.html"><a href="raw-files.html#sample-level-bigwig-files"><i class="fa fa-check"></i><b>6.5</b> Sample-level BigWig files</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="bigwig-tools.html"><a href="bigwig-tools.html"><i class="fa fa-check"></i><b>8</b> bigWig tools</a></li>
-<li class="chapter" data-level="9" data-path="related-software.html"><a href="related-software.html"><i class="fa fa-check"></i><b>9</b> Related software</a></li>
-<li class="chapter" data-level="10" data-path="related-analyses.html"><a href="related-analyses.html"><i class="fa fa-check"></i><b>10</b> Related analyses</a></li>
+<li class="chapter" data-level="7" data-path="related-software.html"><a href="related-software.html"><i class="fa fa-check"></i><b>7</b> Related software</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="related-software.html"><a href="related-software.html#beyond-recount3"><i class="fa fa-check"></i><b>7.1</b> Beyond recount3</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="related-analyses.html"><a href="related-analyses.html"><i class="fa fa-check"></i><b>8</b> Related analyses</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="related-analyses.html"><a href="related-analyses.html#beyond-recount3-1"><i class="fa fa-check"></i><b>8.1</b> Beyond recount3</a></li>
+</ul></li>
 <li class="part"><span><b>III Expand <code>ReCount</code></b></span></li>
-<li class="chapter" data-level="11" data-path="your-data.html"><a href="your-data.html"><i class="fa fa-check"></i><b>11</b> Your data</a><ul>
-<li class="chapter" data-level="11.1" data-path="your-data.html"><a href="your-data.html#process-your-data"><i class="fa fa-check"></i><b>11.1</b> Process your data</a></li>
-<li class="chapter" data-level="11.2" data-path="your-data.html"><a href="your-data.html#contribute-your-collections"><i class="fa fa-check"></i><b>11.2</b> Contribute your collections</a></li>
+<li class="chapter" data-level="9" data-path="your-data.html"><a href="your-data.html"><i class="fa fa-check"></i><b>9</b> Your data</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="your-data.html"><a href="your-data.html#process-your-data"><i class="fa fa-check"></i><b>9.1</b> Process your data</a></li>
+<li class="chapter" data-level="9.2" data-path="your-data.html"><a href="your-data.html#contribute-your-collections"><i class="fa fa-check"></i><b>9.2</b> Contribute your collections</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="your-data.html"><a href="your-data.html#collection-metadata"><i class="fa fa-check"></i><b>9.2.1</b> Collection metadata</a></li>
+<li class="chapter" data-level="9.2.2" data-path="your-data.html"><a href="your-data.html#collection-project-location"><i class="fa fa-check"></i><b>9.2.2</b> Collection project location</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="join-the-recount-team.html"><a href="join-the-recount-team.html"><i class="fa fa-check"></i><b>12</b> Join the <code>ReCount</code> team!</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="join-the-recount-team.html"><a href="join-the-recount-team.html"><i class="fa fa-check"></i><b>10</b> Join the <code>ReCount</code> team!</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 </ul>
 
       </nav>
@@ -191,18 +210,51 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="how-to-ask-for-help" class="section level1">
-<h1><span class="header-section-number">4</span> How to ask for help</h1>
-<p>something about avoiding emails
-sharing your questions enables us to help more people like you</p>
-<div id="gitter" class="section level2">
-<h2><span class="header-section-number">4.1</span> Gitter</h2>
+<div id="how-to-ask-for-help" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> How to ask for help</h1>
+<p>In general we prefer that you contact us through a public forum such that others can benefit from your answers, so please avoid emails as much as possible. Leonardo has written a more extensive page on <a href="https://lcolladotor.github.io/bioc_team_ds/how-to-ask-for-help.html">how to ask for help</a> in general beyond this project which might be useful for you. While we have multiple options for you to contact us, please avoid posting your question in all the forums.</p>
+<div id="gitter" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Gitter</h2>
+<p>We have several Gitter chats setup in relation to our software. Here’s some of them:</p>
+<ul>
+<li><code>Megadepth</code>: <a href="https://gitter.im/megadepth/community" class="uri">https://gitter.im/megadepth/community</a></li>
+<li><code>Snaptron</code>: <a href="https://gitter.im/snaptron/Lobby" class="uri">https://gitter.im/snaptron/Lobby</a></li>
+</ul>
 </div>
-<div id="bioconductor-support-website" class="section level2">
-<h2><span class="header-section-number">4.2</span> Bioconductor Support website</h2>
+<div id="bioconductor-support-website" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Bioconductor Support website</h2>
+<p>For our R/Bioconductor packages, you can ask for help through the Bioconductor support website using the appropriate tags:</p>
+<ul>
+<li><code>recount3</code>: <a href="https://support.bioconductor.org/?tag=recount3" class="uri">https://support.bioconductor.org/?tag=recount3</a></li>
+<li><code>snapcount</code>: <a href="https://support.bioconductor.org/?tag=snapcount" class="uri">https://support.bioconductor.org/?tag=snapcount</a></li>
+<li><code>megadepth</code>: <a href="https://support.bioconductor.org/?tag=megadepth" class="uri">https://support.bioconductor.org/?tag=megadepth</a></li>
+</ul>
 </div>
-<div id="github-issues" class="section level2">
-<h2><span class="header-section-number">4.3</span> GitHub Issues</h2>
+<div id="github-issues" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> GitHub Issues</h2>
+<p>You can also report bugs through GitHub issues. Ideally, use the repository that contains the code that has produced the bug. For example, for the <code>recount3</code> R/Bioconductor package use <a href="https://github.com/LieberInstitute/recount3/issues" class="uri">https://github.com/LieberInstitute/recount3/issues</a>.</p>
+<p>Here’s a list of possible locations:</p>
+<p>R/Bioconductor related:</p>
+<ul>
+<li><code>recount3</code>: <a href="https://github.com/LieberInstitute/recount3/issues" class="uri">https://github.com/LieberInstitute/recount3/issues</a></li>
+<li><code>megadepth</code>: <a href="https://github.com/LieberInstitute/megadepth/issues" class="uri">https://github.com/LieberInstitute/megadepth/issues</a></li>
+<li><code>snapcount</code>: <a href="https://github.com/langmead-lab/snapcount/issues" class="uri">https://github.com/langmead-lab/snapcount/issues</a></li>
+</ul>
+<p>Tools:</p>
+<ul>
+<li><code>Megadepth</code>: <a href="https://github.com/ChristopherWilks/megadepth/issues" class="uri">https://github.com/ChristopherWilks/megadepth/issues</a></li>
+<li><code>Snaptron</code>: <a href="https://github.com/ChristopherWilks/snaptron/issues" class="uri">https://github.com/ChristopherWilks/snaptron/issues</a></li>
+</ul>
+<p>Monorail system related:</p>
+<ul>
+<li><code>monorail-external</code>: <a href="https://github.com/langmead-lab/monorail-external/issues" class="uri">https://github.com/langmead-lab/monorail-external/issues</a></li>
+<li><code>recount-pump</code>: <a href="https://github.com/langmead-lab/recount-pump/issues" class="uri">https://github.com/langmead-lab/recount-pump/issues</a></li>
+<li><code>recount-unify</code>: <a href="https://github.com/langmead-lab/recount-unify/issues" class="uri">https://github.com/langmead-lab/recount-unify/issues</a></li>
+</ul>
+<p>Documentation related:</p>
+<ul>
+<li><code>recount3-docs</code>: <a href="https://github.com/LieberInstitute/recount3-docs/issues" class="uri">https://github.com/LieberInstitute/recount3-docs/issues</a> (where this website is created)</li>
+</ul>
 
 </div>
 </div>
@@ -214,7 +266,7 @@ sharing your questions enables us to help more people like you</p>
           </div>
         </div>
       </div>
-<a href="study-explorer.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="quick-access.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="quality-check-fields.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
