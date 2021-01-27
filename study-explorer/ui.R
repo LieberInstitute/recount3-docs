@@ -5,7 +5,7 @@ bootstrapPage(
     tags$hr(),
     tags$h2("recount3 study explorer"),
     helpText("Under project_home you can subset for GTEx, TCGA or SRA. Note that GTEx v8 and TCGA are split by tissue."),
-    DT::dataTableOutput('metadata', width = "1550px"),
+    DT::dataTableOutput('metadata', width = "95%"),
     tags$hr(),
     downloadButton(
         'downloadData',
