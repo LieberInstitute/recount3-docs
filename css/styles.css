@@ -1,0 +1,9 @@
+.book .book-body .page-wrapper .page-inner {
+  max-width: 1600px !important;
+}
+
+/* Related links
+https://community.rstudio.com/t/increase-the-width-used-by-gitbook-solved/14726/2
+https://stackoverflow.com/questions/47065105/custom-css-to-change-bookdown-page-width
+https://bookdown.org/yihui/bookdown/web-pages-and-shiny-apps.html
+*/
