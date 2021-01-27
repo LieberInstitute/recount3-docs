@@ -133,6 +133,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#study-explorer"><i class="fa fa-check"></i>Study explorer</a></li>
 <li><a href="index.html#how-to-cite-recount3">How to cite <code>recount3</code></a>
 <ul>
+<li class="chapter" data-level="0.0.1" data-path="index.html"><a href="index.html#related-publications"><i class="fa fa-check"></i><b>0.0.1</b> Related publications</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#related-projects"><i class="fa fa-check"></i>Related projects</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#team-members"><i class="fa fa-check"></i>Team members</a></li>
@@ -162,7 +163,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="bioconductor.html"><a href="bioconductor.html"><i class="fa fa-check"></i><b>5</b> Bioconductor</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="bioconductor.html"><a href="bioconductor.html#recount3"><i class="fa fa-check"></i><b>5.1</b> recount3</a></li>
-<li class="chapter" data-level="5.2" data-path="bioconductor.html"><a href="bioconductor.html#snapcount"><i class="fa fa-check"></i><b>5.2</b> snapcount</a></li>
+<li class="chapter" data-level="5.2" data-path="bioconductor.html"><a href="bioconductor.html#snapcount"><i class="fa fa-check"></i><b>5.2</b> snapcount</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="bioconductor.html"><a href="bioconductor.html#basic-queries"><i class="fa fa-check"></i><b>5.2.1</b> Basic queries</a></li>
+</ul></li>
 <li class="chapter" data-level="5.3" data-path="bioconductor.html"><a href="bioconductor.html#megadepth"><i class="fa fa-check"></i><b>5.3</b> megadepth</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="raw-files.html"><a href="raw-files.html"><i class="fa fa-check"></i><b>6</b> Raw Files</a>
@@ -247,7 +251,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="quick-snapcount" class="section level2" number="2.2">
 <h2><span class="header-section-number">2.2</span> Quick snapcount</h2>
-<p>TODO</p>
+<p>If you want to access the data through queries such as a set of regions or annotation features instead of downloading the data at a project-level, we recommend using <em><a href="https://bioconductor.org/packages/3.13/snapcount">snapcount</a></em>. It is an R/Bioconductor package for interfacing with Snaptron’s REST API. Here’s some example code you can use to get started with <code>snapcount</code>.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="quick-access.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Install the snapcount R/Bioconductor package</span></span>
+<span id="cb10-2"><a href="quick-access.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">&quot;BiocManager&quot;</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb10-3"><a href="quick-access.html#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">install.packages</span>(<span class="st">&quot;BiocManager&quot;</span>)</span>
+<span id="cb10-4"><a href="quick-access.html#cb10-4" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">&quot;snapcount&quot;</span>)</span>
+<span id="cb10-5"><a href="quick-access.html#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="quick-access.html#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="do">## Load snapcount R package</span></span>
+<span id="cb10-7"><a href="quick-access.html#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;snapcount&quot;</span>)</span>
+<span id="cb10-8"><a href="quick-access.html#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="quick-access.html#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="do">## snapcount can be used with either a procedural interface</span></span>
+<span id="cb10-10"><a href="quick-access.html#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="fu">query_jx</span>(<span class="at">compilation =</span> <span class="st">&quot;gtex&quot;</span>, <span class="at">regions =</span> <span class="st">&quot;CD99&quot;</span>)</span>
+<span id="cb10-11"><a href="quick-access.html#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="fu">query_jx</span>(<span class="at">compilation =</span> <span class="st">&quot;gtex&quot;</span>, <span class="at">regions =</span> <span class="st">&quot;CD99&quot;</span>, <span class="at">range_filters =</span> samples_count <span class="sc">==</span> <span class="dv">10</span>)</span>
+<span id="cb10-12"><a href="quick-access.html#cb10-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-13"><a href="quick-access.html#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="do">## or using the query-builder class</span></span>
+<span id="cb10-14"><a href="quick-access.html#cb10-14" aria-hidden="true" tabindex="-1"></a>sb <span class="ot">&lt;-</span> SnaptronQueryBuilder<span class="sc">$</span><span class="fu">new</span>()</span>
+<span id="cb10-15"><a href="quick-access.html#cb10-15" aria-hidden="true" tabindex="-1"></a>sb<span class="sc">$</span><span class="fu">compilation</span>(<span class="st">&quot;gtex&quot;</span>)<span class="sc">$</span><span class="fu">regions</span>(<span class="st">&quot;CD99&quot;</span>)<span class="sc">$</span><span class="fu">query_jx</span>()</span></code></pre></div>
 </div>
 <div id="quick-raw-files" class="section level2" number="2.3">
 <h2><span class="header-section-number">2.3</span> Quick raw files</h2>

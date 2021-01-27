@@ -133,6 +133,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#study-explorer"><i class="fa fa-check"></i>Study explorer</a></li>
 <li><a href="index.html#how-to-cite-recount3">How to cite <code>recount3</code></a>
 <ul>
+<li class="chapter" data-level="0.0.1" data-path="index.html"><a href="index.html#related-publications"><i class="fa fa-check"></i><b>0.0.1</b> Related publications</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#related-projects"><i class="fa fa-check"></i>Related projects</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#team-members"><i class="fa fa-check"></i>Team members</a></li>
@@ -162,7 +163,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="bioconductor.html"><a href="bioconductor.html"><i class="fa fa-check"></i><b>5</b> Bioconductor</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="bioconductor.html"><a href="bioconductor.html#recount3"><i class="fa fa-check"></i><b>5.1</b> recount3</a></li>
-<li class="chapter" data-level="5.2" data-path="bioconductor.html"><a href="bioconductor.html#snapcount"><i class="fa fa-check"></i><b>5.2</b> snapcount</a></li>
+<li class="chapter" data-level="5.2" data-path="bioconductor.html"><a href="bioconductor.html#snapcount"><i class="fa fa-check"></i><b>5.2</b> snapcount</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="bioconductor.html"><a href="bioconductor.html#basic-queries"><i class="fa fa-check"></i><b>5.2.1</b> Basic queries</a></li>
+</ul></li>
 <li class="chapter" data-level="5.3" data-path="bioconductor.html"><a href="bioconductor.html#megadepth"><i class="fa fa-check"></i><b>5.3</b> megadepth</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="raw-files.html"><a href="raw-files.html"><i class="fa fa-check"></i><b>6</b> Raw Files</a>
@@ -243,35 +247,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">9.2.1</span> Collection metadata</h3>
 <p>The <code>&lt;collection_name&gt;</code>.custom.gz can then contain any additional columns of interest. For example, in the <a href="https://github.com/LieberInstitute/recount-brain"><code>recount-brain</code> project</a> we manually curated samples from 62 studies and standardized variables across the 62 studies.</p>
 <p>Here’s how the example collection metadata file looks like:</p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="your-data.html#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read.delim</span>(</span>
-<span id="cb57-2"><a href="your-data.html#cb57-2" aria-hidden="true" tabindex="-1"></a>    recount3<span class="sc">::</span><span class="fu">file_retrieve</span>(</span>
-<span id="cb57-3"><a href="your-data.html#cb57-3" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;http://snaptron.cs.jhu.edu/data/temp/recount3/human/collections/gtex_geuvadis/metadata/gtex_geuvadis.custom.gz&quot;</span></span>
-<span id="cb57-4"><a href="your-data.html#cb57-4" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb57-5"><a href="your-data.html#cb57-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
-<pre><code>## 2021-01-27 05:24:35 caching file gtex_geuvadis.custom.gz.</code></pre>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="your-data.html#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read.delim</span>(</span>
+<span id="cb81-2"><a href="your-data.html#cb81-2" aria-hidden="true" tabindex="-1"></a>    recount3<span class="sc">::</span><span class="fu">file_retrieve</span>(</span>
+<span id="cb81-3"><a href="your-data.html#cb81-3" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;http://snaptron.cs.jhu.edu/data/temp/recount3/human/collections/gtex_geuvadis/metadata/gtex_geuvadis.custom.gz&quot;</span></span>
+<span id="cb81-4"><a href="your-data.html#cb81-4" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb81-5"><a href="your-data.html#cb81-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>## 2021-01-27 05:51:42 caching file gtex_geuvadis.custom.gz.</code></pre>
 <pre><code>## adding rname &#39;http://snaptron.cs.jhu.edu/data/temp/recount3/human/collections/gtex_geuvadis/metadata/gtex_geuvadis.custom.gz&#39;</code></pre>
 <pre><code>##   rail_id               external_id     study sequencing_type  tissue
 ## 1   98371                 ERR188021 ERP001942            bulk     LCL
 ## 2  153881 GTEX-U3ZM-0826-SM-4DXU6.1   BLADDER            bulk BLADDER</code></pre>
 <p>This file has to be readble with R using the following code:</p>
-<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="your-data.html#cb61-1" aria-hidden="true" tabindex="-1"></a>utils<span class="sc">::</span><span class="fu">read.delim</span>(</span>
-<span id="cb61-2"><a href="your-data.html#cb61-2" aria-hidden="true" tabindex="-1"></a>    file_path,</span>
-<span id="cb61-3"><a href="your-data.html#cb61-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>,</span>
-<span id="cb61-4"><a href="your-data.html#cb61-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">check.names =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb61-5"><a href="your-data.html#cb61-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">quote =</span> <span class="st">&quot;&quot;</span>,</span>
-<span id="cb61-6"><a href="your-data.html#cb61-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">comment.char =</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb61-7"><a href="your-data.html#cb61-7" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="your-data.html#cb85-1" aria-hidden="true" tabindex="-1"></a>utils<span class="sc">::</span><span class="fu">read.delim</span>(</span>
+<span id="cb85-2"><a href="your-data.html#cb85-2" aria-hidden="true" tabindex="-1"></a>    file_path,</span>
+<span id="cb85-3"><a href="your-data.html#cb85-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>,</span>
+<span id="cb85-4"><a href="your-data.html#cb85-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">check.names =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb85-5"><a href="your-data.html#cb85-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">quote =</span> <span class="st">&quot;&quot;</span>,</span>
+<span id="cb85-6"><a href="your-data.html#cb85-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">comment.char =</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb85-7"><a href="your-data.html#cb85-7" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <p>Since this is the main file that needs to be produced for adding a collection to <code>recount3</code>, if your collection involves data that is already present in <code>recount3</code>, it will be very easy for us to add it to our resource. Otherwise we will need the <a href="raw-files.html#raw-files">raw files</a> for the corresponding new data.</p>
 </div>
 <div id="collection-project-location" class="section level3" number="9.2.2">
 <h3><span class="header-section-number">9.2.2</span> Collection project location</h3>
 <p>The second text file specifies the required information for locating the samples. While we had considered using this type of file, we don’t require it anymore. For historical purposes, this is how that file looked:<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a></p>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="your-data.html#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read.delim</span>(</span>
-<span id="cb62-2"><a href="your-data.html#cb62-2" aria-hidden="true" tabindex="-1"></a>    recount3<span class="sc">::</span><span class="fu">file_retrieve</span>(</span>
-<span id="cb62-3"><a href="your-data.html#cb62-3" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;http://snaptron.cs.jhu.edu/data/temp/recount3/human/collections/gtex_geuvadis/metadata/gtex_geuvadis.recount_project.gz&quot;</span></span>
-<span id="cb62-4"><a href="your-data.html#cb62-4" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb62-5"><a href="your-data.html#cb62-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
-<pre><code>## 2021-01-27 05:24:36 caching file gtex_geuvadis.recount_project.gz.</code></pre>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="your-data.html#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read.delim</span>(</span>
+<span id="cb86-2"><a href="your-data.html#cb86-2" aria-hidden="true" tabindex="-1"></a>    recount3<span class="sc">::</span><span class="fu">file_retrieve</span>(</span>
+<span id="cb86-3"><a href="your-data.html#cb86-3" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;http://snaptron.cs.jhu.edu/data/temp/recount3/human/collections/gtex_geuvadis/metadata/gtex_geuvadis.recount_project.gz&quot;</span></span>
+<span id="cb86-4"><a href="your-data.html#cb86-4" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb86-5"><a href="your-data.html#cb86-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>## 2021-01-27 05:51:42 caching file gtex_geuvadis.recount_project.gz.</code></pre>
 <pre><code>## adding rname &#39;http://snaptron.cs.jhu.edu/data/temp/recount3/human/collections/gtex_geuvadis/metadata/gtex_geuvadis.recount_project.gz&#39;</code></pre>
 <pre><code>##   rail_id               external_id     study   project     organism       file_source           metadata_source
 ## 1   98371                 ERR188021 ERP001942 ERP001942 Homo sapiens  data_sources/sra collections/gtex_geuvadis

@@ -133,6 +133,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#study-explorer"><i class="fa fa-check"></i>Study explorer</a></li>
 <li><a href="index.html#how-to-cite-recount3">How to cite <code>recount3</code></a>
 <ul>
+<li class="chapter" data-level="0.0.1" data-path="index.html"><a href="index.html#related-publications"><i class="fa fa-check"></i><b>0.0.1</b> Related publications</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#related-projects"><i class="fa fa-check"></i>Related projects</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#team-members"><i class="fa fa-check"></i>Team members</a></li>
@@ -162,7 +163,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="bioconductor.html"><a href="bioconductor.html"><i class="fa fa-check"></i><b>5</b> Bioconductor</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="bioconductor.html"><a href="bioconductor.html#recount3"><i class="fa fa-check"></i><b>5.1</b> recount3</a></li>
-<li class="chapter" data-level="5.2" data-path="bioconductor.html"><a href="bioconductor.html#snapcount"><i class="fa fa-check"></i><b>5.2</b> snapcount</a></li>
+<li class="chapter" data-level="5.2" data-path="bioconductor.html"><a href="bioconductor.html#snapcount"><i class="fa fa-check"></i><b>5.2</b> snapcount</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="bioconductor.html"><a href="bioconductor.html#basic-queries"><i class="fa fa-check"></i><b>5.2.1</b> Basic queries</a></li>
+</ul></li>
 <li class="chapter" data-level="5.3" data-path="bioconductor.html"><a href="bioconductor.html#megadepth"><i class="fa fa-check"></i><b>5.3</b> megadepth</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="raw-files.html"><a href="raw-files.html"><i class="fa fa-check"></i><b>6</b> Raw Files</a>
@@ -225,47 +229,47 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">5.1</span> recount3</h2>
 <p><em>The following information is taken from the <a href="https://bioconductor.org/packages/recount3"><code>recount3</code></a> documentation.</em></p>
 <p>After installing <em><a href="https://bioconductor.org/packages/3.13/recount3">recount3</a></em>, we need to load the package, which will automatically load the required dependencies.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="bioconductor.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Load recount3 R package</span></span>
-<span id="cb10-2"><a href="bioconductor.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;recount3&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="bioconductor.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Load recount3 R package</span></span>
+<span id="cb11-2"><a href="bioconductor.html#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;recount3&quot;</span>)</span></code></pre></div>
 <p>If you have identified a <strong>study</strong> of interest and want to access the gene level expression data, use <code>create_rse()</code> as shown below. <code>create_rse()</code> has arguments that will allow you to specify the <strong>annotation</strong> of interest for the given organism, and whether you want to download <strong>gene</strong>, <strong>exon</strong> or <strong>exon-exon junction</strong> expression data.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="bioconductor.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Find all available human projects</span></span>
-<span id="cb11-2"><a href="bioconductor.html#cb11-2" aria-hidden="true" tabindex="-1"></a>human_projects <span class="ot">&lt;-</span> <span class="fu">available_projects</span>()</span></code></pre></div>
-<pre><code>## using temporary cache /tmp/RtmpEO4gZ7/BiocFileCache</code></pre>
-<pre><code>## 2021-01-27 05:24:19 caching file sra.recount_project.MD.gz.</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="bioconductor.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Find all available human projects</span></span>
+<span id="cb12-2"><a href="bioconductor.html#cb12-2" aria-hidden="true" tabindex="-1"></a>human_projects <span class="ot">&lt;-</span> <span class="fu">available_projects</span>()</span></code></pre></div>
+<pre><code>## using temporary cache /tmp/RtmpsOY7rM/BiocFileCache</code></pre>
+<pre><code>## 2021-01-27 05:51:14 caching file sra.recount_project.MD.gz.</code></pre>
 <pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/sra.recount_project.MD.gz&#39;</code></pre>
-<pre><code>## 2021-01-27 05:24:20 caching file gtex.recount_project.MD.gz.</code></pre>
+<pre><code>## 2021-01-27 05:51:15 caching file gtex.recount_project.MD.gz.</code></pre>
 <pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/gtex/metadata/gtex.recount_project.MD.gz&#39;</code></pre>
-<pre><code>## 2021-01-27 05:24:20 caching file tcga.recount_project.MD.gz.</code></pre>
+<pre><code>## 2021-01-27 05:51:15 caching file tcga.recount_project.MD.gz.</code></pre>
 <pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/tcga/metadata/tcga.recount_project.MD.gz&#39;</code></pre>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="bioconductor.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Find the project you are interested in,</span></span>
-<span id="cb19-2"><a href="bioconductor.html#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="do">## here we use SRP009615 as an example</span></span>
-<span id="cb19-3"><a href="bioconductor.html#cb19-3" aria-hidden="true" tabindex="-1"></a>proj_info <span class="ot">&lt;-</span> <span class="fu">subset</span>(</span>
-<span id="cb19-4"><a href="bioconductor.html#cb19-4" aria-hidden="true" tabindex="-1"></a>    human_projects,</span>
-<span id="cb19-5"><a href="bioconductor.html#cb19-5" aria-hidden="true" tabindex="-1"></a>    project <span class="sc">==</span> <span class="st">&quot;SRP009615&quot;</span> <span class="sc">&amp;</span> project_type <span class="sc">==</span> <span class="st">&quot;data_sources&quot;</span></span>
-<span id="cb19-6"><a href="bioconductor.html#cb19-6" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb19-7"><a href="bioconductor.html#cb19-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-8"><a href="bioconductor.html#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="do">## Create a RangedSummarizedExperiment (RSE) object at the gene level</span></span>
-<span id="cb19-9"><a href="bioconductor.html#cb19-9" aria-hidden="true" tabindex="-1"></a>rse_gene_SRP009615 <span class="ot">&lt;-</span> <span class="fu">create_rse</span>(proj_info)</span></code></pre></div>
-<pre><code>## 2021-01-27 05:24:26 downloading and reading the metadata.</code></pre>
-<pre><code>## 2021-01-27 05:24:26 caching file sra.sra.SRP009615.MD.gz.</code></pre>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="bioconductor.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Find the project you are interested in,</span></span>
+<span id="cb20-2"><a href="bioconductor.html#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="do">## here we use SRP009615 as an example</span></span>
+<span id="cb20-3"><a href="bioconductor.html#cb20-3" aria-hidden="true" tabindex="-1"></a>proj_info <span class="ot">&lt;-</span> <span class="fu">subset</span>(</span>
+<span id="cb20-4"><a href="bioconductor.html#cb20-4" aria-hidden="true" tabindex="-1"></a>    human_projects,</span>
+<span id="cb20-5"><a href="bioconductor.html#cb20-5" aria-hidden="true" tabindex="-1"></a>    project <span class="sc">==</span> <span class="st">&quot;SRP009615&quot;</span> <span class="sc">&amp;</span> project_type <span class="sc">==</span> <span class="st">&quot;data_sources&quot;</span></span>
+<span id="cb20-6"><a href="bioconductor.html#cb20-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb20-7"><a href="bioconductor.html#cb20-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-8"><a href="bioconductor.html#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="do">## Create a RangedSummarizedExperiment (RSE) object at the gene level</span></span>
+<span id="cb20-9"><a href="bioconductor.html#cb20-9" aria-hidden="true" tabindex="-1"></a>rse_gene_SRP009615 <span class="ot">&lt;-</span> <span class="fu">create_rse</span>(proj_info)</span></code></pre></div>
+<pre><code>## 2021-01-27 05:51:20 downloading and reading the metadata.</code></pre>
+<pre><code>## 2021-01-27 05:51:20 caching file sra.sra.SRP009615.MD.gz.</code></pre>
 <pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/15/SRP009615/sra.sra.SRP009615.MD.gz&#39;</code></pre>
-<pre><code>## 2021-01-27 05:24:27 caching file sra.recount_project.SRP009615.MD.gz.</code></pre>
+<pre><code>## 2021-01-27 05:51:21 caching file sra.recount_project.SRP009615.MD.gz.</code></pre>
 <pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/15/SRP009615/sra.recount_project.SRP009615.MD.gz&#39;</code></pre>
-<pre><code>## 2021-01-27 05:24:28 caching file sra.recount_qc.SRP009615.MD.gz.</code></pre>
+<pre><code>## 2021-01-27 05:51:22 caching file sra.recount_qc.SRP009615.MD.gz.</code></pre>
 <pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/15/SRP009615/sra.recount_qc.SRP009615.MD.gz&#39;</code></pre>
-<pre><code>## 2021-01-27 05:24:29 caching file sra.recount_seq_qc.SRP009615.MD.gz.</code></pre>
+<pre><code>## 2021-01-27 05:51:22 caching file sra.recount_seq_qc.SRP009615.MD.gz.</code></pre>
 <pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/15/SRP009615/sra.recount_seq_qc.SRP009615.MD.gz&#39;</code></pre>
-<pre><code>## 2021-01-27 05:24:29 caching file sra.recount_pred.SRP009615.MD.gz.</code></pre>
+<pre><code>## 2021-01-27 05:51:23 caching file sra.recount_pred.SRP009615.MD.gz.</code></pre>
 <pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/15/SRP009615/sra.recount_pred.SRP009615.MD.gz&#39;</code></pre>
-<pre><code>## 2021-01-27 05:24:30 downloading and reading the feature information.</code></pre>
-<pre><code>## 2021-01-27 05:24:30 caching file human.gene_sums.G026.gtf.gz.</code></pre>
+<pre><code>## 2021-01-27 05:51:23 downloading and reading the feature information.</code></pre>
+<pre><code>## 2021-01-27 05:51:23 caching file human.gene_sums.G026.gtf.gz.</code></pre>
 <pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/annotations/gene_sums/human.gene_sums.G026.gtf.gz&#39;</code></pre>
-<pre><code>## 2021-01-27 05:24:31 downloading and reading the counts: 12 samples across 63856 features.</code></pre>
-<pre><code>## 2021-01-27 05:24:31 caching file sra.gene_sums.SRP009615.G026.gz.</code></pre>
+<pre><code>## 2021-01-27 05:51:24 downloading and reading the counts: 12 samples across 63856 features.</code></pre>
+<pre><code>## 2021-01-27 05:51:25 caching file sra.gene_sums.SRP009615.G026.gz.</code></pre>
 <pre><code>## adding rname &#39;http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/15/SRP009615/sra.gene_sums.SRP009615.G026.gz&#39;</code></pre>
-<pre><code>## 2021-01-27 05:24:32 construcing the RangedSummarizedExperiment (rse) object.</code></pre>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="bioconductor.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Explore that RSE object</span></span>
-<span id="cb38-2"><a href="bioconductor.html#cb38-2" aria-hidden="true" tabindex="-1"></a>rse_gene_SRP009615</span></code></pre></div>
+<pre><code>## 2021-01-27 05:51:25 construcing the RangedSummarizedExperiment (rse) object.</code></pre>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="bioconductor.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Explore that RSE object</span></span>
+<span id="cb39-2"><a href="bioconductor.html#cb39-2" aria-hidden="true" tabindex="-1"></a>rse_gene_SRP009615</span></code></pre></div>
 <pre><code>## class: RangedSummarizedExperiment 
 ## dim: 63856 12 
 ## metadata(8): time_created recount3_version ... annotation recount3_url
@@ -275,57 +279,166 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## colnames(12): SRR387777 SRR387778 ... SRR389077 SRR389078
 ## colData names(175): rail_id external_id ... recount_pred.curated.cell_line BigWigURL</code></pre>
 <p>You can also interactively choose your study of interest</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="bioconductor.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Note that you can interactively explore the available projects</span></span>
-<span id="cb40-2"><a href="bioconductor.html#cb40-2" aria-hidden="true" tabindex="-1"></a>proj_info_interactive <span class="ot">&lt;-</span> interactiveDisplayBase<span class="sc">::</span><span class="fu">display</span>(human_projects)</span>
-<span id="cb40-3"><a href="bioconductor.html#cb40-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-4"><a href="bioconductor.html#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Select a single row, then hit &quot;send&quot;. The following code checks this.</span></span>
-<span id="cb40-5"><a href="bioconductor.html#cb40-5" aria-hidden="true" tabindex="-1"></a><span class="fu">stopifnot</span>(<span class="fu">nrow</span>(proj_info_interactive) <span class="sc">==</span> <span class="dv">1</span>)</span>
-<span id="cb40-6"><a href="bioconductor.html#cb40-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-7"><a href="bioconductor.html#cb40-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Then create the RSE object</span></span>
-<span id="cb40-8"><a href="bioconductor.html#cb40-8" aria-hidden="true" tabindex="-1"></a>rse_gene_interactive <span class="ot">&lt;-</span> <span class="fu">create_rse</span>(proj_info_interactive)</span></code></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="bioconductor.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Note that you can interactively explore the available projects</span></span>
+<span id="cb41-2"><a href="bioconductor.html#cb41-2" aria-hidden="true" tabindex="-1"></a>proj_info_interactive <span class="ot">&lt;-</span> interactiveDisplayBase<span class="sc">::</span><span class="fu">display</span>(human_projects)</span>
+<span id="cb41-3"><a href="bioconductor.html#cb41-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-4"><a href="bioconductor.html#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Select a single row, then hit &quot;send&quot;. The following code checks this.</span></span>
+<span id="cb41-5"><a href="bioconductor.html#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="fu">stopifnot</span>(<span class="fu">nrow</span>(proj_info_interactive) <span class="sc">==</span> <span class="dv">1</span>)</span>
+<span id="cb41-6"><a href="bioconductor.html#cb41-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-7"><a href="bioconductor.html#cb41-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Then create the RSE object</span></span>
+<span id="cb41-8"><a href="bioconductor.html#cb41-8" aria-hidden="true" tabindex="-1"></a>rse_gene_interactive <span class="ot">&lt;-</span> <span class="fu">create_rse</span>(proj_info_interactive)</span></code></pre></div>
 <p>Once you have a RSE file, you can use <code>transform_counts()</code> to transform the raw coverage counts.</p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="bioconductor.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Once you have your RSE object, you can transform the raw coverage</span></span>
-<span id="cb41-2"><a href="bioconductor.html#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="do">## base-pair coverage counts using transform_counts().</span></span>
-<span id="cb41-3"><a href="bioconductor.html#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="do">## For RPKM, TPM or read outputs, check the details in transform_counts().</span></span>
-<span id="cb41-4"><a href="bioconductor.html#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="fu">assay</span>(rse_gene_SRP009615, <span class="st">&quot;counts&quot;</span>) <span class="ot">&lt;-</span> <span class="fu">transform_counts</span>(rse_gene_SRP009615)</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="bioconductor.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Once you have your RSE object, you can transform the raw coverage</span></span>
+<span id="cb42-2"><a href="bioconductor.html#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="do">## base-pair coverage counts using transform_counts().</span></span>
+<span id="cb42-3"><a href="bioconductor.html#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="do">## For RPKM, TPM or read outputs, check the details in transform_counts().</span></span>
+<span id="cb42-4"><a href="bioconductor.html#cb42-4" aria-hidden="true" tabindex="-1"></a><span class="fu">assay</span>(rse_gene_SRP009615, <span class="st">&quot;counts&quot;</span>) <span class="ot">&lt;-</span> <span class="fu">transform_counts</span>(rse_gene_SRP009615)</span></code></pre></div>
 <p>Now you are ready to continue with downstream analysis software.</p>
 <p><em><a href="https://bioconductor.org/packages/3.13/recount3">recount3</a></em> also supports accessing the BigWig raw coverage files as well as specific study or collection sample <strong>metadata</strong>. Please continue to the <a href="https://bioconductor.org/packages/recount3">users guide</a> for more detailed information.</p>
 </div>
 <div id="snapcount" class="section level2" number="5.2">
 <h2><span class="header-section-number">5.2</span> snapcount</h2>
+<p><em>The following information is taken from the <a href="https://bioconductor.org/packages/snapcount"><code>snapcount</code></a> documentation. As stated in the documentation, <code>snapcount</code> provides access to data from the <code>recount2</code> project, but it can also be used with the data from the <code>recount3</code> project.</em></p>
+<p>To get started, we need to load the <em><a href="https://bioconductor.org/packages/3.13/snapcount">snapcount</a></em> package into our R session. This will load all the required dependencies.</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="bioconductor.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;snapcount&quot;</span>)</span></code></pre></div>
+<p>snapcount makes it easy to query the <a href="http://snaptron.cs.jhu.edu/">Snaptron web services</a>, with results presented as <em><a href="https://bioconductor.org/packages/3.13/RangedSummarizedExperiment">RangedSummarizedExperiment</a></em> objects.
+You can query measurements for <strong>genes</strong>, <strong>exons</strong>, <strong>splice junctions</strong> and <strong>coverage vectors</strong> from the RNA-seq samples indexed in Snaptron.
+Samples are organized into compilations (e.g. <code>srav2</code>) that altogether contain the same studies and summaries in the <em><a href="https://bioconductor.org/packages/3.13/recount">recount</a></em> resource. Queries can be filtered to narrow the focus to particular genes or genomic intervals, to events with certain prevalence, to events that do or don’t appear in gene annotation, or to samples with particular metadata.</p>
+<p>snapcount complements the <em><a href="https://bioconductor.org/packages/3.13/recount">recount</a></em> package, which also allows for searching by coordinates or by HUGO gene names.
+In general, <em><a href="https://bioconductor.org/packages/3.13/recount">recount</a></em> works best when you are interested in <em>all</em> the genes, exons, or splice junctions in a study, whereas snapcount is best for queries over a particular subset of genes or intervals across all or most of the samples in recount2/Snaptron. The more specific your query, the faster and easier it will be to use snapcount.</p>
+<p>All the RNA-seq samples in the recount and Snaptron resources were analyzed using the <a href="http://rail.bio">Rail-RNA</a> aligner. Rail produces spliced alignments that in turn produce coverage and junction-level summaries that are further processed to obtain the data in recount and Snaptron.</p>
+<p>Similar to the <em><a href="https://bioconductor.org/packages/3.13/recount">recount</a></em> all coverage counts in Snaptron/snapcount are stored/retrieved as raw, un-normalized counts.</p>
+<div id="basic-queries" class="section level3" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Basic queries</h3>
+<p>A basic query returns a <em>RangedSummarizedExperiment</em> (RSE) object with one or more features (genes, exons, or splice junctions) as <em>rowRanges</em>.
+Raw coverage counts are returned as the <em>counts</em> assay in the RSE Full sample metadata is returned as the <em>colData</em> of the RSE</p>
+<p>Basic queries include:</p>
+<ul>
+<li>exon-exon splice junction counts: <em>query_jx</em></li>
+<li>exon-level quantifications: <em>query_exon</em></li>
+<li>genes-level quantifications: <em>query_gene</em></li>
+</ul>
+<p>The Gencode v25 annotation defines what genes and exons can be queried (as in <em><a href="https://bioconductor.org/packages/3.13/recount">recount</a></em>).
+For splice junctions, both annotated and novel junctions are queried at the same time unless one is explicitly filtered.</p>
+<p>Metadata columns will vary by compilation (e.g. TCGA vs. GTEx).
+Please be cautious with metadata. We strive to make it as complete and usable as possible, but it can still be incomplete, incorrect or inconsistently formatted (e.g. “age” in the <code>srav2</code> compilation).</p>
+<p>Start by querying for all junctions within the region of gene CD99:</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="bioconductor.html#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="do">##Query coverage for gene, exon, and annotated junctions across all</span></span>
+<span id="cb44-2"><a href="bioconductor.html#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="co">#in the region of the CD99 gene</span></span>
+<span id="cb44-3"><a href="bioconductor.html#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="co">#from GTEx v6 sample compilation</span></span>
+<span id="cb44-4"><a href="bioconductor.html#cb44-4" aria-hidden="true" tabindex="-1"></a><span class="co">#CD99 is chosen for its size</span></span>
+<span id="cb44-5"><a href="bioconductor.html#cb44-5" aria-hidden="true" tabindex="-1"></a>sb <span class="ot">&lt;-</span> <span class="fu">QueryBuilder</span>(<span class="at">compilation=</span><span class="st">&quot;gtex&quot;</span>, <span class="at">regions=</span><span class="st">&quot;CD99&quot;</span>)</span>
+<span id="cb44-6"><a href="bioconductor.html#cb44-6" aria-hidden="true" tabindex="-1"></a>cd99.gene <span class="ot">&lt;-</span> <span class="fu">query_gene</span>(sb)</span>
+<span id="cb44-7"><a href="bioconductor.html#cb44-7" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(cd99.gene)</span></code></pre></div>
+<pre><code>## [1]    1 9662</code></pre>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="bioconductor.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cd99.gene)</span></code></pre></div>
+<pre><code>## class: RangedSummarizedExperiment 
+## dim: 1 9662 
+## metadata(1): uri
+## assays(1): counts
+## rownames(1): 23
+## rowData names(12): DataSource:Type snaptron_id ... coverage_median compilation_id
+## colnames(9662): rail_50099 rail_50100 ... rail_59759 rail_59760
+## colData names(322): rail_id Run ... junction_coverage junction_avg_coverage</code></pre>
+<p>Now query for junctions:</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="bioconductor.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="do">##Query all exon-exon splice junctions within the region of gene CD99</span></span>
+<span id="cb48-2"><a href="bioconductor.html#cb48-2" aria-hidden="true" tabindex="-1"></a>cd99.jx.all <span class="ot">&lt;-</span> <span class="fu">query_jx</span>(sb)</span>
+<span id="cb48-3"><a href="bioconductor.html#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(cd99.jx.all)</span></code></pre></div>
+<pre><code>## [1] 3485 9662</code></pre>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="bioconductor.html#cb50-1" aria-hidden="true" tabindex="-1"></a>cd99.jx.all</span></code></pre></div>
+<pre><code>## class: RangedSummarizedExperiment 
+## dim: 3485 9662 
+## metadata(1): uri
+## assays(1): counts
+## rownames(3485): 28340058 28340273 ... 28352407 28352408
+## rowData names(12): DataSource:Type snaptron_id ... coverage_median source_dataset_id
+## colnames(9662): rail_50099 rail_50100 ... rail_59759 rail_59760
+## colData names(322): rail_id Run ... junction_coverage junction_avg_coverage</code></pre>
+<p>Now query for junctions and filter by sample type: Brain:</p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="bioconductor.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co">#now subfilter by sample tissue</span></span>
+<span id="cb52-2"><a href="bioconductor.html#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="co">#GTEx samples that are labeled with tissue type &quot;Brain&quot;</span></span>
+<span id="cb52-3"><a href="bioconductor.html#cb52-3" aria-hidden="true" tabindex="-1"></a>sb <span class="ot">&lt;-</span> <span class="fu">set_column_filters</span>(sb, SMTS <span class="sc">==</span> <span class="st">&quot;Brain&quot;</span>)</span>
+<span id="cb52-4"><a href="bioconductor.html#cb52-4" aria-hidden="true" tabindex="-1"></a>cd99.jx.all <span class="ot">&lt;-</span> <span class="fu">query_jx</span>(sb)</span>
+<span id="cb52-5"><a href="bioconductor.html#cb52-5" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(cd99.jx.all)</span></code></pre></div>
+<pre><code>## [1]  637 1409</code></pre>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="bioconductor.html#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cd99.jx.all)</span></code></pre></div>
+<pre><code>## class: RangedSummarizedExperiment 
+## dim: 6 1409 
+## metadata(1): uri
+## assays(1): counts
+## rownames(6): 28340058 28341126 ... 28341507 28341508
+## rowData names(12): DataSource:Type snaptron_id ... coverage_median source_dataset_id
+## colnames(1409): rail_50099 rail_50105 ... rail_59748 rail_59753
+## colData names(322): rail_id Run ... junction_coverage junction_avg_coverage</code></pre>
+<p>Same query/filter again but for exons:</p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="bioconductor.html#cb56-1" aria-hidden="true" tabindex="-1"></a>cd99.exon <span class="ot">&lt;-</span> <span class="fu">query_exon</span>(sb)</span>
+<span id="cb56-2"><a href="bioconductor.html#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(cd99.exon)</span></code></pre></div>
+<pre><code>## [1]   32 1409</code></pre>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="bioconductor.html#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cd99.exon)</span></code></pre></div>
+<pre><code>## class: RangedSummarizedExperiment 
+## dim: 6 1409 
+## metadata(1): uri
+## assays(1): counts
+## rownames(6): 691 692 ... 695 696
+## rowData names(12): DataSource:Type snaptron_id ... coverage_median compilation_id
+## colnames(1409): rail_50099 rail_50105 ... rail_59748 rail_59753
+## colData names(322): rail_id Run ... junction_coverage junction_avg_coverage</code></pre>
+<p>Now query junctions but further filter for only those which are fully annotated:</p>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="bioconductor.html#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="do">###Only query junctions which are fully annotated---both left and</span></span>
+<span id="cb60-2"><a href="bioconductor.html#cb60-2" aria-hidden="true" tabindex="-1"></a><span class="co">#right splice sites are found together in one or more of the</span></span>
+<span id="cb60-3"><a href="bioconductor.html#cb60-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Snaptron sourced annotations</span></span>
+<span id="cb60-4"><a href="bioconductor.html#cb60-4" aria-hidden="true" tabindex="-1"></a>sb <span class="ot">&lt;-</span> <span class="fu">set_row_filters</span>(sb, annotated <span class="sc">==</span> <span class="dv">1</span>)</span>
+<span id="cb60-5"><a href="bioconductor.html#cb60-5" aria-hidden="true" tabindex="-1"></a>cd99.jx <span class="ot">&lt;-</span> <span class="fu">query_jx</span>(sb)</span>
+<span id="cb60-6"><a href="bioconductor.html#cb60-6" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(cd99.jx)</span></code></pre></div>
+<pre><code>## [1]   23 1409</code></pre>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="bioconductor.html#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cd99.jx)</span></code></pre></div>
+<pre><code>## class: RangedSummarizedExperiment 
+## dim: 6 1409 
+## metadata(1): uri
+## assays(1): counts
+## rownames(6): 28350154 28350172 ... 28350658 28350686
+## rowData names(12): DataSource:Type snaptron_id ... coverage_median source_dataset_id
+## colnames(1409): rail_50099 rail_50105 ... rail_59748 rail_59753
+## colData names(322): rail_id Run ... junction_coverage junction_avg_coverage</code></pre>
+<p>Now check an example of the metadata stored in the RSE, InsertSize:</p>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="bioconductor.html#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="do">##Metadata is stored directly in the RSE object.</span></span>
+<span id="cb64-2"><a href="bioconductor.html#cb64-2" aria-hidden="true" tabindex="-1"></a><span class="co">#For example the library insert size can be retrieved</span></span>
+<span id="cb64-3"><a href="bioconductor.html#cb64-3" aria-hidden="true" tabindex="-1"></a><span class="co">#across all runs  in the RSE</span></span>
+<span id="cb64-4"><a href="bioconductor.html#cb64-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(cd99.jx.all<span class="sc">$</span>InsertSize)</span></code></pre></div>
+<pre><code>## [1] 162 302 163 150 223 150</code></pre>
+</div>
 </div>
 <div id="megadepth" class="section level2" number="5.3">
 <h2><span class="header-section-number">5.3</span> megadepth</h2>
 <p><em>The following information is taken from the <a href="https://bioconductor.org/packages/megadepth"><code>megadepth</code></a> documentation.</em></p>
 <p>To get started, we need to load the <em><a href="https://bioconductor.org/packages/3.13/megadepth">megadepth</a></em> package into our R session. This will load all the required dependencies.</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="bioconductor.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;megadepth&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="bioconductor.html#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;megadepth&quot;</span>)</span></code></pre></div>
 <p>Once we have the R package loaded, we need to install the <a href="https://github.com/ChristopherWilks/megadepth">Megadepth</a> software. We can do so with <code>install_megadepth()</code>, which downloads a binary for your OS (Linux, Windows or macOS).<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> We can then use with an example BigWig file to compute the coverage at a set of regions.</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="bioconductor.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Install the latest version of Megadepth</span></span>
-<span id="cb43-2"><a href="bioconductor.html#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install_megadepth</span>(<span class="at">force =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="bioconductor.html#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Install the latest version of Megadepth</span></span>
+<span id="cb67-2"><a href="bioconductor.html#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install_megadepth</span>(<span class="at">force =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
 <pre><code>## The latest megadepth version is 1.1.0b</code></pre>
 <pre><code>## megadepth has been installed to /github/home/bin</code></pre>
 <p>Next, we might want to use <em><a href="https://bioconductor.org/packages/3.13/megadepth">megadepth</a></em> to quantify the coverage at a set of regions of the genome of interest to us. Here we will use two example files that are include in the package for illustration and testing purposes. One of them is a <a href="https://genome.ucsc.edu/goldenPath/help/bigWig.html">bigWig file</a> that contains the base-pair coverage information for a sample of interest and the second one is <a href="https://genome.ucsc.edu/FAQ/FAQformat.html#format1">BED file</a> which contains the genomic region coordinates of interest. So we first locate them.</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="bioconductor.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Next, we locate the example BigWig and annotation files</span></span>
-<span id="cb46-2"><a href="bioconductor.html#cb46-2" aria-hidden="true" tabindex="-1"></a>example_bw <span class="ot">&lt;-</span> <span class="fu">system.file</span>(<span class="st">&quot;tests&quot;</span>, <span class="st">&quot;test.bam.all.bw&quot;</span>,</span>
-<span id="cb46-3"><a href="bioconductor.html#cb46-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">package =</span> <span class="st">&quot;megadepth&quot;</span>, <span class="at">mustWork =</span> <span class="cn">TRUE</span></span>
-<span id="cb46-4"><a href="bioconductor.html#cb46-4" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb46-5"><a href="bioconductor.html#cb46-5" aria-hidden="true" tabindex="-1"></a>annotation_file <span class="ot">&lt;-</span> <span class="fu">system.file</span>(<span class="st">&quot;tests&quot;</span>, <span class="st">&quot;testbw2.bed&quot;</span>,</span>
-<span id="cb46-6"><a href="bioconductor.html#cb46-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">package =</span> <span class="st">&quot;megadepth&quot;</span>, <span class="at">mustWork =</span> <span class="cn">TRUE</span></span>
-<span id="cb46-7"><a href="bioconductor.html#cb46-7" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb46-8"><a href="bioconductor.html#cb46-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-9"><a href="bioconductor.html#cb46-9" aria-hidden="true" tabindex="-1"></a><span class="do">## Where are they?</span></span>
-<span id="cb46-10"><a href="bioconductor.html#cb46-10" aria-hidden="true" tabindex="-1"></a>example_bw</span></code></pre></div>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="bioconductor.html#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Next, we locate the example BigWig and annotation files</span></span>
+<span id="cb70-2"><a href="bioconductor.html#cb70-2" aria-hidden="true" tabindex="-1"></a>example_bw <span class="ot">&lt;-</span> <span class="fu">system.file</span>(<span class="st">&quot;tests&quot;</span>, <span class="st">&quot;test.bam.all.bw&quot;</span>,</span>
+<span id="cb70-3"><a href="bioconductor.html#cb70-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">package =</span> <span class="st">&quot;megadepth&quot;</span>, <span class="at">mustWork =</span> <span class="cn">TRUE</span></span>
+<span id="cb70-4"><a href="bioconductor.html#cb70-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb70-5"><a href="bioconductor.html#cb70-5" aria-hidden="true" tabindex="-1"></a>annotation_file <span class="ot">&lt;-</span> <span class="fu">system.file</span>(<span class="st">&quot;tests&quot;</span>, <span class="st">&quot;testbw2.bed&quot;</span>,</span>
+<span id="cb70-6"><a href="bioconductor.html#cb70-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">package =</span> <span class="st">&quot;megadepth&quot;</span>, <span class="at">mustWork =</span> <span class="cn">TRUE</span></span>
+<span id="cb70-7"><a href="bioconductor.html#cb70-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb70-8"><a href="bioconductor.html#cb70-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-9"><a href="bioconductor.html#cb70-9" aria-hidden="true" tabindex="-1"></a><span class="do">## Where are they?</span></span>
+<span id="cb70-10"><a href="bioconductor.html#cb70-10" aria-hidden="true" tabindex="-1"></a>example_bw</span></code></pre></div>
 <pre><code>## [1] &quot;/usr/local/lib/R/host-site-library/megadepth/tests/test.bam.all.bw&quot;</code></pre>
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="bioconductor.html#cb48-1" aria-hidden="true" tabindex="-1"></a>annotation_file</span></code></pre></div>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="bioconductor.html#cb72-1" aria-hidden="true" tabindex="-1"></a>annotation_file</span></code></pre></div>
 <pre><code>## [1] &quot;/usr/local/lib/R/host-site-library/megadepth/tests/testbw2.bed&quot;</code></pre>
 <p>Once we have located the example files we can proceed to calculating the base-pair coverage for our genomic regions of interest. There are several ways to do this with <em><a href="https://bioconductor.org/packages/3.13/megadepth">megadepth</a></em>, but here we use the user-friendly function <code>get_coverage()</code>. This function will perform a given operation <strong>op</strong> on the bigWig file for a given set of regions of interest (<em>annotation</em>). One of those operations is to compute the mean base-pair coverage for each input region. This is what we’ll do with our example bigWig file.</p>
-<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="bioconductor.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="do">## We can then use megadepth to compute the coverage</span></span>
-<span id="cb50-2"><a href="bioconductor.html#cb50-2" aria-hidden="true" tabindex="-1"></a>bw_cov <span class="ot">&lt;-</span> <span class="fu">get_coverage</span>(</span>
-<span id="cb50-3"><a href="bioconductor.html#cb50-3" aria-hidden="true" tabindex="-1"></a>    example_bw,</span>
-<span id="cb50-4"><a href="bioconductor.html#cb50-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">op =</span> <span class="st">&quot;mean&quot;</span>,</span>
-<span id="cb50-5"><a href="bioconductor.html#cb50-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">annotation =</span> annotation_file</span>
-<span id="cb50-6"><a href="bioconductor.html#cb50-6" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb50-7"><a href="bioconductor.html#cb50-7" aria-hidden="true" tabindex="-1"></a>bw_cov</span></code></pre></div>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="bioconductor.html#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="do">## We can then use megadepth to compute the coverage</span></span>
+<span id="cb74-2"><a href="bioconductor.html#cb74-2" aria-hidden="true" tabindex="-1"></a>bw_cov <span class="ot">&lt;-</span> <span class="fu">get_coverage</span>(</span>
+<span id="cb74-3"><a href="bioconductor.html#cb74-3" aria-hidden="true" tabindex="-1"></a>    example_bw,</span>
+<span id="cb74-4"><a href="bioconductor.html#cb74-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">op =</span> <span class="st">&quot;mean&quot;</span>,</span>
+<span id="cb74-5"><a href="bioconductor.html#cb74-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">annotation =</span> annotation_file</span>
+<span id="cb74-6"><a href="bioconductor.html#cb74-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb74-7"><a href="bioconductor.html#cb74-7" aria-hidden="true" tabindex="-1"></a>bw_cov</span></code></pre></div>
 <pre><code>## GRanges object with 4 ranges and 1 metadata column:
 ##         seqnames          ranges strand |     score
 ##            &lt;Rle&gt;       &lt;IRanges&gt;  &lt;Rle&gt; | &lt;numeric&gt;
