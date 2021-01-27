@@ -34,7 +34,7 @@ We have more software beyond recount3 including:
 * `recountmethylation`: https://bioconductor.org/packages/recountmethylation
 * `Rail-RNA` and `Rail-dbGaP`: http://rail.bio/
 * `derfinder`: https://bioconductor.org/packages/derfinder
-* `recount.bwtool`: https://github.com/LieberInstitute/recount.bwtool (now defunct given `megadepth` which is much faster and available through Bioconductor)
+* `recount.bwtool`: https://github.com/LieberInstitute/recount.bwtool (now defunct given `megadepth` which is much faster, easy to install, and available through Bioconductor)
 
 Documentation related:
 

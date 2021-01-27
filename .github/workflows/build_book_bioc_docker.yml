@@ -181,7 +181,7 @@ jobs:
         run: |
           ## For building the website & getting the R session info
           ## Edit as necessary with other packages in the future
-          BiocManager::install(c("bookdown", "sessioninfo", "LieberInstitute/recount3", "BiocStyle", "LieberInstitute/megadepth", "purrr"))
+          BiocManager::install(c("bookdown", "sessioninfo", "LieberInstitute/recount3", "BiocStyle", "LieberInstitute/megadepth", "purrr", "langmead-lab/snapcount"))
         shell: Rscript {0}
 
       - name: Session info

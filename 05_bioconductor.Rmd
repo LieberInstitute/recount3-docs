@@ -74,6 +74,98 @@ Now you are ready to continue with downstream analysis software.
 
 ## snapcount
 
+_The following information is taken from the [`snapcount`](https://bioconductor.org/packages/snapcount) documentation. As stated in the documentation, `snapcount` provides access to data from the `recount2` project, but it can also be used with the data from the `recount3` project._
+
+To get started, we need to load the `r Biocpkg("snapcount")` package into our R session. This will load all the required dependencies.
+
+```{r "start_snapcount", message=FALSE}
+library("snapcount")
+```
+
+snapcount makes it easy to query the [Snaptron web services](http://snaptron.cs.jhu.edu/), with results presented as `r Biocpkg('RangedSummarizedExperiment')` objects.
+You can query measurements for **genes**, **exons**, **splice junctions** and **coverage vectors** from the RNA-seq samples indexed in Snaptron.
+Samples are organized into compilations (e.g. `srav2`) that altogether contain the same studies and summaries in the `r Biocpkg('recount')` resource.  Queries can be filtered to narrow the focus to particular genes or genomic intervals, to events with certain prevalence, to events that do or don't appear in gene annotation, or to samples with particular metadata.
+
+snapcount complements the `r Biocpkg('recount')` package, which also allows for searching by coordinates or by HUGO gene names.
+In general, `r Biocpkg('recount')` works best when you are interested in *all* the genes, exons, or splice junctions in a study, whereas snapcount is best for queries over a particular subset of genes or intervals across all or most of the samples in recount2/Snaptron.  The more specific your query, the faster and easier it will be to use snapcount.
+
+All the RNA-seq samples in the recount and Snaptron resources were analyzed using the [Rail-RNA](http://rail.bio) aligner.  Rail produces spliced alignments that in turn produce coverage and junction-level summaries that are further processed to obtain the data in recount and Snaptron.
+
+Similar to the `r Biocpkg('recount')` all coverage counts in Snaptron/snapcount are stored/retrieved as raw, un-normalized counts.
+
+### Basic queries
+
+A basic query returns a *RangedSummarizedExperiment* (RSE) object with one or more features (genes, exons, or splice junctions) as *rowRanges*.
+Raw coverage counts are returned as the *counts* assay in the RSE  Full sample metadata is returned as the  *colData* of the RSE
+
+Basic queries include:
+
+* exon-exon splice junction counts: *query_jx*
+* exon-level quantifications: *query_exon*
+* genes-level quantifications: *query_gene*
+
+The Gencode v25 annotation defines what genes and exons can be queried (as in `r Biocpkg('recount')`).
+For splice junctions, both annotated and novel junctions are queried at the same time unless one is explicitly filtered.
+
+Metadata columns will vary by compilation (e.g. TCGA vs. GTEx).
+Please be cautious with metadata.  We strive to make it as complete and usable as possible, but it can still be incomplete, incorrect or inconsistently formatted (e.g. "age" in the `srav2` compilation).
+
+Start by querying for all junctions within the region of gene CD99:
+```{r 'snapcount_gene', eval = TRUE}
+##Query coverage for gene, exon, and annotated junctions across all
+#in the region of the CD99 gene
+#from GTEx v6 sample compilation
+#CD99 is chosen for its size
+sb <- QueryBuilder(compilation="gtex", regions="CD99")
+cd99.gene <- query_gene(sb)
+dim(cd99.gene)
+head(cd99.gene)
+```
+
+Now query for junctions:
+```{r 'snapcount_jx', eval = TRUE}
+##Query all exon-exon splice junctions within the region of gene CD99
+cd99.jx.all <- query_jx(sb)
+dim(cd99.jx.all)
+cd99.jx.all
+```
+
+Now query for junctions and filter by sample type: Brain:
+```{r 'snapcount_jx2', eval = TRUE}
+#now subfilter by sample tissue
+#GTEx samples that are labeled with tissue type "Brain"
+sb <- set_column_filters(sb, SMTS == "Brain")
+cd99.jx.all <- query_jx(sb)
+dim(cd99.jx.all)
+head(cd99.jx.all)
+```
+
+Same query/filter again but for exons:
+```{r 'snapcount_exon', eval = TRUE}
+cd99.exon <- query_exon(sb)
+dim(cd99.exon)
+head(cd99.exon)
+```
+
+Now query junctions but further filter for only those which are fully annotated:
+```{r 'snapcount_jx3', eval = TRUE}
+###Only query junctions which are fully annotated---both left and
+#right splice sites are found together in one or more of the
+#Snaptron sourced annotations
+sb <- set_row_filters(sb, annotated == 1)
+cd99.jx <- query_jx(sb)
+dim(cd99.jx)
+head(cd99.jx)
+```
+
+Now check an example of the metadata stored in the RSE, InsertSize:
+```{r 'snapcount_md', eval = TRUE}
+##Metadata is stored directly in the RSE object.
+#For example the library insert size can be retrieved
+#across all runs  in the RSE
+head(cd99.jx.all$InsertSize)
+```
+
 ## megadepth
 
 _The following information is taken from the [`megadepth`](https://bioconductor.org/packages/megadepth) documentation._

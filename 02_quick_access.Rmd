@@ -38,7 +38,25 @@ rse_gene_SRP009615
 
 ## Quick snapcount
 
-TODO
+If you want to access the data through queries such as a set of regions or annotation features instead of downloading the data at a project-level, we recommend using `r BiocStyle::Biocpkg("snapcount")`. It is an R/Bioconductor package for interfacing with Snaptron's REST API. Here's some example code you can use to get started with `snapcount`.
+
+```{r 'snapcount_code', eval = FALSE}
+## Install the snapcount R/Bioconductor package
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("snapcount")
+
+## Load snapcount R package
+library("snapcount")
+
+## snapcount can be used with either a procedural interface
+query_jx(compilation = "gtex", regions = "CD99")
+query_jx(compilation = "gtex", regions = "CD99", range_filters = samples_count == 10)
+
+## or using the query-builder class
+sb <- SnaptronQueryBuilder$new()
+sb$compilation("gtex")$regions("CD99")$query_jx()
+```
 
 ## Quick raw files
 

@@ -40,6 +40,12 @@ Thank you for your continued support of the `ReCount` family of projects! We gre
 print(citation("recount3")[2], bibtex = TRUE)
 ```
 
+### Related publications
+
+Additional publications directly related to `recount3` are:
+
+* Megadepth: efficient coverage quantification for BigWigs and BAMs. Christopher Wilks, Omar Ahmed, Daniel N. Baker, David Zhang, Leonardo Collado-Torres, Ben Langmead. bioRxiv, 2020. DOI: [10.1101/2020.12.17.423317](https://doi.org/10.1101/2020.12.17.423317)
+
 ### Related projects {-}
 
 The `ReCount` project has three main publications over the years with implementation details that have been improved each time. Each phase of the project has had several companion publications that expanded the main resource in different directions. Please cite the appropriate expansions and results as you see relevant for your work.
@@ -98,6 +104,7 @@ library("BiocStyle")
 ## Packages illustrated in the documentation
 library("recount3")
 library("megadepth")
+library("snapcount")
 
 ## For looping
 library("purrr")
