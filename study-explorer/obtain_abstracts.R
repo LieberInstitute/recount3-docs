@@ -1,7 +1,7 @@
 ## Get all the metadata files
 get_metadata_files <-
     function(projects,
-    recount3_url = getOption("recount3_url", "http://idies.jhu.edu/recount3/data")) {
+    recount3_url = getOption("recount3_url", "http://duffel.rail.bio/recount3")) {
         do.call(rbind, apply(projects, 1, function(x) {
             x <-
                 locate_url(
@@ -44,7 +44,7 @@ get_proj_desc <-
                     quote = "",
                     comment.char = ""
                 )
-            # x <- utils::read.delim(file_retrieve("http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/18/SRP195118/sra.sra.SRP195118.MD.gz", bfc = bfc, verbose = FALSE), sep = "\t", check.names = FALSE, nrows = 1)
+            # x <- utils::read.delim(file_retrieve("http://duffel.rail.bio/recount3/human/data_sources/sra/metadata/18/SRP195118/sra.sra.SRP195118.MD.gz", bfc = bfc, verbose = FALSE), sep = "\t", check.names = FALSE, nrows = 1)
             x[, c("study_title", "study_abstract")]
         }) # , BPPARAM = BiocParallel::MulticoreParam(4))
     }

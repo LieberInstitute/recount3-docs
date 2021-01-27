@@ -45,7 +45,7 @@ On the R package, you can use `recount3::locate_url_ann()` to obtain these URLs.
 
 The URL structure is:
 
-`<recount3_url>`/data/`<organism>`/annotations/`<gene|exon>`_sums/`<organism>`.`<gene|exon>`_sums.`<annotation file extension>`.gtf.gz
+`<recount3_url>`/`<organism>`/annotations/`<gene|exon>`_sums/`<organism>`.`<gene|exon>`_sums.`<annotation file extension>`.gtf.gz
 
 These are the annotation file extensions; human:
 
@@ -132,9 +132,9 @@ knitr::kable(head(projects, 20), row.names = FALSE, caption = "First 20 raw proj
 
 The URL structure is:
 
-* gene: `<recount3_url>`/data/`<organism>`/data_sources/`<data_source>`/gene_sums/`<last 2 project letters or digits>`/`<project>`/`<data_source>`.gene_sums.`<project>`.`<annotation file extension>`.gz
-* exon: `<recount3_url>`/data/`<organism>`/data_sources/`<data_source>`/exon_sums/`<last 2 project letters or digits>`/`<project>`/`<data_source>`.exon_sums.`<project>`.`<annotation file extension>`.gz
-* junctions: `<recount3_url>`/data/`<organism>`/data_sources/`<data_source>`/junctions/`<last 2 project letters or digits>`/`<project>`/`<data_source>`.junctions.`<project>`.`<junction type: typically ALL>`.`<junction file extension: RR, MM or ID>`.gz ^[Only GTEx and TCGA have junction type `UNIQUE` available in addition to `ALL`.]
+* gene: `<recount3_url>`/`<organism>`/data_sources/`<data_source>`/gene_sums/`<last 2 project letters or digits>`/`<project>`/`<data_source>`.gene_sums.`<project>`.`<annotation file extension>`.gz
+* exon: `<recount3_url>`/`<organism>`/data_sources/`<data_source>`/exon_sums/`<last 2 project letters or digits>`/`<project>`/`<data_source>`.exon_sums.`<project>`.`<annotation file extension>`.gz
+* junctions: `<recount3_url>`/`<organism>`/data_sources/`<data_source>`/junctions/`<last 2 project letters or digits>`/`<project>`/`<data_source>`.junctions.`<project>`.`<junction type: typically ALL>`.`<junction file extension: RR, MM or ID>`.gz ^[Only GTEx and TCGA have junction type `UNIQUE` available in addition to `ALL`.]
 
 ## Project-level metadata files
 
@@ -182,7 +182,7 @@ head(metadata_files)
 
 The URL structure is:
 
-`<recount3_url>`/data/`<organism>`/data_sources/`<data_source>`/metadata/`<last 2 project letters or digits>`/`<project>`/`<data_source>`.`<table name>`.`<project>`.MD.gz
+`<recount3_url>`/`<organism>`/data_sources/`<data_source>`/metadata/`<last 2 project letters or digits>`/`<project>`/`<data_source>`.`<table name>`.`<project>`.MD.gz
 
 ## Sample-level BigWig files
 
@@ -199,5 +199,6 @@ locate_url(
 
 The URL structure is:
 
-`<recount3_url>`/data/`<organism>`/data_sources/`<data_source>`/base_sums/`<last 2 project letters or digits>`/`<project>`/`<last 2 sample letters or digits>`/`<data_source>`.base_sums.`<project>`_`<sample>`.ALL.bw
+`<recount3_url>`/`<organism>`/data_sources/`<data_source>`/base_sums/`<last 2 project letters or digits>`/`<project>`/`<last 2 sample letters or digits>`/`<data_source>`.base_sums.`<project>`_`<sample>`.ALL.bw
 
+Valid `recount3_url` options we support are `http://duffel.rail.bio/recount3` and `http://idies.jhu.edu/recount3/data`.
