@@ -181,7 +181,7 @@ jobs:
         run: |
           ## For building the website & getting the R session info
           ## Edit as necessary with other packages in the future
-          BiocManager::install(c("bookdown", "sessioninfo", "LieberInstitute/recount3", "BiocStyle", "LieberInstitute/megadepth", "purrr", "langmead-lab/snapcount"))
+          BiocManager::install(c("bookdown", "sessioninfo", "LieberInstitute/recount3", "BiocStyle", "LieberInstitute/megadepth", "purrr", "langmead-lab/snapcount", "postcards"))
         shell: Rscript {0}
 
       - name: Session info
@@ -193,8 +193,16 @@ jobs:
 
       - name: Build website
         run: |
+          rmarkdown::render("index.Rmd")
+          setwd("docs")
           bookdown::render_book("index.Rmd")
         shell: Rscript {0}
+
+      - name: Re-arrange files
+        run: |
+          mkdir docs/website
+          mv index.html docs/website/
+          mv docs/_book docs/website/docs
 
       - name: Install deploy dependencies
         run: |
@@ -205,7 +213,7 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: _book # The folder the action should deploy.
+          FOLDER: docs/website # The folder the action should deploy.
 
 
 

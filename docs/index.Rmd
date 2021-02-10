@@ -1,0 +1,116 @@
+---
+title: "recount3: human and mouse public RNA-seq data"
+author: ""
+site: bookdown::bookdown_site
+documentclass: book
+output:
+  bookdown::gitbook:
+    css: ["css/styles.css"]
+bibliography: ["recount3.bib"]
+biblio-style: "apalike"
+link-citations: true
+---
+
+Welcome to the home of the `recount3` project! This website provides an overview of all the pieces that make up the `recount3` project that is a part of [**recount.bio**](https://recount.bio/).
+
+<img src="https://github.com/LieberInstitute/recount3/blob/master/man/figures/logo.png?raw=true" width="500px"/>
+
+# Overview {-}
+
+**recount3** is an online resource consisting of RNA-seq gene, exon, and exon-exon junction counts as well as coverage bigWig files for 8,679 and 10,088 different studies for human and mouse respectively. It is the third generation of the [ReCount project](http://bowtie-bio.sourceforge.net/recount/) and part of [**recount.bio**](https://recount.bio).
+
+The raw sequencing data were processed with the Monorail system as described in the [recount3 paper](TODO) which created the coverage bigWig files and the recount-unified text files. While these raw output files are available through [IDIES SciServer](https://idies.jhu.edu/), for ease of statistical analysis, we provide through the `r BiocStyle::Biocpkg("recount3")` R/Bioconductor package an interface that builds [RangedSummarizedExperiment](https://doi.org/10.1038/nmeth.3252) R objects for gene, exon, and exon-exon junction counts for each study. Furthermore, `r BiocStyle::Biocpkg("snapcount")` enables query-based access of the `recount3` and `recount2` data. The coverage bigWig files can be used for annotation-agnostic expression analyses using for example `r BiocStyle::Biocpkg("megadepth")`, `r BiocStyle::Biocpkg("derfinder")` and other tools. 
+
+By taking care of several pre-processing steps and combining many datasets into one easily-accessible website, we make finding and analyzing RNA-seq data considerably more straightforward.
+
+## Study explorer {-}
+
+```{r "embed_study_explorer", out.width = "100%", echo = FALSE}
+knitr::include_app("https://jhubiostatistics.shinyapps.io/recount3-study-explorer/", 
+  height = "2000px")
+```
+
+You can also open the study explorer independently through [shinyapps.io](https://jhubiostatistics.shinyapps.io/recount3-study-explorer/).
+
+## How to cite `recount3` {-}
+
+Thank you for your continued support of the `ReCount` family of projects! We greatly appreciate you citing our work.
+
+```{r "citation"}
+print(citation("recount3")[2], bibtex = TRUE)
+```
+
+### Related publications
+
+Additional publications directly related to `recount3` are:
+
+* Megadepth: efficient coverage quantification for BigWigs and BAMs. Christopher Wilks, Omar Ahmed, Daniel N. Baker, David Zhang, Leonardo Collado-Torres, Ben Langmead. bioRxiv, 2020. DOI: [10.1101/2020.12.17.423317](https://doi.org/10.1101/2020.12.17.423317)
+
+### Related projects {-}
+
+The `ReCount` project has three main publications over the years with implementation details that have been improved each time. Each phase of the project has had several companion publications that expanded the main resource in different directions. Please cite the appropriate expansions and results as you see relevant for your work.
+
+Previous `ReCount` projects:
+
+* [`recount2`](https://jhubiostatistics.shinyapps.io/recount/), DOI: [10.1038/nbt.3838](https://doi.org/10.1038/nbt.3838)
+* [`ReCount`](http://bowtie-bio.sourceforge.net/recount/), DOI: [10.1186/1471-2105-12-449](https://doi.org/10.1186/1471-2105-12-449)
+
+## Team members {-}
+
+* [Christopher Wilks](https://github.com/ChristopherWilks) (the star behind `recount3`!)
+* [Leonardo Collado Torres](https://github.com/lcolladotor) 
+* [Shijie Charles Zheng](https://github.com/sjczheng)
+* [Kevin FY Chen](https://github.com/KevinFYChen)
+* [Kasper Daniel Hansen](https://github.com/kasperdanielhansen)
+* [Ben Langmead](https://github.com/BenLangmead)
+
+
+## Teams involved {-}
+
+* [Ben Langmead's lab at JHU Computer Science](http://www.langmead-lab.org/)
+* [Kasper Daniel Hansen's lab at JHBSPH Biostatistics Department](https://www.hansenlab.org/)
+* [Leonardo Collado-Torres](http://lcolladotor.github.io/) and [Andrew E. Jaffe](http://aejaffe.com/) from [LIBD](https://www.libd.org/)
+* [Abhinav Nellore's lab at OHSU](http://nellore.bio/)
+* [Jeff Leek's lab at JHBSPH Biostatistics Deparment](http://jtleek.com/)
+* Data hosted by [SciServer from IDIES at JHU](https://www.sciserver.org/)
+
+|                                                                                                                                                                               |                                                                                                      |                                                                                                                                                                         |                                                                                                                                                   |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| <a href="http://www.langmead-lab.org/"><img src="http://www.langmead-lab.org/wp-content/uploads/2014/01/Screen-Shot-2014-02-02-at-5.20.13-PM-1024x199.png" width="250px"></a> | <a href="https://www.libd.org/"><img src="http://lcolladotor.github.io/img/LIBD_logo.jpg" width="250px"></a> | <a href="http://nellore.bio/"><img src="https://seekvectorlogo.net/wp-content/uploads/2018/08/oregon-health-science-university-ohsu-vector-logo.png" width="250px"></a> | <a href="https://www.sciserver.org/"><img src="https://skyserver.sdss.org/dr14/en/images/sciserver_logo_inverted_vertical.png" width="250px"></a> |
+
+
+This book was last updated on `r Sys.time()`.
+
+## R session information {-}
+
+Details on the R version used for making this book. The source code is available at [`LieberInstitute/recount3-docs`](https://github.com/LieberInstitute/recount3-docs).
+
+```{r session_info_chunk, eval = FALSE}
+## Load the package at the top of your script
+library("sessioninfo")
+
+## Reproducibility information
+print('Reproducibility information:')
+Sys.time()
+proc.time()
+options(width = 120)
+session_info()
+```
+
+```{r "BiocPkgs", message = FALSE}
+## For links
+library("BiocStyle")
+
+## Packages illustrated in the documentation
+library("recount3")
+library("megadepth")
+library("snapcount")
+
+## For looping
+library("purrr")
+```
+
+
+```{r session_info, echo = FALSE}
+<<session_info_chunk>>
+```
