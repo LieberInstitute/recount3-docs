@@ -123,7 +123,7 @@ dim(projects)
 write.csv(projects, file = "recount3_raw_project_files_with_default_annotation.csv", row.names = FALSE)
 ```
 
-As a teaser, here you can see the first 20 rows of this long table. Or you can download the CSV file to your computer from [GitHub](https://github.com/LieberInstitute/recount3-docs/blob/master/recount3_raw_project_files_with_default_annotation.csv).
+As a teaser, here you can see the first 20 rows of this long table. Or you can download the CSV file to your computer from [GitHub](https://github.com/LieberInstitute/recount3-docs/blob/master/docs/recount3_raw_project_files_with_default_annotation.csv).
 
 ```{r "project_raw_files_table", echo = FALSE, results = "asis"}
 projects <- read.csv("recount3_raw_project_files_with_default_annotation.csv", row.names = NULL)
@@ -173,7 +173,7 @@ dim(metadata_files)
 write.csv(metadata_files, file = "recount3_metadata_files.csv", row.names = FALSE)
 ```
 
-As a teaser, here you can see the first 6 rows of this long table. Or you can download the CSV file to your computer from [GitHub](https://github.com/LieberInstitute/recount3-docs/blob/master/recount3_metadata_files.csv). If you want to, you can combine it with the project raw files table from the previous section.
+As a teaser, here you can see the first 6 rows of this long table. Or you can download the CSV file to your computer from [GitHub](https://github.com/LieberInstitute/recount3-docs/blob/master/docs/recount3_metadata_files.csv). If you want to, you can combine it with the project raw files table from the previous section.
 
 ```{r "metadata_files_table", echo = FALSE}
 metadata_files <- read.csv("recount3_metadata_files.csv", row.names = NULL)
