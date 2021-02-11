@@ -26,3 +26,55 @@ library("purrr")
 library("postcards")
 ```
 
+# (PART) Get RNA-seq data! {-}
+
+# Data
+
+`recount3` provides processed RNA-seq data for human and mouse in file formats similar to `recount2` (Figure \@ref(fig:recountWorkflowFig1)), which at its core is based on coverage bigWig files and exon-exon junction counts (see [Raw file](#raw-files) for more details). These two raw files power the whole `recount3` ecosystem. In `recount3`, we have provided coverage count files for several human and mouse annotations with samples grouped by study. Some large studies, like [GTEx](https://gtexportal.org/) and [TCGA](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga) have been fragmented at the tissue level to make the data more accessible.
+
+```{r "recountWorkflowFig1", out.width="100%", fig.align="center", fig.cap = "Overview of the data available in recount2 and recount3. Reads (pink boxes) aligned to the reference genome can be used to compute a base-pair coverage curve and identify exon-exon junctions (split reads). Gene and exon count matrices are generated using annotation information providing the gene (green boxes) and exon (blue boxes) coordinates together with the base-level coverage curve. The reads spanning exon-exon junctions (jx) are used to compute a third count matrix that might include unannotated junctions (jx 3 and 4). Without using annotation information, expressed regions (orange box) can be determined from the base-level coverage curve to then construct data-driven count matrices.", echo = FALSE}
+knitr::include_graphics("images/recountWorkflow_Figure1.png")
+```
+
+The following annotations are supported in `recount3`. See [Annotation files](#annotation-files) section for direct links to the annotation files.
+
+## Human
+
+Annotations:
+
+* Gencode v26
+* Gencode v29
+* RefSeq
+* FANTOM6_cat
+* ERCC
+* SIRV
+
+## Mouse
+
+Annotations:
+
+* Gencode v23
+
+## Study explorer
+
+You can also open the study explorer independently through [shinyapps.io](https://jhubiostatistics.shinyapps.io/recount3-study-explorer/).
+
+```{r "embed_study_explorer", out.width = "100%", echo = FALSE}
+knitr::include_app("https://jhubiostatistics.shinyapps.io/recount3-study-explorer/", 
+    height = "2000px")
+```
+
+
+## How to cite `recount3`
+ 
+Thank you for your continued support of the `ReCount` family of projects! We greatly appreciate you citing our work.
+ 
+```{r "citation"}
+print(citation("recount3")[2], bibtex = TRUE) 
+```
+
+	
+|                                                                                                                                                                               |                                                                                                      |                                                                                                                                                                         |                                                                                                                                                   |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| <a href="http://www.langmead-lab.org/"><img src="http://www.langmead-lab.org/wp-content/uploads/2014/01/Screen-Shot-2014-02-02-at-5.20.13-PM-1024x199.png" width="250px"></a> | <a href="https://www.libd.org/"><img src="http://lcolladotor.github.io/img/LIBD_logo.jpg" width="250px"></a> | <a href="http://nellore.bio/"><img src="https://seekvectorlogo.net/wp-content/uploads/2018/08/oregon-health-science-university-ohsu-vector-logo.png" width="250px"></a> | <a href="https://www.sciserver.org/"><img src="https://skyserver.sdss.org/dr14/en/images/sciserver_logo_inverted_vertical.png" width="250px"></a> |
+
