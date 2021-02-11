@@ -26,3 +26,26 @@ Annotations:
 Annotations:
 
 * Gencode v23
+
+## Study explorer
+
+You can also open the study explorer independently through [shinyapps.io](https://jhubiostatistics.shinyapps.io/recount3-study-explorer/).
+
+```{r "embed_study_explorer", out.width = "100%", echo = FALSE}
+knitr::include_app("https://jhubiostatistics.shinyapps.io/recount3-study-explorer/", 
+    height = "2000px")
+```
+
+
+## How to cite `recount3`
+ 
+Thank you for your continued support of the `ReCount` family of projects! We greatly appreciate you citing our work.
+ 
+```{r "citation"}
+print(citation("recount3")[2], bibtex = TRUE) 
+```
+
+	
+|                                                                                                                                                                               |                                                                                                      |                                                                                                                                                                         |                                                                                                                                                   |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| <a href="http://www.langmead-lab.org/"><img src="http://www.langmead-lab.org/wp-content/uploads/2014/01/Screen-Shot-2014-02-02-at-5.20.13-PM-1024x199.png" width="250px"></a> | <a href="https://www.libd.org/"><img src="http://lcolladotor.github.io/img/LIBD_logo.jpg" width="250px"></a> | <a href="http://nellore.bio/"><img src="https://seekvectorlogo.net/wp-content/uploads/2018/08/oregon-health-science-university-ohsu-vector-logo.png" width="250px"></a> | <a href="https://www.sciserver.org/"><img src="https://skyserver.sdss.org/dr14/en/images/sciserver_logo_inverted_vertical.png" width="250px"></a> |

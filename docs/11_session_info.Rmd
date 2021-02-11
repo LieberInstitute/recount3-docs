@@ -1,0 +1,19 @@
+# R session information {-}
+
+This book was last updated on `r Sys.time()`.
+
+Details on the R version used for making this book. The source code is available at [`LieberInstitute/recount3-docs`](https://github.com/LieberInstitute/recount3-docs).
+
+```{r session_info}
+## Load the package at the top of your script
+library("sessioninfo")
+
+## Reproducibility information
+print('Reproducibility information:')
+Sys.time()
+proc.time()
+options(width = 120)
+session_info()
+```
+
+# References {-}
