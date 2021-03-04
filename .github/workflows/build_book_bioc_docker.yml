@@ -196,6 +196,7 @@ jobs:
           rmarkdown::render("index.Rmd")
           setwd("docs")
           bookdown::render_book("index.Rmd")
+          system("touch website/.nojekyll")
         shell: Rscript {0}
 
       - name: Re-arrange files
