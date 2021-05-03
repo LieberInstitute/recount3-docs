@@ -2,7 +2,9 @@
 
 The code for the analyses shown in the recount3 paper is available through the following GitHub repositories.
 
+* Re-analyses of Intropolis, ASCOT, FANTOM-CAT, and Zhang et al's data: https://github.com/ChristopherWilks/monorail_paper
 * Human gene-level analyses: https://github.com/hansenlab/recount3_human_gene
+* Mouse gene-level analyses: https://github.com/hansenlab/recount3_mouse_gene
 
 ## Beyond recount3
 
