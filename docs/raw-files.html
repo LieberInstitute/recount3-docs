@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>6 Raw Files | recount3: human and mouse public RNA-seq data</title>
   <meta name="description" content="6 Raw Files | recount3: human and mouse public RNA-seq data" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
   <meta property="og:title" content="6 Raw Files | recount3: human and mouse public RNA-seq data" />
   <meta property="og:type" content="book" />
@@ -49,6 +49,8 @@
 
 
 
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -114,6 +116,29 @@ code span.st { color: #4070a0; } /* String */
 code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 <link rel="stylesheet" href="css/styles.css" type="text/css" />
@@ -365,55 +390,55 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>3 exon-exon junction files: the sparse count matrix data in Matrix Market (MM) format, the small list of sample identifiers (IDs), and the exon-exon junctions coordinate information (RR file)</li>
 </ul>
 <p>All these files can be located with <code>recount3::locate_url()</code>. The following R code creates a table with links to the files for the default annotation for each organism. Note that you can replace the annotation file extension (like <code>G026</code>) for the corresponding one for annotation annotation shown in the previous section (or use <code>recount3::annotation_ext()</code> to see available options).</p>
-<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="raw-files.html#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Obtain all available projects</span></span>
-<span id="cb71-2"><a href="raw-files.html#cb71-2" aria-hidden="true" tabindex="-1"></a>projects <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
-<span id="cb71-3"><a href="raw-files.html#cb71-3" aria-hidden="true" tabindex="-1"></a>    recount3<span class="sc">::</span><span class="fu">available_projects</span>(<span class="st">&quot;human&quot;</span>),</span>
-<span id="cb71-4"><a href="raw-files.html#cb71-4" aria-hidden="true" tabindex="-1"></a>    recount3<span class="sc">::</span><span class="fu">available_projects</span>(<span class="st">&quot;mouse&quot;</span>)</span>
-<span id="cb71-5"><a href="raw-files.html#cb71-5" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb71-6"><a href="raw-files.html#cb71-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb71-7"><a href="raw-files.html#cb71-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Locate the project raw files at the gene level using the default annotation</span></span>
-<span id="cb71-8"><a href="raw-files.html#cb71-8" aria-hidden="true" tabindex="-1"></a>projects<span class="sc">$</span>gene <span class="ot">&lt;-</span> <span class="fu">apply</span>(projects, <span class="dv">1</span>, <span class="cf">function</span>(x)</span>
-<span id="cb71-9"><a href="raw-files.html#cb71-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">locate_url</span>(</span>
-<span id="cb71-10"><a href="raw-files.html#cb71-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">project =</span> x[<span class="st">&quot;project&quot;</span>],</span>
-<span id="cb71-11"><a href="raw-files.html#cb71-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">project_home =</span> x[<span class="st">&quot;project_home&quot;</span>],</span>
-<span id="cb71-12"><a href="raw-files.html#cb71-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">type =</span> <span class="st">&quot;gene&quot;</span>,</span>
-<span id="cb71-13"><a href="raw-files.html#cb71-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">organism =</span> x[<span class="st">&quot;organism&quot;</span>],</span>
-<span id="cb71-14"><a href="raw-files.html#cb71-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">annotation =</span> <span class="fu">annotation_options</span>(x[<span class="st">&quot;organism&quot;</span>])[<span class="dv">1</span>] <span class="co"># Use default annotation</span></span>
-<span id="cb71-15"><a href="raw-files.html#cb71-15" aria-hidden="true" tabindex="-1"></a>    ))</span>
-<span id="cb71-16"><a href="raw-files.html#cb71-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb71-17"><a href="raw-files.html#cb71-17" aria-hidden="true" tabindex="-1"></a><span class="do">## Locate the project raw files at the exon level using the default annotation</span></span>
-<span id="cb71-18"><a href="raw-files.html#cb71-18" aria-hidden="true" tabindex="-1"></a>projects<span class="sc">$</span>exon <span class="ot">&lt;-</span> <span class="fu">apply</span>(projects, <span class="dv">1</span>, <span class="cf">function</span>(x)</span>
-<span id="cb71-19"><a href="raw-files.html#cb71-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">locate_url</span>(</span>
-<span id="cb71-20"><a href="raw-files.html#cb71-20" aria-hidden="true" tabindex="-1"></a>        <span class="at">project =</span> x[<span class="st">&quot;project&quot;</span>],</span>
-<span id="cb71-21"><a href="raw-files.html#cb71-21" aria-hidden="true" tabindex="-1"></a>        <span class="at">project_home =</span> x[<span class="st">&quot;project_home&quot;</span>],</span>
-<span id="cb71-22"><a href="raw-files.html#cb71-22" aria-hidden="true" tabindex="-1"></a>        <span class="at">type =</span> <span class="st">&quot;exon&quot;</span>,</span>
-<span id="cb71-23"><a href="raw-files.html#cb71-23" aria-hidden="true" tabindex="-1"></a>        <span class="at">organism =</span> x[<span class="st">&quot;organism&quot;</span>],</span>
-<span id="cb71-24"><a href="raw-files.html#cb71-24" aria-hidden="true" tabindex="-1"></a>        <span class="at">annotation =</span> <span class="fu">annotation_options</span>(x[<span class="st">&quot;organism&quot;</span>])[<span class="dv">1</span>] <span class="co"># Use default annotation</span></span>
-<span id="cb71-25"><a href="raw-files.html#cb71-25" aria-hidden="true" tabindex="-1"></a>    ))</span>
-<span id="cb71-26"><a href="raw-files.html#cb71-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb71-27"><a href="raw-files.html#cb71-27" aria-hidden="true" tabindex="-1"></a><span class="do">## Locate the project raw exon-exon junction files</span></span>
-<span id="cb71-28"><a href="raw-files.html#cb71-28" aria-hidden="true" tabindex="-1"></a>projects <span class="ot">&lt;-</span></span>
-<span id="cb71-29"><a href="raw-files.html#cb71-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cbind</span>(projects, <span class="fu">do.call</span>(rbind, <span class="fu">apply</span>(projects, <span class="dv">1</span>, <span class="cf">function</span>(x) {</span>
-<span id="cb71-30"><a href="raw-files.html#cb71-30" aria-hidden="true" tabindex="-1"></a>        x <span class="ot">&lt;-</span></span>
-<span id="cb71-31"><a href="raw-files.html#cb71-31" aria-hidden="true" tabindex="-1"></a>            <span class="fu">locate_url</span>(</span>
-<span id="cb71-32"><a href="raw-files.html#cb71-32" aria-hidden="true" tabindex="-1"></a>                <span class="at">project =</span> x[<span class="st">&quot;project&quot;</span>],</span>
-<span id="cb71-33"><a href="raw-files.html#cb71-33" aria-hidden="true" tabindex="-1"></a>                <span class="at">project_home =</span> x[<span class="st">&quot;project_home&quot;</span>],</span>
-<span id="cb71-34"><a href="raw-files.html#cb71-34" aria-hidden="true" tabindex="-1"></a>                <span class="at">type =</span> <span class="st">&quot;jxn&quot;</span>,</span>
-<span id="cb71-35"><a href="raw-files.html#cb71-35" aria-hidden="true" tabindex="-1"></a>                <span class="at">organism =</span> x[<span class="st">&quot;organism&quot;</span>]</span>
-<span id="cb71-36"><a href="raw-files.html#cb71-36" aria-hidden="true" tabindex="-1"></a>            )</span>
-<span id="cb71-37"><a href="raw-files.html#cb71-37" aria-hidden="true" tabindex="-1"></a>        res <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">t</span>(x))</span>
-<span id="cb71-38"><a href="raw-files.html#cb71-38" aria-hidden="true" tabindex="-1"></a>        <span class="fu">colnames</span>(res) <span class="ot">&lt;-</span></span>
-<span id="cb71-39"><a href="raw-files.html#cb71-39" aria-hidden="true" tabindex="-1"></a>            <span class="fu">paste0</span>(<span class="st">&quot;jxn_&quot;</span>, <span class="fu">gsub</span>(<span class="st">&quot;^.*</span><span class="sc">\\</span><span class="st">.&quot;</span>, <span class="st">&quot;&quot;</span>, <span class="fu">gsub</span>(<span class="st">&quot;</span><span class="sc">\\</span><span class="st">.gz&quot;</span>, <span class="st">&quot;&quot;</span>, <span class="fu">colnames</span>(res))))</span>
-<span id="cb71-40"><a href="raw-files.html#cb71-40" aria-hidden="true" tabindex="-1"></a>        <span class="fu">return</span>(res)</span>
-<span id="cb71-41"><a href="raw-files.html#cb71-41" aria-hidden="true" tabindex="-1"></a>    })))</span>
-<span id="cb71-42"><a href="raw-files.html#cb71-42" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(projects) <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
-<span id="cb71-43"><a href="raw-files.html#cb71-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb71-44"><a href="raw-files.html#cb71-44" aria-hidden="true" tabindex="-1"></a><span class="do">## Dimensions of the table</span></span>
-<span id="cb71-45"><a href="raw-files.html#cb71-45" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(projects)</span>
-<span id="cb71-46"><a href="raw-files.html#cb71-46" aria-hidden="true" tabindex="-1"></a><span class="co"># [1] 18830    11</span></span>
-<span id="cb71-47"><a href="raw-files.html#cb71-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb71-48"><a href="raw-files.html#cb71-48" aria-hidden="true" tabindex="-1"></a><span class="do">## Export</span></span>
-<span id="cb71-49"><a href="raw-files.html#cb71-49" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(projects, <span class="at">file =</span> <span class="st">&quot;recount3_raw_project_files_with_default_annotation.csv&quot;</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="raw-files.html#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Obtain all available projects</span></span>
+<span id="cb70-2"><a href="raw-files.html#cb70-2" aria-hidden="true" tabindex="-1"></a>projects <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
+<span id="cb70-3"><a href="raw-files.html#cb70-3" aria-hidden="true" tabindex="-1"></a>    recount3<span class="sc">::</span><span class="fu">available_projects</span>(<span class="st">&quot;human&quot;</span>),</span>
+<span id="cb70-4"><a href="raw-files.html#cb70-4" aria-hidden="true" tabindex="-1"></a>    recount3<span class="sc">::</span><span class="fu">available_projects</span>(<span class="st">&quot;mouse&quot;</span>)</span>
+<span id="cb70-5"><a href="raw-files.html#cb70-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb70-6"><a href="raw-files.html#cb70-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-7"><a href="raw-files.html#cb70-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Locate the project raw files at the gene level using the default annotation</span></span>
+<span id="cb70-8"><a href="raw-files.html#cb70-8" aria-hidden="true" tabindex="-1"></a>projects<span class="sc">$</span>gene <span class="ot">&lt;-</span> <span class="fu">apply</span>(projects, <span class="dv">1</span>, <span class="cf">function</span>(x)</span>
+<span id="cb70-9"><a href="raw-files.html#cb70-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">locate_url</span>(</span>
+<span id="cb70-10"><a href="raw-files.html#cb70-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">project =</span> x[<span class="st">&quot;project&quot;</span>],</span>
+<span id="cb70-11"><a href="raw-files.html#cb70-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">project_home =</span> x[<span class="st">&quot;project_home&quot;</span>],</span>
+<span id="cb70-12"><a href="raw-files.html#cb70-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">type =</span> <span class="st">&quot;gene&quot;</span>,</span>
+<span id="cb70-13"><a href="raw-files.html#cb70-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">organism =</span> x[<span class="st">&quot;organism&quot;</span>],</span>
+<span id="cb70-14"><a href="raw-files.html#cb70-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">annotation =</span> <span class="fu">annotation_options</span>(x[<span class="st">&quot;organism&quot;</span>])[<span class="dv">1</span>] <span class="co"># Use default annotation</span></span>
+<span id="cb70-15"><a href="raw-files.html#cb70-15" aria-hidden="true" tabindex="-1"></a>    ))</span>
+<span id="cb70-16"><a href="raw-files.html#cb70-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-17"><a href="raw-files.html#cb70-17" aria-hidden="true" tabindex="-1"></a><span class="do">## Locate the project raw files at the exon level using the default annotation</span></span>
+<span id="cb70-18"><a href="raw-files.html#cb70-18" aria-hidden="true" tabindex="-1"></a>projects<span class="sc">$</span>exon <span class="ot">&lt;-</span> <span class="fu">apply</span>(projects, <span class="dv">1</span>, <span class="cf">function</span>(x)</span>
+<span id="cb70-19"><a href="raw-files.html#cb70-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">locate_url</span>(</span>
+<span id="cb70-20"><a href="raw-files.html#cb70-20" aria-hidden="true" tabindex="-1"></a>        <span class="at">project =</span> x[<span class="st">&quot;project&quot;</span>],</span>
+<span id="cb70-21"><a href="raw-files.html#cb70-21" aria-hidden="true" tabindex="-1"></a>        <span class="at">project_home =</span> x[<span class="st">&quot;project_home&quot;</span>],</span>
+<span id="cb70-22"><a href="raw-files.html#cb70-22" aria-hidden="true" tabindex="-1"></a>        <span class="at">type =</span> <span class="st">&quot;exon&quot;</span>,</span>
+<span id="cb70-23"><a href="raw-files.html#cb70-23" aria-hidden="true" tabindex="-1"></a>        <span class="at">organism =</span> x[<span class="st">&quot;organism&quot;</span>],</span>
+<span id="cb70-24"><a href="raw-files.html#cb70-24" aria-hidden="true" tabindex="-1"></a>        <span class="at">annotation =</span> <span class="fu">annotation_options</span>(x[<span class="st">&quot;organism&quot;</span>])[<span class="dv">1</span>] <span class="co"># Use default annotation</span></span>
+<span id="cb70-25"><a href="raw-files.html#cb70-25" aria-hidden="true" tabindex="-1"></a>    ))</span>
+<span id="cb70-26"><a href="raw-files.html#cb70-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-27"><a href="raw-files.html#cb70-27" aria-hidden="true" tabindex="-1"></a><span class="do">## Locate the project raw exon-exon junction files</span></span>
+<span id="cb70-28"><a href="raw-files.html#cb70-28" aria-hidden="true" tabindex="-1"></a>projects <span class="ot">&lt;-</span></span>
+<span id="cb70-29"><a href="raw-files.html#cb70-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cbind</span>(projects, <span class="fu">do.call</span>(rbind, <span class="fu">apply</span>(projects, <span class="dv">1</span>, <span class="cf">function</span>(x) {</span>
+<span id="cb70-30"><a href="raw-files.html#cb70-30" aria-hidden="true" tabindex="-1"></a>        x <span class="ot">&lt;-</span></span>
+<span id="cb70-31"><a href="raw-files.html#cb70-31" aria-hidden="true" tabindex="-1"></a>            <span class="fu">locate_url</span>(</span>
+<span id="cb70-32"><a href="raw-files.html#cb70-32" aria-hidden="true" tabindex="-1"></a>                <span class="at">project =</span> x[<span class="st">&quot;project&quot;</span>],</span>
+<span id="cb70-33"><a href="raw-files.html#cb70-33" aria-hidden="true" tabindex="-1"></a>                <span class="at">project_home =</span> x[<span class="st">&quot;project_home&quot;</span>],</span>
+<span id="cb70-34"><a href="raw-files.html#cb70-34" aria-hidden="true" tabindex="-1"></a>                <span class="at">type =</span> <span class="st">&quot;jxn&quot;</span>,</span>
+<span id="cb70-35"><a href="raw-files.html#cb70-35" aria-hidden="true" tabindex="-1"></a>                <span class="at">organism =</span> x[<span class="st">&quot;organism&quot;</span>]</span>
+<span id="cb70-36"><a href="raw-files.html#cb70-36" aria-hidden="true" tabindex="-1"></a>            )</span>
+<span id="cb70-37"><a href="raw-files.html#cb70-37" aria-hidden="true" tabindex="-1"></a>        res <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">t</span>(x))</span>
+<span id="cb70-38"><a href="raw-files.html#cb70-38" aria-hidden="true" tabindex="-1"></a>        <span class="fu">colnames</span>(res) <span class="ot">&lt;-</span></span>
+<span id="cb70-39"><a href="raw-files.html#cb70-39" aria-hidden="true" tabindex="-1"></a>            <span class="fu">paste0</span>(<span class="st">&quot;jxn_&quot;</span>, <span class="fu">gsub</span>(<span class="st">&quot;^.*</span><span class="sc">\\</span><span class="st">.&quot;</span>, <span class="st">&quot;&quot;</span>, <span class="fu">gsub</span>(<span class="st">&quot;</span><span class="sc">\\</span><span class="st">.gz&quot;</span>, <span class="st">&quot;&quot;</span>, <span class="fu">colnames</span>(res))))</span>
+<span id="cb70-40"><a href="raw-files.html#cb70-40" aria-hidden="true" tabindex="-1"></a>        <span class="fu">return</span>(res)</span>
+<span id="cb70-41"><a href="raw-files.html#cb70-41" aria-hidden="true" tabindex="-1"></a>    })))</span>
+<span id="cb70-42"><a href="raw-files.html#cb70-42" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(projects) <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb70-43"><a href="raw-files.html#cb70-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-44"><a href="raw-files.html#cb70-44" aria-hidden="true" tabindex="-1"></a><span class="do">## Dimensions of the table</span></span>
+<span id="cb70-45"><a href="raw-files.html#cb70-45" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(projects)</span>
+<span id="cb70-46"><a href="raw-files.html#cb70-46" aria-hidden="true" tabindex="-1"></a><span class="co"># [1] 18830    11</span></span>
+<span id="cb70-47"><a href="raw-files.html#cb70-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-48"><a href="raw-files.html#cb70-48" aria-hidden="true" tabindex="-1"></a><span class="do">## Export</span></span>
+<span id="cb70-49"><a href="raw-files.html#cb70-49" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(projects, <span class="at">file =</span> <span class="st">&quot;recount3_raw_project_files_with_default_annotation.csv&quot;</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
 <p>As a teaser, here you can see the first 20 rows of this long table. Or you can download the CSV file to your computer from <a href="https://github.com/LieberInstitute/recount3-docs/blob/master/docs/recount3_raw_project_files_with_default_annotation.csv">GitHub</a>.</p>
 <table>
 <caption>(#tab:project_raw_files_table)First 20 raw project files</caption>
@@ -704,28 +729,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><code>recount_pred</code>: curated and predicted sample information described in the recount3 manuscript</li>
 </ul>
 <p>You can use the following R code to obtain the links to all these raw metadata files or use <code>recount3::locate_url()</code>.</p>
-<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="raw-files.html#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Obtain all the metadata files</span></span>
-<span id="cb72-2"><a href="raw-files.html#cb72-2" aria-hidden="true" tabindex="-1"></a>metadata_files <span class="ot">&lt;-</span> <span class="fu">do.call</span>(rbind, <span class="fu">apply</span>(projects, <span class="dv">1</span>, <span class="cf">function</span>(x) {</span>
-<span id="cb72-3"><a href="raw-files.html#cb72-3" aria-hidden="true" tabindex="-1"></a>    x <span class="ot">&lt;-</span></span>
-<span id="cb72-4"><a href="raw-files.html#cb72-4" aria-hidden="true" tabindex="-1"></a>        <span class="fu">locate_url</span>(</span>
-<span id="cb72-5"><a href="raw-files.html#cb72-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">project =</span> x[[<span class="st">&quot;project&quot;</span>]],</span>
-<span id="cb72-6"><a href="raw-files.html#cb72-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">project_home =</span> x[[<span class="st">&quot;project_home&quot;</span>]],</span>
-<span id="cb72-7"><a href="raw-files.html#cb72-7" aria-hidden="true" tabindex="-1"></a>            <span class="at">type =</span> <span class="st">&quot;metadata&quot;</span>,</span>
-<span id="cb72-8"><a href="raw-files.html#cb72-8" aria-hidden="true" tabindex="-1"></a>            <span class="at">organism =</span> x[[<span class="st">&quot;organism&quot;</span>]]</span>
-<span id="cb72-9"><a href="raw-files.html#cb72-9" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb72-10"><a href="raw-files.html#cb72-10" aria-hidden="true" tabindex="-1"></a>    res <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">t</span>(x))</span>
-<span id="cb72-11"><a href="raw-files.html#cb72-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">colnames</span>(res) <span class="ot">&lt;-</span></span>
-<span id="cb72-12"><a href="raw-files.html#cb72-12" aria-hidden="true" tabindex="-1"></a>        <span class="fu">gsub</span>(<span class="st">&quot;</span><span class="sc">\\</span><span class="st">..*&quot;</span>, <span class="st">&quot;&quot;</span>, <span class="fu">gsub</span>(<span class="st">&quot;^[a-z]+</span><span class="sc">\\</span><span class="st">.&quot;</span>, <span class="st">&quot;&quot;</span>, <span class="fu">colnames</span>(res)))</span>
-<span id="cb72-13"><a href="raw-files.html#cb72-13" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb72-14"><a href="raw-files.html#cb72-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">colnames</span>(res)[<span class="fu">colnames</span>(res) <span class="sc">%in%</span> <span class="fu">unique</span>(projects<span class="sc">$</span>file_source)] <span class="ot">&lt;-</span></span>
-<span id="cb72-15"><a href="raw-files.html#cb72-15" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;project_meta&quot;</span></span>
-<span id="cb72-16"><a href="raw-files.html#cb72-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(res)</span>
-<span id="cb72-17"><a href="raw-files.html#cb72-17" aria-hidden="true" tabindex="-1"></a>}))</span>
-<span id="cb72-18"><a href="raw-files.html#cb72-18" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(metadata_files)</span>
-<span id="cb72-19"><a href="raw-files.html#cb72-19" aria-hidden="true" tabindex="-1"></a><span class="co"># [1] 18830     5</span></span>
-<span id="cb72-20"><a href="raw-files.html#cb72-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb72-21"><a href="raw-files.html#cb72-21" aria-hidden="true" tabindex="-1"></a><span class="do">## Export</span></span>
-<span id="cb72-22"><a href="raw-files.html#cb72-22" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(metadata_files, <span class="at">file =</span> <span class="st">&quot;recount3_metadata_files.csv&quot;</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="raw-files.html#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Obtain all the metadata files</span></span>
+<span id="cb71-2"><a href="raw-files.html#cb71-2" aria-hidden="true" tabindex="-1"></a>metadata_files <span class="ot">&lt;-</span> <span class="fu">do.call</span>(rbind, <span class="fu">apply</span>(projects, <span class="dv">1</span>, <span class="cf">function</span>(x) {</span>
+<span id="cb71-3"><a href="raw-files.html#cb71-3" aria-hidden="true" tabindex="-1"></a>    x <span class="ot">&lt;-</span></span>
+<span id="cb71-4"><a href="raw-files.html#cb71-4" aria-hidden="true" tabindex="-1"></a>        <span class="fu">locate_url</span>(</span>
+<span id="cb71-5"><a href="raw-files.html#cb71-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">project =</span> x[[<span class="st">&quot;project&quot;</span>]],</span>
+<span id="cb71-6"><a href="raw-files.html#cb71-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">project_home =</span> x[[<span class="st">&quot;project_home&quot;</span>]],</span>
+<span id="cb71-7"><a href="raw-files.html#cb71-7" aria-hidden="true" tabindex="-1"></a>            <span class="at">type =</span> <span class="st">&quot;metadata&quot;</span>,</span>
+<span id="cb71-8"><a href="raw-files.html#cb71-8" aria-hidden="true" tabindex="-1"></a>            <span class="at">organism =</span> x[[<span class="st">&quot;organism&quot;</span>]]</span>
+<span id="cb71-9"><a href="raw-files.html#cb71-9" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb71-10"><a href="raw-files.html#cb71-10" aria-hidden="true" tabindex="-1"></a>    res <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">t</span>(x))</span>
+<span id="cb71-11"><a href="raw-files.html#cb71-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">colnames</span>(res) <span class="ot">&lt;-</span></span>
+<span id="cb71-12"><a href="raw-files.html#cb71-12" aria-hidden="true" tabindex="-1"></a>        <span class="fu">gsub</span>(<span class="st">&quot;</span><span class="sc">\\</span><span class="st">..*&quot;</span>, <span class="st">&quot;&quot;</span>, <span class="fu">gsub</span>(<span class="st">&quot;^[a-z]+</span><span class="sc">\\</span><span class="st">.&quot;</span>, <span class="st">&quot;&quot;</span>, <span class="fu">colnames</span>(res)))</span>
+<span id="cb71-13"><a href="raw-files.html#cb71-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb71-14"><a href="raw-files.html#cb71-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">colnames</span>(res)[<span class="fu">colnames</span>(res) <span class="sc">%in%</span> <span class="fu">unique</span>(projects<span class="sc">$</span>file_source)] <span class="ot">&lt;-</span></span>
+<span id="cb71-15"><a href="raw-files.html#cb71-15" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;project_meta&quot;</span></span>
+<span id="cb71-16"><a href="raw-files.html#cb71-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(res)</span>
+<span id="cb71-17"><a href="raw-files.html#cb71-17" aria-hidden="true" tabindex="-1"></a>}))</span>
+<span id="cb71-18"><a href="raw-files.html#cb71-18" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(metadata_files)</span>
+<span id="cb71-19"><a href="raw-files.html#cb71-19" aria-hidden="true" tabindex="-1"></a><span class="co"># [1] 18830     5</span></span>
+<span id="cb71-20"><a href="raw-files.html#cb71-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb71-21"><a href="raw-files.html#cb71-21" aria-hidden="true" tabindex="-1"></a><span class="do">## Export</span></span>
+<span id="cb71-22"><a href="raw-files.html#cb71-22" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(metadata_files, <span class="at">file =</span> <span class="st">&quot;recount3_metadata_files.csv&quot;</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
 <p>As a teaser, here you can see the first 6 rows of this long table. Or you can download the CSV file to your computer from <a href="https://github.com/LieberInstitute/recount3-docs/blob/master/docs/recount3_metadata_files.csv">GitHub</a>. If you want to, you can combine it with the project raw files table from the previous section.</p>
 <pre><code>##                                                                                              project_meta
 ## 1 http://idies.jhu.edu/recount3/data/human/data_sources/sra/metadata/65/SRP107565/sra.sra.SRP107565.MD.gz
@@ -768,12 +793,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="sample-level-bigwig-files" class="section level2" number="6.5">
 <h2><span class="header-section-number">6.5</span> Sample-level BigWig files</h2>
 <p>Each sample in recount3 has bigWig file publicly available and whose URL can be obtained using <code>recount3::locate_url()</code>. Below we show the URL for one such sample.</p>
-<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="raw-files.html#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="fu">locate_url</span>(</span>
-<span id="cb74-2"><a href="raw-files.html#cb74-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;SRP009615&quot;</span>,</span>
-<span id="cb74-3"><a href="raw-files.html#cb74-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;data_sources/sra&quot;</span>,</span>
-<span id="cb74-4"><a href="raw-files.html#cb74-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">type =</span> <span class="st">&quot;bw&quot;</span>,</span>
-<span id="cb74-5"><a href="raw-files.html#cb74-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">sample =</span> <span class="st">&quot;SRR387777&quot;</span></span>
-<span id="cb74-6"><a href="raw-files.html#cb74-6" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="raw-files.html#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="fu">locate_url</span>(</span>
+<span id="cb73-2"><a href="raw-files.html#cb73-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;SRP009615&quot;</span>,</span>
+<span id="cb73-3"><a href="raw-files.html#cb73-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;data_sources/sra&quot;</span>,</span>
+<span id="cb73-4"><a href="raw-files.html#cb73-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">type =</span> <span class="st">&quot;bw&quot;</span>,</span>
+<span id="cb73-5"><a href="raw-files.html#cb73-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">sample =</span> <span class="st">&quot;SRR387777&quot;</span></span>
+<span id="cb73-6"><a href="raw-files.html#cb73-6" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
 <pre><code>##                                                                                    sra.base_sums.SRP009615_SRR387777.ALL.bw 
 ## &quot;http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/15/SRP009615/77/sra.base_sums.SRP009615_SRR387777.ALL.bw&quot;</code></pre>
 <p>The URL structure is:</p>
@@ -817,6 +842,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {

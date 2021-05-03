@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>4 Quality check fields | recount3: human and mouse public RNA-seq data</title>
   <meta name="description" content="4 Quality check fields | recount3: human and mouse public RNA-seq data" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
   <meta property="og:title" content="4 Quality check fields | recount3: human and mouse public RNA-seq data" />
   <meta property="og:type" content="book" />
@@ -49,6 +49,8 @@
 
 
 
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -114,6 +116,29 @@ code span.st { color: #4070a0; } /* String */
 code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 <link rel="stylesheet" href="css/styles.css" type="text/css" />
@@ -208,7 +233,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="quality-check-fields" class="section level1" number="4">
 <h1><span class="header-section-number">4</span> Quality check fields</h1>
-<p>We used a number of tools to collect potentially useful quality-control (QC) measures. Specifically, we used <code>seqtk</code> <span class="citation">(<a href="references.html#ref-seqtk" role="doc-biblioref">Li 2020 (accessed August 18, 2020)</a>)</span>, the <code>idxstats</code> subcommand of <code>samtools</code>, the output of <code>STAR</code>, our own <code>megadepth</code> tool, and <code>featureCounts</code>. We examine each in turn, listing the specific QC measures calculated be each.</p>
+<p>We used a number of tools to collect potentially useful quality-control (QC) measures. Specifically, we used <code>seqtk</code> <span class="citation">(<a href="#ref-seqtk" role="doc-biblioref">Li 2020 (accessed August 18, 2020)</a>)</span>, the <code>idxstats</code> subcommand of <code>samtools</code>, the output of <code>STAR</code>, our own <code>megadepth</code> tool, and <code>featureCounts</code>. We examine each in turn, listing the specific QC measures calculated be each.</p>
 <p>Monorail runs the <code>seqtk fqchk</code> command on input FASTQ files to collect base-quality and base-composition summaries for all sequencing cycles. We distill these into a few QC measures included with every summarized run in <code>recount3</code>.</p>
 <ol style="list-style-type: decimal">
 <li><strong><code>min_len</code></strong>: minimum read length</li>
@@ -271,7 +296,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><strong><code>aligned_reads%.chry</code></strong>: Precent of reads aligning to chromosome Y.</li>
 </ol>
 <p>Monorail runs our <code>megadepth</code> tool on the BAM files output by <code>STAR</code>. The chief function is to convert BAM files to bigWig files that are then added to the recount3 archive. As <code>megadepth</code> performs this conversion, it also summarizes the amount of sequencing coverage within the intervals of a provided BED file representing a gene annotation. These quantifications can be useful for quality control, tell us, for example, what fraction of the coverage is within annotated genes.</p>
-<p>Fragment length distribution is based on a special read filter only applied for this purpose to be compatible with CSAW’s fragment counting approach <span class="citation">(<a href="references.html#ref-csaw" role="doc-biblioref">Lun and Smyth 2016</a>)</span>, paired reads in a passing fragment must not be secondary, supplementary, have conflicting read order, be unmapped or be mapped on more than one chromosome. The <code>bc_</code> prefix here refers to the previous name of the Megadepth tool.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p>Fragment length distribution is based on a special read filter only applied for this purpose to be compatible with CSAW’s fragment counting approach <span class="citation">(<a href="#ref-csaw" role="doc-biblioref">Lun and Smyth 2016</a>)</span>, paired reads in a passing fragment must not be secondary, supplementary, have conflicting read order, be unmapped or be mapped on more than one chromosome. The <code>bc_</code> prefix here refers to the previous name of the Megadepth tool.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
 <ol style="list-style-type: decimal">
 <li><strong><code>bc_auc.all_reads_all_bases</code></strong>: Area under coverage (total depth of coverage evaluated at all bases) for all alignments</li>
 <li><strong><code>bc_auc.all_reads_annotated_bases</code></strong>: Area under coverage for all alignments, but only for bases in annotated exons</li>
@@ -302,6 +327,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><strong><code>gene_fc_count_unique.assigned</code></strong>: Number of uniquely mapping fragments assigned by <code>featureCounts</code> to a gene</li>
 </ol>
 
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-seqtk" class="csl-entry">
+Li, H. 2020 (accessed August 18, 2020). <em>Seqtk: Toolkit for Processing Sequences in FASTA/q Formats</em>. <a href="https://github.com/lh3/seqtk">https://github.com/lh3/seqtk</a>.
+</div>
+<div id="ref-csaw" class="csl-entry">
+Lun, A. T., and G. K. Smyth. 2016. <span>“<span class="nocase">csaw: a <span>B</span>ioconductor package for differential binding analysis of <span>C</span>h<span>I</span><span>P</span>-seq data using sliding windows</span>.”</span> <em>Nucleic Acids Res.</em> 44 (5): e45.
+</div>
 </div>
 <div class="footnotes">
 <hr />
@@ -338,6 +372,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
