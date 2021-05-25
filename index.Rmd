@@ -26,7 +26,8 @@ You can open the study explorer independently through [shinyapps.io](https://jhu
 
 Additional publications directly related to `recount3` are:
 
-* Megadepth: efficient coverage quantification for BigWigs and BAMs. Christopher Wilks, Omar Ahmed, Daniel N. Baker, David Zhang, Leonardo Collado-Torres, Ben Langmead. bioRxiv, 2020. DOI: [10.1101/2020.12.17.423317](https://doi.org/10.1101/2020.12.17.423317)
+* recount3: summaries and queries for large-scale RNA-seq expression and splicing. Christopher Wilks, Shijie C. Zheng, Feng Yong Chen, Rone Charles, Brad Solomon, Jonathan P. Ling, Eddie Luidy Imada, David Zhang, Lance Joseph, Jeffrey T. Leek, Andrew E. Jaffe, Abhinav Nellore, Leonardo Collado-Torres, Kasper D. Hansen, Ben Langmead. _bioRxiv_, 2021. DOI: [10.1101/2021.05.21.445138](https://doi.org/10.1101/2021.05.21.445138).
+* Megadepth: efficient coverage quantification for BigWigs and BAMs. Christopher Wilks, Omar Ahmed, Daniel N. Baker, David Zhang, Leonardo Collado-Torres, Ben Langmead. _Bioinformatics_, 2021. DOI: [10.1093/bioinformatics/btab152](https://doi.org/10.1093/bioinformatics/btab152).
 
 ## Related projects
 
