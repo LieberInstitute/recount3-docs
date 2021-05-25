@@ -14,7 +14,7 @@ output:
 
 **recount3** is an online resource consisting of RNA-seq gene, exon, and exon-exon junction counts as well as coverage bigWig files for 8,679 and 10,088 different studies for human and mouse respectively. It is the third generation of the [ReCount project](http://bowtie-bio.sourceforge.net/recount/) and part of [**recount.bio**](https://recount.bio).
 
-The raw sequencing data were processed with the Monorail system as described in the [recount3 paper](TODO) which created the coverage bigWig files and the recount-unified text files. While these raw output files are available through [IDIES SciServer](https://idies.jhu.edu/), for ease of statistical analysis, we provide through the `r BiocStyle::Biocpkg("recount3")` R/Bioconductor package an interface that builds [RangedSummarizedExperiment](https://doi.org/10.1038/nmeth.3252) R objects for gene, exon, and exon-exon junction counts for each study. Furthermore, `r BiocStyle::Biocpkg("snapcount")` enables query-based access of the `recount3` and `recount2` data. The coverage bigWig files can be used for annotation-agnostic expression analyses using for example `r BiocStyle::Biocpkg("megadepth")`, `r BiocStyle::Biocpkg("derfinder")` and other tools. 
+The raw sequencing data were processed with the Monorail system as described in the [recount3 paper](https://doi.org/10.1101/2021.05.21.445138) which created the coverage bigWig files and the recount-unified text files. While these raw output files are available through [IDIES SciServer](https://idies.jhu.edu/), for ease of statistical analysis, we provide through the `r BiocStyle::Biocpkg("recount3")` R/Bioconductor package an interface that builds [RangedSummarizedExperiment](https://doi.org/10.1038/nmeth.3252) R objects for gene, exon, and exon-exon junction counts for each study. Furthermore, `r BiocStyle::Biocpkg("snapcount")` enables query-based access of the `recount3` and `recount2` data. The coverage bigWig files can be used for annotation-agnostic expression analyses using for example `r BiocStyle::Biocpkg("megadepth")`, `r BiocStyle::Biocpkg("derfinder")` and other tools. 
 
 By taking care of several pre-processing steps and combining many datasets into one easily-accessible website, we make finding and analyzing RNA-seq data considerably more straightforward. For more details about `recount3`, check the [documentation book](docs/).
 
@@ -41,9 +41,9 @@ Previous `ReCount` projects:
 ## Team members
 
 * [Christopher Wilks](https://github.com/ChristopherWilks) (the star behind `recount3`!)
-* [Leonardo Collado Torres](https://github.com/lcolladotor) 
 * [Shijie Charles Zheng](https://github.com/sjczheng)
 * [Kevin FY Chen](https://github.com/KevinFYChen)
+* [Leonardo Collado Torres](https://github.com/lcolladotor) 
 * [Kasper Daniel Hansen](https://github.com/kasperdanielhansen)
 * [Ben Langmead](https://github.com/BenLangmead)
 
