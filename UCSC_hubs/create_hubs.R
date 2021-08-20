@@ -89,7 +89,7 @@ create_hub <-
                 x_bw$external_id,
                 "\nbigDataUrl ",
                 x_bw$bigWig,
-                "\nshortLabel recount3 coverage bigWig for sample ",
+                "\nshortLabel recount3 ",
                 x_bw$external_id,
                 "\nlongLabel recount3 bigWig for external id ",
                 x_bw$external_id,
@@ -97,11 +97,9 @@ create_hub <-
                 x_bw$project,
                 " file source ",
                 x_bw$file_source,
-                " organism ",
-                x_bw$organism,
                 "\ntype bigWig\nvisibility ",
                 rep(c("show", "hide"), c(1, nrow(x_bw) - 1)),
-                "\n"
+                "\nautoScale on\n"
             )
         writeLines(content_trackDb,
             file.path(output_dir, org, "trackDb.txt"))
@@ -123,12 +121,11 @@ create_hub(
     output_dir = here("UCSC_hubs", "mouse", "DRP001299")
 )
 
-## test with https://genome.ucsc.edu/cgi-bin/hgTracks?db=mm10&lastVirtModeType=default&lastVirtModeExtraState=&virtModeType=default&virtMode=0&nonVirtPosition=&position=chr1&hubUrl=https://raw.githubusercontent.com/LieberInstitute/recount3-docs/master/UCSC_hubs/mouse/DRP001299/hub.txt&hgt.customText=http://rna.recount.bio/
-## https://genome.ucsc.edu/cgi-bin/hgTracks?db=mm10&position=chr1&hubUrl=https://raw.githubusercontent.com/LieberInstitute/recount3-docs/master/UCSC_hubs/mouse/DRP001299/hub.txt&hgt.customText=http://rna.recount.bio/
+## test with
+## https://genome.ucsc.edu/cgi-bin/hgTracks?db=mm10&lastVirtModeType=default&lastVirtModeExtraState=&virtModeType=default&virtMode=0&nonVirtPosition=&position=chr1&hubUrl=https://raw.githubusercontent.com/LieberInstitute/recount3-docs/master/UCSC_hubs/mouse/DRP001299/hub.txt
 
-
-# hub_base_url <- "https://raw.githubusercontent.com/LieberInstitute/recount3-docs/master/UCSC_hubs/DRP001299/"
-# output_dir <- "~/Desktop/test"
+## can also work for one sample at a time like at
+## http://genome.ucsc.edu/cgi-bin/hgTracks?db=mm10&position=chr1&hgct_customText=track%20type=bigWig%20name=DRR014696%20description=%22a%20bigWig%20track%22%20visibility=full%20bigDataUrl=http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/99/DRP001299/96/sra.base_sums.DRP001299_DRR014696.ALL.bw
 
 ## Reproducibility information
 print('Reproducibility information:')
