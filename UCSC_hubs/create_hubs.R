@@ -6,9 +6,9 @@ library("sessioninfo")
 create_hub <-
     function(x,
         output_dir = ".",
-        hub_name = "recount3 custom",
+        hub_name = "recount3",
         email = "someone@somewhere",
-        hub_short_label = "Uniformly processed RNA-seq expression data from recount3",
+        hub_short_label = "recount3 coverage",
         hub_long_label = "recount3 summaries and queries for large-scaleRNA-seq expression and splicing",
         hub_description_url = "https://rna.recount.bio/index.html",
         recount3_url = getOption("recount3_url", "http://duffel.rail.bio/recount3")) {
@@ -23,6 +23,25 @@ create_hub <-
             ) %in% colnames(x)
         ))
         stopifnot(length(unique(x$organism)) == 1)
+
+        if (grepl(" ", hub_name)) {
+            stop(
+                "hub_name should be a single word starting with a letter as stated at http://genome.ucsc.edu/goldenPath/help/hgTrackHubHelp.html.",
+                call. = FALSE
+            )
+        }
+        if (nchar(hub_short_label) > 17) {
+            warning(
+                "The recommended maximum character length for the short label is 17 at http://genome.ucsc.edu/goldenPath/help/hgTrackHubHelp.html.",
+                call. = FALSE
+            )
+        }
+        if (nchar(hub_long_label) > 80) {
+            warning(
+                "The recommended maximum character length for the long label is 80 at http://genome.ucsc.edu/goldenPath/help/hgTrackHubHelp.html.",
+                call. = FALSE
+            )
+        }
 
         dir.create(output_dir, recursive = TRUE)
 
@@ -45,7 +64,7 @@ create_hub <-
         org <- ifelse(unique(x$organism) == "human", "hg38", "mm10")
         dir.create(file.path(output_dir, org))
         content_genomes <-
-            paste0("genome ", org, "\ntrackDb ", org, "/trackDb.txt")
+            paste0("genome ", org, "\ntrackDb ", org, "/trackDb.txt\n")
         writeLines(content_genomes, file.path(output_dir, "genomes.txt"))
 
         by_proj <- split(x, paste0(x$project, "-", x$organism))
@@ -80,7 +99,9 @@ create_hub <-
                 x_bw$file_source,
                 " organism ",
                 x_bw$organism,
-                "\ntype bigWig\nvisibility ", rep(c("show", "hide"), c(1, nrow(x_bw) - 1)), "\n"
+                "\ntype bigWig\nvisibility ",
+                rep(c("show", "hide"), c(1, nrow(x_bw) - 1)),
+                "\n"
             )
         writeLines(content_trackDb,
             file.path(output_dir, org, "trackDb.txt"))
@@ -103,6 +124,7 @@ create_hub(
 )
 
 ## test with https://genome.ucsc.edu/cgi-bin/hgTracks?db=mm10&lastVirtModeType=default&lastVirtModeExtraState=&virtModeType=default&virtMode=0&nonVirtPosition=&position=chr1&hubUrl=https://raw.githubusercontent.com/LieberInstitute/recount3-docs/master/UCSC_hubs/mouse/DRP001299/hub.txt&hgt.customText=http://rna.recount.bio/
+## https://genome.ucsc.edu/cgi-bin/hgTracks?db=mm10&position=chr1&hubUrl=https://raw.githubusercontent.com/LieberInstitute/recount3-docs/master/UCSC_hubs/mouse/DRP001299/hub.txt&hgt.customText=http://rna.recount.bio/
 
 
 # hub_base_url <- "https://raw.githubusercontent.com/LieberInstitute/recount3-docs/master/UCSC_hubs/DRP001299/"
