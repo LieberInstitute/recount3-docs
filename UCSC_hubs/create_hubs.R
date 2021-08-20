@@ -40,7 +40,7 @@ create_hub <-
             ))
         }))
 
-        content_trackDb <- paste0("track ", x_bw$external_id, "\nbigDataUrl ", x_bw$bigWig, "\nshortLabel recount3 coverage bigWig for sample ", x_bw$external_id, "\nlongLabel recount3 bigWig for external id: ", x_bw$external_id, ", project: ", x_bw$project, ", file_source: ", x_bw$file_source, ", organism: ", x_bw$organism, "\ntype BigWig\n")
+        content_trackDb <- paste0("track ", x_bw$external_id, "\nbigDataUrl ", x_bw$bigWig, "\nshortLabel recount3 coverage bigWig for sample ", x_bw$external_id, "\nlongLabel recount3 bigWig for external id: ", x_bw$external_id, ", project: ", x_bw$project, ", file_source: ", x_bw$file_source, ", organism: ", x_bw$organism, "\ntype bigWig\n")
         writeLines(content_trackDb, file.path(output_dir, org, "trackDb.txt"))
 
     }
@@ -54,6 +54,8 @@ samples <- rbind(recount3::available_samples("human"),
 ## Test with DRP001299
 x <- subset(samples, project == "DRP001299")
 create_hub(x, hub_name = "DRP001299", email = "lcolladotor@gmail.com", output_dir = here("UCSC_hubs", "mouse", "DRP001299"))
+
+## test with https://genome.ucsc.edu/cgi-bin/hgTracks?db=mm10&lastVirtModeType=default&lastVirtModeExtraState=&virtModeType=default&virtMode=0&nonVirtPosition=&position=chr1:1-10000&hubUrl=https://raw.githubusercontent.com/LieberInstitute/recount3-docs/master/UCSC_hubs/mouse/DRP001299/hub.txt&hgt.customText=http://rna.recount.bio/
 
 
 # hub_base_url <- "https://raw.githubusercontent.com/LieberInstitute/recount3-docs/master/UCSC_hubs/DRP001299/"
