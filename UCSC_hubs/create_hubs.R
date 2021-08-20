@@ -134,6 +134,9 @@ xx <- lapply(samples_by_proj, function(x) {
     create_hub(x, hub_name = x$project[1], email = "lcolladotor@gmail.com", output_dir = here("UCSC_hubs", x$organism[1], paste0(x$file_source[1], "_", x$project[1])))
 })
 
+## test a large one (GTEx brain) with
+## https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&lastVirtModeType=default&lastVirtModeExtraState=&virtModeType=default&virtMode=0&nonVirtPosition=&position=chr1&hubUrl=https://raw.githubusercontent.com/LieberInstitute/recount3-docs/master/UCSC_hubs/human/gtex_BRAIN/hub.txt
+
 ## Reproducibility information
 print('Reproducibility information:')
 Sys.time()
