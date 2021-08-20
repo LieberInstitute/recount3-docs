@@ -130,7 +130,7 @@ create_hub(
 
 ## Create for all projects
 samples_by_proj <- split(samples, paste0(samples$project, "-", samples$organism))
-xx <- lapply(samples_by_proj[1:3], function(x) {
+xx <- lapply(samples_by_proj, function(x) {
     create_hub(x, hub_name = x$project[1], email = "lcolladotor@gmail.com", output_dir = here("UCSC_hubs", x$organism[1], paste0(x$file_source[1], "_", x$project[1])))
 })
 
