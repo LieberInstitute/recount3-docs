@@ -1,6 +1,6 @@
 hub DRP001299
 shortLabel Uniformly processed RNA-seq expression data from recount3
-longLabel Wilks et al, 2021. recount3: summaries and queries for large-scaleRNA-seq expression and splicing.
+longLabel recount3 summaries and queries for large-scaleRNA-seq expression and splicing
 genomesFile genomes.txt
 email lcolladotor@gmail.com
 descriptionUrl http://rna.recount.bio/

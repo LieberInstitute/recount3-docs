@@ -9,7 +9,7 @@ create_hub <-
         hub_name = "recount3 custom",
         email = "someone@somewhere",
         hub_short_label = "Uniformly processed RNA-seq expression data from recount3",
-        hub_long_label = "Wilks et al, 2021. recount3: summaries and queries for large-scaleRNA-seq expression and splicing.",
+        hub_long_label = "recount3 summaries and queries for large-scaleRNA-seq expression and splicing",
         hub_description_url = "http://rna.recount.bio/",
         recount3_url = getOption("recount3_url", "http://duffel.rail.bio/recount3")) {
         stopifnot(is(x, "data.frame"))
@@ -72,15 +72,15 @@ create_hub <-
                 x_bw$bigWig,
                 "\nshortLabel recount3 coverage bigWig for sample ",
                 x_bw$external_id,
-                "\nlongLabel recount3 bigWig for external id: ",
+                "\nlongLabel recount3 bigWig for external id ",
                 x_bw$external_id,
-                ", project: ",
+                " project ",
                 x_bw$project,
-                ", file_source: ",
+                " file source ",
                 x_bw$file_source,
-                ", organism: ",
+                " organism ",
                 x_bw$organism,
-                "\ntype bigWig\n"
+                "\ntype bigWig\nvisibility ", rep(c("show", "hide"), c(1, nrow(x_bw) - 1)), "\n"
             )
         writeLines(content_trackDb,
             file.path(output_dir, org, "trackDb.txt"))
@@ -102,7 +102,7 @@ create_hub(
     output_dir = here("UCSC_hubs", "mouse", "DRP001299")
 )
 
-## test with https://genome.ucsc.edu/cgi-bin/hgTracks?db=mm10&lastVirtModeType=default&lastVirtModeExtraState=&virtModeType=default&virtMode=0&nonVirtPosition=&position=chr1:1-10000&hubUrl=https://raw.githubusercontent.com/LieberInstitute/recount3-docs/master/UCSC_hubs/mouse/DRP001299/hub.txt&hgt.customText=http://rna.recount.bio/
+## test with https://genome.ucsc.edu/cgi-bin/hgTracks?db=mm10&lastVirtModeType=default&lastVirtModeExtraState=&virtModeType=default&virtMode=0&nonVirtPosition=&position=chr1&hubUrl=https://raw.githubusercontent.com/LieberInstitute/recount3-docs/master/UCSC_hubs/mouse/DRP001299/hub.txt&hgt.customText=http://rna.recount.bio/
 
 
 # hub_base_url <- "https://raw.githubusercontent.com/LieberInstitute/recount3-docs/master/UCSC_hubs/DRP001299/"
