@@ -31,7 +31,7 @@
   
 <link rel="prev" href="join-the-recount-team.html"/>
 <link rel="next" href="references.html"/>
-<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -233,7 +233,7 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="r-session-information" class="section level1 unnumbered">
 <h1>R session information</h1>
-<p>This book was last updated on 2021-05-25 17:45:31.</p>
+<p>This book was last updated on 2021-08-20 15:28:43.</p>
 <p>Details on the R version used for making this book. The source code is available at <a href="https://github.com/LieberInstitute/recount3-docs"><code>LieberInstitute/recount3-docs</code></a>.</p>
 <div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="r-session-information.html#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Load the package at the top of your script</span></span>
 <span id="cb84-2"><a href="r-session-information.html#cb84-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;sessioninfo&quot;</span>)</span>
@@ -242,61 +242,62 @@ div.csl-indent {
 <span id="cb84-5"><a href="r-session-information.html#cb84-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">&#39;Reproducibility information:&#39;</span>)</span></code></pre></div>
 <pre><code>## [1] &quot;Reproducibility information:&quot;</code></pre>
 <div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="r-session-information.html#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.time</span>()</span></code></pre></div>
-<pre><code>## [1] &quot;2021-05-25 17:45:31 UTC&quot;</code></pre>
+<pre><code>## [1] &quot;2021-08-20 15:28:43 UTC&quot;</code></pre>
 <div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="r-session-information.html#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="fu">proc.time</span>()</span></code></pre></div>
 <pre><code>##    user  system elapsed 
-##  26.624   1.252  50.019</code></pre>
+##  35.110   1.616  75.662</code></pre>
 <div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="r-session-information.html#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">width =</span> <span class="dv">120</span>)</span>
 <span id="cb90-2"><a href="r-session-information.html#cb90-2" aria-hidden="true" tabindex="-1"></a><span class="fu">session_info</span>()</span></code></pre></div>
 <pre><code>## ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
 ##  setting  value                       
 ##  version  R version 4.1.0 (2021-05-18)
-##  os       Ubuntu 20.04.2 LTS          
+##  os       Ubuntu 20.04.3 LTS          
 ##  system   x86_64, linux-gnu           
 ##  ui       X11                         
 ##  language (EN)                        
 ##  collate  en_US.UTF-8                 
 ##  ctype    en_US.UTF-8                 
-##  tz       Etc/UTC                     
-##  date     2021-05-25                  
+##  tz       UTC                         
+##  date     2021-08-20                  
 ## 
 ## ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
 ##  package              * version  date       lib source                                    
 ##  assertthat             0.2.1    2019-03-21 [1] RSPM (R 4.1.0)                            
 ##  Biobase              * 2.53.0   2021-05-19 [1] Bioconductor                              
-##  BiocFileCache          2.1.0    2021-05-19 [1] Bioconductor                              
-##  BiocGenerics         * 0.39.0   2021-05-19 [1] Bioconductor                              
+##  BiocFileCache          2.1.1    2021-06-23 [1] Bioconductor                              
+##  BiocGenerics         * 0.39.2   2021-08-18 [1] Bioconductor                              
 ##  BiocIO                 1.3.0    2021-05-19 [1] Bioconductor                              
-##  BiocManager            1.30.15  2021-05-11 [2] CRAN (R 4.1.0)                            
-##  BiocParallel           1.27.0   2021-05-19 [1] Bioconductor                              
-##  BiocStyle            * 2.21.0   2021-05-19 [1] Bioconductor                              
-##  Biostrings             2.61.0   2021-05-19 [1] Bioconductor                              
+##  BiocManager            1.30.16  2021-06-15 [2] CRAN (R 4.1.0)                            
+##  BiocParallel           1.27.3   2021-08-09 [1] Bioconductor                              
+##  BiocStyle            * 2.21.3   2021-06-16 [1] Bioconductor                              
+##  Biostrings             2.61.2   2021-08-04 [1] Bioconductor                              
 ##  bit                    4.0.4    2020-08-04 [1] RSPM (R 4.1.0)                            
 ##  bit64                  4.0.5    2020-08-30 [1] RSPM (R 4.1.0)                            
 ##  bitops                 1.0-7    2021-04-24 [1] RSPM (R 4.1.0)                            
-##  blob                   1.2.1    2020-01-20 [1] RSPM (R 4.1.0)                            
+##  blob                   1.2.2    2021-07-23 [1] RSPM (R 4.1.0)                            
 ##  bookdown               0.22     2021-04-22 [1] RSPM (R 4.1.0)                            
+##  bslib                  0.2.5.1  2021-05-18 [1] RSPM (R 4.1.0)                            
 ##  cachem                 1.0.5    2021-05-15 [2] RSPM (R 4.1.0)                            
-##  cli                    2.5.0    2021-04-26 [2] RSPM (R 4.1.0)                            
+##  cli                    3.0.1    2021-07-17 [2] RSPM (R 4.1.0)                            
 ##  cmdfun                 1.0.2    2020-10-10 [1] RSPM (R 4.1.0)                            
 ##  crayon                 1.4.1    2021-02-08 [2] RSPM (R 4.1.0)                            
-##  curl                   4.3.1    2021-04-30 [2] RSPM (R 4.1.0)                            
+##  curl                   4.3.2    2021-06-23 [2] RSPM (R 4.1.0)                            
 ##  data.table             1.14.0   2021-02-21 [1] RSPM (R 4.1.0)                            
 ##  DBI                    1.1.1    2021-01-15 [1] RSPM (R 4.1.0)                            
 ##  dbplyr                 2.1.1    2021-04-06 [1] RSPM (R 4.1.0)                            
-##  DelayedArray           0.19.0   2021-05-19 [1] Bioconductor                              
+##  DelayedArray           0.19.1   2021-06-25 [1] Bioconductor                              
 ##  desc                   1.3.0    2021-03-05 [2] RSPM (R 4.1.0)                            
 ##  digest                 0.6.27   2020-10-24 [2] RSPM (R 4.1.0)                            
-##  dplyr                  1.0.6    2021-05-05 [1] RSPM (R 4.1.0)                            
+##  dplyr                  1.0.7    2021-06-18 [2] RSPM (R 4.1.0)                            
 ##  ellipsis               0.3.2    2021-04-29 [2] RSPM (R 4.1.0)                            
 ##  evaluate               0.14     2019-05-28 [2] RSPM (R 4.1.0)                            
-##  fansi                  0.4.2    2021-01-15 [2] RSPM (R 4.1.0)                            
+##  fansi                  0.5.0    2021-05-25 [2] RSPM (R 4.1.0)                            
 ##  fastmap                1.1.0    2021-01-25 [2] RSPM (R 4.1.0)                            
 ##  filelock               1.0.2    2018-10-05 [1] RSPM (R 4.1.0)                            
 ##  fs                     1.5.0    2020-07-31 [2] RSPM (R 4.1.0)                            
-##  generics               0.1.0    2020-10-31 [1] RSPM (R 4.1.0)                            
-##  GenomeInfoDb         * 1.29.0   2021-05-19 [1] Bioconductor                              
-##  GenomeInfoDbData       1.2.6    2021-05-25 [1] Bioconductor                              
+##  generics               0.1.0    2020-10-31 [2] RSPM (R 4.1.0)                            
+##  GenomeInfoDb         * 1.29.3   2021-07-01 [1] Bioconductor                              
+##  GenomeInfoDbData       1.2.6    2021-08-20 [1] Bioconductor                              
 ##  GenomicAlignments      1.29.0   2021-05-19 [1] Bioconductor                              
 ##  GenomicRanges        * 1.45.0   2021-05-19 [1] Bioconductor                              
 ##  glue                   1.4.2    2020-08-27 [2] RSPM (R 4.1.0)                            
@@ -304,53 +305,57 @@ div.csl-indent {
 ##  hms                    1.1.0    2021-05-17 [1] RSPM (R 4.1.0)                            
 ##  htmltools              0.5.1.1  2021-01-22 [1] RSPM (R 4.1.0)                            
 ##  httr                   1.4.2    2020-07-20 [2] RSPM (R 4.1.0)                            
-##  IRanges              * 2.27.0   2021-05-19 [1] Bioconductor                              
+##  IRanges              * 2.27.2   2021-08-18 [1] Bioconductor                              
+##  jquerylib              0.1.4    2021-04-26 [1] RSPM (R 4.1.0)                            
 ##  jsonlite               1.7.2    2020-12-09 [2] RSPM (R 4.1.0)                            
 ##  knitr                  1.33     2021-04-24 [2] RSPM (R 4.1.0)                            
 ##  lattice                0.20-44  2021-05-02 [3] CRAN (R 4.1.0)                            
 ##  lifecycle              1.0.0    2021-02-15 [2] RSPM (R 4.1.0)                            
 ##  magrittr               2.0.1    2020-11-17 [2] RSPM (R 4.1.0)                            
-##  Matrix                 1.3-3    2021-05-04 [3] CRAN (R 4.1.0)                            
-##  MatrixGenerics       * 1.5.0    2021-05-19 [1] Bioconductor                              
-##  matrixStats          * 0.58.0   2021-01-29 [1] RSPM (R 4.1.0)                            
-##  megadepth            * 1.3.0    2021-05-25 [1] Github (LieberInstitute/megadepth@3f3551d)
+##  Matrix                 1.3-4    2021-06-01 [2] RSPM (R 4.1.0)                            
+##  MatrixGenerics       * 1.5.3    2021-08-05 [1] Bioconductor                              
+##  matrixStats          * 0.60.0   2021-07-26 [1] RSPM (R 4.1.0)                            
+##  megadepth            * 1.3.3    2021-08-20 [1] Github (LieberInstitute/megadepth@6ea0179)
 ##  memoise                2.0.0    2021-01-26 [2] RSPM (R 4.1.0)                            
-##  pillar                 1.6.1    2021-05-16 [2] RSPM (R 4.1.0)                            
+##  pillar                 1.6.2    2021-07-29 [2] RSPM (R 4.1.0)                            
 ##  pkgconfig              2.0.3    2019-09-22 [2] RSPM (R 4.1.0)                            
 ##  pkgload                1.2.1    2021-04-06 [2] RSPM (R 4.1.0)                            
-##  postcards            * 0.2.0    2021-01-06 [1] RSPM (R 4.1.0)                            
+##  postcards            * 0.2.2    2021-07-31 [1] RSPM (R 4.1.0)                            
 ##  purrr                * 0.3.4    2020-04-17 [2] RSPM (R 4.1.0)                            
 ##  R.methodsS3            1.8.1    2020-08-26 [1] RSPM (R 4.1.0)                            
 ##  R.oo                   1.24.0   2020-08-26 [1] RSPM (R 4.1.0)                            
 ##  R.utils                2.10.1   2020-08-26 [1] RSPM (R 4.1.0)                            
 ##  R6                     2.5.0    2020-10-28 [2] RSPM (R 4.1.0)                            
 ##  rappdirs               0.3.3    2021-01-31 [2] RSPM (R 4.1.0)                            
-##  Rcpp                   1.0.6    2021-01-15 [2] RSPM (R 4.1.0)                            
+##  Rcpp                   1.0.7    2021-07-07 [2] RSPM (R 4.1.0)                            
 ##  RCurl                  1.98-1.3 2021-03-16 [1] RSPM (R 4.1.0)                            
-##  readr                  1.4.0    2020-10-05 [1] RSPM (R 4.1.0)                            
-##  recount3             * 1.3.1    2021-05-25 [1] Github (LieberInstitute/recount3@ffe4442) 
+##  readr                  2.0.0    2021-07-20 [1] RSPM (R 4.1.0)                            
+##  recount3             * 1.3.5    2021-08-20 [1] Github (LieberInstitute/recount3@57e56bd) 
 ##  restfulr               0.0.13   2017-08-06 [1] RSPM (R 4.1.0)                            
 ##  rjson                  0.2.20   2018-06-08 [1] RSPM (R 4.1.0)                            
 ##  rlang                  0.4.11   2021-04-30 [2] RSPM (R 4.1.0)                            
-##  rmarkdown              2.8      2021-05-07 [1] RSPM (R 4.1.0)                            
+##  rmarkdown              2.10     2021-08-06 [1] RSPM (R 4.1.0)                            
 ##  rprojroot              2.0.2    2020-11-15 [2] RSPM (R 4.1.0)                            
-##  Rsamtools              2.9.0    2021-05-19 [1] Bioconductor                              
+##  Rsamtools              2.9.1    2021-06-17 [1] Bioconductor                              
 ##  RSQLite                2.2.7    2021-04-22 [1] RSPM (R 4.1.0)                            
 ##  rstudioapi             0.13     2020-11-12 [2] RSPM (R 4.1.0)                            
-##  rtracklayer            1.53.0   2021-05-19 [1] Bioconductor                              
-##  S4Vectors            * 0.31.0   2021-05-19 [1] Bioconductor                              
+##  rtracklayer            1.53.1   2021-08-13 [1] Bioconductor                              
+##  S4Vectors            * 0.31.1   2021-08-18 [1] Bioconductor                              
+##  sass                   0.4.0    2021-05-12 [1] RSPM (R 4.1.0)                            
 ##  sessioninfo          * 1.1.1    2018-11-05 [2] RSPM (R 4.1.0)                            
-##  snapcount            * 1.3.1    2021-05-25 [1] Github (langmead-lab/snapcount@19cf747)   
-##  stringi                1.6.2    2021-05-17 [2] RSPM (R 4.1.0)                            
+##  snapcount            * 1.3.1    2021-08-20 [1] Github (langmead-lab/snapcount@19cf747)   
+##  stringi                1.7.3    2021-07-16 [2] RSPM (R 4.1.0)                            
 ##  stringr                1.4.0    2019-02-10 [2] RSPM (R 4.1.0)                            
-##  SummarizedExperiment * 1.23.0   2021-05-19 [1] Bioconductor                              
-##  testthat               3.0.2    2021-02-14 [2] RSPM (R 4.1.0)                            
-##  tibble                 3.1.2    2021-05-16 [2] RSPM (R 4.1.0)                            
-##  tidyselect             1.1.1    2021-04-30 [1] RSPM (R 4.1.0)                            
-##  utf8                   1.2.1    2021-03-12 [2] RSPM (R 4.1.0)                            
+##  SummarizedExperiment * 1.23.1   2021-06-24 [1] Bioconductor                              
+##  testthat               3.0.4    2021-07-01 [2] RSPM (R 4.1.0)                            
+##  tibble                 3.1.3    2021-07-23 [2] RSPM (R 4.1.0)                            
+##  tidyselect             1.1.1    2021-04-30 [2] RSPM (R 4.1.0)                            
+##  tzdb                   0.1.2    2021-07-20 [1] RSPM (R 4.1.0)                            
+##  utf8                   1.2.2    2021-07-24 [2] RSPM (R 4.1.0)                            
 ##  vctrs                  0.3.8    2021-04-29 [2] RSPM (R 4.1.0)                            
+##  vroom                  1.5.4    2021-08-05 [1] RSPM (R 4.1.0)                            
 ##  withr                  2.4.2    2021-04-18 [2] RSPM (R 4.1.0)                            
-##  xfun                   0.23     2021-05-15 [2] RSPM (R 4.1.0)                            
+##  xfun                   0.25     2021-08-06 [2] RSPM (R 4.1.0)                            
 ##  XML                    3.99-0.6 2021-03-16 [1] RSPM (R 4.1.0)                            
 ##  XVector                0.33.0   2021-05-19 [1] Bioconductor                              
 ##  yaml                   2.2.1    2020-02-01 [2] RSPM (R 4.1.0)                            
