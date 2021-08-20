@@ -10,7 +10,7 @@ create_hub <-
         email = "someone@somewhere",
         hub_short_label = "Uniformly processed RNA-seq expression data from recount3",
         hub_long_label = "recount3 summaries and queries for large-scaleRNA-seq expression and splicing",
-        hub_description_url = "http://rna.recount.bio/",
+        hub_description_url = "https://rna.recount.bio/index.html",
         recount3_url = getOption("recount3_url", "http://duffel.rail.bio/recount3")) {
         stopifnot(is(x, "data.frame"))
         stopifnot(all(
