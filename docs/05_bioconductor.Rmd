@@ -12,6 +12,8 @@ To facilitate the re-analysis of public expression data, we have provided severa
 
 These packages can also benefit from using `r BiocStyle::Biocpkg("recount")` and `r BiocStyle::Biocpkg("derfinder")`, which we made in earlier phases of the `ReCount` project.
 
+In the Bioconductor landing pages for our packages you can find detailed vignette documents, such as the one called [`recount3` quick start guide](http://bioconductor.org/packages/release/bioc/vignettes/recount3/inst/doc/recount3-quickstart.html). Vignette documents are user guides illustrating how the different functions in a given R package can be used together. The code shown in this chapter is a subset from these vignette documents, thus we highly recommend that you read the vignettes if you want to learn more details about these R packages than what we have illustrated here. 
+
 ## recount3
 
 _The following information is taken from the [`recount3`](https://bioconductor.org/packages/recount3) documentation._

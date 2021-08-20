@@ -6,6 +6,8 @@ The data from the `recount3` project is accessible through R/Bioconductor packag
 * `r BiocStyle::Biocpkg("snapcount")`: this R/Bioconductor package also provides access to data from `recount2` and `recount3` through a query-based interface. 
 * _raw files_: these are text files that are hosted by IDIES and can be used with other programming software outside of R.
 
+As noted in the [Bioconductor chapter](#bioconductor), detailed vignette documents showing further details of our R/Bioconductor packages are available from the Bioconductor landing pages, such as the one called [`recount3` quick start guide](http://bioconductor.org/packages/release/bioc/vignettes/recount3/inst/doc/recount3-quickstart.html).
+
 ## Quick recount3
 
 If you want to access the data `r BiocStyle::Biocpkg("recount3")`, here's some R code that you can use. See the [Bioconductor chapter](#bioconductor) for the full output of these commands and more details.
