@@ -3,7 +3,8 @@ library("here")
 library("sessioninfo")
 
 ## Obtain all available samples
-samples <- available_samples(c("human", "mouse")[Sys.getenv("SGE_TASK_ID")])
+samples <-
+    available_samples(c("human", "mouse")[Sys.getenv("SGE_TASK_ID")])
 
 ## Test with DRP001299
 # x <- subset(samples, project == "DRP001299")
@@ -21,9 +22,19 @@ samples <- available_samples(c("human", "mouse")[Sys.getenv("SGE_TASK_ID")])
 ## http://genome.ucsc.edu/cgi-bin/hgTracks?db=mm10&position=chr1&hgct_customText=track%20type=bigWig%20name=DRR014696%20description=%22a%20bigWig%20track%22%20visibility=full%20bigDataUrl=http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/99/DRP001299/96/sra.base_sums.DRP001299_DRR014696.ALL.bw
 
 ## Create for all projects
-samples_by_proj <- split(samples, paste0(samples$project, "-", samples$organism))
+samples_by_proj <-
+    split(samples, paste0(samples$project, "-", samples$organism))
 xx <- lapply(samples_by_proj, function(x) {
-    create_hub(x, hub_name = x$project[1], email = "lcolladotor@gmail.com", output_dir = here("UCSC_hubs", x$organism[1], paste0(x$file_source[1], "_", x$project[1])))
+    create_hub(
+        x,
+        hub_name = x$project[1],
+        email = "lcolladotor@gmail.com",
+        output_dir = here(
+            "UCSC_hubs",
+            x$organism[1],
+            paste0(x$file_source[1], "_", x$project[1])
+        )
+    )
 })
 
 ## test a large one (GTEx brain) with
