@@ -1,0 +1,16 @@
+track ERR2014658
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/37/ERP023737/58/sra.base_sums.ERP023737_ERR2014658.ALL.bw
+shortLabel ERR2014658
+longLabel recount3 coverage bigWig for external id ERR2014658 project ERP023737 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR2014659
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/37/ERP023737/59/sra.base_sums.ERP023737_ERR2014659.ALL.bw
+shortLabel ERR2014659
+longLabel recount3 coverage bigWig for external id ERR2014659 project ERP023737 file source sra
+type bigWig
+visibility show
+autoScale on
+

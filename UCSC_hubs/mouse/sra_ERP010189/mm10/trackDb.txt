@@ -1,0 +1,64 @@
+track ERR1024510
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/89/ERP010189/10/sra.base_sums.ERP010189_ERR1024510.ALL.bw
+shortLabel ERR1024510
+longLabel recount3 coverage bigWig for external id ERR1024510 project ERP010189 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR1024511
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/89/ERP010189/11/sra.base_sums.ERP010189_ERR1024511.ALL.bw
+shortLabel ERR1024511
+longLabel recount3 coverage bigWig for external id ERR1024511 project ERP010189 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR1024512
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/89/ERP010189/12/sra.base_sums.ERP010189_ERR1024512.ALL.bw
+shortLabel ERR1024512
+longLabel recount3 coverage bigWig for external id ERR1024512 project ERP010189 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR1024513
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/89/ERP010189/13/sra.base_sums.ERP010189_ERR1024513.ALL.bw
+shortLabel ERR1024513
+longLabel recount3 coverage bigWig for external id ERR1024513 project ERP010189 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR1024514
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/89/ERP010189/14/sra.base_sums.ERP010189_ERR1024514.ALL.bw
+shortLabel ERR1024514
+longLabel recount3 coverage bigWig for external id ERR1024514 project ERP010189 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR1024515
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/89/ERP010189/15/sra.base_sums.ERP010189_ERR1024515.ALL.bw
+shortLabel ERR1024515
+longLabel recount3 coverage bigWig for external id ERR1024515 project ERP010189 file source sra
+type bigWig
+visibility hide
+autoScale on
+
+track ERR1024516
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/89/ERP010189/16/sra.base_sums.ERP010189_ERR1024516.ALL.bw
+shortLabel ERR1024516
+longLabel recount3 coverage bigWig for external id ERR1024516 project ERP010189 file source sra
+type bigWig
+visibility hide
+autoScale on
+
+track ERR1024517
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/89/ERP010189/17/sra.base_sums.ERP010189_ERR1024517.ALL.bw
+shortLabel ERR1024517
+longLabel recount3 coverage bigWig for external id ERR1024517 project ERP010189 file source sra
+type bigWig
+visibility hide
+autoScale on
+

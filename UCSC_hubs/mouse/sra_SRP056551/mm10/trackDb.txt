@@ -1,0 +1,48 @@
+track SRR1930034
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/51/SRP056551/34/sra.base_sums.SRP056551_SRR1930034.ALL.bw
+shortLabel SRR1930034
+longLabel recount3 coverage bigWig for external id SRR1930034 project SRP056551 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track SRR1930035
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/51/SRP056551/35/sra.base_sums.SRP056551_SRR1930035.ALL.bw
+shortLabel SRR1930035
+longLabel recount3 coverage bigWig for external id SRR1930035 project SRP056551 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track SRR1930036
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/51/SRP056551/36/sra.base_sums.SRP056551_SRR1930036.ALL.bw
+shortLabel SRR1930036
+longLabel recount3 coverage bigWig for external id SRR1930036 project SRP056551 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track SRR1930037
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/51/SRP056551/37/sra.base_sums.SRP056551_SRR1930037.ALL.bw
+shortLabel SRR1930037
+longLabel recount3 coverage bigWig for external id SRR1930037 project SRP056551 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track SRR1930038
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/51/SRP056551/38/sra.base_sums.SRP056551_SRR1930038.ALL.bw
+shortLabel SRR1930038
+longLabel recount3 coverage bigWig for external id SRR1930038 project SRP056551 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track SRR1930039
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/51/SRP056551/39/sra.base_sums.SRP056551_SRR1930039.ALL.bw
+shortLabel SRR1930039
+longLabel recount3 coverage bigWig for external id SRR1930039 project SRP056551 file source sra
+type bigWig
+visibility hide
+autoScale on
+

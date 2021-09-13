@@ -1,0 +1,16 @@
+track ERR2860676
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/99/ERP111699/76/sra.base_sums.ERP111699_ERR2860676.ALL.bw
+shortLabel ERR2860676
+longLabel recount3 coverage bigWig for external id ERR2860676 project ERP111699 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR2860677
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/99/ERP111699/77/sra.base_sums.ERP111699_ERR2860677.ALL.bw
+shortLabel ERR2860677
+longLabel recount3 coverage bigWig for external id ERR2860677 project ERP111699 file source sra
+type bigWig
+visibility show
+autoScale on
+

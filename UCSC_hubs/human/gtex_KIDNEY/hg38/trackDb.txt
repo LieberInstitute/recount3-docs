@@ -1,0 +1,784 @@
+track GTEX-11GS4-2326-SM-5A5KS.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/KS/gtex.base_sums.KIDNEY_GTEX-11GS4-2326-SM-5A5KS.1.ALL.bw
+shortLabel GTEX-11GS4-2326-SM-5A5KS.1
+longLabel recount3 coverage bigWig for external id GTEX-11GS4-2326-SM-5A5KS.1 project KIDNEY file source gtex
+type bigWig
+visibility show
+autoScale on
+
+track GTEX-11OF3-1326-SM-5N9FJ.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/FJ/gtex.base_sums.KIDNEY_GTEX-11OF3-1326-SM-5N9FJ.1.ALL.bw
+shortLabel GTEX-11OF3-1326-SM-5N9FJ.1
+longLabel recount3 coverage bigWig for external id GTEX-11OF3-1326-SM-5N9FJ.1 project KIDNEY file source gtex
+type bigWig
+visibility show
+autoScale on
+
+track GTEX-11PRG-2226-SM-5GU5R.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/5R/gtex.base_sums.KIDNEY_GTEX-11PRG-2226-SM-5GU5R.1.ALL.bw
+shortLabel GTEX-11PRG-2226-SM-5GU5R.1
+longLabel recount3 coverage bigWig for external id GTEX-11PRG-2226-SM-5GU5R.1 project KIDNEY file source gtex
+type bigWig
+visibility show
+autoScale on
+
+track GTEX-11TTK-1926-SM-5PNW8.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/W8/gtex.base_sums.KIDNEY_GTEX-11TTK-1926-SM-5PNW8.1.ALL.bw
+shortLabel GTEX-11TTK-1926-SM-5PNW8.1
+longLabel recount3 coverage bigWig for external id GTEX-11TTK-1926-SM-5PNW8.1 project KIDNEY file source gtex
+type bigWig
+visibility show
+autoScale on
+
+track GTEX-12696-0926-SM-5FQTV.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/TV/gtex.base_sums.KIDNEY_GTEX-12696-0926-SM-5FQTV.1.ALL.bw
+shortLabel GTEX-12696-0926-SM-5FQTV.1
+longLabel recount3 coverage bigWig for external id GTEX-12696-0926-SM-5FQTV.1 project KIDNEY file source gtex
+type bigWig
+visibility show
+autoScale on
+
+track GTEX-12WSG-0826-SM-5EQ5A.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/5A/gtex.base_sums.KIDNEY_GTEX-12WSG-0826-SM-5EQ5A.1.ALL.bw
+shortLabel GTEX-12WSG-0826-SM-5EQ5A.1
+longLabel recount3 coverage bigWig for external id GTEX-12WSG-0826-SM-5EQ5A.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-13112-2126-SM-5GCO4.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/O4/gtex.base_sums.KIDNEY_GTEX-13112-2126-SM-5GCO4.1.ALL.bw
+shortLabel GTEX-13112-2126-SM-5GCO4.1
+longLabel recount3 coverage bigWig for external id GTEX-13112-2126-SM-5GCO4.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1399S-0526-SM-5IJG8.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/G8/gtex.base_sums.KIDNEY_GTEX-1399S-0526-SM-5IJG8.1.ALL.bw
+shortLabel GTEX-1399S-0526-SM-5IJG8.1
+longLabel recount3 coverage bigWig for external id GTEX-1399S-0526-SM-5IJG8.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-13NYB-1726-SM-5N9G2.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/G2/gtex.base_sums.KIDNEY_GTEX-13NYB-1726-SM-5N9G2.1.ALL.bw
+shortLabel GTEX-13NYB-1726-SM-5N9G2.1
+longLabel recount3 coverage bigWig for external id GTEX-13NYB-1726-SM-5N9G2.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-13O1R-2526-SM-5N9FW.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/FW/gtex.base_sums.KIDNEY_GTEX-13O1R-2526-SM-5N9FW.1.ALL.bw
+shortLabel GTEX-13O1R-2526-SM-5N9FW.1
+longLabel recount3 coverage bigWig for external id GTEX-13O1R-2526-SM-5N9FW.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-13OVI-1126-SM-5KLZF.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/ZF/gtex.base_sums.KIDNEY_GTEX-13OVI-1126-SM-5KLZF.1.ALL.bw
+shortLabel GTEX-13OVI-1126-SM-5KLZF.1
+longLabel recount3 coverage bigWig for external id GTEX-13OVI-1126-SM-5KLZF.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-13OVL-1826-SM-5KLZR.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/ZR/gtex.base_sums.KIDNEY_GTEX-13OVL-1826-SM-5KLZR.1.ALL.bw
+shortLabel GTEX-13OVL-1826-SM-5KLZR.1
+longLabel recount3 coverage bigWig for external id GTEX-13OVL-1826-SM-5KLZR.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-13OW6-1826-SM-5N9F9.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/F9/gtex.base_sums.KIDNEY_GTEX-13OW6-1826-SM-5N9F9.1.ALL.bw
+shortLabel GTEX-13OW6-1826-SM-5N9F9.1
+longLabel recount3 coverage bigWig for external id GTEX-13OW6-1826-SM-5N9F9.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-13RTJ-2226-SM-5S2Q1.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/Q1/gtex.base_sums.KIDNEY_GTEX-13RTJ-2226-SM-5S2Q1.1.ALL.bw
+shortLabel GTEX-13RTJ-2226-SM-5S2Q1.1
+longLabel recount3 coverage bigWig for external id GTEX-13RTJ-2226-SM-5S2Q1.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-145MN-0326-SM-5QGQI.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/QI/gtex.base_sums.KIDNEY_GTEX-145MN-0326-SM-5QGQI.1.ALL.bw
+shortLabel GTEX-145MN-0326-SM-5QGQI.1
+longLabel recount3 coverage bigWig for external id GTEX-145MN-0326-SM-5QGQI.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-147F4-2626-SM-5Q5CS.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/CS/gtex.base_sums.KIDNEY_GTEX-147F4-2626-SM-5Q5CS.1.ALL.bw
+shortLabel GTEX-147F4-2626-SM-5Q5CS.1
+longLabel recount3 coverage bigWig for external id GTEX-147F4-2626-SM-5Q5CS.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1497J-0826-SM-5NQAJ.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/AJ/gtex.base_sums.KIDNEY_GTEX-1497J-0826-SM-5NQAJ.1.ALL.bw
+shortLabel GTEX-1497J-0826-SM-5NQAJ.1
+longLabel recount3 coverage bigWig for external id GTEX-1497J-0826-SM-5NQAJ.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-14C39-2126-SM-664OH.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/OH/gtex.base_sums.KIDNEY_GTEX-14C39-2126-SM-664OH.1.ALL.bw
+shortLabel GTEX-14C39-2126-SM-664OH.1
+longLabel recount3 coverage bigWig for external id GTEX-14C39-2126-SM-664OH.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-14C5O-2026-SM-5YYB1.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/B1/gtex.base_sums.KIDNEY_GTEX-14C5O-2026-SM-5YYB1.1.ALL.bw
+shortLabel GTEX-14C5O-2026-SM-5YYB1.1
+longLabel recount3 coverage bigWig for external id GTEX-14C5O-2026-SM-5YYB1.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-14E6D-2526-SM-5YYA9.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/A9/gtex.base_sums.KIDNEY_GTEX-14E6D-2526-SM-5YYA9.1.ALL.bw
+shortLabel GTEX-14E6D-2526-SM-5YYA9.1
+longLabel recount3 coverage bigWig for external id GTEX-14E6D-2526-SM-5YYA9.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-15CHQ-2126-SM-6871M.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/1M/gtex.base_sums.KIDNEY_GTEX-15CHQ-2126-SM-6871M.1.ALL.bw
+shortLabel GTEX-15CHQ-2126-SM-6871M.1
+longLabel recount3 coverage bigWig for external id GTEX-15CHQ-2126-SM-6871M.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-15DYW-2026-SM-6AJBD.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/BD/gtex.base_sums.KIDNEY_GTEX-15DYW-2026-SM-6AJBD.1.ALL.bw
+shortLabel GTEX-15DYW-2026-SM-6AJBD.1
+longLabel recount3 coverage bigWig for external id GTEX-15DYW-2026-SM-6AJBD.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-15TU5-2226-SM-6LPI2.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/I2/gtex.base_sums.KIDNEY_GTEX-15TU5-2226-SM-6LPI2.1.ALL.bw
+shortLabel GTEX-15TU5-2226-SM-6LPI2.1
+longLabel recount3 coverage bigWig for external id GTEX-15TU5-2226-SM-6LPI2.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-16MT8-1926-SM-7EPGL.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/GL/gtex.base_sums.KIDNEY_GTEX-16MT8-1926-SM-7EPGL.1.ALL.bw
+shortLabel GTEX-16MT8-1926-SM-7EPGL.1
+longLabel recount3 coverage bigWig for external id GTEX-16MT8-1926-SM-7EPGL.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-17F96-1926-SM-7MGWY.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/WY/gtex.base_sums.KIDNEY_GTEX-17F96-1926-SM-7MGWY.1.ALL.bw
+shortLabel GTEX-17F96-1926-SM-7MGWY.1
+longLabel recount3 coverage bigWig for external id GTEX-17F96-1926-SM-7MGWY.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-17F97-1926-SM-7IGM4.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/M4/gtex.base_sums.KIDNEY_GTEX-17F97-1926-SM-7IGM4.1.ALL.bw
+shortLabel GTEX-17F97-1926-SM-7IGM4.1
+longLabel recount3 coverage bigWig for external id GTEX-17F97-1926-SM-7IGM4.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-17HHY-2326-SM-7KFSR.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/SR/gtex.base_sums.KIDNEY_GTEX-17HHY-2326-SM-7KFSR.1.ALL.bw
+shortLabel GTEX-17HHY-2326-SM-7KFSR.1
+longLabel recount3 coverage bigWig for external id GTEX-17HHY-2326-SM-7KFSR.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1A3MW-2226-SM-73KUX.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/UX/gtex.base_sums.KIDNEY_GTEX-1A3MW-2226-SM-73KUX.1.ALL.bw
+shortLabel GTEX-1A3MW-2226-SM-73KUX.1
+longLabel recount3 coverage bigWig for external id GTEX-1A3MW-2226-SM-73KUX.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1A8FM-2026-SM-7P8RN.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/RN/gtex.base_sums.KIDNEY_GTEX-1A8FM-2026-SM-7P8RN.1.ALL.bw
+shortLabel GTEX-1A8FM-2026-SM-7P8RN.1
+longLabel recount3 coverage bigWig for external id GTEX-1A8FM-2026-SM-7P8RN.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1AX8Z-2326-SM-731CR.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/CR/gtex.base_sums.KIDNEY_GTEX-1AX8Z-2326-SM-731CR.1.ALL.bw
+shortLabel GTEX-1AX8Z-2326-SM-731CR.1
+longLabel recount3 coverage bigWig for external id GTEX-1AX8Z-2326-SM-731CR.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1BAJH-1826-SM-731DA.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/DA/gtex.base_sums.KIDNEY_GTEX-1BAJH-1826-SM-731DA.1.ALL.bw
+shortLabel GTEX-1BAJH-1826-SM-731DA.1
+longLabel recount3 coverage bigWig for external id GTEX-1BAJH-1826-SM-731DA.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1C6VQ-2326-SM-7IGN1.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/N1/gtex.base_sums.KIDNEY_GTEX-1C6VQ-2326-SM-7IGN1.1.ALL.bw
+shortLabel GTEX-1C6VQ-2326-SM-7IGN1.1
+longLabel recount3 coverage bigWig for external id GTEX-1C6VQ-2326-SM-7IGN1.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1CB4J-1926-SM-7MGX8.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/X8/gtex.base_sums.KIDNEY_GTEX-1CB4J-1926-SM-7MGX8.1.ALL.bw
+shortLabel GTEX-1CB4J-1926-SM-7MGX8.1
+longLabel recount3 coverage bigWig for external id GTEX-1CB4J-1926-SM-7MGX8.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1E2YA-1626-SM-7MGXS.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/XS/gtex.base_sums.KIDNEY_GTEX-1E2YA-1626-SM-7MGXS.1.ALL.bw
+shortLabel GTEX-1E2YA-1626-SM-7MGXS.1
+longLabel recount3 coverage bigWig for external id GTEX-1E2YA-1626-SM-7MGXS.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1EKGG-2226-SM-7IGOA.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/OA/gtex.base_sums.KIDNEY_GTEX-1EKGG-2226-SM-7IGOA.1.ALL.bw
+shortLabel GTEX-1EKGG-2226-SM-7IGOA.1
+longLabel recount3 coverage bigWig for external id GTEX-1EKGG-2226-SM-7IGOA.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1F48J-2226-SM-7MXTN.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/TN/gtex.base_sums.KIDNEY_GTEX-1F48J-2226-SM-7MXTN.1.ALL.bw
+shortLabel GTEX-1F48J-2226-SM-7MXTN.1
+longLabel recount3 coverage bigWig for external id GTEX-1F48J-2226-SM-7MXTN.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1GF9V-1926-SM-9JGHE.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/HE/gtex.base_sums.KIDNEY_GTEX-1GF9V-1926-SM-9JGHE.1.ALL.bw
+shortLabel GTEX-1GF9V-1926-SM-9JGHE.1
+longLabel recount3 coverage bigWig for external id GTEX-1GF9V-1926-SM-9JGHE.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1GF9W-1326-SM-7P8PX.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/PX/gtex.base_sums.KIDNEY_GTEX-1GF9W-1326-SM-7P8PX.1.ALL.bw
+shortLabel GTEX-1GF9W-1326-SM-7P8PX.1
+longLabel recount3 coverage bigWig for external id GTEX-1GF9W-1326-SM-7P8PX.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1GMR3-2426-SM-7MXV2.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/V2/gtex.base_sums.KIDNEY_GTEX-1GMR3-2426-SM-7MXV2.1.ALL.bw
+shortLabel GTEX-1GMR3-2426-SM-7MXV2.1
+longLabel recount3 coverage bigWig for external id GTEX-1GMR3-2426-SM-7MXV2.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1GN1U-2126-SM-AHZ4J.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/4J/gtex.base_sums.KIDNEY_GTEX-1GN1U-2126-SM-AHZ4J.1.ALL.bw
+shortLabel GTEX-1GN1U-2126-SM-AHZ4J.1
+longLabel recount3 coverage bigWig for external id GTEX-1GN1U-2126-SM-AHZ4J.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1GTWX-1826-SM-9QEHG.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/HG/gtex.base_sums.KIDNEY_GTEX-1GTWX-1826-SM-9QEHG.1.ALL.bw
+shortLabel GTEX-1GTWX-1826-SM-9QEHG.1
+longLabel recount3 coverage bigWig for external id GTEX-1GTWX-1826-SM-9QEHG.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1H3NZ-2126-SM-9WPQ6.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/Q6/gtex.base_sums.KIDNEY_GTEX-1H3NZ-2126-SM-9WPQ6.1.ALL.bw
+shortLabel GTEX-1H3NZ-2126-SM-9WPQ6.1
+longLabel recount3 coverage bigWig for external id GTEX-1H3NZ-2126-SM-9WPQ6.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1H3VY-1926-SM-9JGHJ.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/HJ/gtex.base_sums.KIDNEY_GTEX-1H3VY-1926-SM-9JGHJ.1.ALL.bw
+shortLabel GTEX-1H3VY-1926-SM-9JGHJ.1
+longLabel recount3 coverage bigWig for external id GTEX-1H3VY-1926-SM-9JGHJ.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1HB9E-1826-SM-D4P33.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/33/gtex.base_sums.KIDNEY_GTEX-1HB9E-1826-SM-D4P33.1.ALL.bw
+shortLabel GTEX-1HB9E-1826-SM-D4P33.1
+longLabel recount3 coverage bigWig for external id GTEX-1HB9E-1826-SM-D4P33.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1HBPI-2026-SM-CE6RZ.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/RZ/gtex.base_sums.KIDNEY_GTEX-1HBPI-2026-SM-CE6RZ.1.ALL.bw
+shortLabel GTEX-1HBPI-2026-SM-CE6RZ.1
+longLabel recount3 coverage bigWig for external id GTEX-1HBPI-2026-SM-CE6RZ.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1HCU7-1826-SM-A9G2A.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/2A/gtex.base_sums.KIDNEY_GTEX-1HCU7-1826-SM-A9G2A.1.ALL.bw
+shortLabel GTEX-1HCU7-1826-SM-A9G2A.1
+longLabel recount3 coverage bigWig for external id GTEX-1HCU7-1826-SM-A9G2A.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1I1GP-1926-SM-CNNQU.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/QU/gtex.base_sums.KIDNEY_GTEX-1I1GP-1926-SM-CNNQU.1.ALL.bw
+shortLabel GTEX-1I1GP-1926-SM-CNNQU.1
+longLabel recount3 coverage bigWig for external id GTEX-1I1GP-1926-SM-CNNQU.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1ICLY-2026-SM-A8N9D.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/9D/gtex.base_sums.KIDNEY_GTEX-1ICLY-2026-SM-A8N9D.1.ALL.bw
+shortLabel GTEX-1ICLY-2026-SM-A8N9D.1
+longLabel recount3 coverage bigWig for external id GTEX-1ICLY-2026-SM-A8N9D.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1IKK5-0926-SM-A9G2U.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/2U/gtex.base_sums.KIDNEY_GTEX-1IKK5-0926-SM-A9G2U.1.ALL.bw
+shortLabel GTEX-1IKK5-0926-SM-A9G2U.1
+longLabel recount3 coverage bigWig for external id GTEX-1IKK5-0926-SM-A9G2U.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1IL2V-1826-SM-ARU7R.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/7R/gtex.base_sums.KIDNEY_GTEX-1IL2V-1826-SM-ARU7R.1.ALL.bw
+shortLabel GTEX-1IL2V-1826-SM-ARU7R.1
+longLabel recount3 coverage bigWig for external id GTEX-1IL2V-1826-SM-ARU7R.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1J1OQ-1426-SM-AHZ3P.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/3P/gtex.base_sums.KIDNEY_GTEX-1J1OQ-1426-SM-AHZ3P.1.ALL.bw
+shortLabel GTEX-1J1OQ-1426-SM-AHZ3P.1
+longLabel recount3 coverage bigWig for external id GTEX-1J1OQ-1426-SM-AHZ3P.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1JJ6O-2526-SM-AHZ3J.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/3J/gtex.base_sums.KIDNEY_GTEX-1JJ6O-2526-SM-AHZ3J.1.ALL.bw
+shortLabel GTEX-1JJ6O-2526-SM-AHZ3J.1
+longLabel recount3 coverage bigWig for external id GTEX-1JJ6O-2526-SM-AHZ3J.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1JMLX-1526-SM-AHZ3N.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/3N/gtex.base_sums.KIDNEY_GTEX-1JMLX-1526-SM-AHZ3N.1.ALL.bw
+shortLabel GTEX-1JMLX-1526-SM-AHZ3N.1
+longLabel recount3 coverage bigWig for external id GTEX-1JMLX-1526-SM-AHZ3N.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1JMPZ-1226-SM-ARU8Y.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/8Y/gtex.base_sums.KIDNEY_GTEX-1JMPZ-1226-SM-ARU8Y.1.ALL.bw
+shortLabel GTEX-1JMPZ-1226-SM-ARU8Y.1
+longLabel recount3 coverage bigWig for external id GTEX-1JMPZ-1226-SM-ARU8Y.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1JMQJ-1726-SM-E9U4V.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/4V/gtex.base_sums.KIDNEY_GTEX-1JMQJ-1726-SM-E9U4V.1.ALL.bw
+shortLabel GTEX-1JMQJ-1726-SM-E9U4V.1
+longLabel recount3 coverage bigWig for external id GTEX-1JMQJ-1726-SM-E9U4V.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1JMQK-1926-SM-CJI3B.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/3B/gtex.base_sums.KIDNEY_GTEX-1JMQK-1926-SM-CJI3B.1.ALL.bw
+shortLabel GTEX-1JMQK-1926-SM-CJI3B.1
+longLabel recount3 coverage bigWig for external id GTEX-1JMQK-1926-SM-CJI3B.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1K2DU-0926-SM-DHXKB.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/KB/gtex.base_sums.KIDNEY_GTEX-1K2DU-0926-SM-DHXKB.1.ALL.bw
+shortLabel GTEX-1K2DU-0926-SM-DHXKB.1
+longLabel recount3 coverage bigWig for external id GTEX-1K2DU-0926-SM-DHXKB.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1K9T9-1826-SM-CXZK2.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/K2/gtex.base_sums.KIDNEY_GTEX-1K9T9-1826-SM-CXZK2.1.ALL.bw
+shortLabel GTEX-1K9T9-1826-SM-CXZK2.1
+longLabel recount3 coverage bigWig for external id GTEX-1K9T9-1826-SM-CXZK2.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1KWVE-0826-SM-CXZKO.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/KO/gtex.base_sums.KIDNEY_GTEX-1KWVE-0826-SM-CXZKO.1.ALL.bw
+shortLabel GTEX-1KWVE-0826-SM-CXZKO.1
+longLabel recount3 coverage bigWig for external id GTEX-1KWVE-0826-SM-CXZKO.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1LG7Y-2726-SM-D5OVW.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/VW/gtex.base_sums.KIDNEY_GTEX-1LG7Y-2726-SM-D5OVW.1.ALL.bw
+shortLabel GTEX-1LG7Y-2726-SM-D5OVW.1
+longLabel recount3 coverage bigWig for external id GTEX-1LG7Y-2726-SM-D5OVW.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1MUQO-2526-SM-E9TJN.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/JN/gtex.base_sums.KIDNEY_GTEX-1MUQO-2526-SM-E9TJN.1.ALL.bw
+shortLabel GTEX-1MUQO-2526-SM-E9TJN.1
+longLabel recount3 coverage bigWig for external id GTEX-1MUQO-2526-SM-E9TJN.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1N2DW-1826-SM-EAZ54.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/54/gtex.base_sums.KIDNEY_GTEX-1N2DW-1826-SM-EAZ54.1.ALL.bw
+shortLabel GTEX-1N2DW-1826-SM-EAZ54.1
+longLabel recount3 coverage bigWig for external id GTEX-1N2DW-1826-SM-EAZ54.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1N2EF-1426-SM-EXUSH.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/SH/gtex.base_sums.KIDNEY_GTEX-1N2EF-1426-SM-EXUSH.1.ALL.bw
+shortLabel GTEX-1N2EF-1426-SM-EXUSH.1
+longLabel recount3 coverage bigWig for external id GTEX-1N2EF-1426-SM-EXUSH.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1NV8Z-2226-SM-EXOJ2.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/J2/gtex.base_sums.KIDNEY_GTEX-1NV8Z-2226-SM-EXOJ2.1.ALL.bw
+shortLabel GTEX-1NV8Z-2226-SM-EXOJ2.1
+longLabel recount3 coverage bigWig for external id GTEX-1NV8Z-2226-SM-EXOJ2.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1OJC4-2326-SM-DTXA5.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/A5/gtex.base_sums.KIDNEY_GTEX-1OJC4-2326-SM-DTXA5.1.ALL.bw
+shortLabel GTEX-1OJC4-2326-SM-DTXA5.1
+longLabel recount3 coverage bigWig for external id GTEX-1OJC4-2326-SM-DTXA5.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1PWST-2226-SM-EVR3G.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/3G/gtex.base_sums.KIDNEY_GTEX-1PWST-2226-SM-EVR3G.1.ALL.bw
+shortLabel GTEX-1PWST-2226-SM-EVR3G.1
+longLabel recount3 coverage bigWig for external id GTEX-1PWST-2226-SM-EVR3G.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1QP6S-1526-SM-EXUSG.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/SG/gtex.base_sums.KIDNEY_GTEX-1QP6S-1526-SM-EXUSG.1.ALL.bw
+shortLabel GTEX-1QP6S-1526-SM-EXUSG.1
+longLabel recount3 coverage bigWig for external id GTEX-1QP6S-1526-SM-EXUSG.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-1R9PO-1626-SM-E6CPT.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/PT/gtex.base_sums.KIDNEY_GTEX-1R9PO-1626-SM-E6CPT.1.ALL.bw
+shortLabel GTEX-1R9PO-1626-SM-E6CPT.1
+longLabel recount3 coverage bigWig for external id GTEX-1R9PO-1626-SM-E6CPT.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-N7MS-1626-SM-3LK5F.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/5F/gtex.base_sums.KIDNEY_GTEX-N7MS-1626-SM-3LK5F.1.ALL.bw
+shortLabel GTEX-N7MS-1626-SM-3LK5F.1
+longLabel recount3 coverage bigWig for external id GTEX-N7MS-1626-SM-3LK5F.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-NPJ8-2226-SM-3TW8D.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/8D/gtex.base_sums.KIDNEY_GTEX-NPJ8-2226-SM-3TW8D.1.ALL.bw
+shortLabel GTEX-NPJ8-2226-SM-3TW8D.1
+longLabel recount3 coverage bigWig for external id GTEX-NPJ8-2226-SM-3TW8D.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-O5YV-1226-SM-EV795.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/95/gtex.base_sums.KIDNEY_GTEX-O5YV-1226-SM-EV795.1.ALL.bw
+shortLabel GTEX-O5YV-1226-SM-EV795.1
+longLabel recount3 coverage bigWig for external id GTEX-O5YV-1226-SM-EV795.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-P4QS-1126-SM-3NMD5.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/D5/gtex.base_sums.KIDNEY_GTEX-P4QS-1126-SM-3NMD5.1.ALL.bw
+shortLabel GTEX-P4QS-1126-SM-3NMD5.1
+longLabel recount3 coverage bigWig for external id GTEX-P4QS-1126-SM-3NMD5.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-QDT8-1726-SM-EYYV6.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/V6/gtex.base_sums.KIDNEY_GTEX-QDT8-1726-SM-EYYV6.1.ALL.bw
+shortLabel GTEX-QDT8-1726-SM-EYYV6.1
+longLabel recount3 coverage bigWig for external id GTEX-QDT8-1726-SM-EYYV6.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-QDVN-1626-SM-48TZC.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/ZC/gtex.base_sums.KIDNEY_GTEX-QDVN-1626-SM-48TZC.1.ALL.bw
+shortLabel GTEX-QDVN-1626-SM-48TZC.1
+longLabel recount3 coverage bigWig for external id GTEX-QDVN-1626-SM-48TZC.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-QLQW-1626-SM-4R1K1.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/K1/gtex.base_sums.KIDNEY_GTEX-QLQW-1626-SM-4R1K1.1.ALL.bw
+shortLabel GTEX-QLQW-1626-SM-4R1K1.1
+longLabel recount3 coverage bigWig for external id GTEX-QLQW-1626-SM-4R1K1.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-QLQW-1626-SM-CMKFE.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/FE/gtex.base_sums.KIDNEY_GTEX-QLQW-1626-SM-CMKFE.1.ALL.bw
+shortLabel GTEX-QLQW-1626-SM-CMKFE.1
+longLabel recount3 coverage bigWig for external id GTEX-QLQW-1626-SM-CMKFE.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-R55E-2026-SM-EZ6L1.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/L1/gtex.base_sums.KIDNEY_GTEX-R55E-2026-SM-EZ6L1.1.ALL.bw
+shortLabel GTEX-R55E-2026-SM-EZ6L1.1
+longLabel recount3 coverage bigWig for external id GTEX-R55E-2026-SM-EZ6L1.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-REY6-1826-SM-EAZAT.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/AT/gtex.base_sums.KIDNEY_GTEX-REY6-1826-SM-EAZAT.1.ALL.bw
+shortLabel GTEX-REY6-1826-SM-EAZAT.1
+longLabel recount3 coverage bigWig for external id GTEX-REY6-1826-SM-EAZAT.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-RN64-1626-SM-48FD7.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/D7/gtex.base_sums.KIDNEY_GTEX-RN64-1626-SM-48FD7.1.ALL.bw
+shortLabel GTEX-RN64-1626-SM-48FD7.1
+longLabel recount3 coverage bigWig for external id GTEX-RN64-1626-SM-48FD7.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-RU72-1926-SM-EAZ3F.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/3F/gtex.base_sums.KIDNEY_GTEX-RU72-1926-SM-EAZ3F.1.ALL.bw
+shortLabel GTEX-RU72-1926-SM-EAZ3F.1
+longLabel recount3 coverage bigWig for external id GTEX-RU72-1926-SM-EAZ3F.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-S33H-1426-SM-EZ6L7.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/L7/gtex.base_sums.KIDNEY_GTEX-S33H-1426-SM-EZ6L7.1.ALL.bw
+shortLabel GTEX-S33H-1426-SM-EZ6L7.1
+longLabel recount3 coverage bigWig for external id GTEX-S33H-1426-SM-EZ6L7.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-T5JC-1526-SM-4DM68.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/68/gtex.base_sums.KIDNEY_GTEX-T5JC-1526-SM-4DM68.1.ALL.bw
+shortLabel GTEX-T5JC-1526-SM-4DM68.1
+longLabel recount3 coverage bigWig for external id GTEX-T5JC-1526-SM-4DM68.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-T5JC-1626-SM-EZ6KW.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/KW/gtex.base_sums.KIDNEY_GTEX-T5JC-1626-SM-EZ6KW.1.ALL.bw
+shortLabel GTEX-T5JC-1626-SM-EZ6KW.1
+longLabel recount3 coverage bigWig for external id GTEX-T5JC-1626-SM-EZ6KW.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-T6MN-1826-SM-EXOHN.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/HN/gtex.base_sums.KIDNEY_GTEX-T6MN-1826-SM-EXOHN.1.ALL.bw
+shortLabel GTEX-T6MN-1826-SM-EXOHN.1
+longLabel recount3 coverage bigWig for external id GTEX-T6MN-1826-SM-EXOHN.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-TKQ2-0626-SM-EZ6LB.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/LB/gtex.base_sums.KIDNEY_GTEX-TKQ2-0626-SM-EZ6LB.1.ALL.bw
+shortLabel GTEX-TKQ2-0626-SM-EZ6LB.1
+longLabel recount3 coverage bigWig for external id GTEX-TKQ2-0626-SM-EZ6LB.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-UPIC-1126-SM-4IHLO.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/LO/gtex.base_sums.KIDNEY_GTEX-UPIC-1126-SM-4IHLO.1.ALL.bw
+shortLabel GTEX-UPIC-1126-SM-4IHLO.1
+longLabel recount3 coverage bigWig for external id GTEX-UPIC-1126-SM-4IHLO.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-WI4N-2026-SM-4OOS7.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/S7/gtex.base_sums.KIDNEY_GTEX-WI4N-2026-SM-4OOS7.1.ALL.bw
+shortLabel GTEX-WI4N-2026-SM-4OOS7.1
+longLabel recount3 coverage bigWig for external id GTEX-WI4N-2026-SM-4OOS7.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-XPVG-0526-SM-4B65N.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/5N/gtex.base_sums.KIDNEY_GTEX-XPVG-0526-SM-4B65N.1.ALL.bw
+shortLabel GTEX-XPVG-0526-SM-4B65N.1
+longLabel recount3 coverage bigWig for external id GTEX-XPVG-0526-SM-4B65N.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-Y5V5-1226-SM-EYYVP.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/VP/gtex.base_sums.KIDNEY_GTEX-Y5V5-1226-SM-EYYVP.1.ALL.bw
+shortLabel GTEX-Y5V5-1226-SM-EYYVP.1
+longLabel recount3 coverage bigWig for external id GTEX-Y5V5-1226-SM-EYYVP.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-Y5V6-2026-SM-5IFHO.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/HO/gtex.base_sums.KIDNEY_GTEX-Y5V6-2026-SM-5IFHO.1.ALL.bw
+shortLabel GTEX-Y5V6-2026-SM-5IFHO.1
+longLabel recount3 coverage bigWig for external id GTEX-Y5V6-2026-SM-5IFHO.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-ZC5H-1726-SM-5HL7X.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/7X/gtex.base_sums.KIDNEY_GTEX-ZC5H-1726-SM-5HL7X.1.ALL.bw
+shortLabel GTEX-ZC5H-1726-SM-5HL7X.1
+longLabel recount3 coverage bigWig for external id GTEX-ZC5H-1726-SM-5HL7X.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-ZDXO-0226-SM-4WKH7.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/H7/gtex.base_sums.KIDNEY_GTEX-ZDXO-0226-SM-4WKH7.1.ALL.bw
+shortLabel GTEX-ZDXO-0226-SM-4WKH7.1
+longLabel recount3 coverage bigWig for external id GTEX-ZDXO-0226-SM-4WKH7.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-ZE9C-1426-SM-4WKGM.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/GM/gtex.base_sums.KIDNEY_GTEX-ZE9C-1426-SM-4WKGM.1.ALL.bw
+shortLabel GTEX-ZE9C-1426-SM-4WKGM.1
+longLabel recount3 coverage bigWig for external id GTEX-ZE9C-1426-SM-4WKGM.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-ZLFU-0926-SM-5P9F8.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/F8/gtex.base_sums.KIDNEY_GTEX-ZLFU-0926-SM-5P9F8.1.ALL.bw
+shortLabel GTEX-ZLFU-0926-SM-5P9F8.1
+longLabel recount3 coverage bigWig for external id GTEX-ZLFU-0926-SM-5P9F8.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-ZVZP-0926-SM-5GIDB.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/DB/gtex.base_sums.KIDNEY_GTEX-ZVZP-0926-SM-5GIDB.1.ALL.bw
+shortLabel GTEX-ZVZP-0926-SM-5GIDB.1
+longLabel recount3 coverage bigWig for external id GTEX-ZVZP-0926-SM-5GIDB.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-ZYFD-1526-SM-5NQ7T.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/7T/gtex.base_sums.KIDNEY_GTEX-ZYFD-1526-SM-5NQ7T.1.ALL.bw
+shortLabel GTEX-ZYFD-1526-SM-5NQ7T.1
+longLabel recount3 coverage bigWig for external id GTEX-ZYFD-1526-SM-5NQ7T.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-ZYFG-1626-SM-5GZYY.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/YY/gtex.base_sums.KIDNEY_GTEX-ZYFG-1626-SM-5GZYY.1.ALL.bw
+shortLabel GTEX-ZYFG-1626-SM-5GZYY.1
+longLabel recount3 coverage bigWig for external id GTEX-ZYFG-1626-SM-5GZYY.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-ZYT6-2226-SM-5GIC9.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/EY/KIDNEY/C9/gtex.base_sums.KIDNEY_GTEX-ZYT6-2226-SM-5GIC9.1.ALL.bw
+shortLabel GTEX-ZYT6-2226-SM-5GIC9.1
+longLabel recount3 coverage bigWig for external id GTEX-ZYT6-2226-SM-5GIC9.1 project KIDNEY file source gtex
+type bigWig
+visibility hide
+autoScale on
+

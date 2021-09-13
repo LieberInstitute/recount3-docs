@@ -1,0 +1,72 @@
+track GTEX-OHPK-2326-SM-3MJH2.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/BE/FALLOPIAN_TUBE/H2/gtex.base_sums.FALLOPIAN_TUBE_GTEX-OHPK-2326-SM-3MJH2.1.ALL.bw
+shortLabel GTEX-OHPK-2326-SM-3MJH2.1
+longLabel recount3 coverage bigWig for external id GTEX-OHPK-2326-SM-3MJH2.1 project FALLOPIAN_TUBE file source gtex
+type bigWig
+visibility show
+autoScale on
+
+track GTEX-PLZ4-2326-SM-EYYV5.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/BE/FALLOPIAN_TUBE/V5/gtex.base_sums.FALLOPIAN_TUBE_GTEX-PLZ4-2326-SM-EYYV5.1.ALL.bw
+shortLabel GTEX-PLZ4-2326-SM-EYYV5.1
+longLabel recount3 coverage bigWig for external id GTEX-PLZ4-2326-SM-EYYV5.1 project FALLOPIAN_TUBE file source gtex
+type bigWig
+visibility show
+autoScale on
+
+track GTEX-S32W-1326-SM-4AD5Q.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/BE/FALLOPIAN_TUBE/5Q/gtex.base_sums.FALLOPIAN_TUBE_GTEX-S32W-1326-SM-4AD5Q.1.ALL.bw
+shortLabel GTEX-S32W-1326-SM-4AD5Q.1
+longLabel recount3 coverage bigWig for external id GTEX-S32W-1326-SM-4AD5Q.1 project FALLOPIAN_TUBE file source gtex
+type bigWig
+visibility show
+autoScale on
+
+track GTEX-S341-0826-SM-4AD73.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/BE/FALLOPIAN_TUBE/73/gtex.base_sums.FALLOPIAN_TUBE_GTEX-S341-0826-SM-4AD73.1.ALL.bw
+shortLabel GTEX-S341-0826-SM-4AD73.1
+longLabel recount3 coverage bigWig for external id GTEX-S341-0826-SM-4AD73.1 project FALLOPIAN_TUBE file source gtex
+type bigWig
+visibility show
+autoScale on
+
+track GTEX-SE5C-0926-SM-4BRUF.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/BE/FALLOPIAN_TUBE/UF/gtex.base_sums.FALLOPIAN_TUBE_GTEX-SE5C-0926-SM-4BRUF.1.ALL.bw
+shortLabel GTEX-SE5C-0926-SM-4BRUF.1
+longLabel recount3 coverage bigWig for external id GTEX-SE5C-0926-SM-4BRUF.1 project FALLOPIAN_TUBE file source gtex
+type bigWig
+visibility show
+autoScale on
+
+track GTEX-T5JW-0326-SM-4DM6J.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/BE/FALLOPIAN_TUBE/6J/gtex.base_sums.FALLOPIAN_TUBE_GTEX-T5JW-0326-SM-4DM6J.1.ALL.bw
+shortLabel GTEX-T5JW-0326-SM-4DM6J.1
+longLabel recount3 coverage bigWig for external id GTEX-T5JW-0326-SM-4DM6J.1 project FALLOPIAN_TUBE file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-T6MO-1026-SM-4DM72.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/BE/FALLOPIAN_TUBE/72/gtex.base_sums.FALLOPIAN_TUBE_GTEX-T6MO-1026-SM-4DM72.1.ALL.bw
+shortLabel GTEX-T6MO-1026-SM-4DM72.1
+longLabel recount3 coverage bigWig for external id GTEX-T6MO-1026-SM-4DM72.1 project FALLOPIAN_TUBE file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-TSE9-2326-SM-EZ6ME.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/BE/FALLOPIAN_TUBE/ME/gtex.base_sums.FALLOPIAN_TUBE_GTEX-TSE9-2326-SM-EZ6ME.1.ALL.bw
+shortLabel GTEX-TSE9-2326-SM-EZ6ME.1
+longLabel recount3 coverage bigWig for external id GTEX-TSE9-2326-SM-EZ6ME.1 project FALLOPIAN_TUBE file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-U3ZN-1126-SM-4DXUL.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/BE/FALLOPIAN_TUBE/UL/gtex.base_sums.FALLOPIAN_TUBE_GTEX-U3ZN-1126-SM-4DXUL.1.ALL.bw
+shortLabel GTEX-U3ZN-1126-SM-4DXUL.1
+longLabel recount3 coverage bigWig for external id GTEX-U3ZN-1126-SM-4DXUL.1 project FALLOPIAN_TUBE file source gtex
+type bigWig
+visibility hide
+autoScale on
+

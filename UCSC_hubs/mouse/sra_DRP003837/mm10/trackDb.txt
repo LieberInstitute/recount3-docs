@@ -1,0 +1,56 @@
+track DRR122178
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/37/DRP003837/78/sra.base_sums.DRP003837_DRR122178.ALL.bw
+shortLabel DRR122178
+longLabel recount3 coverage bigWig for external id DRR122178 project DRP003837 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track DRR122179
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/37/DRP003837/79/sra.base_sums.DRP003837_DRR122179.ALL.bw
+shortLabel DRR122179
+longLabel recount3 coverage bigWig for external id DRR122179 project DRP003837 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track DRR093300
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/37/DRP003837/00/sra.base_sums.DRP003837_DRR093300.ALL.bw
+shortLabel DRR093300
+longLabel recount3 coverage bigWig for external id DRR093300 project DRP003837 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track DRR090722
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/37/DRP003837/22/sra.base_sums.DRP003837_DRR090722.ALL.bw
+shortLabel DRR090722
+longLabel recount3 coverage bigWig for external id DRR090722 project DRP003837 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track DRR090723
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/37/DRP003837/23/sra.base_sums.DRP003837_DRR090723.ALL.bw
+shortLabel DRR090723
+longLabel recount3 coverage bigWig for external id DRR090723 project DRP003837 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track DRR090724
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/37/DRP003837/24/sra.base_sums.DRP003837_DRR090724.ALL.bw
+shortLabel DRR090724
+longLabel recount3 coverage bigWig for external id DRR090724 project DRP003837 file source sra
+type bigWig
+visibility hide
+autoScale on
+
+track DRR090725
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/37/DRP003837/25/sra.base_sums.DRP003837_DRR090725.ALL.bw
+shortLabel DRR090725
+longLabel recount3 coverage bigWig for external id DRR090725 project DRP003837 file source sra
+type bigWig
+visibility hide
+autoScale on
+

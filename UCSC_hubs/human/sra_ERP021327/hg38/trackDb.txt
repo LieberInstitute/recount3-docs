@@ -1,0 +1,16 @@
+track ERR1817225
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/27/ERP021327/25/sra.base_sums.ERP021327_ERR1817225.ALL.bw
+shortLabel ERR1817225
+longLabel recount3 coverage bigWig for external id ERR1817225 project ERP021327 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR1817226
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/27/ERP021327/26/sra.base_sums.ERP021327_ERR1817226.ALL.bw
+shortLabel ERR1817226
+longLabel recount3 coverage bigWig for external id ERR1817226 project ERP021327 file source sra
+type bigWig
+visibility show
+autoScale on
+

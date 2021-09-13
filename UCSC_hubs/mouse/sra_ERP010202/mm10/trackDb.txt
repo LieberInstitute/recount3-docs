@@ -1,0 +1,56 @@
+track ERR861327
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/02/ERP010202/27/sra.base_sums.ERP010202_ERR861327.ALL.bw
+shortLabel ERR861327
+longLabel recount3 coverage bigWig for external id ERR861327 project ERP010202 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR861328
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/02/ERP010202/28/sra.base_sums.ERP010202_ERR861328.ALL.bw
+shortLabel ERR861328
+longLabel recount3 coverage bigWig for external id ERR861328 project ERP010202 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR861329
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/02/ERP010202/29/sra.base_sums.ERP010202_ERR861329.ALL.bw
+shortLabel ERR861329
+longLabel recount3 coverage bigWig for external id ERR861329 project ERP010202 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR861330
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/02/ERP010202/30/sra.base_sums.ERP010202_ERR861330.ALL.bw
+shortLabel ERR861330
+longLabel recount3 coverage bigWig for external id ERR861330 project ERP010202 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR861331
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/02/ERP010202/31/sra.base_sums.ERP010202_ERR861331.ALL.bw
+shortLabel ERR861331
+longLabel recount3 coverage bigWig for external id ERR861331 project ERP010202 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR861332
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/02/ERP010202/32/sra.base_sums.ERP010202_ERR861332.ALL.bw
+shortLabel ERR861332
+longLabel recount3 coverage bigWig for external id ERR861332 project ERP010202 file source sra
+type bigWig
+visibility hide
+autoScale on
+
+track ERR861333
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/02/ERP010202/33/sra.base_sums.ERP010202_ERR861333.ALL.bw
+shortLabel ERR861333
+longLabel recount3 coverage bigWig for external id ERR861333 project ERP010202 file source sra
+type bigWig
+visibility hide
+autoScale on
+

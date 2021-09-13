@@ -1,0 +1,16 @@
+track ERR1517156
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/51/ERP016351/56/sra.base_sums.ERP016351_ERR1517156.ALL.bw
+shortLabel ERR1517156
+longLabel recount3 coverage bigWig for external id ERR1517156 project ERP016351 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR1517158
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/51/ERP016351/58/sra.base_sums.ERP016351_ERR1517158.ALL.bw
+shortLabel ERR1517158
+longLabel recount3 coverage bigWig for external id ERR1517158 project ERP016351 file source sra
+type bigWig
+visibility show
+autoScale on
+

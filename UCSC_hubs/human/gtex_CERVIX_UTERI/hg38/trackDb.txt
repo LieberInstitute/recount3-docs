@@ -1,0 +1,152 @@
+track GTEX-N7MT-0826-SM-EV794.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/RI/CERVIX_UTERI/94/gtex.base_sums.CERVIX_UTERI_GTEX-N7MT-0826-SM-EV794.1.ALL.bw
+shortLabel GTEX-N7MT-0826-SM-EV794.1
+longLabel recount3 coverage bigWig for external id GTEX-N7MT-0826-SM-EV794.1 project CERVIX_UTERI file source gtex
+type bigWig
+visibility show
+autoScale on
+
+track GTEX-OHPN-2226-SM-E9TI7.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/RI/CERVIX_UTERI/I7/gtex.base_sums.CERVIX_UTERI_GTEX-OHPN-2226-SM-E9TI7.1.ALL.bw
+shortLabel GTEX-OHPN-2226-SM-E9TI7.1
+longLabel recount3 coverage bigWig for external id GTEX-OHPN-2226-SM-E9TI7.1 project CERVIX_UTERI file source gtex
+type bigWig
+visibility show
+autoScale on
+
+track GTEX-P78B-2326-SM-EZ6KO.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/RI/CERVIX_UTERI/KO/gtex.base_sums.CERVIX_UTERI_GTEX-P78B-2326-SM-EZ6KO.1.ALL.bw
+shortLabel GTEX-P78B-2326-SM-EZ6KO.1
+longLabel recount3 coverage bigWig for external id GTEX-P78B-2326-SM-EZ6KO.1 project CERVIX_UTERI file source gtex
+type bigWig
+visibility show
+autoScale on
+
+track GTEX-P78B-2426-SM-EWRM2.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/RI/CERVIX_UTERI/M2/gtex.base_sums.CERVIX_UTERI_GTEX-P78B-2426-SM-EWRM2.1.ALL.bw
+shortLabel GTEX-P78B-2426-SM-EWRM2.1
+longLabel recount3 coverage bigWig for external id GTEX-P78B-2426-SM-EWRM2.1 project CERVIX_UTERI file source gtex
+type bigWig
+visibility show
+autoScale on
+
+track GTEX-PLZ4-2226-SM-EZ6KS.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/RI/CERVIX_UTERI/KS/gtex.base_sums.CERVIX_UTERI_GTEX-PLZ4-2226-SM-EZ6KS.1.ALL.bw
+shortLabel GTEX-PLZ4-2226-SM-EZ6KS.1
+longLabel recount3 coverage bigWig for external id GTEX-PLZ4-2226-SM-EZ6KS.1 project CERVIX_UTERI file source gtex
+type bigWig
+visibility show
+autoScale on
+
+track GTEX-Q2AG-2326-SM-EZ6KY.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/RI/CERVIX_UTERI/KY/gtex.base_sums.CERVIX_UTERI_GTEX-Q2AG-2326-SM-EZ6KY.1.ALL.bw
+shortLabel GTEX-Q2AG-2326-SM-EZ6KY.1
+longLabel recount3 coverage bigWig for external id GTEX-Q2AG-2326-SM-EZ6KY.1 project CERVIX_UTERI file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-S32W-1526-SM-4AD6Z.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/RI/CERVIX_UTERI/6Z/gtex.base_sums.CERVIX_UTERI_GTEX-S32W-1526-SM-4AD6Z.1.ALL.bw
+shortLabel GTEX-S32W-1526-SM-4AD6Z.1
+longLabel recount3 coverage bigWig for external id GTEX-S32W-1526-SM-4AD6Z.1 project CERVIX_UTERI file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-S32W-1626-SM-4AD6G.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/RI/CERVIX_UTERI/6G/gtex.base_sums.CERVIX_UTERI_GTEX-S32W-1626-SM-4AD6G.1.ALL.bw
+shortLabel GTEX-S32W-1626-SM-4AD6G.1
+longLabel recount3 coverage bigWig for external id GTEX-S32W-1626-SM-4AD6G.1 project CERVIX_UTERI file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-S341-1126-SM-4AD6T.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/RI/CERVIX_UTERI/6T/gtex.base_sums.CERVIX_UTERI_GTEX-S341-1126-SM-4AD6T.1.ALL.bw
+shortLabel GTEX-S341-1126-SM-4AD6T.1
+longLabel recount3 coverage bigWig for external id GTEX-S341-1126-SM-4AD6T.1 project CERVIX_UTERI file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-S341-1326-SM-4AD72.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/RI/CERVIX_UTERI/72/gtex.base_sums.CERVIX_UTERI_GTEX-S341-1326-SM-4AD72.1.ALL.bw
+shortLabel GTEX-S341-1326-SM-4AD72.1
+longLabel recount3 coverage bigWig for external id GTEX-S341-1326-SM-4AD72.1 project CERVIX_UTERI file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-S4UY-1426-SM-4AD6Y.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/RI/CERVIX_UTERI/6Y/gtex.base_sums.CERVIX_UTERI_GTEX-S4UY-1426-SM-4AD6Y.1.ALL.bw
+shortLabel GTEX-S4UY-1426-SM-4AD6Y.1
+longLabel recount3 coverage bigWig for external id GTEX-S4UY-1426-SM-4AD6Y.1 project CERVIX_UTERI file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-T5JW-0726-SM-4DM6D.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/RI/CERVIX_UTERI/6D/gtex.base_sums.CERVIX_UTERI_GTEX-T5JW-0726-SM-4DM6D.1.ALL.bw
+shortLabel GTEX-T5JW-0726-SM-4DM6D.1
+longLabel recount3 coverage bigWig for external id GTEX-T5JW-0726-SM-4DM6D.1 project CERVIX_UTERI file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-T5JW-0826-SM-EYYVD.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/RI/CERVIX_UTERI/VD/gtex.base_sums.CERVIX_UTERI_GTEX-T5JW-0826-SM-EYYVD.1.ALL.bw
+shortLabel GTEX-T5JW-0826-SM-EYYVD.1
+longLabel recount3 coverage bigWig for external id GTEX-T5JW-0826-SM-EYYVD.1 project CERVIX_UTERI file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-T6MO-1426-SM-4DM73.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/RI/CERVIX_UTERI/73/gtex.base_sums.CERVIX_UTERI_GTEX-T6MO-1426-SM-4DM73.1.ALL.bw
+shortLabel GTEX-T6MO-1426-SM-4DM73.1
+longLabel recount3 coverage bigWig for external id GTEX-T6MO-1426-SM-4DM73.1 project CERVIX_UTERI file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-TML8-0726-SM-4DXTT.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/RI/CERVIX_UTERI/TT/gtex.base_sums.CERVIX_UTERI_GTEX-TML8-0726-SM-4DXTT.1.ALL.bw
+shortLabel GTEX-TML8-0726-SM-4DXTT.1
+longLabel recount3 coverage bigWig for external id GTEX-TML8-0726-SM-4DXTT.1 project CERVIX_UTERI file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-TSE9-2726-SM-4DXSQ.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/RI/CERVIX_UTERI/SQ/gtex.base_sums.CERVIX_UTERI_GTEX-TSE9-2726-SM-4DXSQ.1.ALL.bw
+shortLabel GTEX-TSE9-2726-SM-4DXSQ.1
+longLabel recount3 coverage bigWig for external id GTEX-TSE9-2726-SM-4DXSQ.1 project CERVIX_UTERI file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-TSE9-2826-SM-4DXTF.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/RI/CERVIX_UTERI/TF/gtex.base_sums.CERVIX_UTERI_GTEX-TSE9-2826-SM-4DXTF.1.ALL.bw
+shortLabel GTEX-TSE9-2826-SM-4DXTF.1
+longLabel recount3 coverage bigWig for external id GTEX-TSE9-2826-SM-4DXTF.1 project CERVIX_UTERI file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-U3ZN-1626-SM-4DXTZ.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/RI/CERVIX_UTERI/TZ/gtex.base_sums.CERVIX_UTERI_GTEX-U3ZN-1626-SM-4DXTZ.1.ALL.bw
+shortLabel GTEX-U3ZN-1626-SM-4DXTZ.1
+longLabel recount3 coverage bigWig for external id GTEX-U3ZN-1626-SM-4DXTZ.1 project CERVIX_UTERI file source gtex
+type bigWig
+visibility hide
+autoScale on
+
+track GTEX-ZPIC-1326-SM-DO91Y.1
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/gtex/base_sums/RI/CERVIX_UTERI/1Y/gtex.base_sums.CERVIX_UTERI_GTEX-ZPIC-1326-SM-DO91Y.1.ALL.bw
+shortLabel GTEX-ZPIC-1326-SM-DO91Y.1
+longLabel recount3 coverage bigWig for external id GTEX-ZPIC-1326-SM-DO91Y.1 project CERVIX_UTERI file source gtex
+type bigWig
+visibility hide
+autoScale on
+

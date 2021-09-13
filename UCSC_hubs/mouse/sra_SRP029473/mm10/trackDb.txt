@@ -1,0 +1,16 @@
+track SRR965189
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/73/SRP029473/89/sra.base_sums.SRP029473_SRR965189.ALL.bw
+shortLabel SRR965189
+longLabel recount3 coverage bigWig for external id SRR965189 project SRP029473 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track SRR965350
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/73/SRP029473/50/sra.base_sums.SRP029473_SRR965350.ALL.bw
+shortLabel SRR965350
+longLabel recount3 coverage bigWig for external id SRR965350 project SRP029473 file source sra
+type bigWig
+visibility show
+autoScale on
+

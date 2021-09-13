@@ -1,0 +1,56 @@
+track SRR5211101
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/06/SRP098206/01/sra.base_sums.SRP098206_SRR5211101.ALL.bw
+shortLabel SRR5211101
+longLabel recount3 coverage bigWig for external id SRR5211101 project SRP098206 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track SRR5211102
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/06/SRP098206/02/sra.base_sums.SRP098206_SRR5211102.ALL.bw
+shortLabel SRR5211102
+longLabel recount3 coverage bigWig for external id SRR5211102 project SRP098206 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track SRR5211103
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/06/SRP098206/03/sra.base_sums.SRP098206_SRR5211103.ALL.bw
+shortLabel SRR5211103
+longLabel recount3 coverage bigWig for external id SRR5211103 project SRP098206 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track SRR5211104
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/06/SRP098206/04/sra.base_sums.SRP098206_SRR5211104.ALL.bw
+shortLabel SRR5211104
+longLabel recount3 coverage bigWig for external id SRR5211104 project SRP098206 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track SRR5211105
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/06/SRP098206/05/sra.base_sums.SRP098206_SRR5211105.ALL.bw
+shortLabel SRR5211105
+longLabel recount3 coverage bigWig for external id SRR5211105 project SRP098206 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track SRR5211106
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/06/SRP098206/06/sra.base_sums.SRP098206_SRR5211106.ALL.bw
+shortLabel SRR5211106
+longLabel recount3 coverage bigWig for external id SRR5211106 project SRP098206 file source sra
+type bigWig
+visibility hide
+autoScale on
+
+track SRR5211107
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/06/SRP098206/07/sra.base_sums.SRP098206_SRR5211107.ALL.bw
+shortLabel SRR5211107
+longLabel recount3 coverage bigWig for external id SRR5211107 project SRP098206 file source sra
+type bigWig
+visibility hide
+autoScale on
+

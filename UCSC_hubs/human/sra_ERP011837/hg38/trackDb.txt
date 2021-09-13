@@ -1,0 +1,72 @@
+track ERR990405
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/37/ERP011837/05/sra.base_sums.ERP011837_ERR990405.ALL.bw
+shortLabel ERR990405
+longLabel recount3 coverage bigWig for external id ERR990405 project ERP011837 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR990406
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/37/ERP011837/06/sra.base_sums.ERP011837_ERR990406.ALL.bw
+shortLabel ERR990406
+longLabel recount3 coverage bigWig for external id ERR990406 project ERP011837 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR990407
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/37/ERP011837/07/sra.base_sums.ERP011837_ERR990407.ALL.bw
+shortLabel ERR990407
+longLabel recount3 coverage bigWig for external id ERR990407 project ERP011837 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR990408
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/37/ERP011837/08/sra.base_sums.ERP011837_ERR990408.ALL.bw
+shortLabel ERR990408
+longLabel recount3 coverage bigWig for external id ERR990408 project ERP011837 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR990409
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/37/ERP011837/09/sra.base_sums.ERP011837_ERR990409.ALL.bw
+shortLabel ERR990409
+longLabel recount3 coverage bigWig for external id ERR990409 project ERP011837 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR990410
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/37/ERP011837/10/sra.base_sums.ERP011837_ERR990410.ALL.bw
+shortLabel ERR990410
+longLabel recount3 coverage bigWig for external id ERR990410 project ERP011837 file source sra
+type bigWig
+visibility hide
+autoScale on
+
+track ERR990411
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/37/ERP011837/11/sra.base_sums.ERP011837_ERR990411.ALL.bw
+shortLabel ERR990411
+longLabel recount3 coverage bigWig for external id ERR990411 project ERP011837 file source sra
+type bigWig
+visibility hide
+autoScale on
+
+track ERR990412
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/37/ERP011837/12/sra.base_sums.ERP011837_ERR990412.ALL.bw
+shortLabel ERR990412
+longLabel recount3 coverage bigWig for external id ERR990412 project ERP011837 file source sra
+type bigWig
+visibility hide
+autoScale on
+
+track ERR990413
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/37/ERP011837/13/sra.base_sums.ERP011837_ERR990413.ALL.bw
+shortLabel ERR990413
+longLabel recount3 coverage bigWig for external id ERR990413 project ERP011837 file source sra
+type bigWig
+visibility hide
+autoScale on
+

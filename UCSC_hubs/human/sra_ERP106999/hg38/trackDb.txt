@@ -1,0 +1,16 @@
+track ERR2322002
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/99/ERP106999/02/sra.base_sums.ERP106999_ERR2322002.ALL.bw
+shortLabel ERR2322002
+longLabel recount3 coverage bigWig for external id ERR2322002 project ERP106999 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR2322003
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/99/ERP106999/03/sra.base_sums.ERP106999_ERR2322003.ALL.bw
+shortLabel ERR2322003
+longLabel recount3 coverage bigWig for external id ERR2322003 project ERP106999 file source sra
+type bigWig
+visibility show
+autoScale on
+

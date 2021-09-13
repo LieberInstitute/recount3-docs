@@ -1,0 +1,32 @@
+track ERR674419
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/82/ERP008682/19/sra.base_sums.ERP008682_ERR674419.ALL.bw
+shortLabel ERR674419
+longLabel recount3 coverage bigWig for external id ERR674419 project ERP008682 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR674422
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/82/ERP008682/22/sra.base_sums.ERP008682_ERR674422.ALL.bw
+shortLabel ERR674422
+longLabel recount3 coverage bigWig for external id ERR674422 project ERP008682 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR674424
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/82/ERP008682/24/sra.base_sums.ERP008682_ERR674424.ALL.bw
+shortLabel ERR674424
+longLabel recount3 coverage bigWig for external id ERR674424 project ERP008682 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR674425
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/82/ERP008682/25/sra.base_sums.ERP008682_ERR674425.ALL.bw
+shortLabel ERR674425
+longLabel recount3 coverage bigWig for external id ERR674425 project ERP008682 file source sra
+type bigWig
+visibility show
+autoScale on
+

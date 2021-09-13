@@ -1,0 +1,16 @@
+track ERR1702143
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/87/ERP018587/43/sra.base_sums.ERP018587_ERR1702143.ALL.bw
+shortLabel ERR1702143
+longLabel recount3 coverage bigWig for external id ERR1702143 project ERP018587 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR1702144
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/87/ERP018587/44/sra.base_sums.ERP018587_ERR1702144.ALL.bw
+shortLabel ERR1702144
+longLabel recount3 coverage bigWig for external id ERR1702144 project ERP018587 file source sra
+type bigWig
+visibility show
+autoScale on
+

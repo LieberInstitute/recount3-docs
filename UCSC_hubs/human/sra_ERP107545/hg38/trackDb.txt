@@ -1,0 +1,16 @@
+track ERR2403203
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/45/ERP107545/03/sra.base_sums.ERP107545_ERR2403203.ALL.bw
+shortLabel ERR2403203
+longLabel recount3 coverage bigWig for external id ERR2403203 project ERP107545 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR2403204
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/45/ERP107545/04/sra.base_sums.ERP107545_ERR2403204.ALL.bw
+shortLabel ERR2403204
+longLabel recount3 coverage bigWig for external id ERR2403204 project ERP107545 file source sra
+type bigWig
+visibility show
+autoScale on
+

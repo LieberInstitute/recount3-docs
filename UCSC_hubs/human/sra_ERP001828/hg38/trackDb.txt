@@ -1,0 +1,56 @@
+track ERR173258
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/28/ERP001828/58/sra.base_sums.ERP001828_ERR173258.ALL.bw
+shortLabel ERR173258
+longLabel recount3 coverage bigWig for external id ERR173258 project ERP001828 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR173260
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/28/ERP001828/60/sra.base_sums.ERP001828_ERR173260.ALL.bw
+shortLabel ERR173260
+longLabel recount3 coverage bigWig for external id ERR173260 project ERP001828 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR173261
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/28/ERP001828/61/sra.base_sums.ERP001828_ERR173261.ALL.bw
+shortLabel ERR173261
+longLabel recount3 coverage bigWig for external id ERR173261 project ERP001828 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR173266
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/28/ERP001828/66/sra.base_sums.ERP001828_ERR173266.ALL.bw
+shortLabel ERR173266
+longLabel recount3 coverage bigWig for external id ERR173266 project ERP001828 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR173274
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/28/ERP001828/74/sra.base_sums.ERP001828_ERR173274.ALL.bw
+shortLabel ERR173274
+longLabel recount3 coverage bigWig for external id ERR173274 project ERP001828 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR173279
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/28/ERP001828/79/sra.base_sums.ERP001828_ERR173279.ALL.bw
+shortLabel ERR173279
+longLabel recount3 coverage bigWig for external id ERR173279 project ERP001828 file source sra
+type bigWig
+visibility hide
+autoScale on
+
+track ERR173280
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/28/ERP001828/80/sra.base_sums.ERP001828_ERR173280.ALL.bw
+shortLabel ERR173280
+longLabel recount3 coverage bigWig for external id ERR173280 project ERP001828 file source sra
+type bigWig
+visibility hide
+autoScale on
+

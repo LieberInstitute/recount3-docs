@@ -1,0 +1,48 @@
+track ERR1750007
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/62/ERP020462/07/sra.base_sums.ERP020462_ERR1750007.ALL.bw
+shortLabel ERR1750007
+longLabel recount3 coverage bigWig for external id ERR1750007 project ERP020462 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR1750008
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/62/ERP020462/08/sra.base_sums.ERP020462_ERR1750008.ALL.bw
+shortLabel ERR1750008
+longLabel recount3 coverage bigWig for external id ERR1750008 project ERP020462 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR1750009
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/62/ERP020462/09/sra.base_sums.ERP020462_ERR1750009.ALL.bw
+shortLabel ERR1750009
+longLabel recount3 coverage bigWig for external id ERR1750009 project ERP020462 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR1750010
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/62/ERP020462/10/sra.base_sums.ERP020462_ERR1750010.ALL.bw
+shortLabel ERR1750010
+longLabel recount3 coverage bigWig for external id ERR1750010 project ERP020462 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR1750011
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/62/ERP020462/11/sra.base_sums.ERP020462_ERR1750011.ALL.bw
+shortLabel ERR1750011
+longLabel recount3 coverage bigWig for external id ERR1750011 project ERP020462 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR1750012
+bigDataUrl http://duffel.rail.bio/recount3/human/data_sources/sra/base_sums/62/ERP020462/12/sra.base_sums.ERP020462_ERR1750012.ALL.bw
+shortLabel ERR1750012
+longLabel recount3 coverage bigWig for external id ERR1750012 project ERP020462 file source sra
+type bigWig
+visibility hide
+autoScale on
+

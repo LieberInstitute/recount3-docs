@@ -1,0 +1,24 @@
+track ERR418031
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/28/ERP001828/31/sra.base_sums.ERP001828_ERR418031.ALL.bw
+shortLabel ERR418031
+longLabel recount3 coverage bigWig for external id ERR418031 project ERP001828 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR418032
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/28/ERP001828/32/sra.base_sums.ERP001828_ERR418032.ALL.bw
+shortLabel ERR418032
+longLabel recount3 coverage bigWig for external id ERR418032 project ERP001828 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR418033
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/28/ERP001828/33/sra.base_sums.ERP001828_ERR418033.ALL.bw
+shortLabel ERR418033
+longLabel recount3 coverage bigWig for external id ERR418033 project ERP001828 file source sra
+type bigWig
+visibility show
+autoScale on
+

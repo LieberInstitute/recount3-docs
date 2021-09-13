@@ -1,0 +1,16 @@
+track ERR2538129
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/35/ERP108435/29/sra.base_sums.ERP108435_ERR2538129.ALL.bw
+shortLabel ERR2538129
+longLabel recount3 coverage bigWig for external id ERR2538129 project ERP108435 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR2538130
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/35/ERP108435/30/sra.base_sums.ERP108435_ERR2538130.ALL.bw
+shortLabel ERR2538130
+longLabel recount3 coverage bigWig for external id ERR2538130 project ERP108435 file source sra
+type bigWig
+visibility show
+autoScale on
+

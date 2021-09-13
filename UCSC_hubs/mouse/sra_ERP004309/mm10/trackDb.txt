@@ -1,0 +1,16 @@
+track ERR467405
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/09/ERP004309/05/sra.base_sums.ERP004309_ERR467405.ALL.bw
+shortLabel ERR467405
+longLabel recount3 coverage bigWig for external id ERR467405 project ERP004309 file source sra
+type bigWig
+visibility show
+autoScale on
+
+track ERR467406
+bigDataUrl http://duffel.rail.bio/recount3/mouse/data_sources/sra/base_sums/09/ERP004309/06/sra.base_sums.ERP004309_ERR467406.ALL.bw
+shortLabel ERR467406
+longLabel recount3 coverage bigWig for external id ERR467406 project ERP004309 file source sra
+type bigWig
+visibility show
+autoScale on
+
