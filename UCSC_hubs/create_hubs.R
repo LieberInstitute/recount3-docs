@@ -3,9 +3,7 @@ library("here")
 library("sessioninfo")
 
 ## Obtain all available samples
-samples <- rbind(recount3::available_samples("human"),
-    recount3::available_samples("mouse"))
-
+samples <- available_samples(c("human", "mouse")[Sys.getenv("SGE_TASK_ID")])
 
 ## Test with DRP001299
 # x <- subset(samples, project == "DRP001299")
