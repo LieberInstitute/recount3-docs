@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>recount3: human and mouse public RNA-seq data</title>
   <meta name="description" content="recount3: human and mouse public RNA-seq data" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="recount3: human and mouse public RNA-seq data" />
   <meta property="og:type" content="book" />
@@ -32,7 +32,8 @@
 
 <link rel="next" href="quick-access.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -40,7 +41,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -238,7 +238,7 @@ div.csl-indent {
 <div id="data" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Data</h1>
 <p><code>recount3</code> provides processed RNA-seq data for human and mouse in file formats similar to <code>recount2</code> (Figure <a href="index.html#fig:recountWorkflowFig1">1.1</a>), which at its core is based on coverage bigWig files and exon-exon junction counts (see <a href="raw-files.html#raw-files">Raw file</a> for more details). These two raw files power the whole <code>recount3</code> ecosystem. In <code>recount3</code>, we have provided coverage count files for several human and mouse annotations with samples grouped by study. Some large studies, like <a href="https://gtexportal.org/">GTEx</a> and <a href="https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga">TCGA</a> have been fragmented at the tissue level to make the data more accessible.</p>
-<div class="figure" style="text-align: center"><span id="fig:recountWorkflowFig1"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:recountWorkflowFig1"></span>
 <img src="images/recountWorkflow_Figure1.png" alt="Overview of the data available in recount2 and recount3. Reads (pink boxes) aligned to the reference genome can be used to compute a base-pair coverage curve and identify exon-exon junctions (split reads). Gene and exon count matrices are generated using annotation information providing the gene (green boxes) and exon (blue boxes) coordinates together with the base-level coverage curve. The reads spanning exon-exon junctions (jx) are used to compute a third count matrix that might include unannotated junctions (jx 3 and 4). Without using annotation information, expressed regions (orange box) can be determined from the base-level coverage curve to then construct data-driven count matrices." width="100%" />
 <p class="caption">
 Figure 1.1: Overview of the data available in recount2 and recount3. Reads (pink boxes) aligned to the reference genome can be used to compute a base-pair coverage curve and identify exon-exon junctions (split reads). Gene and exon count matrices are generated using annotation information providing the gene (green boxes) and exon (blue boxes) coordinates together with the base-level coverage curve. The reads spanning exon-exon junctions (jx) are used to compute a third count matrix that might include unannotated junctions (jx 3 and 4). Without using annotation information, expressed regions (orange box) can be determined from the base-level coverage curve to then construct data-driven count matrices.
@@ -267,7 +267,7 @@ Figure 1.1: Overview of the data available in recount2 and recount3. Reads (pink
 <div id="study-explorer" class="section level2" number="1.3">
 <h2><span class="header-section-number">1.3</span> Study explorer</h2>
 <p>You can also open the study explorer independently through <a href="https://jhubiostatistics.shinyapps.io/recount3-study-explorer/">shinyapps.io</a>.</p>
-<iframe src="https://jhubiostatistics.shinyapps.io/recount3-study-explorer/?showcase=0" width="100%" height="2000px">
+<iframe src="https://jhubiostatistics.shinyapps.io/recount3-study-explorer/?showcase=0" width="100%" height="2000px" data-external="1">
 </iframe>
 </div>
 <div id="how-to-cite-recount3" class="section level2" number="1.4">
@@ -316,7 +316,6 @@ Figure 1.1: Overview of the data available in recount2 and recount3. Reads (pink
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -356,6 +355,10 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

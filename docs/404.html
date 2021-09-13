@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>9 Your data | recount3: human and mouse public RNA-seq data</title>
-  <meta name="description" content="9 Your data | recount3: human and mouse public RNA-seq data" />
+  <title>Page not found | recount3: human and mouse public RNA-seq data</title>
+  <meta name="description" content="Page not found | recount3: human and mouse public RNA-seq data" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="9 Your data | recount3: human and mouse public RNA-seq data" />
+  <meta property="og:title" content="Page not found | recount3: human and mouse public RNA-seq data" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="9 Your data | recount3: human and mouse public RNA-seq data" />
+  <meta name="twitter:title" content="Page not found | recount3: human and mouse public RNA-seq data" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="related-analyses.html"/>
-<link rel="next" href="join-the-recount-team.html"/>
+
+
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -231,93 +231,19 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="your-data" class="section level1" number="9">
-<h1><span class="header-section-number">9</span> Your data</h1>
-<p><em>Note that this section will need to be refined once we have gone through this process. Currently we are focused on releasing the initial version of recount3.</em></p>
-<div id="process-your-data" class="section level2" number="9.1">
-<h2><span class="header-section-number">9.1</span> Process your data</h2>
-<p>While <a href="https://github.com/langmead-lab/recount-pump"><code>recount_pump</code></a> contains code for generating recount3, if you want to use the Monorail RNA-seq processing pipeline (alignment/quantification) for your own data, we highly recommend that you start by looking at the <a href="https://github.com/langmead-lab/monorail-external/"><strong><code>monorail-external</code></strong></a> GitHub repository. It contains a very detailed README with instructions on how to install the software, download the annotation files, and process raw RNA-seq data (with some example files used for illustration purposes).</p>
-<p>In order to add your data to recount3, we will need all the <a href="raw-files.html#raw-files">raw files</a> for your study. That is:</p>
-<ul>
-<li>the gene count text files for each annotation we support (organism-dependent)</li>
-<li>similarly, the exon count text files for each annotation</li>
-<li>the exon-exon junction files<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></li>
-<li>the five metadata files</li>
-<li>the bigWig files for each sample</li>
-</ul>
-<p>We will then need to organize your data into the directory structure expected by <code>recount3</code>.</p>
-</div>
-<div id="contribute-your-collections" class="section level2" number="9.2">
-<h2><span class="header-section-number">9.2</span> Contribute your collections</h2>
-<p>As described in the <a href="raw-files.html#raw-files">raw files</a> section, collections involve creating a metadata file for a custom set of samples across one or more studies (typically more than one study). You can find some example collections at <a href="http://snaptron.cs.jhu.edu/data/temp/recount3/human/collections/" class="uri">http://snaptron.cs.jhu.edu/data/temp/recount3/human/collections/</a>. For example, <a href="http://snaptron.cs.jhu.edu/data/temp/recount3/human/collections/gtex_geuvadis/metadata/" class="uri">http://snaptron.cs.jhu.edu/data/temp/recount3/human/collections/gtex_geuvadis/metadata/</a> contains two files:</p>
-<ul>
-<li><code>&lt;collection_name&gt;</code>.custom.gz: gtex_geuvadis.custom.gz</li>
-<li><code>&lt;collection_name&gt;</code>.recount_project.gz: gtex_geuvadis.recount_project.gz (optional!)</li>
-</ul>
-<p>These files include the 3 columns we use internally for identifying all samples:</p>
-<ul>
-<li><code>rail_id</code>: used by Snaptron</li>
-<li><code>study</code>: the project name. See <code>recount3::available_projects()</code> for supported options (or use your own custom <code>recount3_url</code>).</li>
-<li><code>external_id</code>: typically the SRA run ID but each data source has different unique IDs, like TCGA which uses much longer sample IDs.</li>
-</ul>
-<div id="collection-metadata" class="section level3" number="9.2.1">
-<h3><span class="header-section-number">9.2.1</span> Collection metadata</h3>
-<p>The <code>&lt;collection_name&gt;</code>.custom.gz can then contain any additional columns of interest. For example, in the <a href="https://github.com/LieberInstitute/recount-brain"><code>recount-brain</code> project</a> we manually curated samples from 62 studies and standardized variables across the 62 studies.</p>
-<p>Here’s how the example collection metadata file looks like:</p>
-<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="your-data.html#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read.delim</span>(</span>
-<span id="cb75-2"><a href="your-data.html#cb75-2" aria-hidden="true" tabindex="-1"></a>    recount3<span class="sc">::</span><span class="fu">file_retrieve</span>(</span>
-<span id="cb75-3"><a href="your-data.html#cb75-3" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;http://snaptron.cs.jhu.edu/data/temp/recount3/human/collections/gtex_geuvadis/metadata/gtex_geuvadis.custom.gz&quot;</span></span>
-<span id="cb75-4"><a href="your-data.html#cb75-4" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb75-5"><a href="your-data.html#cb75-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
-<pre><code>## 2021-09-13 20:09:30 caching file gtex_geuvadis.custom.gz.</code></pre>
-<pre><code>## adding rname &#39;http://snaptron.cs.jhu.edu/data/temp/recount3/human/collections/gtex_geuvadis/metadata/gtex_geuvadis.custom.gz&#39;</code></pre>
-<pre><code>##   rail_id               external_id     study sequencing_type  tissue
-## 1   98371                 ERR188021 ERP001942            bulk     LCL
-## 2  153881 GTEX-U3ZM-0826-SM-4DXU6.1   BLADDER            bulk BLADDER</code></pre>
-<p>This file has to be readble with R using the following code:</p>
-<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="your-data.html#cb79-1" aria-hidden="true" tabindex="-1"></a>utils<span class="sc">::</span><span class="fu">read.delim</span>(</span>
-<span id="cb79-2"><a href="your-data.html#cb79-2" aria-hidden="true" tabindex="-1"></a>    file_path,</span>
-<span id="cb79-3"><a href="your-data.html#cb79-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>,</span>
-<span id="cb79-4"><a href="your-data.html#cb79-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">check.names =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb79-5"><a href="your-data.html#cb79-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">quote =</span> <span class="st">&quot;&quot;</span>,</span>
-<span id="cb79-6"><a href="your-data.html#cb79-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">comment.char =</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb79-7"><a href="your-data.html#cb79-7" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
-<p>Since this is the main file that needs to be produced for adding a collection to <code>recount3</code>, if your collection involves data that is already present in <code>recount3</code>, it will be very easy for us to add it to our resource. Otherwise we will need the <a href="raw-files.html#raw-files">raw files</a> for the corresponding new data.</p>
-</div>
-<div id="collection-project-location" class="section level3" number="9.2.2">
-<h3><span class="header-section-number">9.2.2</span> Collection project location</h3>
-<p>The second text file specifies the required information for locating the samples. While we had considered using this type of file, we don’t require it anymore. For historical purposes, this is how that file looked:<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a></p>
-<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="your-data.html#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read.delim</span>(</span>
-<span id="cb80-2"><a href="your-data.html#cb80-2" aria-hidden="true" tabindex="-1"></a>    recount3<span class="sc">::</span><span class="fu">file_retrieve</span>(</span>
-<span id="cb80-3"><a href="your-data.html#cb80-3" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;http://snaptron.cs.jhu.edu/data/temp/recount3/human/collections/gtex_geuvadis/metadata/gtex_geuvadis.recount_project.gz&quot;</span></span>
-<span id="cb80-4"><a href="your-data.html#cb80-4" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb80-5"><a href="your-data.html#cb80-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
-<pre><code>## 2021-09-13 20:09:30 caching file gtex_geuvadis.recount_project.gz.</code></pre>
-<pre><code>## adding rname &#39;http://snaptron.cs.jhu.edu/data/temp/recount3/human/collections/gtex_geuvadis/metadata/gtex_geuvadis.recount_project.gz&#39;</code></pre>
-<pre><code>##   rail_id               external_id     study   project     organism
-## 1   98371                 ERR188021 ERP001942 ERP001942 Homo sapiens
-## 2  153881 GTEX-U3ZM-0826-SM-4DXU6.1   BLADDER   BLADDER Homo sapiens
-##         file_source           metadata_source date_processed
-## 1  data_sources/sra collections/gtex_geuvadis     2019-10-01
-## 2 data_sources/gtex collections/gtex_geuvadis     2019-11-01</code></pre>
-
-</div>
-</div>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="5">
-<li id="fn5"><p>Hm… I think this will be tricky if new exon-exon junctions are found in someone’s data which are absent in recount3. This is VERY likely to happen!<a href="your-data.html#fnref5" class="footnote-back">↩︎</a></p></li>
-<li id="fn6"><p>Once we have more collections I can verify this!<a href="your-data.html#fnref6" class="footnote-back">↩︎</a></p></li>
-</ol>
+<div id="page-not-found" class="section level1">
+<h1>Page not found</h1>
+<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
+<p>You may want to try searching to find the page's new location, or use
+the table of contents to find the page you are looking for.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="related-analyses.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="join-the-recount-team.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
