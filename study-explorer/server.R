@@ -36,30 +36,18 @@ shinyServer(function(input, output, session) {
                 '.csv')
         },
         content = function(file) {
-            current <- projects_meta[input$metadata_rows_all, ]
+            current <- projects_meta[input$metadata_rows_all,]
             write.csv(current, file, row.names = FALSE)
         }
     )
-
-    get_current <- reactive({
-        info <- input$metadata_cell_clicked
-        if (is.null(info$value))
-            return()
-
-        current <- projects_meta[info$row, ]
-        current$project <- as.character(current$project)
-        current$project_home <- as.character(current$project_home)
-        current$organism <- as.character(current$organism)
-
-        return(current)
-    })
 
     observeEvent(input$metadata_cell_clicked, {
         info <- input$metadata_cell_clicked
         if (is.null(info$value))
             return()
 
-        current <- get_current()
+        current <- projects_meta[info$row,]
+        current$organism <- as.character(current$organism)
 
         ## Get the available annotation options for the chosen organism
         ann_options <-
@@ -81,7 +69,10 @@ shinyServer(function(input, output, session) {
         if (is.null(info$value))
             return()
 
-        current <- get_current()
+        current <- projects_meta[info$row,]
+        current$project <- as.character(current$project)
+        current$project_home <- as.character(current$project_home)
+        current$organism <- as.character(current$organism)
 
         ## Get the available annotation options for the chosen organism
         ann_options <-
@@ -158,6 +149,69 @@ shinyServer(function(input, output, session) {
                     paste0('<li><b><a href="', .x, '">', .y, "</a></b></li>")
             )
 
+        ## Create R code for downloading the study with R
+        output$recount3_code <- renderText({
+            ## Construct R code for creating the RSE object with R
+            paste0(
+                'recount3::create_rse_manual(\n    project = "',
+                current[["project"]],
+                '",\n    project_home = "',
+                current[["project_home"]],
+                '",\n    organism = "',
+                current[["organism"]],
+                '",\n    annotation = "',
+                curr_ann,
+                '",\n    type = "gene"\n)'
+            )
+
+        })
+
+        ## Download BigWig file URLs
+        output$downloadBigWigList <- downloadHandler(
+            filename = function() {
+                gsub(":", "-", gsub(
+                    " ",
+                    "_",
+                    paste0(
+                        "recount3_study-explorer_BigWig_list_",
+                        current[["organism"]],
+                        "_",
+                        basename(current[["project_home"]]),
+                        "_",
+                        current[["project"]],
+                        ".csv"
+                    )
+                ))
+            },
+            content = function(file) {
+                ## Locate all metadata files
+                meta_urls <- locate_url(
+                    project = current[["project"]],
+                    project_home = current[["project_home"]],
+                    type = "metadata",
+                    organism = current[["organism"]]
+                )
+
+                ## Just read in the most basic one
+                meta_proj <-
+                    read_metadata(metadata_files = file_retrieve(meta_urls[grep("recount_project", names(meta_urls))]))
+
+                ## Locate BigWig URLs
+                meta_proj$BigWigURL <- locate_url(
+                    project = current[["project"]],
+                    project_home = current[["project_home"]],
+                    type = "bw",
+                    organism = current[["organism"]],
+                    sample = meta_proj$external_id
+                )
+
+                ## Finish with a basic recount3 metadata file structure:
+                ## rail_id, external_id, study
+                ## plus the BigWigURL
+                write.csv(meta_proj[, c("rail_id", "external_id", "study", "BigWigURL")], file, row.names = FALSE)
+            }
+        )
+
         tagList(
             tags$h3("R code (recommended option)"),
             helpText(
@@ -201,91 +255,5 @@ shinyServer(function(input, output, session) {
             )
         )
     })
-
-    ## Create R code for downloading the study with R
-    output$recount3_code <- renderText({
-        current <- get_current()
-        if (is.null(current))
-            return()
-
-        ## Get the available annotation options for the chosen organism
-        ann_options <-
-            recount3::annotation_options(current[["organism"]])
-
-        curr_ann <- input$annotation
-        if (!curr_ann %in% ann_options) {
-            ## Avoid issues with changing organisms across multiple clicks
-            curr_ann <- ann_options[1]
-        }
-
-        ## Construct R code for creating the RSE object with R
-        paste0(
-            'recount3::create_rse_manual(\n    project = "',
-            current[["project"]],
-            '",\n    project_home = "',
-            current[["project_home"]],
-            '",\n    organism = "',
-            current[["organism"]],
-            '",\n    annotation = "',
-            curr_ann,
-            '",\n    type = "gene"\n)'
-        )
-
-    })
-
-
-    ## Download BigWig file URLs
-    output$downloadBigWigList <- downloadHandler(
-        filename = function() {
-            current <- get_current()
-            if (is.null(current))
-                return()
-
-            gsub(":", "-", gsub(
-                " ",
-                "_",
-                paste0(
-                    "recount3_study-explorer_BigWig_list_",
-                    current[["organism"]],
-                    "_",
-                    basename(current[["project_home"]]),
-                    "_",
-                    current[["project"]],
-                    ".csv"
-                )
-            ))
-        },
-        content = function(file) {
-            current <- get_current()
-            if (is.null(current))
-                return()
-
-            ## Locate all metadata files
-            meta_urls <- locate_url(
-                project = current[["project"]],
-                project_home = current[["project_home"]],
-                type = "metadata",
-                organism = current[["organism"]]
-            )
-
-            ## Just read in the most basic one
-            meta_proj <-
-                read_metadata(metadata_files = file_retrieve(meta_urls[grep("recount_project", names(meta_urls))]))
-
-            ## Locate BigWig URLs
-            meta_proj$BigWigURL <- locate_url(
-                project = current[["project"]],
-                project_home = current[["project_home"]],
-                type = "bw",
-                organism = current[["organism"]],
-                sample = meta_proj$external_id
-            )
-
-            ## Finish with a basic recount3 metadata file structure:
-            ## rail_id, external_id, study
-            ## plus the BigWigURL
-            write.csv(meta_proj[, c("rail_id", "external_id", "study", "BigWigURL")], file, row.names = FALSE)
-        }
-    )
 
 })
