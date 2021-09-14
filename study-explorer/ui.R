@@ -12,10 +12,9 @@ bootstrapPage(
         'Download list of projects matching search results'
     ),
     tags$hr(),
-    tags$h2("Raw files"),
+    tags$h2("Access data"),
     helpText("Click on a row in the above table to select a project of interest."),
     selectInput("annotation", "Select annotation", choices = recount3::annotation_options(), selected = recount3::annotation_options()[1]),
     uiOutput("raw_file_links"),
-    helpText("Use recount3::locate_url() for obtaining the bigWig URLs for each sample."),
     tags$hr()
 )
