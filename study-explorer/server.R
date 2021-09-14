@@ -41,13 +41,21 @@ shinyServer(function(input, output, session) {
         }
     )
 
+    get_current <- reactive({
+        info <- input$metadata_cell_clicked
+        if (is.null(info$value))
+            return()
+
+
+        return(current)
+    })
+
     observeEvent(input$metadata_cell_clicked, {
         info <- input$metadata_cell_clicked
         if (is.null(info$value))
             return()
 
-        current <- projects_meta[info$row,]
-        current$organism <- as.character(current$organism)
+        current <- get_current()
 
         ## Get the available annotation options for the chosen organism
         ann_options <-
@@ -69,10 +77,7 @@ shinyServer(function(input, output, session) {
         if (is.null(info$value))
             return()
 
-        current <- projects_meta[info$row,]
-        current$project <- as.character(current$project)
-        current$project_home <- as.character(current$project_home)
-        current$organism <- as.character(current$organism)
+        current <- get_current()
 
         ## Get the available annotation options for the chosen organism
         ann_options <-
