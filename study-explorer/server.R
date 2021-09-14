@@ -46,6 +46,10 @@ shinyServer(function(input, output, session) {
         if (is.null(info$value))
             return()
 
+        current <- projects_meta[info$row,]
+        current$project <- as.character(current$project)
+        current$project_home <- as.character(current$project_home)
+        current$organism <- as.character(current$organism)
 
         return(current)
     })
@@ -246,7 +250,7 @@ shinyServer(function(input, output, session) {
             tags$hr(),
             tags$h3("Raw files"),
             helpText(
-                "If you prefer to access the raw files, you can download them manually through the following links:"
+                "If you prefer to access the raw files, you can download them manually through the following links. These raw files are used by recount3::create_rse() and recount3::create_rse_manual() so most users will not interact with these files directly."
             ),
             tags$ul(HTML(url_text)),
             downloadButton(
