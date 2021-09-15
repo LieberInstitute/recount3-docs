@@ -222,7 +222,7 @@ shinyServer(function(input, output, session) {
         )
 
         tagList(
-            tags$h3("R code (recommended option)"),
+            tags$h3("R code for this study (recommended option)"),
             helpText(
                 "You can use the following R code to obtain the data for this study:"
             ),
@@ -236,7 +236,7 @@ shinyServer(function(input, output, session) {
                 )
             ),
             tags$hr(),
-            tags$h3("UCSC Genome Browser"),
+            tags$h3("UCSC Genome Browser for this study"),
             helpText(
                 "You can view the base-pair coverage BigWig files on the UCSC Genome Browser by opening the link below in a new tab."
             ),
@@ -248,7 +248,7 @@ shinyServer(function(input, output, session) {
                 )
             )),
             tags$hr(),
-            tags$h3("Raw files"),
+            tags$h3("Raw files for this study"),
             helpText(
                 "If you prefer to access the raw files, you can download them manually through the following links. These raw files are used by recount3::create_rse() and recount3::create_rse_manual() so most users will not interact with these files directly."
             ),
