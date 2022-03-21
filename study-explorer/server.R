@@ -122,7 +122,7 @@ shinyServer(function(input, output, session) {
                 "&lastVirtModeType=default&lastVirtModeExtraState=&virtModeType=default&virtMode=0&nonVirtPosition=&position=chr1&hubUrl=https://raw.githubusercontent.com/LieberInstitute/recount3-docs/master/UCSC_hubs/",
                 current[["organism"]],
                 "/",
-                dirname(current[["project_home"]]),
+                basename(current[["project_home"]]),
                 "_",
                 current[["project"]],
                 "/hub.txt"
