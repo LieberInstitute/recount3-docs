@@ -1,12 +1,12 @@
 library('shiny')
 library("recount3")
 
-options("recount3_url" = "https://sciserver.org/public-data/recount3/data")
-
 bootstrapPage(
     tags$hr(),
     tags$h2("recount3 study explorer"),
-    helpText("Under project_home you can subset for GTEx, TCGA or SRA. Note that GTEx v8 and TCGA are split by tissue."),
+    helpText(
+        "Under project_home you can subset for GTEx, TCGA or SRA. Note that GTEx v8 and TCGA are split by tissue."
+    ),
     DT::dataTableOutput('metadata', width = "95%"),
     tags$hr(),
     downloadButton(
@@ -16,7 +16,20 @@ bootstrapPage(
     tags$hr(),
     tags$h2("Access data"),
     helpText("Click on a row in the above table to select a project of interest."),
-    selectInput("annotation", "Select annotation", choices = recount3::annotation_options(), selected = recount3::annotation_options()[1]),
+    # dput(recount3::annotation_options())
+    selectInput(
+        "annotation",
+        "Select annotation",
+        choices = c(
+            "gencode_v26",
+            "gencode_v29",
+            "fantom6_cat",
+            "refseq",
+            "ercc",
+            "sirv"
+        ),
+        selected = "gencode_v26"
+    ),
     uiOutput("raw_file_links"),
     tags$hr()
 )
