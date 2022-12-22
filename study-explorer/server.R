@@ -3,6 +3,7 @@ library("DT")
 library("recount3")
 library("purrr")
 
+options("recount3_url" = "https://sciserver.org/public-data/recount3/data")
 load("projects_meta.Rdata")
 
 projects_meta <-

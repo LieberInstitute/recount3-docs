@@ -1,6 +1,8 @@
 library('shiny')
 library("recount3")
 
+options("recount3_url" = "https://sciserver.org/public-data/recount3/data")
+
 bootstrapPage(
     tags$hr(),
     tags$h2("recount3 study explorer"),
