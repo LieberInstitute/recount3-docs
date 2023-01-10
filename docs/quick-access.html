@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>2 Quick Access | recount3: human and mouse public RNA-seq data</title>
   <meta name="description" content="2 Quick Access | recount3: human and mouse public RNA-seq data" />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
   <meta property="og:title" content="2 Quick Access | recount3: human and mouse public RNA-seq data" />
   <meta property="og:type" content="book" />
@@ -235,14 +235,14 @@ div.csl-indent {
 <h1><span class="header-section-number">2</span> Quick Access<a href="quick-access.html#quick-access" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>The data from the <code>recount3</code> project is accessible through R/Bioconductor packages as well as raw files. You can access the data through:</p>
 <ul>
-<li><em><a href="https://bioconductor.org/packages/3.16/recount3">recount3</a></em>: this R/Bioconductor package retrieves the data from the <a href="https://idies.jhu.edu/">IDIES</a> servers and builds <code>RangedSummarizedExperiment</code> objects by study that can be used with many Bioconductor analysis packages for downstream analyses (DOI: <a href="https://doi.org/10.1038/nmeth.3252">10.1038/nmeth.3252</a>).</li>
-<li><em><a href="https://bioconductor.org/packages/3.16/snapcount">snapcount</a></em>: this R/Bioconductor package also provides access to data from <code>recount2</code> and <code>recount3</code> through a query-based interface.</li>
+<li><em><a href="https://bioconductor.org/packages/3.17/recount3">recount3</a></em>: this R/Bioconductor package retrieves the data from the <a href="https://idies.jhu.edu/">IDIES</a> servers and builds <code>RangedSummarizedExperiment</code> objects by study that can be used with many Bioconductor analysis packages for downstream analyses (DOI: <a href="https://doi.org/10.1038/nmeth.3252">10.1038/nmeth.3252</a>).</li>
+<li><em><a href="https://bioconductor.org/packages/3.17/snapcount">snapcount</a></em>: this R/Bioconductor package also provides access to data from <code>recount2</code> and <code>recount3</code> through a query-based interface.</li>
 <li><em>raw files</em>: these are text files that are hosted by IDIES and can be used with other programming software outside of R.</li>
 </ul>
 <p>As noted in the <a href="bioconductor.html#bioconductor">Bioconductor chapter</a>, longer tutorials (called <em>vignette</em> documents in R/Bioconductor) showing how to install and use our R/Bioconductor packages are available from the Bioconductor landing pages (that is, the Bioconductor website for each package), such as the one called <a href="http://bioconductor.org/packages/release/bioc/vignettes/recount3/inst/doc/recount3-quickstart.html"><code>recount3</code> quick start guide</a>.</p>
 <div id="quick-recount3" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> Quick recount3<a href="quick-access.html#quick-recount3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>If you want to access the data <em><a href="https://bioconductor.org/packages/3.16/recount3">recount3</a></em>, here’s some R code that you can use. See the <a href="bioconductor.html#bioconductor">Bioconductor chapter</a> for the full output of these commands and more details.</p>
+<p>If you want to access the data <em><a href="https://bioconductor.org/packages/3.17/recount3">recount3</a></em>, here’s some R code that you can use. See the <a href="bioconductor.html#bioconductor">Bioconductor chapter</a> for the full output of these commands and more details.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="quick-access.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Install the recount3 R/Bioconductor package</span></span>
 <span id="cb4-2"><a href="quick-access.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">&quot;BiocManager&quot;</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>))</span>
 <span id="cb4-3"><a href="quick-access.html#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">install.packages</span>(<span class="st">&quot;BiocManager&quot;</span>)</span>
@@ -269,7 +269,7 @@ div.csl-indent {
 </div>
 <div id="quick-snapcount" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> Quick snapcount<a href="quick-access.html#quick-snapcount" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>If you want to access the data through queries such as a set of regions or annotation features instead of downloading the data at a project-level, we recommend using <em><a href="https://bioconductor.org/packages/3.16/snapcount">snapcount</a></em>. It is an R/Bioconductor package for interfacing with Snaptron’s REST API. Here’s some example code you can use to get started with <code>snapcount</code>.</p>
+<p>If you want to access the data through queries such as a set of regions or annotation features instead of downloading the data at a project-level, we recommend using <em><a href="https://bioconductor.org/packages/3.17/snapcount">snapcount</a></em>. It is an R/Bioconductor package for interfacing with Snaptron’s REST API. Here’s some example code you can use to get started with <code>snapcount</code>.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="quick-access.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Install the snapcount R/Bioconductor package</span></span>
 <span id="cb5-2"><a href="quick-access.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">&quot;BiocManager&quot;</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>))</span>
 <span id="cb5-3"><a href="quick-access.html#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">install.packages</span>(<span class="st">&quot;BiocManager&quot;</span>)</span>
