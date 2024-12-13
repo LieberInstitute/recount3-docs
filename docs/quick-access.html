@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>2 Quick Access | recount3: human and mouse public RNA-seq data</title>
   <meta name="description" content="2 Quick Access | recount3: human and mouse public RNA-seq data" />
-  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
   <meta property="og:title" content="2 Quick Access | recount3: human and mouse public RNA-seq data" />
   <meta property="og:type" content="book" />
@@ -55,7 +55,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -65,7 +65,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -119,10 +119,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </style>
 
 <style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -235,56 +240,56 @@ div.csl-indent {
 <h1><span class="header-section-number">2</span> Quick Access<a href="quick-access.html#quick-access" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>The data from the <code>recount3</code> project is accessible through R/Bioconductor packages as well as raw files. You can access the data through:</p>
 <ul>
-<li><em><a href="https://bioconductor.org/packages/3.17/recount3">recount3</a></em>: this R/Bioconductor package retrieves the data from the <a href="https://idies.jhu.edu/">IDIES</a> servers and builds <code>RangedSummarizedExperiment</code> objects by study that can be used with many Bioconductor analysis packages for downstream analyses (DOI: <a href="https://doi.org/10.1038/nmeth.3252">10.1038/nmeth.3252</a>).</li>
-<li><em><a href="https://bioconductor.org/packages/3.17/snapcount">snapcount</a></em>: this R/Bioconductor package also provides access to data from <code>recount2</code> and <code>recount3</code> through a query-based interface.</li>
+<li><em><a href="https://bioconductor.org/packages/3.21/recount3">recount3</a></em>: this R/Bioconductor package retrieves the data from the <a href="https://idies.jhu.edu/">IDIES</a> servers and builds <code>RangedSummarizedExperiment</code> objects by study that can be used with many Bioconductor analysis packages for downstream analyses (DOI: <a href="https://doi.org/10.1038/nmeth.3252">10.1038/nmeth.3252</a>).</li>
+<li><em><a href="https://bioconductor.org/packages/3.21/snapcount">snapcount</a></em>: this R/Bioconductor package also provides access to data from <code>recount2</code> and <code>recount3</code> through a query-based interface.</li>
 <li><em>raw files</em>: these are text files that are hosted by IDIES and can be used with other programming software outside of R.</li>
 </ul>
 <p>As noted in the <a href="bioconductor.html#bioconductor">Bioconductor chapter</a>, longer tutorials (called <em>vignette</em> documents in R/Bioconductor) showing how to install and use our R/Bioconductor packages are available from the Bioconductor landing pages (that is, the Bioconductor website for each package), such as the one called <a href="http://bioconductor.org/packages/release/bioc/vignettes/recount3/inst/doc/recount3-quickstart.html"><code>recount3</code> quick start guide</a>.</p>
 <div id="quick-recount3" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> Quick recount3<a href="quick-access.html#quick-recount3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>If you want to access the data <em><a href="https://bioconductor.org/packages/3.17/recount3">recount3</a></em>, here’s some R code that you can use. See the <a href="bioconductor.html#bioconductor">Bioconductor chapter</a> for the full output of these commands and more details.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="quick-access.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Install the recount3 R/Bioconductor package</span></span>
-<span id="cb4-2"><a href="quick-access.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">&quot;BiocManager&quot;</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb4-3"><a href="quick-access.html#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">install.packages</span>(<span class="st">&quot;BiocManager&quot;</span>)</span>
-<span id="cb4-4"><a href="quick-access.html#cb4-4" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">&quot;recount3&quot;</span>)</span>
-<span id="cb4-5"><a href="quick-access.html#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="quick-access.html#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="do">## Load recount3 R package</span></span>
-<span id="cb4-7"><a href="quick-access.html#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;recount3&quot;</span>)</span>
-<span id="cb4-8"><a href="quick-access.html#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-9"><a href="quick-access.html#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="do">## Find all available human projects</span></span>
-<span id="cb4-10"><a href="quick-access.html#cb4-10" aria-hidden="true" tabindex="-1"></a>human_projects <span class="ot">&lt;-</span> <span class="fu">available_projects</span>()</span>
-<span id="cb4-11"><a href="quick-access.html#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-12"><a href="quick-access.html#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="do">## Find the project you are interested in,</span></span>
-<span id="cb4-13"><a href="quick-access.html#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="do">## here we use SRP009615 as an example</span></span>
-<span id="cb4-14"><a href="quick-access.html#cb4-14" aria-hidden="true" tabindex="-1"></a>proj_info <span class="ot">&lt;-</span> <span class="fu">subset</span>(</span>
-<span id="cb4-15"><a href="quick-access.html#cb4-15" aria-hidden="true" tabindex="-1"></a>    human_projects,</span>
-<span id="cb4-16"><a href="quick-access.html#cb4-16" aria-hidden="true" tabindex="-1"></a>    project <span class="sc">==</span> <span class="st">&quot;SRP009615&quot;</span> <span class="sc">&amp;</span> project_type <span class="sc">==</span> <span class="st">&quot;data_sources&quot;</span></span>
-<span id="cb4-17"><a href="quick-access.html#cb4-17" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb4-18"><a href="quick-access.html#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-19"><a href="quick-access.html#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="do">## Create a RangedSummarizedExperiment (RSE) object at the gene level</span></span>
-<span id="cb4-20"><a href="quick-access.html#cb4-20" aria-hidden="true" tabindex="-1"></a>rse_gene_SRP009615 <span class="ot">&lt;-</span> <span class="fu">create_rse</span>(proj_info)</span>
-<span id="cb4-21"><a href="quick-access.html#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-22"><a href="quick-access.html#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="do">## Explore that RSE object</span></span>
-<span id="cb4-23"><a href="quick-access.html#cb4-23" aria-hidden="true" tabindex="-1"></a>rse_gene_SRP009615</span></code></pre></div>
+<p>If you want to access the data <em><a href="https://bioconductor.org/packages/3.21/recount3">recount3</a></em>, here’s some R code that you can use. See the <a href="bioconductor.html#bioconductor">Bioconductor chapter</a> for the full output of these commands and more details.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="quick-access.html#cb4-1" tabindex="-1"></a><span class="do">## Install the recount3 R/Bioconductor package</span></span>
+<span id="cb4-2"><a href="quick-access.html#cb4-2" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">&quot;BiocManager&quot;</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb4-3"><a href="quick-access.html#cb4-3" tabindex="-1"></a>    <span class="fu">install.packages</span>(<span class="st">&quot;BiocManager&quot;</span>)</span>
+<span id="cb4-4"><a href="quick-access.html#cb4-4" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">&quot;recount3&quot;</span>)</span>
+<span id="cb4-5"><a href="quick-access.html#cb4-5" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="quick-access.html#cb4-6" tabindex="-1"></a><span class="do">## Load recount3 R package</span></span>
+<span id="cb4-7"><a href="quick-access.html#cb4-7" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;recount3&quot;</span>)</span>
+<span id="cb4-8"><a href="quick-access.html#cb4-8" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="quick-access.html#cb4-9" tabindex="-1"></a><span class="do">## Find all available human projects</span></span>
+<span id="cb4-10"><a href="quick-access.html#cb4-10" tabindex="-1"></a>human_projects <span class="ot">&lt;-</span> <span class="fu">available_projects</span>()</span>
+<span id="cb4-11"><a href="quick-access.html#cb4-11" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="quick-access.html#cb4-12" tabindex="-1"></a><span class="do">## Find the project you are interested in,</span></span>
+<span id="cb4-13"><a href="quick-access.html#cb4-13" tabindex="-1"></a><span class="do">## here we use SRP009615 as an example</span></span>
+<span id="cb4-14"><a href="quick-access.html#cb4-14" tabindex="-1"></a>proj_info <span class="ot">&lt;-</span> <span class="fu">subset</span>(</span>
+<span id="cb4-15"><a href="quick-access.html#cb4-15" tabindex="-1"></a>    human_projects,</span>
+<span id="cb4-16"><a href="quick-access.html#cb4-16" tabindex="-1"></a>    project <span class="sc">==</span> <span class="st">&quot;SRP009615&quot;</span> <span class="sc">&amp;</span> project_type <span class="sc">==</span> <span class="st">&quot;data_sources&quot;</span></span>
+<span id="cb4-17"><a href="quick-access.html#cb4-17" tabindex="-1"></a>)</span>
+<span id="cb4-18"><a href="quick-access.html#cb4-18" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="quick-access.html#cb4-19" tabindex="-1"></a><span class="do">## Create a RangedSummarizedExperiment (RSE) object at the gene level</span></span>
+<span id="cb4-20"><a href="quick-access.html#cb4-20" tabindex="-1"></a>rse_gene_SRP009615 <span class="ot">&lt;-</span> <span class="fu">create_rse</span>(proj_info)</span>
+<span id="cb4-21"><a href="quick-access.html#cb4-21" tabindex="-1"></a></span>
+<span id="cb4-22"><a href="quick-access.html#cb4-22" tabindex="-1"></a><span class="do">## Explore that RSE object</span></span>
+<span id="cb4-23"><a href="quick-access.html#cb4-23" tabindex="-1"></a>rse_gene_SRP009615</span></code></pre></div>
 </div>
 <div id="quick-snapcount" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> Quick snapcount<a href="quick-access.html#quick-snapcount" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>If you want to access the data through queries such as a set of regions or annotation features instead of downloading the data at a project-level, we recommend using <em><a href="https://bioconductor.org/packages/3.17/snapcount">snapcount</a></em>. It is an R/Bioconductor package for interfacing with Snaptron’s REST API. Here’s some example code you can use to get started with <code>snapcount</code>.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="quick-access.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Install the snapcount R/Bioconductor package</span></span>
-<span id="cb5-2"><a href="quick-access.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">&quot;BiocManager&quot;</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb5-3"><a href="quick-access.html#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">install.packages</span>(<span class="st">&quot;BiocManager&quot;</span>)</span>
-<span id="cb5-4"><a href="quick-access.html#cb5-4" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">&quot;snapcount&quot;</span>)</span>
-<span id="cb5-5"><a href="quick-access.html#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-6"><a href="quick-access.html#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="do">## Load snapcount R package</span></span>
-<span id="cb5-7"><a href="quick-access.html#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;snapcount&quot;</span>)</span>
-<span id="cb5-8"><a href="quick-access.html#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="quick-access.html#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="do">## snapcount can be used with either a procedural interface</span></span>
-<span id="cb5-10"><a href="quick-access.html#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="fu">query_jx</span>(<span class="at">compilation =</span> <span class="st">&quot;gtex&quot;</span>, <span class="at">regions =</span> <span class="st">&quot;CD99&quot;</span>)</span>
-<span id="cb5-11"><a href="quick-access.html#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="fu">query_jx</span>(<span class="at">compilation =</span> <span class="st">&quot;gtex&quot;</span>, <span class="at">regions =</span> <span class="st">&quot;CD99&quot;</span>, <span class="at">range_filters =</span> samples_count <span class="sc">==</span> <span class="dv">10</span>)</span>
-<span id="cb5-12"><a href="quick-access.html#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-13"><a href="quick-access.html#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="do">## or using the query-builder class</span></span>
-<span id="cb5-14"><a href="quick-access.html#cb5-14" aria-hidden="true" tabindex="-1"></a>sb <span class="ot">&lt;-</span> SnaptronQueryBuilder<span class="sc">$</span><span class="fu">new</span>()</span>
-<span id="cb5-15"><a href="quick-access.html#cb5-15" aria-hidden="true" tabindex="-1"></a>sb<span class="sc">$</span><span class="fu">compilation</span>(<span class="st">&quot;gtex&quot;</span>)<span class="sc">$</span><span class="fu">regions</span>(<span class="st">&quot;CD99&quot;</span>)<span class="sc">$</span><span class="fu">query_jx</span>()</span></code></pre></div>
+<p>If you want to access the data through queries such as a set of regions or annotation features instead of downloading the data at a project-level, we recommend using <em><a href="https://bioconductor.org/packages/3.21/snapcount">snapcount</a></em>. It is an R/Bioconductor package for interfacing with Snaptron’s REST API. Here’s some example code you can use to get started with <code>snapcount</code>.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="quick-access.html#cb5-1" tabindex="-1"></a><span class="do">## Install the snapcount R/Bioconductor package</span></span>
+<span id="cb5-2"><a href="quick-access.html#cb5-2" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">&quot;BiocManager&quot;</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb5-3"><a href="quick-access.html#cb5-3" tabindex="-1"></a>    <span class="fu">install.packages</span>(<span class="st">&quot;BiocManager&quot;</span>)</span>
+<span id="cb5-4"><a href="quick-access.html#cb5-4" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">&quot;snapcount&quot;</span>)</span>
+<span id="cb5-5"><a href="quick-access.html#cb5-5" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="quick-access.html#cb5-6" tabindex="-1"></a><span class="do">## Load snapcount R package</span></span>
+<span id="cb5-7"><a href="quick-access.html#cb5-7" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;snapcount&quot;</span>)</span>
+<span id="cb5-8"><a href="quick-access.html#cb5-8" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="quick-access.html#cb5-9" tabindex="-1"></a><span class="do">## snapcount can be used with either a procedural interface</span></span>
+<span id="cb5-10"><a href="quick-access.html#cb5-10" tabindex="-1"></a><span class="fu">query_jx</span>(<span class="at">compilation =</span> <span class="st">&quot;gtex&quot;</span>, <span class="at">regions =</span> <span class="st">&quot;CD99&quot;</span>)</span>
+<span id="cb5-11"><a href="quick-access.html#cb5-11" tabindex="-1"></a><span class="fu">query_jx</span>(<span class="at">compilation =</span> <span class="st">&quot;gtex&quot;</span>, <span class="at">regions =</span> <span class="st">&quot;CD99&quot;</span>, <span class="at">range_filters =</span> samples_count <span class="sc">==</span> <span class="dv">10</span>)</span>
+<span id="cb5-12"><a href="quick-access.html#cb5-12" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="quick-access.html#cb5-13" tabindex="-1"></a><span class="do">## or using the query-builder class</span></span>
+<span id="cb5-14"><a href="quick-access.html#cb5-14" tabindex="-1"></a>sb <span class="ot">&lt;-</span> SnaptronQueryBuilder<span class="sc">$</span><span class="fu">new</span>()</span>
+<span id="cb5-15"><a href="quick-access.html#cb5-15" tabindex="-1"></a>sb<span class="sc">$</span><span class="fu">compilation</span>(<span class="st">&quot;gtex&quot;</span>)<span class="sc">$</span><span class="fu">regions</span>(<span class="st">&quot;CD99&quot;</span>)<span class="sc">$</span><span class="fu">query_jx</span>()</span></code></pre></div>
 </div>
 <div id="quick-raw-files" class="section level2 hasAnchor" number="2.3">
 <h2><span class="header-section-number">2.3</span> Quick raw files<a href="quick-access.html#quick-raw-files" class="anchor-section" aria-label="Anchor link to header"></a></h2>

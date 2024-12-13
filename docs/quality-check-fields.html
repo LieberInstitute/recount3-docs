@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>4 Quality check fields | recount3: human and mouse public RNA-seq data</title>
   <meta name="description" content="4 Quality check fields | recount3: human and mouse public RNA-seq data" />
-  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
 
   <meta property="og:title" content="4 Quality check fields | recount3: human and mouse public RNA-seq data" />
   <meta property="og:type" content="book" />
@@ -55,7 +55,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -65,7 +65,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -119,10 +119,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </style>
 
 <style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -233,7 +238,7 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="quality-check-fields" class="section level1 hasAnchor" number="4">
 <h1><span class="header-section-number">4</span> Quality check fields<a href="quality-check-fields.html#quality-check-fields" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>We used a number of tools to collect potentially useful quality-control (QC) measures. Specifically, we used <code>seqtk</code> <span class="citation">(<a href="#ref-seqtk" role="doc-biblioref">Li 2020 (accessed August 18, 2020)</a>)</span>, the <code>idxstats</code> subcommand of <code>samtools</code>, the output of <code>STAR</code>, our own <code>megadepth</code> tool, and <code>featureCounts</code>. We examine each in turn, listing the specific QC measures calculated be each.</p>
+<p>We used a number of tools to collect potentially useful quality-control (QC) measures. Specifically, we used <code>seqtk</code> <span class="citation">(<a href="#ref-seqtk">Li 2020 (accessed August 18, 2020)</a>)</span>, the <code>idxstats</code> subcommand of <code>samtools</code>, the output of <code>STAR</code>, our own <code>megadepth</code> tool, and <code>featureCounts</code>. We examine each in turn, listing the specific QC measures calculated be each.</p>
 <p>Monorail runs the <code>seqtk fqchk</code> command on input FASTQ files to collect base-quality and base-composition summaries for all sequencing cycles. We distill these into a few QC measures included with every summarized run in <code>recount3</code>.</p>
 <ol style="list-style-type: decimal">
 <li><strong><code>min_len</code></strong>: minimum read length</li>
@@ -296,7 +301,7 @@ div.csl-indent {
 <li><strong><code>aligned_reads%.chry</code></strong>: Precent of reads aligning to chromosome Y.</li>
 </ol>
 <p>Monorail runs our <code>megadepth</code> tool on the BAM files output by <code>STAR</code>. The chief function is to convert BAM files to bigWig files that are then added to the recount3 archive. As <code>megadepth</code> performs this conversion, it also summarizes the amount of sequencing coverage within the intervals of a provided BED file representing a gene annotation. These quantifications can be useful for quality control, tell us, for example, what fraction of the coverage is within annotated genes.</p>
-<p>Fragment length distribution is based on a special read filter only applied for this purpose to be compatible with CSAW’s fragment counting approach <span class="citation">(<a href="#ref-csaw" role="doc-biblioref">Lun and Smyth 2016</a>)</span>, paired reads in a passing fragment must not be secondary, supplementary, have conflicting read order, be unmapped or be mapped on more than one chromosome. The <code>bc_</code> prefix here refers to the previous name of the Megadepth tool <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p>
+<p>Fragment length distribution is based on a special read filter only applied for this purpose to be compatible with CSAW’s fragment counting approach <span class="citation">(<a href="#ref-csaw">Lun and Smyth 2016</a>)</span>, paired reads in a passing fragment must not be secondary, supplementary, have conflicting read order, be unmapped or be mapped on more than one chromosome. The <code>bc_</code> prefix here refers to the previous name of the Megadepth tool <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p>
 <ol style="list-style-type: decimal">
 <li><strong><code>bc_auc.all_reads_all_bases</code></strong>: Area under coverage (total depth of coverage evaluated at all bases) for all alignments</li>
 <li><strong><code>bc_auc.all_reads_annotated_bases</code></strong>: Area under coverage for all alignments, but only for bases in annotated exons</li>
@@ -329,7 +334,7 @@ div.csl-indent {
 
 </div>
 <h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
 <div id="ref-seqtk" class="csl-entry">
 Li, H. 2020 (accessed August 18, 2020). <em>Seqtk: Toolkit for Processing Sequences in FASTA/q Formats</em>. <a href="https://github.com/lh3/seqtk">https://github.com/lh3/seqtk</a>.
 </div>
