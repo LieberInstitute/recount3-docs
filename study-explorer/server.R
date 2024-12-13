@@ -5,6 +5,10 @@ library("purrr")
 
 load("projects_meta.Rdata")
 
+## Use https instead of http for duffel to resolve basically the same issue
+## as in https://github.com/leekgroup/recount-website/issues/25
+options("recount3_url" = "https://duffel.rail.bio/recount3")
+
 projects_meta <-
     projects_meta[, c("organism",
         "project_home",
