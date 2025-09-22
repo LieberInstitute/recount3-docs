@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>6 Raw Files | recount3: human and mouse public RNA-seq data</title>
   <meta name="description" content="6 Raw Files | recount3: human and mouse public RNA-seq data" />
-  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.44 and GitBook 2.6.7" />
 
   <meta property="og:title" content="6 Raw Files | recount3: human and mouse public RNA-seq data" />
   <meta property="og:type" content="book" />
@@ -54,8 +54,9 @@
 
 
 <style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -65,7 +66,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -127,7 +128,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -445,7 +445,7 @@ div.csl-indent {
 <span id="cb70-48"><a href="raw-files.html#cb70-48" tabindex="-1"></a><span class="do">## Export</span></span>
 <span id="cb70-49"><a href="raw-files.html#cb70-49" tabindex="-1"></a><span class="fu">write.csv</span>(projects, <span class="at">file =</span> <span class="st">&quot;recount3_raw_project_files_with_default_annotation.csv&quot;</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
 <p>As a teaser, here you can see the first 20 rows of this long table. Or you can download the CSV file to your computer from <a href="https://github.com/LieberInstitute/recount3-docs/blob/master/docs/recount3_raw_project_files_with_default_annotation.csv">GitHub</a>.</p>
-<table>
+<table style="width:100%;">
 <caption>(#tab:project_raw_files_table)First 20 raw project files</caption>
 <colgroup>
 <col width="1%" />
@@ -453,11 +453,12 @@ div.csl-indent {
 <col width="1%" />
 <col width="2%" />
 <col width="2%" />
+<col width="1%" />
 <col width="17%" />
 <col width="17%" />
-<col width="18%" />
-<col width="18%" />
-<col width="18%" />
+<col width="17%" />
+<col width="17%" />
+<col width="17%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -466,6 +467,7 @@ div.csl-indent {
 <th align="left">file_source</th>
 <th align="left">project_home</th>
 <th align="left">project_type</th>
+<th align="right">n_samples</th>
 <th align="left">gene</th>
 <th align="left">exon</th>
 <th align="left">jxn_MM</th>
@@ -480,11 +482,12 @@ div.csl-indent {
 <td align="left">sra</td>
 <td align="left">data_sources/sra</td>
 <td align="left">data_sources</td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP107565/sra.gene_sums.SRP107565.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP107565/sra.gene_sums.SRP107565.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP107565/sra.exon_sums.SRP107565.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP107565/sra.exon_sums.SRP107565.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP107565/sra.junctions.SRP107565.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP107565/sra.junctions.SRP107565.ALL.MM.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP107565/sra.junctions.SRP107565.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP107565/sra.junctions.SRP107565.ALL.RR.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP107565/sra.junctions.SRP107565.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP107565/sra.junctions.SRP107565.ALL.ID.gz</a></td>
+<td align="right">216</td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP107565/sra.gene_sums.SRP107565.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP107565/sra.gene_sums.SRP107565.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP107565/sra.exon_sums.SRP107565.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP107565/sra.exon_sums.SRP107565.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP107565/sra.junctions.SRP107565.ALL.MM.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP107565/sra.junctions.SRP107565.ALL.MM.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP107565/sra.junctions.SRP107565.ALL.RR.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP107565/sra.junctions.SRP107565.ALL.RR.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP107565/sra.junctions.SRP107565.ALL.ID.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP107565/sra.junctions.SRP107565.ALL.ID.gz</a></td>
 </tr>
 <tr class="even">
 <td align="left">SRP149665</td>
@@ -492,11 +495,12 @@ div.csl-indent {
 <td align="left">sra</td>
 <td align="left">data_sources/sra</td>
 <td align="left">data_sources</td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP149665/sra.gene_sums.SRP149665.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP149665/sra.gene_sums.SRP149665.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP149665/sra.exon_sums.SRP149665.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP149665/sra.exon_sums.SRP149665.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP149665/sra.junctions.SRP149665.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP149665/sra.junctions.SRP149665.ALL.MM.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP149665/sra.junctions.SRP149665.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP149665/sra.junctions.SRP149665.ALL.RR.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP149665/sra.junctions.SRP149665.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP149665/sra.junctions.SRP149665.ALL.ID.gz</a></td>
+<td align="right">4</td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP149665/sra.gene_sums.SRP149665.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP149665/sra.gene_sums.SRP149665.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP149665/sra.exon_sums.SRP149665.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP149665/sra.exon_sums.SRP149665.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP149665/sra.junctions.SRP149665.ALL.MM.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP149665/sra.junctions.SRP149665.ALL.MM.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP149665/sra.junctions.SRP149665.ALL.RR.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP149665/sra.junctions.SRP149665.ALL.RR.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP149665/sra.junctions.SRP149665.ALL.ID.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP149665/sra.junctions.SRP149665.ALL.ID.gz</a></td>
 </tr>
 <tr class="odd">
 <td align="left">SRP017465</td>
@@ -504,11 +508,12 @@ div.csl-indent {
 <td align="left">sra</td>
 <td align="left">data_sources/sra</td>
 <td align="left">data_sources</td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP017465/sra.gene_sums.SRP017465.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP017465/sra.gene_sums.SRP017465.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP017465/sra.exon_sums.SRP017465.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP017465/sra.exon_sums.SRP017465.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP017465/sra.junctions.SRP017465.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP017465/sra.junctions.SRP017465.ALL.MM.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP017465/sra.junctions.SRP017465.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP017465/sra.junctions.SRP017465.ALL.RR.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP017465/sra.junctions.SRP017465.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP017465/sra.junctions.SRP017465.ALL.ID.gz</a></td>
+<td align="right">23</td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP017465/sra.gene_sums.SRP017465.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP017465/sra.gene_sums.SRP017465.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP017465/sra.exon_sums.SRP017465.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP017465/sra.exon_sums.SRP017465.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP017465/sra.junctions.SRP017465.ALL.MM.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP017465/sra.junctions.SRP017465.ALL.MM.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP017465/sra.junctions.SRP017465.ALL.RR.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP017465/sra.junctions.SRP017465.ALL.RR.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP017465/sra.junctions.SRP017465.ALL.ID.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP017465/sra.junctions.SRP017465.ALL.ID.gz</a></td>
 </tr>
 <tr class="even">
 <td align="left">SRP119165</td>
@@ -516,11 +521,12 @@ div.csl-indent {
 <td align="left">sra</td>
 <td align="left">data_sources/sra</td>
 <td align="left">data_sources</td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP119165/sra.gene_sums.SRP119165.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP119165/sra.gene_sums.SRP119165.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP119165/sra.exon_sums.SRP119165.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP119165/sra.exon_sums.SRP119165.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP119165/sra.junctions.SRP119165.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP119165/sra.junctions.SRP119165.ALL.MM.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP119165/sra.junctions.SRP119165.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP119165/sra.junctions.SRP119165.ALL.RR.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP119165/sra.junctions.SRP119165.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP119165/sra.junctions.SRP119165.ALL.ID.gz</a></td>
+<td align="right">6</td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP119165/sra.gene_sums.SRP119165.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP119165/sra.gene_sums.SRP119165.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP119165/sra.exon_sums.SRP119165.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP119165/sra.exon_sums.SRP119165.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP119165/sra.junctions.SRP119165.ALL.MM.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP119165/sra.junctions.SRP119165.ALL.MM.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP119165/sra.junctions.SRP119165.ALL.RR.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP119165/sra.junctions.SRP119165.ALL.RR.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP119165/sra.junctions.SRP119165.ALL.ID.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP119165/sra.junctions.SRP119165.ALL.ID.gz</a></td>
 </tr>
 <tr class="odd">
 <td align="left">SRP133965</td>
@@ -528,11 +534,12 @@ div.csl-indent {
 <td align="left">sra</td>
 <td align="left">data_sources/sra</td>
 <td align="left">data_sources</td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP133965/sra.gene_sums.SRP133965.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP133965/sra.gene_sums.SRP133965.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP133965/sra.exon_sums.SRP133965.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP133965/sra.exon_sums.SRP133965.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP133965/sra.junctions.SRP133965.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP133965/sra.junctions.SRP133965.ALL.MM.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP133965/sra.junctions.SRP133965.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP133965/sra.junctions.SRP133965.ALL.RR.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP133965/sra.junctions.SRP133965.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP133965/sra.junctions.SRP133965.ALL.ID.gz</a></td>
+<td align="right">12</td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP133965/sra.gene_sums.SRP133965.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP133965/sra.gene_sums.SRP133965.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP133965/sra.exon_sums.SRP133965.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP133965/sra.exon_sums.SRP133965.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP133965/sra.junctions.SRP133965.ALL.MM.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP133965/sra.junctions.SRP133965.ALL.MM.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP133965/sra.junctions.SRP133965.ALL.RR.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP133965/sra.junctions.SRP133965.ALL.RR.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP133965/sra.junctions.SRP133965.ALL.ID.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP133965/sra.junctions.SRP133965.ALL.ID.gz</a></td>
 </tr>
 <tr class="even">
 <td align="left">SRP096765</td>
@@ -540,11 +547,12 @@ div.csl-indent {
 <td align="left">sra</td>
 <td align="left">data_sources/sra</td>
 <td align="left">data_sources</td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP096765/sra.gene_sums.SRP096765.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP096765/sra.gene_sums.SRP096765.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP096765/sra.exon_sums.SRP096765.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP096765/sra.exon_sums.SRP096765.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP096765/sra.junctions.SRP096765.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP096765/sra.junctions.SRP096765.ALL.MM.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP096765/sra.junctions.SRP096765.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP096765/sra.junctions.SRP096765.ALL.RR.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP096765/sra.junctions.SRP096765.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP096765/sra.junctions.SRP096765.ALL.ID.gz</a></td>
+<td align="right">7</td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP096765/sra.gene_sums.SRP096765.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP096765/sra.gene_sums.SRP096765.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP096765/sra.exon_sums.SRP096765.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP096765/sra.exon_sums.SRP096765.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP096765/sra.junctions.SRP096765.ALL.MM.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP096765/sra.junctions.SRP096765.ALL.MM.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP096765/sra.junctions.SRP096765.ALL.RR.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP096765/sra.junctions.SRP096765.ALL.RR.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP096765/sra.junctions.SRP096765.ALL.ID.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP096765/sra.junctions.SRP096765.ALL.ID.gz</a></td>
 </tr>
 <tr class="odd">
 <td align="left">SRP124965</td>
@@ -552,11 +560,12 @@ div.csl-indent {
 <td align="left">sra</td>
 <td align="left">data_sources/sra</td>
 <td align="left">data_sources</td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP124965/sra.gene_sums.SRP124965.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP124965/sra.gene_sums.SRP124965.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP124965/sra.exon_sums.SRP124965.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP124965/sra.exon_sums.SRP124965.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP124965/sra.junctions.SRP124965.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP124965/sra.junctions.SRP124965.ALL.MM.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP124965/sra.junctions.SRP124965.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP124965/sra.junctions.SRP124965.ALL.RR.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP124965/sra.junctions.SRP124965.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP124965/sra.junctions.SRP124965.ALL.ID.gz</a></td>
+<td align="right">12</td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP124965/sra.gene_sums.SRP124965.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP124965/sra.gene_sums.SRP124965.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP124965/sra.exon_sums.SRP124965.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP124965/sra.exon_sums.SRP124965.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP124965/sra.junctions.SRP124965.ALL.MM.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP124965/sra.junctions.SRP124965.ALL.MM.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP124965/sra.junctions.SRP124965.ALL.RR.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP124965/sra.junctions.SRP124965.ALL.RR.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP124965/sra.junctions.SRP124965.ALL.ID.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP124965/sra.junctions.SRP124965.ALL.ID.gz</a></td>
 </tr>
 <tr class="even">
 <td align="left">SRP189165</td>
@@ -564,11 +573,12 @@ div.csl-indent {
 <td align="left">sra</td>
 <td align="left">data_sources/sra</td>
 <td align="left">data_sources</td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP189165/sra.gene_sums.SRP189165.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP189165/sra.gene_sums.SRP189165.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP189165/sra.exon_sums.SRP189165.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP189165/sra.exon_sums.SRP189165.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP189165/sra.junctions.SRP189165.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP189165/sra.junctions.SRP189165.ALL.MM.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP189165/sra.junctions.SRP189165.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP189165/sra.junctions.SRP189165.ALL.RR.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP189165/sra.junctions.SRP189165.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP189165/sra.junctions.SRP189165.ALL.ID.gz</a></td>
+<td align="right">15</td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP189165/sra.gene_sums.SRP189165.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP189165/sra.gene_sums.SRP189165.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP189165/sra.exon_sums.SRP189165.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP189165/sra.exon_sums.SRP189165.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP189165/sra.junctions.SRP189165.ALL.MM.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP189165/sra.junctions.SRP189165.ALL.MM.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP189165/sra.junctions.SRP189165.ALL.RR.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP189165/sra.junctions.SRP189165.ALL.RR.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP189165/sra.junctions.SRP189165.ALL.ID.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP189165/sra.junctions.SRP189165.ALL.ID.gz</a></td>
 </tr>
 <tr class="odd">
 <td align="left">SRP050365</td>
@@ -576,11 +586,12 @@ div.csl-indent {
 <td align="left">sra</td>
 <td align="left">data_sources/sra</td>
 <td align="left">data_sources</td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP050365/sra.gene_sums.SRP050365.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP050365/sra.gene_sums.SRP050365.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP050365/sra.exon_sums.SRP050365.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP050365/sra.exon_sums.SRP050365.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP050365/sra.junctions.SRP050365.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP050365/sra.junctions.SRP050365.ALL.MM.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP050365/sra.junctions.SRP050365.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP050365/sra.junctions.SRP050365.ALL.RR.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP050365/sra.junctions.SRP050365.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP050365/sra.junctions.SRP050365.ALL.ID.gz</a></td>
+<td align="right">10</td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP050365/sra.gene_sums.SRP050365.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP050365/sra.gene_sums.SRP050365.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP050365/sra.exon_sums.SRP050365.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP050365/sra.exon_sums.SRP050365.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP050365/sra.junctions.SRP050365.ALL.MM.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP050365/sra.junctions.SRP050365.ALL.MM.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP050365/sra.junctions.SRP050365.ALL.RR.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP050365/sra.junctions.SRP050365.ALL.RR.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP050365/sra.junctions.SRP050365.ALL.ID.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP050365/sra.junctions.SRP050365.ALL.ID.gz</a></td>
 </tr>
 <tr class="even">
 <td align="left">SRP123065</td>
@@ -588,11 +599,12 @@ div.csl-indent {
 <td align="left">sra</td>
 <td align="left">data_sources/sra</td>
 <td align="left">data_sources</td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP123065/sra.gene_sums.SRP123065.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP123065/sra.gene_sums.SRP123065.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP123065/sra.exon_sums.SRP123065.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP123065/sra.exon_sums.SRP123065.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP123065/sra.junctions.SRP123065.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP123065/sra.junctions.SRP123065.ALL.MM.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP123065/sra.junctions.SRP123065.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP123065/sra.junctions.SRP123065.ALL.RR.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP123065/sra.junctions.SRP123065.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP123065/sra.junctions.SRP123065.ALL.ID.gz</a></td>
+<td align="right">41</td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP123065/sra.gene_sums.SRP123065.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP123065/sra.gene_sums.SRP123065.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP123065/sra.exon_sums.SRP123065.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP123065/sra.exon_sums.SRP123065.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP123065/sra.junctions.SRP123065.ALL.MM.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP123065/sra.junctions.SRP123065.ALL.MM.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP123065/sra.junctions.SRP123065.ALL.RR.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP123065/sra.junctions.SRP123065.ALL.RR.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP123065/sra.junctions.SRP123065.ALL.ID.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP123065/sra.junctions.SRP123065.ALL.ID.gz</a></td>
 </tr>
 <tr class="odd">
 <td align="left">SRP162465</td>
@@ -600,11 +612,12 @@ div.csl-indent {
 <td align="left">sra</td>
 <td align="left">data_sources/sra</td>
 <td align="left">data_sources</td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP162465/sra.gene_sums.SRP162465.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP162465/sra.gene_sums.SRP162465.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP162465/sra.exon_sums.SRP162465.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP162465/sra.exon_sums.SRP162465.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP162465/sra.junctions.SRP162465.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP162465/sra.junctions.SRP162465.ALL.MM.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP162465/sra.junctions.SRP162465.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP162465/sra.junctions.SRP162465.ALL.RR.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP162465/sra.junctions.SRP162465.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP162465/sra.junctions.SRP162465.ALL.ID.gz</a></td>
+<td align="right">8</td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP162465/sra.gene_sums.SRP162465.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP162465/sra.gene_sums.SRP162465.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP162465/sra.exon_sums.SRP162465.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP162465/sra.exon_sums.SRP162465.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP162465/sra.junctions.SRP162465.ALL.MM.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP162465/sra.junctions.SRP162465.ALL.MM.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP162465/sra.junctions.SRP162465.ALL.RR.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP162465/sra.junctions.SRP162465.ALL.RR.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP162465/sra.junctions.SRP162465.ALL.ID.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP162465/sra.junctions.SRP162465.ALL.ID.gz</a></td>
 </tr>
 <tr class="even">
 <td align="left">SRP178865</td>
@@ -612,11 +625,12 @@ div.csl-indent {
 <td align="left">sra</td>
 <td align="left">data_sources/sra</td>
 <td align="left">data_sources</td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP178865/sra.gene_sums.SRP178865.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP178865/sra.gene_sums.SRP178865.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP178865/sra.exon_sums.SRP178865.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP178865/sra.exon_sums.SRP178865.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP178865/sra.junctions.SRP178865.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP178865/sra.junctions.SRP178865.ALL.MM.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP178865/sra.junctions.SRP178865.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP178865/sra.junctions.SRP178865.ALL.RR.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP178865/sra.junctions.SRP178865.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP178865/sra.junctions.SRP178865.ALL.ID.gz</a></td>
+<td align="right">24</td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP178865/sra.gene_sums.SRP178865.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP178865/sra.gene_sums.SRP178865.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP178865/sra.exon_sums.SRP178865.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP178865/sra.exon_sums.SRP178865.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP178865/sra.junctions.SRP178865.ALL.MM.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP178865/sra.junctions.SRP178865.ALL.MM.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP178865/sra.junctions.SRP178865.ALL.RR.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP178865/sra.junctions.SRP178865.ALL.RR.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP178865/sra.junctions.SRP178865.ALL.ID.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP178865/sra.junctions.SRP178865.ALL.ID.gz</a></td>
 </tr>
 <tr class="odd">
 <td align="left">SRP032165</td>
@@ -624,11 +638,12 @@ div.csl-indent {
 <td align="left">sra</td>
 <td align="left">data_sources/sra</td>
 <td align="left">data_sources</td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP032165/sra.gene_sums.SRP032165.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP032165/sra.gene_sums.SRP032165.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP032165/sra.exon_sums.SRP032165.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP032165/sra.exon_sums.SRP032165.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP032165/sra.junctions.SRP032165.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP032165/sra.junctions.SRP032165.ALL.MM.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP032165/sra.junctions.SRP032165.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP032165/sra.junctions.SRP032165.ALL.RR.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP032165/sra.junctions.SRP032165.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP032165/sra.junctions.SRP032165.ALL.ID.gz</a></td>
+<td align="right">24</td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP032165/sra.gene_sums.SRP032165.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP032165/sra.gene_sums.SRP032165.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP032165/sra.exon_sums.SRP032165.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP032165/sra.exon_sums.SRP032165.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP032165/sra.junctions.SRP032165.ALL.MM.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP032165/sra.junctions.SRP032165.ALL.MM.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP032165/sra.junctions.SRP032165.ALL.RR.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP032165/sra.junctions.SRP032165.ALL.RR.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP032165/sra.junctions.SRP032165.ALL.ID.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP032165/sra.junctions.SRP032165.ALL.ID.gz</a></td>
 </tr>
 <tr class="even">
 <td align="left">SRP125965</td>
@@ -636,11 +651,12 @@ div.csl-indent {
 <td align="left">sra</td>
 <td align="left">data_sources/sra</td>
 <td align="left">data_sources</td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP125965/sra.gene_sums.SRP125965.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP125965/sra.gene_sums.SRP125965.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP125965/sra.exon_sums.SRP125965.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP125965/sra.exon_sums.SRP125965.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP125965/sra.junctions.SRP125965.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP125965/sra.junctions.SRP125965.ALL.MM.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP125965/sra.junctions.SRP125965.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP125965/sra.junctions.SRP125965.ALL.RR.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP125965/sra.junctions.SRP125965.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP125965/sra.junctions.SRP125965.ALL.ID.gz</a></td>
+<td align="right">72</td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP125965/sra.gene_sums.SRP125965.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP125965/sra.gene_sums.SRP125965.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP125965/sra.exon_sums.SRP125965.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP125965/sra.exon_sums.SRP125965.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP125965/sra.junctions.SRP125965.ALL.MM.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP125965/sra.junctions.SRP125965.ALL.MM.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP125965/sra.junctions.SRP125965.ALL.RR.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP125965/sra.junctions.SRP125965.ALL.RR.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP125965/sra.junctions.SRP125965.ALL.ID.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP125965/sra.junctions.SRP125965.ALL.ID.gz</a></td>
 </tr>
 <tr class="odd">
 <td align="left">SRP120165</td>
@@ -648,11 +664,12 @@ div.csl-indent {
 <td align="left">sra</td>
 <td align="left">data_sources/sra</td>
 <td align="left">data_sources</td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP120165/sra.gene_sums.SRP120165.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP120165/sra.gene_sums.SRP120165.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP120165/sra.exon_sums.SRP120165.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP120165/sra.exon_sums.SRP120165.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP120165/sra.junctions.SRP120165.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP120165/sra.junctions.SRP120165.ALL.MM.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP120165/sra.junctions.SRP120165.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP120165/sra.junctions.SRP120165.ALL.RR.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP120165/sra.junctions.SRP120165.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP120165/sra.junctions.SRP120165.ALL.ID.gz</a></td>
+<td align="right">18</td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP120165/sra.gene_sums.SRP120165.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP120165/sra.gene_sums.SRP120165.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP120165/sra.exon_sums.SRP120165.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP120165/sra.exon_sums.SRP120165.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP120165/sra.junctions.SRP120165.ALL.MM.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP120165/sra.junctions.SRP120165.ALL.MM.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP120165/sra.junctions.SRP120165.ALL.RR.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP120165/sra.junctions.SRP120165.ALL.RR.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP120165/sra.junctions.SRP120165.ALL.ID.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP120165/sra.junctions.SRP120165.ALL.ID.gz</a></td>
 </tr>
 <tr class="even">
 <td align="left">SRP044265</td>
@@ -660,11 +677,12 @@ div.csl-indent {
 <td align="left">sra</td>
 <td align="left">data_sources/sra</td>
 <td align="left">data_sources</td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP044265/sra.gene_sums.SRP044265.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP044265/sra.gene_sums.SRP044265.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP044265/sra.exon_sums.SRP044265.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP044265/sra.exon_sums.SRP044265.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP044265/sra.junctions.SRP044265.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP044265/sra.junctions.SRP044265.ALL.MM.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP044265/sra.junctions.SRP044265.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP044265/sra.junctions.SRP044265.ALL.RR.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP044265/sra.junctions.SRP044265.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP044265/sra.junctions.SRP044265.ALL.ID.gz</a></td>
+<td align="right">6</td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP044265/sra.gene_sums.SRP044265.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP044265/sra.gene_sums.SRP044265.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP044265/sra.exon_sums.SRP044265.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP044265/sra.exon_sums.SRP044265.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP044265/sra.junctions.SRP044265.ALL.MM.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP044265/sra.junctions.SRP044265.ALL.MM.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP044265/sra.junctions.SRP044265.ALL.RR.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP044265/sra.junctions.SRP044265.ALL.RR.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP044265/sra.junctions.SRP044265.ALL.ID.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP044265/sra.junctions.SRP044265.ALL.ID.gz</a></td>
 </tr>
 <tr class="odd">
 <td align="left">SRP014565</td>
@@ -672,11 +690,12 @@ div.csl-indent {
 <td align="left">sra</td>
 <td align="left">data_sources/sra</td>
 <td align="left">data_sources</td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP014565/sra.gene_sums.SRP014565.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP014565/sra.gene_sums.SRP014565.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP014565/sra.exon_sums.SRP014565.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP014565/sra.exon_sums.SRP014565.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP014565/sra.junctions.SRP014565.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP014565/sra.junctions.SRP014565.ALL.MM.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP014565/sra.junctions.SRP014565.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP014565/sra.junctions.SRP014565.ALL.RR.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP014565/sra.junctions.SRP014565.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP014565/sra.junctions.SRP014565.ALL.ID.gz</a></td>
+<td align="right">1</td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP014565/sra.gene_sums.SRP014565.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP014565/sra.gene_sums.SRP014565.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP014565/sra.exon_sums.SRP014565.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP014565/sra.exon_sums.SRP014565.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP014565/sra.junctions.SRP014565.ALL.MM.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP014565/sra.junctions.SRP014565.ALL.MM.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP014565/sra.junctions.SRP014565.ALL.RR.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP014565/sra.junctions.SRP014565.ALL.RR.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP014565/sra.junctions.SRP014565.ALL.ID.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP014565/sra.junctions.SRP014565.ALL.ID.gz</a></td>
 </tr>
 <tr class="even">
 <td align="left">SRP057065</td>
@@ -684,11 +703,12 @@ div.csl-indent {
 <td align="left">sra</td>
 <td align="left">data_sources/sra</td>
 <td align="left">data_sources</td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP057065/sra.gene_sums.SRP057065.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP057065/sra.gene_sums.SRP057065.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP057065/sra.exon_sums.SRP057065.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP057065/sra.exon_sums.SRP057065.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP057065/sra.junctions.SRP057065.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP057065/sra.junctions.SRP057065.ALL.MM.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP057065/sra.junctions.SRP057065.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP057065/sra.junctions.SRP057065.ALL.RR.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP057065/sra.junctions.SRP057065.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP057065/sra.junctions.SRP057065.ALL.ID.gz</a></td>
+<td align="right">51</td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP057065/sra.gene_sums.SRP057065.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP057065/sra.gene_sums.SRP057065.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP057065/sra.exon_sums.SRP057065.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP057065/sra.exon_sums.SRP057065.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP057065/sra.junctions.SRP057065.ALL.MM.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP057065/sra.junctions.SRP057065.ALL.MM.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP057065/sra.junctions.SRP057065.ALL.RR.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP057065/sra.junctions.SRP057065.ALL.RR.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP057065/sra.junctions.SRP057065.ALL.ID.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP057065/sra.junctions.SRP057065.ALL.ID.gz</a></td>
 </tr>
 <tr class="odd">
 <td align="left">SRP117665</td>
@@ -696,11 +716,12 @@ div.csl-indent {
 <td align="left">sra</td>
 <td align="left">data_sources/sra</td>
 <td align="left">data_sources</td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP117665/sra.gene_sums.SRP117665.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP117665/sra.gene_sums.SRP117665.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP117665/sra.exon_sums.SRP117665.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP117665/sra.exon_sums.SRP117665.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP117665/sra.junctions.SRP117665.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP117665/sra.junctions.SRP117665.ALL.MM.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP117665/sra.junctions.SRP117665.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP117665/sra.junctions.SRP117665.ALL.RR.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP117665/sra.junctions.SRP117665.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP117665/sra.junctions.SRP117665.ALL.ID.gz</a></td>
+<td align="right">9</td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP117665/sra.gene_sums.SRP117665.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP117665/sra.gene_sums.SRP117665.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP117665/sra.exon_sums.SRP117665.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP117665/sra.exon_sums.SRP117665.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP117665/sra.junctions.SRP117665.ALL.MM.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP117665/sra.junctions.SRP117665.ALL.MM.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP117665/sra.junctions.SRP117665.ALL.RR.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP117665/sra.junctions.SRP117665.ALL.RR.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP117665/sra.junctions.SRP117665.ALL.ID.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP117665/sra.junctions.SRP117665.ALL.ID.gz</a></td>
 </tr>
 <tr class="even">
 <td align="left">SRP049465</td>
@@ -708,11 +729,12 @@ div.csl-indent {
 <td align="left">sra</td>
 <td align="left">data_sources/sra</td>
 <td align="left">data_sources</td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP049465/sra.gene_sums.SRP049465.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/gene_sums/65/SRP049465/sra.gene_sums.SRP049465.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP049465/sra.exon_sums.SRP049465.G026.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/exon_sums/65/SRP049465/sra.exon_sums.SRP049465.G026.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP049465/sra.junctions.SRP049465.ALL.MM.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP049465/sra.junctions.SRP049465.ALL.MM.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP049465/sra.junctions.SRP049465.ALL.RR.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP049465/sra.junctions.SRP049465.ALL.RR.gz</a></td>
-<td align="left"><a href="http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP049465/sra.junctions.SRP049465.ALL.ID.gz" class="uri">http://idies.jhu.edu/recount3/data/human/data_sources/sra/junctions/65/SRP049465/sra.junctions.SRP049465.ALL.ID.gz</a></td>
+<td align="right">4</td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP049465/sra.gene_sums.SRP049465.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/gene_sums/65/SRP049465/sra.gene_sums.SRP049465.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP049465/sra.exon_sums.SRP049465.G026.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/exon_sums/65/SRP049465/sra.exon_sums.SRP049465.G026.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP049465/sra.junctions.SRP049465.ALL.MM.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP049465/sra.junctions.SRP049465.ALL.MM.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP049465/sra.junctions.SRP049465.ALL.RR.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP049465/sra.junctions.SRP049465.ALL.RR.gz</a></td>
+<td align="left"><a href="http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP049465/sra.junctions.SRP049465.ALL.ID.gz" class="uri">http://duffel.rail.bio/recount3/human/data_sources/sra/junctions/65/SRP049465/sra.junctions.SRP049465.ALL.ID.gz</a></td>
 </tr>
 </tbody>
 </table>
@@ -838,42 +860,42 @@ div.csl-indent {
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": null,
-"text": null
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": null,
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "subsection"
-}
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
 });
 });
 </script>
